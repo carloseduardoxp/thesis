@@ -1,0 +1,10 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,177,177,DISTINCT,Define a constant instead of duplicating this literal "UserLoggedIn" 5 times.,null,
+java:S1192,181,181,DISTINCT,Define a constant instead of duplicating this literal "CustomAction" 4 times.,null,
+java:S106,94,94,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,97,97,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,124,124,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,137,137,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,150,150,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,159,159,MODULAR,Replace this use of System.out by a logger.,null,

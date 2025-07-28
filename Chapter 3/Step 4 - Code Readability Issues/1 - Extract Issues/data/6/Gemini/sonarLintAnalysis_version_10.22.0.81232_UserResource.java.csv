@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1104,12,12,MODULAR,Make id a static final constant or non-public and provide accessors if needed.,null,
+java:S1104,13,13,MODULAR,Make name a static final constant or non-public and provide accessors if needed.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2140,33,33,LOGICAL,Use "java.util.Random.nextInt()" instead.,null,

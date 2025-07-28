@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1149,20,20,CONVENTIONAL,Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".,null,
+java:S106,14,14,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,27,27,MODULAR,Replace this use of System.out by a logger.,null,

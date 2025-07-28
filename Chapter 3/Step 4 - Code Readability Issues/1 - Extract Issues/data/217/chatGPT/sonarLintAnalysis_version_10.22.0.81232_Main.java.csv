@@ -1,0 +1,11 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3740,32,32,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S1450,26,26,CLEAR,Remove the "output" field and declare it as a local variable in the relevant methods.,null,
+java:S1197,18,18,FORMATTED,Move the array designators [] to the type.,null,
+java:S106,46,46,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,64,64,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,79,79,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,81,81,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,89,89,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1068,26,26,CLEAR,Remove this unused "output" private field.,null,

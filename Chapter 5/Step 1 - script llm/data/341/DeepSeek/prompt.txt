@@ -1,0 +1,25 @@
+Given the following Java code snippet:
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        Set<String> mutableSet = new HashSet<>();
+        mutableSet.add("Apple");
+        mutableSet.add("Banana");
+        mutableSet.add("Cherry");
+
+        Set<String> immutableSet = Collections.unmodifiableSet(mutableSet);
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "immutableSet"., start line = 16, end line = 16, rule key = java:S1481 message = Remove this unused "immutableSet" local variable., start line = 16, end line = 16, rule key = java:S1854 message = Remove this useless assignment to local variable "immutableSet"., start line = 16, end line = 16, rule key = java:S1481 message = Remove this unused "immutableSet" local variable., start line = 16, end line = 16.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

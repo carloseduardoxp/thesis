@@ -1,0 +1,23 @@
+Based on this pull request with the developer description: Changing if-else-if ladder to switch statement for better readability, the code was changed by the developer from if (opt == '+') {
+             return x + y;
+         } else if (opt == '-') {
+             return x - y;
+         } else if (opt == '*') {
+             return x * y;
+         } else if (opt == '/') {
+             return x / y;
+         } else if (opt == '%') {
+             return x % y;
+         } else if (opt == '^') {
+             return Math.pow(x, y);
+         } (if dont have code before, the code wasnt exist yet) to switch (opt){
+             case '+': return x + y;
+             case '-': return x - y;
+             case '*': return x * y;
+             case '/': return x / y;
+             case '%': return x % y;
+             case '^': return Math.pow(x , y);
+             default:
+                 inText.setFont(inText.getFont().deriveFont(Font.PLAIN));
+                 return y;
+         }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

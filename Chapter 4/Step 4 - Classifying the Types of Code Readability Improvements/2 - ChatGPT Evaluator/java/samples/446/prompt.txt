@@ -1,0 +1,9 @@
+Based on this pull request with the developer description: Extracted each layer parameter to separate line., the code was changed by the developer from .layer(0, new ConvolutionLayer.Builder(new int[] {5, 5}, new int[] {1, 1}).name("cnn1")
+                                         .nIn(inputShape[0]).nOut(20).activation(Activation.RELU).build()) (if dont have code before, the code wasnt exist yet) to .layer(new ConvolutionLayer.Builder()
+                                 .name("cnn1")
+                                 .kernelSize(5, 5)
+                                 .stride(1, 1)
+                                 .nIn(inputShape[0])
+                                 .nOut(20)
+                                 .activation(Activation.RELU)
+                                 .build()), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

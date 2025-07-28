@@ -1,0 +1,9 @@
+Based on this pull request with the developer description: removes the checks that compare the Ca truststore file as a whole. These checks are only passing because in the Ca class in some cases we reuse the data directly, rather than instantiating a new hashmap. The tests don't need to check the whether it is the exact same file, and in testExpiredCertsGetRemovedAuto we actually wouldn't expect the file to be the same. Since there are already checks that the correct cert is present in the truststore, the asserts that compare the whole file can be removed., the code was changed by the developer from assertThat(initialClusterCaCertSecret.getData().keySet(), is(Set.of(CA_CRT, CA_STORE, CA_STORE_PASSWORD)));
+         assertThat(initialClusterCaCertSecret.getData().get(CA_CRT), is(notNullValue()));
+         assertThat(initialClusterCaCertSecret.getData().get(CA_STORE), is(notNullValue()));
+         assertThat(initialClusterCaCertSecret.getData().get(CA_STORE_PASSWORD), is(notNullValue())); (if dont have code before, the code wasnt exist yet) to assertCertDataNotNull(initialClusterCaCertSecret.getData());  private void assertCertDataNotNull(Map<String, String> certData) {
+         assertThat(certData.keySet(), is(Set.of(CA_CRT, CA_STORE, CA_STORE_PASSWORD)));
+         assertThat(certData.get(CA_CRT), is(notNullValue()));
+         assertThat(certData.get(CA_STORE), is(notNullValue()));
+         assertThat(certData.get(CA_STORE_PASSWORD), is(notNullValue()));
+     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

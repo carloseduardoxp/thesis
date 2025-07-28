@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Integrated task exception handling directly within the task function., the code was changed by the developer from await message.edit_text(
+                 "\n".join(message.text_html.split("\n")[:2] + ["å¾æ ç´ æä¸è½½å®æ!"]), parse_mode=ParseMode.HTML
+             ) (if dont have code before, the code wasnt exist yet) to notice_text = "å¾æ ç´ æä¸è½½å®æ"  await message.edit_text(notice_text), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

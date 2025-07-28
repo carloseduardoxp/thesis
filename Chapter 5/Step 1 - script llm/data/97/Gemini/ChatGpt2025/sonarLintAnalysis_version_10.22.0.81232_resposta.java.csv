@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S5361,24,24,EFFICIENT,Replace this call to "replaceAll()" by a call to the "replace()" method.,null,
+java:S5361,23,23,EFFICIENT,Replace this call to "replaceAll()" by a call to the "replace()" method.,null,
+java:S106,67,67,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,68,68,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,69,69,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,70,70,MODULAR,Replace this use of System.out by a logger.,null,

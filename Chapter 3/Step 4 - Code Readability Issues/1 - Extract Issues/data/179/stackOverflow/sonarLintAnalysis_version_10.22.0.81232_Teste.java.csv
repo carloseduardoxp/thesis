@@ -1,0 +1,11 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,9,9,LOGICAL,Remove this useless assignment to local variable "object3".,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "object2".,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "object1".,null,
+java:S1854,4,4,LOGICAL,Remove this useless assignment to local variable "object".,null,
+java:S1481,4,4,CLEAR,Remove this unused "object" local variable.,null,
+java:S1874,5,5,CONVENTIONAL,Remove this use of "newInstance"; it is deprecated.,null,
+java:S1481,5,5,CLEAR,Remove this unused "object1" local variable.,null,
+java:S1481,7,7,CLEAR,Remove this unused "object2" local variable.,null,
+java:S1481,9,9,CLEAR,Remove this unused "object3" local variable.,null,

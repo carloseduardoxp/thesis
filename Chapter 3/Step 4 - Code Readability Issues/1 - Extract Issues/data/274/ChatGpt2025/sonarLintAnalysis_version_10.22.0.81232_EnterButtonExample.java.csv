@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3252,7,7,CLEAR,Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".,null,
+java:S1602,14,14,CLEAR,Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S106,15,15,MODULAR,Replace this use of System.out by a logger.,null,

@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1118,7,7,CLEAR,Add a private constructor to hide the implicit public one.,null,
+java:S2093,15,15,CONVENTIONAL,Change this "try" to a try-with-resources. (sonar.java.source not set. Assuming 7 or greater.),null,

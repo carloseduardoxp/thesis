@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S117,6,6,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2293,6,6,CLEAR,Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.),null,
+java:S1854,12,12,LOGICAL,Remove this useless assignment to local variable "array".,null,

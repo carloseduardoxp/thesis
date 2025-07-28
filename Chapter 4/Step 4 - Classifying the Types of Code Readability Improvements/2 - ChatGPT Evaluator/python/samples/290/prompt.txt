@@ -1,0 +1,9 @@
+Based on this pull request with the developer description: I refactorized the code to distinguish more easily between forward passes at inference time and forwards passes at train time., the code was changed by the developer from if train:             all_params = {'params':params, 'batch_stats':batch_stats}             logits, batch_stats = net.apply(all_params, x, True, mutable=['batch_stats'])         else:             logits = net.apply({'params':params, 'batch_stats':batch_stats}, x, False) (if dont have code before, the code wasnt exist yet) to @jax.jit
+     def test_loss_and_accuracy(params, batch_stats, l2reg, data):
+         """Return testing loss and accuracy."""
+         all_vars = {"params":params, "batch_stats":batch_stats}
+         images, labels = data
+         logits = predict(all_vars, images, train=False)
+         accuracy = jnp.mean(jnp.argmax(logits, axis=-1) == labels)
+         loss = loss_from_logits(logits, labels, l2reg)
+         return loss, accuracy, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

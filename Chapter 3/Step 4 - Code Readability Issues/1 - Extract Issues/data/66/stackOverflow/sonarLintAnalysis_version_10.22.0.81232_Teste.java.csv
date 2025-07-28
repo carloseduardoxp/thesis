@@ -1,0 +1,10 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2293,8,8,CLEAR,Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.),null,
+java:S2293,10,10,CLEAR,Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.),null,
+java:S2293,11,11,CLEAR,Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.),null,
+java:S3740,10,10,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S3740,10,10,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S3740,11,11,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S1854,8,8,LOGICAL,Remove this useless assignment to local variable "l".,null,
+java:S1481,8,8,CLEAR,Remove this unused "l" local variable.,null,

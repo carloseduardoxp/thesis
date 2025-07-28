@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,6,6,LOGICAL,Remove this useless assignment to local variable "obj".,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "message".,null,
+java:S1854,4,4,LOGICAL,Remove this useless assignment to local variable "x".,null,
+java:S1481,4,4,CLEAR,Remove this unused "x" local variable.,null,
+java:S1481,5,5,CLEAR,Remove this unused "message" local variable.,null,
+java:S1481,6,6,CLEAR,Remove this unused "obj" local variable.,null,
+java:S106,12,12,MODULAR,Replace this use of System.out by a logger.,null,
+java:S125,18,18,CLEAR,This block of commented-out lines of code should be removed.,null,
+java:S2094,23,23,CLEAR,Remove this empty class, write its code or make it an "interface".,null,
+java:S125,28,28,CLEAR,This block of commented-out lines of code should be removed.,null,

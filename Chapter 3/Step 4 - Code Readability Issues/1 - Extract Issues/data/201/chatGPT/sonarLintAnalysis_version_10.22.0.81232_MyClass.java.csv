@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1104,3,3,MODULAR,Make myGlobalVariable a static final constant or non-public and provide accessors if needed.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1444,3,3,MODULAR,Make this "public static myGlobalVariable" field final,null,
+java:S106,7,7,MODULAR,Replace this use of System.out by a logger.,null,

@@ -1,0 +1,13 @@
+Given the following Java code snippet:
+public class Singleton {
+    public static final Singleton instance = new Singleton();
+    private Singleton() {}
+    public void foo() {}
+
+    public static void main(String[] args) {
+        Singleton.instance.foo();
+    }
+}
+
+the following improvements are recommended: rule key = java:S1186 message = Add a nested comment explaining why this method is empty, start line = 4, end line = 4.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

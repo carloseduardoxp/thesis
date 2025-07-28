@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,13,13,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,14,14,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2209,14,14,CLEAR,Change this instance-reference to a static reference.,null,
+java:S106,15,15,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2209,15,15,CLEAR,Change this instance-reference to a static reference.,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2209,16,16,CLEAR,Change this instance-reference to a static reference.,null,

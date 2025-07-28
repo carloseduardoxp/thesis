@@ -1,0 +1,10 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2094,7,7,CLEAR,Remove this empty class, write its code or make it an "interface".,null,
+java:S2326,7,7,CLEAR,T is not used in the class.,null,
+java:S2326,8,8,CLEAR,T is not used in the interface.,null,
+java:S2326,8,8,CLEAR,U is not used in the interface.,null,
+java:S106,17,17,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,26,26,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,27,27,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1128,3,3,CLEAR,Remove this unused import 'java.util.List'.,null,

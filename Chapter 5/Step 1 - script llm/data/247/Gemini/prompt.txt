@@ -1,0 +1,37 @@
+Given the following Java code snippet:
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+class SuperClass {
+    void doSomething() throws IOException {
+        System.out.println("SuperClass doing something.");
+    }
+}
+
+class SubClass extends SuperClass {
+    @Override
+    void doSomething() throws FileNotFoundException { // OK: FileNotFoundException is a subclass of IOException
+        System.out.println("SubClass doing something.");
+        throw new FileNotFoundException("File not found in SubClass");
+    }
+}
+
+class AnotherSubClass extends SuperClass {
+    @Override
+    void doSomething() { // OK: Can choose not to throw any checked exception
+        System.out.println("AnotherSubClass doing something.");
+    }
+}
+
+class InvalidSubClass extends SuperClass {
+    // This would cause a compile-time error
+    // @Override
+    // void doSomething() throws Exception { // ERROR: Exception is broader than IOException
+    //     System.out.println("InvalidSubClass doing something.");
+    // }
+}
+
+
+the following improvements are recommended: rule key = java:S1130 message = Remove the declaration of thrown exception 'java.io.IOException', start line = 6, end line = 6, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 30, end line = 30, rule key = java:S1130 message = Remove the declaration of thrown exception 'java.io.IOException', start line = 6, end line = 6, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 30, end line = 30.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

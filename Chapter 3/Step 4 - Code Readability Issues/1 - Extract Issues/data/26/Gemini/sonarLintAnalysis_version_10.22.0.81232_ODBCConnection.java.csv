@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S4925,12,12,CLEAR,Remove this "Class.forName()", it is useless. (sonar.java.source not set. Assuming 6 or greater.),null,
+java:S2115,15,15,TRUSTWORTHY,Add password protection to this database.,null,
+java:S106,18,18,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,22,22,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,26,26,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,28,28,MODULAR,Replace this use of System.err by a logger.,null,

@@ -1,0 +1,18 @@
+Given the following Java code snippet:
+import java.util.*;
+
+public class Teste {
+
+    public static void main(String[] args) {        
+        ArrayList<Integer[]> snake_parts = new ArrayList<Integer[]>();
+        snake_parts.add(new Integer[]{1,2});
+        snake_parts.add(new Integer[]{3,4});
+        snake_parts.add(new Integer[]{5,6});
+        snake_parts.add(0,new Integer[]{0,0});
+        int[][] array= new int[snake_parts.size()][];
+        array = snake_parts.toArray(array);
+    }
+}
+
+the following improvements are recommended: rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 6, end line = 6, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 6, end line = 6, rule key = java:S1854 message = Remove this useless assignment to local variable "array"., start line = 12, end line = 12, rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 6, end line = 6, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 6, end line = 6, rule key = java:S1854 message = Remove this useless assignment to local variable "array"., start line = 12, end line = 12, rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 6, end line = 6, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 6, end line = 6, rule key = java:S1854 message = Remove this useless assignment to local variable "array"., start line = 12, end line = 12.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

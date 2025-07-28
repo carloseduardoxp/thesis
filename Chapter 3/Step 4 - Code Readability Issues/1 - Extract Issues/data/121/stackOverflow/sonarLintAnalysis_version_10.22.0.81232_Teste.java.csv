@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S117,10,10,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S117,14,14,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S117,19,19,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1643,34,34,EFFICIENT,Use a StringBuilder instead.,null,
+java:S1149,40,40,CONVENTIONAL,Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".,null,
+java:S1149,49,49,CONVENTIONAL,Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".,null,
+java:S4719,9,9,CONVENTIONAL,Replace charset name argument with StandardCharsets.UTF_8,null,
+java:S4719,19,19,CONVENTIONAL,Replace charset name argument with StandardCharsets.UTF_8,null,
+java:S1135,23,23,COMPLETE,Complete the task associated to this TODO comment.,null,
+java:S1135,30,30,COMPLETE,Complete the task associated to this TODO comment.,null,

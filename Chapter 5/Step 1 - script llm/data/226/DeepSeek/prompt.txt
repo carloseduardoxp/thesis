@@ -1,0 +1,25 @@
+Given the following Java code snippet:
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        SAXParserFactory factory = SAXParserFactory.newInstance();
+        factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+        factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
+        factory.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+        SAXParser parser = factory.newSAXParser();
+
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+        dbf.setFeature("http://xml.org/sax/features/external-general-entities", false);
+        dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+        DocumentBuilder db = dbf.newDocumentBuilder();
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "db"., start line = 16, end line = 16, rule key = java:S1854 message = Remove this useless assignment to local variable "parser"., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "parser" local variable., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "db" local variable., start line = 16, end line = 16, rule key = java:S1854 message = Remove this useless assignment to local variable "db"., start line = 16, end line = 16, rule key = java:S1854 message = Remove this useless assignment to local variable "parser"., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "parser" local variable., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "db" local variable., start line = 16, end line = 16.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

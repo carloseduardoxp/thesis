@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S5993,21,21,CLEAR,Change the visibility of this constructor to "protected".,null,
+java:S2142,71,71,COMPLETE,Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.,null,
+java:S106,87,87,MODULAR,Replace this use of System.out by a logger.,null,

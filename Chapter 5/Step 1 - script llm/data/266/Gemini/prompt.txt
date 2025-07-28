@@ -1,0 +1,37 @@
+Given the following Java code snippet:
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook; // For .xls files
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class ExcelColumnsExample {
+
+    public static void main(String[] args) {
+        // Choose between HSSFWorkbook (for .xls) or XSSFWorkbook (for .xlsx)
+        // Workbook workbook = new HSSFWorkbook();
+        Workbook workbook = new XSSFWorkbook();
+
+        Sheet sheet = workbook.createSheet("Column Data");
+
+        // ... (add your column operations here)
+
+        try (FileOutputStream outputStream = new FileOutputStream("ColumnsExample.xlsx")) {
+            workbook.write(outputStream);
+            System.out.println("Excel file created successfully!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                workbook.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 12, end line = 12, rule key = java:S1481 message = Remove this unused "sheet" local variable., start line = 15, end line = 15, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 12, end line = 12, rule key = java:S1481 message = Remove this unused "sheet" local variable., start line = 15, end line = 15.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

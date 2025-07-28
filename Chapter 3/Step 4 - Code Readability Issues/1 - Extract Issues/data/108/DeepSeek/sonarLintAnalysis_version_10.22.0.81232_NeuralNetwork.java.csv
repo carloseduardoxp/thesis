@@ -1,0 +1,3 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1068,12,12,CLEAR,Remove this unused "learningRate" private field.,null,

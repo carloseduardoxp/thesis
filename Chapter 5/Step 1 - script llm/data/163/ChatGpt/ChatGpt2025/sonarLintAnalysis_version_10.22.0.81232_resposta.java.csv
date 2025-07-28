@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,3,3,LOGICAL,Remove this useless assignment to local variable "num".,null,
+java:S1481,3,3,CLEAR,Remove this unused "num" local variable.,null,

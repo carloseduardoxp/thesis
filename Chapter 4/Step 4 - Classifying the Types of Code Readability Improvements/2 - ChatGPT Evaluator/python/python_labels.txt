@@ -1,0 +1,58 @@
+Add Default Argument
+Add Parentheses for Clarity
+Apply Early Return
+Break Complex Ternary Expressions
+Clarify Comments and docstring
+Clarify Numeric Constants
+Clarify Positional Indexing
+Clarify Test Intent
+Collapse Boolean Return
+Disable Pylint warning
+Encapsulate Private Logic
+Extract Constants into Local Variables
+Extract Field into Local Variable
+Extract Lambda into a Named Function
+Extract Literals to Constants
+Extract logic to Dataclass
+Extract Method from Large Function
+Extract Variable
+Format Spacing (Python Black)
+Group Related Values into Named Structures
+Improve codacy
+Improve Naming
+Improve Regex
+Improve String Formatting
+Include Modifiers and Annotations
+Include New Comments and docstrings
+Include type hints and name parameters
+Inline Temporary Variable
+Limit Line Length
+Move logic to another file
+Prefer Built-in methods
+Prefer Idiomatic Conditions
+Prefer Idiomatic Iteration
+Prefer One Statement Per Line
+Prefer Positive Conditions
+Prefer Specific Exception Handling
+Prefer Structured Resource Management
+Reduce Conditional Nesting
+Remove Commented Code
+Remove Duplicate Code
+Remove Unnecessary Comments
+remove unused field or variable
+Remove Unused Imports
+Remove Unused Method/ chunk of code
+Remove Unused Try/Catch
+Remove Useless Constant
+Remove Useless Parameter
+Reorder Elements
+Replace Duck Typing with Explicit Type Check
+Replace Generic with Specialized API
+Replace Lookup with Dict
+Replace while with for
+Simplify Import Statements
+Simplify Object Construction and Conversion
+Unwrap unnecessary else
+Use Enumerate
+Use Native Type Annotations
+Use Pep 8 standard guidelines

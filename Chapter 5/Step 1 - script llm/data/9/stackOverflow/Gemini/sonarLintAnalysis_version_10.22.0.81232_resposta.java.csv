@@ -1,0 +1,3 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,9,9,LOGICAL,Remove this useless assignment to local variable "items".,null,

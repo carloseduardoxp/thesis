@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: I've improved the readability of the imports from pyparsing and the `grammar()` function., the code was changed by the developer from return OneOrMore(comment_def | create_table_def | add_fkey_def | other_statement_def) (if dont have code before, the code wasnt exist yet) to return OneOrMore(
+         comment_def
+         | create_table_def
+         | add_fkey_def
+         | other_statement_def
+     ), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

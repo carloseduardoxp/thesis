@@ -1,0 +1,50 @@
+Given the following Java code snippet:
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class TextFieldButtonExample extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        // Create the TextField and Button
+        TextField textField = new TextField();
+        Button button = new Button("Click Me");
+        
+        // Set action for the button
+        button.setOnAction(event -> {
+            String text = textField.getText(); // Get text from TextField
+            System.out.println("Text entered: " + text);
+            // You can perform any action with the text here
+        });
+        
+        // Alternatively, you can use a method reference:
+        // button.setOnAction(this::handleButtonClick);
+        
+        // Create layout and add controls
+        VBox root = new VBox(10, textField, button);
+        
+        // Set up the scene and stage
+        Scene scene = new Scene(root, 300, 200);
+        primaryStage.setTitle("TextField and Button Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    
+    // Alternative handler method
+    private void handleButtonClick(ActionEvent event) {
+        // You would need access to the TextField here
+        // Could be an instance variable or passed to this method
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1144 message = Remove this unused private "handleButtonClick" method., start line = 37, end line = 37, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 24, end line = 24, rule key = java:S1172 message = Remove this unused method parameter "event"., start line = 37, end line = 37, rule key = java:S1144 message = Remove this unused private "handleButtonClick" method., start line = 37, end line = 37, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 24, end line = 24, rule key = java:S1172 message = Remove this unused method parameter "event"., start line = 37, end line = 37, rule key = java:S1144 message = Remove this unused private "handleButtonClick" method., start line = 37, end line = 37, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 24, end line = 24, rule key = java:S1172 message = Remove this unused method parameter "event"., start line = 37, end line = 37.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

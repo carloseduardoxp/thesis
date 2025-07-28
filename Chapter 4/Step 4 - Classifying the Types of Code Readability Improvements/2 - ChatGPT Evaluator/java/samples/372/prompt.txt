@@ -1,0 +1,15 @@
+Based on this pull request with the developer description: Improve readability and simplify the code. Config is a value object and has a builder. There is no need to use a mock here., the code was changed by the developer from Config config = mock(Config.class);
+ 
+         when(config.getPluginDir()).thenReturn(refDir);
+         when(config.getJenkinsWar()).thenReturn(Settings.DEFAULT_WAR);
+         when(config.getJenkinsUc()).thenReturn(Settings.DEFAULT_UPDATE_CENTER);
+         when(config.getPlugins()).thenReturn(new ArrayList<Plugin>());
+         when(config.doDownload()).thenReturn(true);
+         when(config.getJenkinsUcExperimental()).thenReturn(Settings.DEFAULT_EXPERIMENTAL_UPDATE_CENTER); (if dont have code before, the code wasnt exist yet) to Config config = Config.builder()
+                 .withPluginDir(refDir)
+                 .withJenkinsWar(Settings.DEFAULT_WAR)
+                 .withJenkinsUc(Settings.DEFAULT_UPDATE_CENTER)
+                 .withPlugins(new ArrayList<>())
+                 .withDoDownload(true)
+                 .withJenkinsUcExperimental(Settings.DEFAULT_EXPERIMENTAL_UPDATE_CENTER)
+                 .build();, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,33 @@
+Given the following Java code snippet:
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLEngine;
+import javax.net.ssl.SSLParameters;
+
+public class TlsDisableExample {
+    public static void main(String[] args) throws Exception {
+        // Option 1: Create an SSLContext that only supports TLSv1.2
+        SSLContext context = SSLContext.getInstance("TLSv1.2");
+        context.init(null, null, null); // Use default KeyManager and TrustManager
+
+        // When creating SSLSockets or SSLEngines from this context,
+        // they will default to TLSv1.2.
+        SSLSocket socket = (SSLSocket) context.getSocketFactory().createSocket("example.com", 443);
+        // Or for SSLEngine:
+        // SSLEngine engine = context.createSSLEngine("example.com", 443);
+
+        // Option 2: Explicitly set enabled protocols on an existing SSLSocket/SSLEngine
+        // (if you didn't create it with a specific SSLContext)
+        SSLSocket anotherSocket = new SSLSocket(); // Or get from an existing connection
+        anotherSocket.setEnabledProtocols(new String[]{"TLSv1.2"});
+
+        // Option 3: Using SSLParameters
+        SSLParameters sslParameters = new SSLParameters();
+        sslParameters.setProtocols(new String[]{"TLSv1.2"});
+        anotherSocket.setSSLParameters(sslParameters);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1192 message = Define a constant instead of duplicating this literal "TLSv1.2" 3 times., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "socket"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "socket" local variable., start line = 14, end line = 14, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 16, end line = 16, rule key = java:S1192 message = Define a constant instead of duplicating this literal "TLSv1.2" 3 times., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "socket"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "socket" local variable., start line = 14, end line = 14, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 16, end line = 16, rule key = java:S1192 message = Define a constant instead of duplicating this literal "TLSv1.2" 3 times., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "socket"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "socket" local variable., start line = 14, end line = 14, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 16, end line = 16, rule key = java:S1192 message = Define a constant instead of duplicating this literal "TLSv1.2" 3 times., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "socket"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "socket" local variable., start line = 14, end line = 14, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 16, end line = 16.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,24 @@
+Given the following Java code snippet:
+public class TowersOfHanoi {
+    public static void main(String[] args) {
+        int n = 3; // Number of disks
+        char from = 'A', to = 'C', aux = 'B'; // Pegs
+        
+        System.out.println("Moves:");
+        moveDisks(n, from, to, aux);
+    }
+    
+    public static void moveDisks(int n, char from, char to, char aux) {
+        if (n == 1) {
+            System.out.println(from + " -> " + to);
+        } else {
+            moveDisks(n-1, from, aux, to);
+            System.out.println(from + " -> " + to);
+            moveDisks(n-1, aux, to, from);
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1659 message = Declare "to" and all following declarations on a separate line., start line = 4, end line = 4, rule key = java:S2234 message = Parameters to moveDisks have the same names but not the same order as the method arguments., start line = 14, end line = 14, rule key = java:S2234 message = Parameters to moveDisks have the same names but not the same order as the method arguments., start line = 16, end line = 16, rule key = java:S1659 message = Declare "to" and all following declarations on a separate line., start line = 4, end line = 4, rule key = java:S2234 message = Parameters to moveDisks have the same names but not the same order as the method arguments., start line = 14, end line = 14, rule key = java:S2234 message = Parameters to moveDisks have the same names but not the same order as the method arguments., start line = 16, end line = 16.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

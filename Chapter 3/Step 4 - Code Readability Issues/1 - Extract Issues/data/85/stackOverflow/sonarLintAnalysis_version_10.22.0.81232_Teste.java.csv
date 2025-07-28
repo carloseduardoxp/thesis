@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S117,9,9,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S117,9,9,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1118,7,7,CLEAR,Add a private constructor to hide the implicit public one.,null,
+java:S125,18,18,CLEAR,This block of commented-out lines of code should be removed.,null,
+java:S106,29,29,MODULAR,Replace this use of System.out by a logger.,null,
+java:S125,56,56,CLEAR,This block of commented-out lines of code should be removed.,null,

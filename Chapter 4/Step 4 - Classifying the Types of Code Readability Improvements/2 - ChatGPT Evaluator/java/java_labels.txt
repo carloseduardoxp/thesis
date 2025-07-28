@@ -1,0 +1,61 @@
+Add a break to a for loop
+Apply Early Return
+Clarify Comments and Javadoc
+Clarify Numeric Constants
+Clarify Test Intent
+Collapse Boolean Return
+Encapsulate Private Logic
+Explicit Imports
+Extract Class to Separate Package
+Extract field into local variable
+Extract Literals to Constants
+Extract Literals to Enumerated Values
+Extract method from large function
+Extract Variable
+Favour Diamond Operators
+Improve Naming
+Improve String Formatting
+Include Modifiers and Annotations
+Include New Comments and Javadoc
+Inline Lambda Block
+Inline Temporary Variable
+Introduce Named Overloads
+Limit Line Length
+Make generics explicit in type checks
+Move logic to another file
+Prefer Built-in Methods
+Prefer Idiomatic Conditions
+Prefer Idiomatic Iteration
+Prefer One Statement Per Line
+Prefer Positive Conditions
+prefer specific exception handling
+Prefer Structured Resource Management
+Reduce Conditional Nesting
+Refactor to Lombok
+Remove Commented Code
+Remove Duplicate Code
+Remove unnecessary annotation or modifier
+Remove unnecessary Throws
+Remove Unused Field or Variable
+Remove Unused Imports
+Remove Unused Method/ chunk of code
+Remove Unused Try/Catch
+Remove Useless Parameter
+Reorder Elements
+Replace Anonymous Class With Functional Style
+Replace Condition with ternary
+Replace Deprecated Code
+Replace for loop or iterator with for-each
+Replace Generic with Specialized API
+Replace If-Else with Switch
+Replace Lambda With Method Reference
+Replace Null-check with Annotation
+Replace Switch with If-Else
+Replace Ternary with If-Else
+Simplify Import Statements
+Simplify Object Construction and Conversion
+Standardize Indentation
+Unwrap unnecessary else
+Use abstract type
+Use Builder Pattern
+Use domain-specific types to clarify intent

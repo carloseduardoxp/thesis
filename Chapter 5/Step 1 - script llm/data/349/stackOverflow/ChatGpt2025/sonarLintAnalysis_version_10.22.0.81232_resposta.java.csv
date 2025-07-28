@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S5738,5,5,COMPLETE,Remove this call to a deprecated class, it has been marked for removal.,null,
+java:S1161,11,11,CLEAR,Add the "@Override" annotation above this method signature,null,
+java:S1161,31,31,CLEAR,Add the "@Override" annotation above this method signature,null,

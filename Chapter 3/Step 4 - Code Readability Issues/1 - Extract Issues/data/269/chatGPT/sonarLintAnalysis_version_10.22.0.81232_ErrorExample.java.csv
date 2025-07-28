@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "a".,null,
+java:S1181,6,6,CONVENTIONAL,Catch Exception instead of Error.,null,
+java:S1481,5,5,CLEAR,Remove this unused "a" local variable.,null,
+java:S106,8,8,MODULAR,Replace this use of System.err by a logger.,null,

@@ -1,0 +1,30 @@
+Given the following Java code snippet:
+import java.util.concurrent.CompletableFuture;
+
+public class AsyncSendExample {
+    public static void main(String[] args) {
+        CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
+            sendData();
+        });
+
+        // You can do other tasks here...
+
+        // Optionally wait for completion
+        future.join();
+    }
+
+    public static void sendData() {
+        System.out.println("Sending data asynchronously...");
+        // Simulate sending data (e.g., HTTP request, socket send)
+        try {
+            Thread.sleep(2000); // simulate delay
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Data sent!");
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 5, end line = 5, rule key = java:S1612 message = Replace this lambda with method reference 'AsyncSendExample::sendData'. (sonar.java.source not set. Assuming 8 or greater.), start line = 5, end line = 5, rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 5, end line = 5, rule key = java:S1612 message = Replace this lambda with method reference 'AsyncSendExample::sendData'. (sonar.java.source not set. Assuming 8 or greater.), start line = 5, end line = 5.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

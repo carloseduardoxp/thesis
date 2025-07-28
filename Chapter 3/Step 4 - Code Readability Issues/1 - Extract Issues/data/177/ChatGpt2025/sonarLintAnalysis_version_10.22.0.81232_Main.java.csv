@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1135,9,9,COMPLETE,Complete the task associated to this TODO comment.,null,
+java:S106,18,18,MODULAR,Replace this use of System.out by a logger.,null,

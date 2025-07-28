@@ -1,0 +1,12 @@
+Given the following Java code snippet:
+public class Teste {
+
+   public static void main(String[] args) {
+        StringBuilder stringName = new StringBuilder();
+        String reverse = stringName.reverse().toString();
+   }
+   
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "reverse"., start line = 5, end line = 5, rule key = java:S1481 message = Remove this unused "reverse" local variable., start line = 5, end line = 5, rule key = java:S1854 message = Remove this useless assignment to local variable "reverse"., start line = 5, end line = 5, rule key = java:S1481 message = Remove this unused "reverse" local variable., start line = 5, end line = 5.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

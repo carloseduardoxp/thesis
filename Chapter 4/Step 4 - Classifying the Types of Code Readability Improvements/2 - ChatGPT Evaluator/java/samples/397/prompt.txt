@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Add in code comments., the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to /**
+  * Base class and interface for process controller, process parameter controller and status bar
+  */, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

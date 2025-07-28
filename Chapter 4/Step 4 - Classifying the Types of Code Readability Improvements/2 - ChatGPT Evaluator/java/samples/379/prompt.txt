@@ -1,0 +1,5 @@
+Based on this pull request with the developer description: Add Comments, the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to /**
+  * This class is a client for the User Registration Admin Service.
+  * It provides methods to perform operations like adding a new user,
+  * checking if a user exists, and reading user fields for user registration.
+  */, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

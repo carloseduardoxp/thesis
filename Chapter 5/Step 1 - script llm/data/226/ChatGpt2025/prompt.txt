@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+
+public class Chat {
+
+    public static void main(String[] args) {
+
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+
+        dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+        dbf.setFeature("http://xml.org/sax/features/external-general-entities", false);
+        dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+        dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+
+        dbf.setXIncludeAware(false);
+        dbf.setExpandEntityReferences(false);
+
+        DocumentBuilder db = dbf.newDocumentBuilder();
+        Document doc = db.parse(inputStream);
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "doc"., start line = 17, end line = 17, rule key = java:S1481 message = Remove this unused "doc" local variable., start line = 17, end line = 17, rule key = java:S1854 message = Remove this useless assignment to local variable "doc"., start line = 17, end line = 17, rule key = java:S1481 message = Remove this unused "doc" local variable., start line = 17, end line = 17.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

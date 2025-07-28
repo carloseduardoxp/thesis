@@ -1,0 +1,7 @@
+Based on this pull request with the developer description: Module thumbor.config  thumbor/config.py:914:12: R1713: Consider using str.join(sequence) for concatenating strings from an iterable (consider-using-join), the code was changed by the developer from representation = "[\n"
+         for item in value:
+             representation += (  # pylint: disable=consider-using-join
+                 f"#    {item}"
+             )
+         representation += "#]"
+         return representation (if dont have code before, the code wasnt exist yet) to return "[\n" + "".join(f"#    {item}" for item in value) + "#]", (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

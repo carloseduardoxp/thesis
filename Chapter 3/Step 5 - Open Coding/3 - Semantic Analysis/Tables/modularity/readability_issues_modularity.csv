@@ -1,0 +1,9 @@
+rule_key,stackoverflow_code_snippets,stackoverflow_instancias,chatgpt_code_snippets,chatgpt_instancias,chatgpt2025_code_snippets,chatgpt2025_instancias,deepseek_code_snippets,deepseek_instancias,Gemini_code_snippets,Gemini_instancias
+java:S135,1,1,2,2,0,0,0,0,1,1
+java:S1450,1,1,2,2,2,3,1,1,1,1
+java:S1479,1,2,0,0,0,0,0,0,0,0
+java:S3776,2,4,0,0,1,1,0,0,5,5
+java:S6541,1,1,0,0,0,0,0,0,0,0
+TOTAL_LIMIT_VARIABLE_SCOPE,1,1,2,2,2,3,1,1,1,1
+TOTAL_REFACTOR_COMPLEX_LOGIC,3,8,2,2,1,1,0,0,5,6
+TOTAL_GERAL,4,9,4,4,3,4,1,1,6,7

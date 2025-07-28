@@ -1,0 +1,8 @@
+Based on this pull request with the developer description: Include comments, the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to /**
+  * This class implements the Longest Common Subsequence (LCS) problem.
+  * The LCS of two sequences is the longest sequence that appears in both
+  * sequences
+  * in the same order, but not necessarily consecutively.
+  *
+  * This implementation uses dynamic programming to find the LCS of two strings.
+  */, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

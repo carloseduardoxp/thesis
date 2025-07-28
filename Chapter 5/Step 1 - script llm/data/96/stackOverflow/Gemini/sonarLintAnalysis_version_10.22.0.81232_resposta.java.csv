@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,8,8,LOGICAL,Remove this useless assignment to local variable "b".,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "a".,null,
+java:S1481,7,7,CLEAR,Remove this unused "a" local variable.,null,
+java:S1481,8,8,CLEAR,Remove this unused "b" local variable.,null,

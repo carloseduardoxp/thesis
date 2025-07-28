@@ -1,0 +1,22 @@
+Based on this pull request with the developer description: Extract a named class from this lambda, the code was changed by the developer from return (params) -> new TemplateScript(params) {
+                     @Override
+                     public String execute() {
+                         return propertyValue;
+                     }
+                 }; (if dont have code before, the code wasnt exist yet) to return new ConstantTemplateScriptFactory(propertyValue);  public static class ConstantTemplateScriptFactory implements TemplateScript.Factory {
+         final TemplateScript script;
+ 
+         private ConstantTemplateScriptFactory(String value) {
+             this.script = new TemplateScript(Map.of()) {
+                 @Override
+                 public String execute() {
+                     return value;
+                 }
+             };
+         }
+ 
+         @Override
+         public TemplateScript newInstance(Map<String, Object> params) {
+             return script;
+         }
+     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

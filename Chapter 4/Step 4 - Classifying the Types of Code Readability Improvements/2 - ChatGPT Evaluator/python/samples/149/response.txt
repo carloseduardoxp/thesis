@@ -1,0 +1,1 @@
+Replace Duck Typing with Explicit Type Check

@@ -1,0 +1,18 @@
+Given the following Java code snippet:
+public class RemoveNumbers {
+    public static void main(String[] args) {
+        String originalString = "Hello123World456Java789";
+        String stringWithoutNumbers = originalString.replaceAll("[0-9]", "");
+        System.out.println("Original String: " + originalString);
+        System.out.println("String without numbers: " + stringWithoutNumbers);
+
+        String anotherString = "123TestString456with789numbers";
+        String anotherStringWithoutNumbers = anotherString.replaceAll("[0-9]", "");
+        System.out.println("Original String: " + anotherString);
+        System.out.println("String without numbers: " + anotherStringWithoutNumbers);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 4, end line = 4, rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 9, end line = 9.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,10 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,16,16,LOGICAL,Remove this useless assignment to local variable "roundedD1".,null,
+java:S1854,13,13,LOGICAL,Remove this useless assignment to local variable "roundedF3".,null,
+java:S1854,10,10,LOGICAL,Remove this useless assignment to local variable "roundedF2".,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "roundedF1".,null,
+java:S1481,7,7,CLEAR,Remove this unused "roundedF1" local variable.,null,
+java:S1481,10,10,CLEAR,Remove this unused "roundedF2" local variable.,null,
+java:S1481,13,13,CLEAR,Remove this unused "roundedF3" local variable.,null,
+java:S1481,16,16,CLEAR,Remove this unused "roundedD1" local variable.,null,

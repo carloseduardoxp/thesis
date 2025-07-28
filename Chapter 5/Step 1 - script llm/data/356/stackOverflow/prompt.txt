@@ -1,0 +1,33 @@
+Given the following Java code snippet:
+
+import javax.naming.Context;
+import javax.swing.Box;
+
+public class Teste {
+
+    @Override
+    public void onAsyncOperationCompleted(AsyncOperation operation) {
+        String operationIs = null;
+
+        switch (operation.getType()) {
+
+            case LoadAll:
+                itemsList = BoxRepository.getAllBoxes(getApplicationContext());
+
+        }
+    }
+}
+
+class BoxRepository {
+
+    public static void getAllBoxes(Context context, AsyncOperationListener listener) {
+        AsyncSession asyncSession = App.getInstance().daoSession.startAsyncSession();
+        asyncSession.setListener(listener);
+        asyncSession.loadAll(Box.class);
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1481 message = Remove this unused "operationIs" local variable., start line = 9, end line = 9, rule key = java:S1301 message = Replace this "switch" statement by "if" statements to increase readability., start line = 11, end line = 11, rule key = java:S1172 message = Remove this unused method parameter "context"., start line = 22, end line = 22, rule key = java:S1481 message = Remove this unused "operationIs" local variable., start line = 9, end line = 9, rule key = java:S1301 message = Replace this "switch" statement by "if" statements to increase readability., start line = 11, end line = 11, rule key = java:S1172 message = Remove this unused method parameter "context"., start line = 22, end line = 22, rule key = java:S1481 message = Remove this unused "operationIs" local variable., start line = 9, end line = 9, rule key = java:S1301 message = Replace this "switch" statement by "if" statements to increase readability., start line = 11, end line = 11, rule key = java:S1172 message = Remove this unused method parameter "context"., start line = 22, end line = 22.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

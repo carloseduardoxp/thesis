@@ -1,0 +1,157 @@
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+/**
+ * A simple custom list implementation for strings.
+ * This class implements the Iterable interface, allowing it to be used
+ * in enhanced for-each loops.
+ */
+class MyStringList implements Iterable<String> {
+    private String[] elements;
+    private int size;
+    private static final int DEFAULT_CAPACITY = 10;
+
+    /**
+     * Constructs an empty MyStringList with a default capacity.
+     */
+    public MyStringList() {
+        this.elements = new String[DEFAULT_CAPACITY];
+        this.size = 0;
+    }
+
+    /**
+     * Adds a string element to the list.
+     * If the internal array is full, it doubles its capacity.
+     * @param element The string to add.
+     */
+    public void add(String element) {
+        if (size == elements.length) {
+            // Double the capacity if the array is full
+            String[] newElements = new String[elements.length * 2];
+            System.arraycopy(elements, 0, newElements, 0, size);
+            elements = newElements;
+        }
+        elements[size++] = element;
+    }
+
+    /**
+     * Returns the element at the specified position in this list.
+     * @param index The index of the element to return.
+     * @return The element at the specified index.
+     * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size).
+     */
+    public String get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+        return elements[index];
+    }
+
+    /**
+     * Returns the number of elements in this list.
+     * @return The number of elements.
+     */
+    public int size() {
+        return size;
+    }
+
+    /**
+     * Returns an iterator over the elements in this list in proper sequence.
+     * This method is required by the Iterable interface.
+     * @return An iterator.
+     */
+    @Override
+    public Iterator<String> iterator() {
+        return new MyStringListIterator();
+    }
+
+    /**
+     * Inner class implementing the Iterator interface for MyStringList.
+     * This iterator provides sequential access to the elements of MyStringList.
+     */
+    private class MyStringListIterator implements Iterator<String> {
+        private int currentIndex = 0; // Tracks the current position of the iterator
+
+        /**
+         * Returns true if the iteration has more elements.
+         * (In other words, returns true if next would return an element rather than throwing an exception.)
+         * @return true if the iteration has more elements.
+         */
+        @Override
+        public boolean hasNext() {
+            return currentIndex < size; // Check if the current index is within the bounds of the list's size
+        }
+
+        /**
+         * Returns the next element in the iteration.
+         * @return The next element in the iteration.
+         * @throws NoSuchElementException if the iteration has no more elements.
+         */
+        @Override
+        public String next() {
+            if (!hasNext()) {
+                // If there are no more elements, throw an exception
+                throw new NoSuchElementException();
+            }
+            // Return the element at the current index and then increment the index
+            return elements[currentIndex++];
+        }
+
+        /**
+         * Removes from the underlying collection the last element returned by this iterator (optional operation).
+         * This implementation does not support removal and will throw an UnsupportedOperationException.
+         * @throws UnsupportedOperationException if the remove operation is not supported by this iterator.
+         */
+        @Override
+        public void remove() {
+            // For simplicity, we are not supporting the remove operation in this custom iterator.
+            // If you wanted to support it, you would need to implement logic to shift elements
+            // in the underlying array after removal.
+            throw new UnsupportedOperationException("Remove operation is not supported.");
+        }
+    }
+
+    /**
+     * Main method to demonstrate the custom iterator.
+     */
+    public static void main(String[] args) {
+        MyStringList myList = new MyStringList();
+        myList.add("Apple");
+        myList.add("Banana");
+        myList.add("Cherry");
+        myList.add("Date");
+
+        System.out.println("Iterating using enhanced for-each loop:");
+        // Because MyStringList implements Iterable, we can use an enhanced for-each loop
+        for (String fruit : myList) {
+            System.out.println(fruit);
+        }
+
+        System.out.println("\nIterating using Iterator explicitly:");
+        // Get the iterator explicitly
+        Iterator<String> iterator = myList.iterator();
+        while (iterator.hasNext()) {
+            String fruit = iterator.next();
+            System.out.println(fruit);
+        }
+
+        System.out.println("\nDemonstrating NoSuchElementException (will not be thrown in normal flow):");
+        try {
+            // This will throw NoSuchElementException as there are no elements
+            // (code removed as per recommendation)
+        } catch (NoSuchElementException e) {
+            System.out.println("Caught expected exception: " + e.getMessage());
+        }
+
+        System.out.println("\nDemonstrating UnsupportedOperationException for remove():");
+        Iterator<String> removeDemoIterator = myList.iterator();
+        if (removeDemoIterator.hasNext()) {
+            removeDemoIterator.next(); // Move to the first element
+            try {
+                removeDemoIterator.remove(); // Attempt to remove
+            } catch (UnsupportedOperationException e) {
+                System.out.println("Caught expected exception: " + e.getMessage());
+            }
+        }
+    }
+}

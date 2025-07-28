@@ -1,0 +1,13 @@
+Given the following Java code snippet:
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        ParentClassOrInterface obj = new ParentClassOrInterface() {
+            // class body - method implementations or new methods
+        };
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "obj"., start line = 5, end line = 7, rule key = java:S1481 message = Remove this unused "obj" local variable., start line = 5, end line = 5, rule key = java:S1854 message = Remove this useless assignment to local variable "obj"., start line = 5, end line = 7, rule key = java:S1481 message = Remove this unused "obj" local variable., start line = 5, end line = 5.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S2184,54,54,CLEAR,Cast one of the operands of this multiplication operation to a "long".,null,
+java:S2184,55,55,CLEAR,Cast one of the operands of this multiplication operation to a "long".,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1161,25,25,CLEAR,Add the "@Override" annotation above this method signature,null,
+java:S1161,45,45,CLEAR,Add the "@Override" annotation above this method signature,null,
+java:S1201,49,49,CLEAR,Either override Object.equals(Object), or rename the method to prevent any confusion.,null,

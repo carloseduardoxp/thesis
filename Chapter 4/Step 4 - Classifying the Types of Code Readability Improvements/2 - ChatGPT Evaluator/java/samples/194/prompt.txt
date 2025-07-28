@@ -1,0 +1,7 @@
+Based on this pull request with the developer description: introduce lambdas, the code was changed by the developer from r.executeOnServer(new Callable<Object>() {
+             public Object call() throws Exception {
+                 assertFalse("Shouldn't be accessible to anonymous user",b.hasPermission(action.getPermission()));
+                 return null;
+             } (if dont have code before, the code wasnt exist yet) to r.executeOnServer(() -> {
+             assertFalse("Shouldn't be accessible to anonymous user",b.hasPermission(action.getPermission()));
+             return null;, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

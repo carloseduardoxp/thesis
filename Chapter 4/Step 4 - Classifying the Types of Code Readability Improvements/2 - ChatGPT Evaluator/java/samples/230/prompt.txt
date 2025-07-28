@@ -1,0 +1,2 @@
+Based on this pull request with the developer description: Use try-resource., the code was changed by the developer from try {
+       in = fs.open(sourceFile); (if dont have code before, the code wasnt exist yet) to try (FSDataInputStream in = fs.open(sourceFile)) {, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

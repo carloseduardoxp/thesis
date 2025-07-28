@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+import akka.cluster.Cluster;
+import akka.cluster.ClusterEvent;
+import akka.cluster.Member;
+import akka.cluster.MemberStatus;
+
+public class ClusterApp {
+
+    public static void main(String[] args) {
+        Cluster cluster = Cluster.get(context().system());
+        SortedSet<Member> members = cluster.state().members();
+        Traversable<Member> filteredmembers = members.filter(__.status == MemberStatus.up());
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "filteredmembers"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "filteredmembers" local variable., start line = 14, end line = 14, rule key = java:S1854 message = Remove this useless assignment to local variable "filteredmembers"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "filteredmembers" local variable., start line = 14, end line = 14.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

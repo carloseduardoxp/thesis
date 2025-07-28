@@ -1,0 +1,15 @@
+Based on this pull request with the developer description: Moves two method into separate class to enable unit test (next PR). The code is same except one method that has been split into smaller one to improve readability., the code was changed by the developer from private String evaluateMacro(String template) {
+         try {
+             File workspace = run.getRootDir();
+             return TokenMacro.expandAll(run, new FilePath(workspace), listener, template);
+         } catch (InterruptedException | IOException | MacroEvaluationException e) {
+             throw new IllegalArgumentException(e);
+         }
+     } (if dont have code before, the code wasnt exist yet) to public class DecisionMaker {      private final Run run;     private final Result previousResult;      private final TaskListener listener;  private String evaluateMacro(String template) {
+         try {
+             File workspace = run.getRootDir();
+             return TokenMacro.expandAll(run, new FilePath(workspace), listener, template);
+         } catch (InterruptedException | IOException | MacroEvaluationException e) {
+             throw new IllegalArgumentException(e);
+         }
+     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

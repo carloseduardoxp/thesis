@@ -1,0 +1,20 @@
+Given the following Java code snippet:
+
+import javax.servlet.http.HttpSession;
+
+// ... inside your doGet() or doPost() method
+public class Gemini {
+
+    public static void main(String[] args) {
+
+        HttpSession session = request.getSession();
+// At this point, 'session' will always be a valid HttpSession object.
+// It might be an existing one or a newly created one.
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "session"., start line = 9, end line = 9, rule key = java:S1481 message = Remove this unused "session" local variable., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "session"., start line = 9, end line = 9, rule key = java:S1481 message = Remove this unused "session" local variable., start line = 9, end line = 9.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

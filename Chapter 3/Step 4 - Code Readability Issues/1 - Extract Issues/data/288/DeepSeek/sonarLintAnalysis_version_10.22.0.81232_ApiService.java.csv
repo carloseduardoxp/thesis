@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1488,11,11,CLEAR,Immediately return this expression instead of assigning it to the temporary variable "response".,null,
+java:S125,14,14,CLEAR,This block of commented-out lines of code should be removed.,null,

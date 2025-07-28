@@ -1,0 +1,33 @@
+Given the following Java code snippet:
+
+import java.util.Arrays;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        char[] copyFrom = {'a', 'b', 'c', 'd', 'e'};
+        char[] copyTo = new char[7];
+
+        System.out.println(Arrays.toString(copyFrom));
+        System.arraycopy(copyFrom, 0, copyTo, 0, copyFrom.length);
+        System.out.println(Arrays.toString(copyTo));
+
+        String[] array = new String[5];
+
+        array = expand(array, 10);
+    }
+
+    private static String[] expand(String[] array, int size) {
+        String[] temp = new String[size];
+        System.arraycopy(array, 0, temp, 0, array.length);
+        for (int j = array.length; j < size; j++) {
+            temp[j] = "";
+        }
+        return temp;
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "array"., start line = 16, end line = 16.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,15 @@
+Given the following Java code snippet:
+import java.math.BigInteger;
+
+public class AppDemo {
+
+    public static void main(String[] args) {
+
+        BigInteger a = new BigInteger("9223372036854775807");
+        BigInteger b = new BigInteger("9223372036854775808");
+        BigInteger result = a.add(b);
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "result"., start line = 9, end line = 9, rule key = java:S2129 message = Remove this "BigInteger" constructor, start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "result" local variable., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "result"., start line = 9, end line = 9, rule key = java:S2129 message = Remove this "BigInteger" constructor, start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "result" local variable., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "result"., start line = 9, end line = 9, rule key = java:S2129 message = Remove this "BigInteger" constructor, start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "result" local variable., start line = 9, end line = 9.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

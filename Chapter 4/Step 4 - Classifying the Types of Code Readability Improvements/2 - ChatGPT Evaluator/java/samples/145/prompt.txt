@@ -1,0 +1,4 @@
+Based on this pull request with the developer description: Improve code clarity by using Arrays.copyOf(), the code was changed by the developer from byte[] dest = new byte[wi];
+       System.arraycopy(escapedBytes, 0, dest, 0, wi);
+ 
+       return dest; (if dont have code before, the code wasnt exist yet) to return Arrays.copyOf(escapedBytes, wi);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

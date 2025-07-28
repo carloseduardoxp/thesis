@@ -1,0 +1,451 @@
+ID,Human Label,Response.txt,Match
+1,Improve Naming,Improve Naming,YES
+2,Improve Naming,Improve Naming,YES
+3,Improve Naming,Improve Naming,YES
+4,Improve Naming,Improve Naming,YES
+5,Improve Naming,Improve Naming,YES
+6,Improve Naming,Improve Naming,YES
+7,Improve Naming,Improve Naming,YES
+8,Improve Naming,Improve Naming,YES
+9,Improve Naming,Improve Naming,YES
+10,Improve Naming,Improve Naming,YES
+11,Improve Naming,Improve Naming,YES
+12,Improve Naming,Improve Naming,YES
+13,Improve Naming,Improve Naming,YES
+14,Improve Naming,Improve Naming,YES
+15,Improve Naming,Improve Naming,YES
+16,Improve Naming,Improve Naming,YES
+17,Improve Naming,Improve Naming,YES
+18,Improve Naming,Improve Naming,YES
+19,Improve Naming,Improve Naming,YES
+20,Improve Naming,Improve Naming,YES
+21,Improve Naming,Improve Naming,YES
+22,Improve Naming,Improve Naming,YES
+23,Improve Naming,Improve Naming,YES
+24,Improve Naming,Improve Naming,YES
+25,Improve Naming,Improve Naming,YES
+26,Improve Naming,Improve Naming,YES
+27,Improve Naming,Improve Naming,YES
+28,Improve Naming,Improve Naming,YES
+29,Improve Naming,Improve Naming,YES
+30,Improve Naming,Improve Naming,YES
+31,Improve Naming,Improve Naming,YES
+32,Improve Naming,Improve Naming,YES
+33,Improve Naming,Improve Naming,YES
+34,Improve Naming,Improve Naming,YES
+35,Improve Naming,Improve Naming,YES
+36,Improve Naming,Improve Naming,YES
+37,Improve Naming,Improve Naming,YES
+38,Improve Naming,Improve Naming,YES
+39,Improve Naming,Improve Naming,YES
+40,Improve Naming,Improve Naming,YES
+41,Improve Naming,Improve Naming,YES
+42,Improve Naming,Improve Naming,YES
+43,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+44,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+45,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+46,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+47,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+48,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+49,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+50,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+51,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+52,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+53,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+54,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+55,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+56,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+57,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+58,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+59,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+60,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+61,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+62,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+63,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+64,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+65,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+66,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+67,Include Modifiers and Annotations,Include Modifiers and Annotations,YES
+68,Extract Literals to Constants,Extract Literals to Constants,YES
+69,Extract Literals to Constants,Extract Literals to Constants,YES
+70,Extract Literals to Constants,Extract Literals to Constants,YES
+71,Extract Literals to Constants,Extract Literals to Constants,YES
+72,Extract Literals to Constants,Replace Deprecated Code,NO
+73,Clarify Numeric Constants,Clarify Numeric Constants,YES
+74,Extract Literals to Constants,Extract Literals to Constants,YES
+75,Extract Literals to Constants,Extract Literals to Constants,YES
+76,Extract Literals to Constants,Extract Literals to Constants,YES
+77,Extract Literals to Constants,Extract Literals to Constants,YES
+78,Extract Literals to Constants,Extract Literals to Constants,YES
+79,Extract Literals to Constants,Extract Literals to Constants,YES
+80,Extract Literals to Constants,Extract Literals to Constants,YES
+81,Extract Literals to Constants,Extract Literals to Constants,YES
+82,Extract Literals to Constants,Extract Literals to Constants,YES
+83,Extract Literals to Constants,Extract Literals to Constants,YES
+84,Clarify Test Intent,Clarify Test Intent,YES
+85,Clarify Test Intent,Clarify Test Intent,YES
+86,Clarify Test Intent,Clarify Test Intent,YES
+87,Clarify Test Intent,Clarify Test Intent,YES
+88,Clarify Test Intent,Replace Generic with Specialized API,NO
+89,Clarify Test Intent,Clarify Test Intent,YES
+90,Clarify Test Intent,Clarify Test Intent,YES
+91,Clarify Test Intent,Clarify Test Intent,YES
+92,Clarify Test Intent,Clarify Test Intent,YES
+93,Clarify Test Intent,Clarify Test Intent,YES
+94,Replace Generic with Specialized API,Replace Generic with Specialized API,YES
+95,Replace Generic with Specialized API,Clarify Test Intent,NO
+96,Replace Generic with Specialized API,Replace Generic with Specialized API,YES
+98,Replace Generic with Specialized API,Replace Generic with Specialized API,YES
+99,Replace Generic with Specialized API,Replace Generic with Specialized API,YES
+100,Replace Generic with Specialized API,Replace Generic with Specialized API,YES
+101,Replace Generic with Specialized API,Reorder Elements,NO
+102,Clarify Numeric Constants,Clarify Numeric Constants,YES
+103,Extract Variable,Improve String Formatting,NO
+104,Extract Variable,Extract Variable,YES
+105,Extract Variable,Extract Variable,YES
+106,Extract Variable,Clarify Numeric Constants,NO
+107,Extract Variable,Simplify Object Construction and Conversion,NO
+108,Extract Variable,Extract Variable,YES
+109,Apply Early Return,Apply Early Return,YES
+110,Apply Early Return,Apply Early Return,YES
+111,Apply Early Return,Apply Early Return,YES
+112,Apply Early Return,Apply Early Return,YES
+113,Apply Early Return,Apply Early Return,YES
+114,Apply Early Return,Apply Early Return,YES
+115,Prefer Positive Conditions,Prefer Positive Conditions,YES
+116,Prefer Positive Conditions,Prefer Positive Conditions,YES
+117,Prefer Positive Conditions,Prefer Positive Conditions,YES
+118,Prefer Positive Conditions,Prefer Positive Conditions,YES
+119,Replace Ternary with If-Else,Replace Ternary with If-Else,YES
+120,Replace Ternary with If-Else,Replace Ternary with If-Else,YES
+121,Replace Ternary with If-Else,Collapse Boolean Return,NO
+122,Replace Ternary with If-Else,Replace Ternary with If-Else,YES
+123,Extract Literals to Enum,Extract Literals to Enum,YES
+124,Extract Literals to Enum,Extract Literals to Enum,YES
+125,Extract Literals to Enum,Extract Literals to Enum,YES
+126,Extract Literals to Enum,Extract Literals to Enum,YES
+127,Restrict Field Visibility,Restrict Field Visibility,YES
+128,Restrict Field Visibility,Restrict Field Visibility,YES
+129,Restrict Field Visibility,Restrict Field Visibility,YES
+130,Clarify Numeric Constants,Clarify Numeric Constants,YES
+131,Clarify Numeric Constants,Clarify Numeric Constants,YES
+132,Clarify Numeric Constants,Clarify Numeric Constants,YES
+133,Extract field into local variable,Extract field into local variable,YES
+134,Extract field into local variable,Extract field into local variable,YES
+135,Introduce Named Overloads,Introduce Named Overloads,YES
+136,Introduce Named Overloads,Introduce Named Overloads,YES
+137,Use domain-specific types to clarify intent,Use domain-specific types to clarify intent,YES
+138,Use domain-specific types to clarify intent,Use domain-specific types to clarify intent,YES
+139,Make generics explicit in type checks,Make generics explicit in type checks,YES
+140,Replace Deprecated Code,Replace Deprecated Code,YES
+141,Add a break to a for loop,Add a break to a for loop,YES
+142,prefer specific exception handling,prefer specific exception handling,YES
+143,Use abstract type,Use abstract type,YES
+144,Replace Condition with ternary,Replace Condition with ternary,YES
+145,Prefer Built-in Methods,Prefer Built-in Methods,YES
+146,Simplify Object Construction and Conversion,Simplify Object Construction and Conversion,YES
+147,Prefer Built-in Methods,Prefer Built-in Methods,YES
+148,Prefer Built-in Methods,Replace Generic with Specialized API,NO
+149,Prefer Built-in Methods,Prefer Built-in Methods,YES
+150,Prefer Built-in Methods,Prefer Built-in Methods,YES
+151,Prefer Built-in Methods,Prefer Built-in Methods,YES
+152,Prefer Built-in Methods,Prefer Built-in Methods,YES
+153,Prefer Built-in Methods,Prefer Built-in Methods,YES
+154,Prefer Built-in Methods,Prefer Built-in Methods,YES
+155,Clarify Numeric Constants,Clarify Numeric Constants,YES
+157,Use domain-specific types to clarify intent,Use domain-specific types to clarify intent,YES
+158,Prefer Built-in Methods,Prefer Built-in Methods,YES
+159,Prefer Built-in Methods,Prefer Built-in Methods,YES
+160,Prefer Built-in Methods,Prefer Built-in Methods,YES
+161,Prefer Built-in Methods,Prefer Built-in Methods,YES
+162,Prefer Built-in Methods,Prefer Built-in Methods,YES
+163,Prefer Built-in Methods,Prefer Built-in Methods,YES
+164,Prefer Built-in Methods,Prefer Built-in Methods,YES
+165,Simplify Object Construction and Conversion,Simplify Object Construction and Conversion,YES
+166,Simplify Object Construction and Conversion,Simplify Object Construction and Conversion,YES
+167,Simplify Object Construction and Conversion,Simplify Object Construction and Conversion,YES
+168,Simplify Object Construction and Conversion,Prefer Built-in Methods,NO
+169,Simplify Object Construction and Conversion,Prefer Built-in Methods,NO
+170,Simplify Object Construction and Conversion,Remove Duplicate Code,NO
+171,Simplify Object Construction and Conversion,Extract field into local variable,NO
+172,Simplify Object Construction and Conversion,Prefer Built-in Methods,NO
+173,Simplify Object Construction and Conversion,Simplify Object Construction and Conversion,YES
+174,Simplify Object Construction and Conversion,Simplify Object Construction and Conversion,YES
+175,Simplify Object Construction and Conversion,Simplify Object Construction and Conversion,YES
+176,Simplify Object Construction and Conversion,Use domain-specific types to clarify method intent,NO
+177,Prefer Idiomatic Iteration,Prefer Idiomatic Iteration,YES
+178,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+179,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+180,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+181,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+182,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+184,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+185,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+186,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+187,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+188,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+189,Replace Anonymous Class With Functional Style,Replace Anonymous Class With Functional Style,YES
+190,Prefer Idiomatic Iteration,Prefer Idiomatic Iteration,YES
+191,Replace Lambda With Method Reference,Replace Lambda With Method Reference,YES
+192,Prefer Idiomatic Iteration,Prefer Idiomatic Iteration,YES
+193,Prefer Idiomatic Iteration,Prefer Idiomatic Iteration,YES
+194,Replace Anonymous Classes With Lambda,Replace Anonymous Classes With Lambda,YES
+195,Prefer Idiomatic Iteration,Prefer Built-in Methods,NO
+196,Prefer Idiomatic Iteration,Prefer Built-in Methods,NO
+197,Prefer Idiomatic Iteration,Prefer Idiomatic Iteration,YES
+198,Prefer Idiomatic Iteration,Apply Early Return,NO
+199,Prefer Idiomatic Iteration,Prefer Built-in Methods,NO
+200,Reduce Conditional Nesting,Apply Early Return,NO
+201,Reduce Conditional Nesting,Reduce Conditional Nesting,YES
+202,Reduce Conditional Nesting,Reduce Conditional Nesting,YES
+203,Reduce Conditional Nesting,Reduce Conditional Nesting,YES
+204,Reduce Conditional Nesting,Reduce Conditional Nesting,YES
+205,Reduce Conditional Nesting,Reduce Conditional Nesting,YES
+206,Reduce Conditional Nesting,Extract method from large function,NO
+207,Reduce Conditional Nesting,Extract method from large function,NO
+208,Collapse Boolean Return,Collapse Boolean Return,YES
+209,Replace Switch with If-Else,Replace Switch with If-Else,YES
+210,Replace Switch with If-Else,Replace Switch with If-Else,YES
+211,Replace Switch with If-Else,Replace Switch with If-Else,YES
+212,Replace Switch with If-Else,Replace Switch with If-Else,YES
+213,Replace Switch with If-Else,Replace Switch with If-Else,YES
+214,Replace Switch with If-Else,Replace Switch with If-Else,YES
+215,Replace Switch with If-Else,Replace Switch with If-Else,YES
+216,Replace If-Else with Switch,Replace If-Else with Switch,YES
+217,Replace If-Else with Switch,Replace If-Else with Switch,YES
+218,Replace If-Else with Switch,Replace If-Else with Switch,YES
+219,Unwrap unnecessary else,Reduce Conditional Nesting,NO
+220,Unwrap unnecessary else,Apply Early Return,NO
+221,Unwrap unnecessary else,Unwrap unnecessary else,YES
+222,Unwrap unnecessary else,Reduce Conditional Nesting,NO
+223,Unwrap unnecessary else,Apply Early Return,NO
+224,Unwrap unnecessary else,Unwrap unnecessary else,YES
+225,Prefer Structured Resource Management,Prefer Structured Resource Management,YES
+226,Prefer Structured Resource Management,Prefer Structured Resource Management,YES
+227,Prefer Structured Resource Management,Prefer Structured Resource Management,YES
+228,Prefer Structured Resource Management,Prefer Structured Resource Management,YES
+229,Prefer Structured Resource Management,Prefer Structured Resource Management,YES
+230,Prefer Structured Resource Management,Prefer Structured Resource Management,YES
+231,Inline redundant return variables,Inline redundant return variables,YES
+232,Inline redundant return variables,Inline redundant return variables,YES
+233,Inline redundant return variables,Inline redundant return variables,YES
+234,Inline redundant return variables,Improve Naming,NO
+235,Inline redundant return variables,Prefer Idiomatic Iteration,NO
+236,Inline redundant return variables,Replace Deprecated Code,NO
+238,Replace Lambda With Method Reference,Replace Lambda With Method Reference,YES
+239,Replace Lambda With Method Reference,Replace Lambda With Method Reference,YES
+240,Replace Lambda With Method Reference,Replace Lambda With Method Reference,YES
+241,Replace Lambda With Method Reference,Replace Lambda With Method Reference,YES
+242,Collapse Boolean Return,Reduce Conditional Nesting,NO
+243,Collapse Boolean Return,Collapse Boolean Return,YES
+244,Collapse Boolean Return,Collapse Boolean Return,YES
+245,Collapse Boolean Return,Collapse Boolean Return,YES
+246,Favour Diamond Operators,Favour Diamond Operators,YES
+247,Favour Diamond Operators,Favour Diamond Operators,YES
+248,Favour Diamond Operators,Favour Diamond Operators,YES
+249,Improve String Formatting,Simplify Object Construction and Conversion,NO
+250,Improve String Formatting,Improve String Formatting,YES
+251,Remove Unused Method/ chunk of code,Remove Unused Field or Variable,NO
+252,Remove Unused Method/ chunk of code,Prefer Positive Conditions,NO
+253,Simplify Import Statements,Simplify Import Statements,YES
+254,Simplify Import Statements,Simplify Import Statements,YES
+255,Remove unnecessary Throws,Remove unnecessary Throws,YES
+256,Prefer Built-in Methods,Prefer Built-in Methods,YES
+257,Inline Lambda Block,Inline Lambda Block,YES
+258,Refactor to Lombok,Refactor to Lombok,YES
+259,Replace for loop or iterator with for-each,Replace for loop or iterator with for-each,YES
+260,Remove Duplicate Code,Extract Literals to Enum,NO
+261,Remove Duplicate Code,Remove Duplicate Code,YES
+262,Remove Duplicate Code,Extract method from large function,NO
+263,Remove Duplicate Code,Remove Duplicate Code,YES
+264,Remove Duplicate Code,Remove Duplicate Code,YES
+265,Remove Duplicate Code,Remove Duplicate Code,YES
+266,Unwrap unnecessary else,Reduce Conditional Nesting,NO
+267,Remove Duplicate Code,Remove Duplicate Code,YES
+268,Remove Duplicate Code,Extract method from large function,NO
+269,Remove Duplicate Code,Remove Duplicate Code,YES
+270,Remove Duplicate Code,Remove Duplicate Code,YES
+271,Remove Duplicate Code,Remove Duplicate Code,YES
+272,Reduce Conditional Nesting,Reduce Conditional Nesting,YES
+273,Remove Commented Code,Remove Commented Code,YES
+274,Remove Commented Code,Remove Commented Code,YES
+275,Remove Commented Code,Remove Commented Code,YES
+276,Remove Commented Code,Remove Commented Code,YES
+277,Remove Commented Code,Remove Commented Code,YES
+278,Remove Commented Code,Remove Commented Code,YES
+279,Remove Commented Code,Remove Commented Code,YES
+280,Remove Commented Code,Remove Commented Code,YES
+281,Remove Commented Code,Remove Commented Code,YES
+282,Remove Commented Code,Remove Commented Code,YES
+283,Remove Commented Code,Remove Commented Code,YES
+284,Remove Commented Code,Remove Commented Code,YES
+285,Remove Commented Code,Remove Commented Code,YES
+286,Remove Commented Code,Remove Commented Code,YES
+287,Remove Unused Imports,Remove Unused Imports,YES
+288,Remove Unused Imports,Remove Unused Imports,YES
+289,Remove Unused Imports,Explicit Imports,NO
+290,Remove Unused Imports,Remove Unused Imports,YES
+291,Remove Unused Imports,Remove Unused Imports,YES
+292,Remove unnecessary Throws,Remove unnecessary Throws,YES
+293,Remove unnecessary Throws,Remove unnecessary Throws,YES
+294,Remove unnecessary Throws,Remove unnecessary Throws,YES
+295,Remove unnecessary Throws,Remove unnecessary Throws,YES
+296,Remove unnecessary Throws,Remove Unused Try/Catch,NO
+297,Remove Useless Parameter,Remove Useless Parameter,YES
+298,Remove Useless Parameter,Remove Useless Parameter,YES
+299,Remove Useless Parameter,Remove Useless Parameter,YES
+300,Remove Useless Parameter,Remove Useless Parameter,YES
+301,Remove Unused Field or Variable,Remove Unused Field or Variable,YES
+302,Remove Unused Field or Variable,Remove Unused Field or Variable,YES
+303,Remove Unused Field or Variable,Remove Unused Field or Variable,YES
+304,Remove Unused Method/ chunk of code,Remove Unused Method/ chunk of code,YES
+305,Remove Unused Method/ chunk of code,Remove Unused Method/ chunk of code,YES
+306,Remove Unused Method/ chunk of code,Remove Unused Method/ chunk of code,YES
+307,Remove Unused Try/Catch,Remove Unused Try/Catch,YES
+308,Remove Unused Method/ chunk of code,Remove Unused Method/ chunk of code,YES
+309,Remove Unused Method/ chunk of code,Remove Unused Method/ chunk of code,YES
+310,Extract method from large function,Extract method from large function,YES
+311,Remove Unused Method/ chunk of code,Remove Unused Method/ chunk of code,YES
+312,Remove Unused Method/ chunk of code,Remove Unused Method/ chunk of code,YES
+313,Remove Unused Method/ chunk of code,Remove Unused Method/ chunk of code,YES
+314,Remove Unused Method/ chunk of code,Remove Unused Method/ chunk of code,YES
+315,Replace Null-check with Annotation,Replace Null-check with Annotation,YES
+316,Reduce Conditional Nesting,Reduce Conditional Nesting,YES
+317,Remove Unused Method/ chunk of code,Reduce Conditional Nesting,NO
+318,Collapse Boolean Return,Collapse Boolean Return,YES
+319,Remove unnecessary annotation or modifier,Remove unnecessary annotation or modifier,YES
+320,Remove unnecessary annotation or modifier,Remove unnecessary annotation or modifier,YES
+321,Remove unnecessary annotation or modifier,Unwrap unnecessary else,NO
+322,Remove unnecessary annotation or modifier,Apply Early Return,NO
+323,Extract method from large function,Extract method from large function,YES
+324,Extract method from large function,Extract method from large function,YES
+325,Extract method from large function,Extract method from large function,YES
+326,Extract method from large function,Extract method from large function,YES
+327,Extract method from large function,Extract method from large function,YES
+329,Prefer Built-in Methods,Prefer Built-in Methods,YES
+330,Extract method from large function,Extract method from large function,YES
+331,Extract method from large function,Extract method from large function,YES
+332,Move logic to another file,Move logic to another file,YES
+333,Extract method from large function,Extract method from large function,YES
+334,Extract method from large function,Extract method from large function,YES
+335,Extract method from large function,Extract method from large function,YES
+336,Extract method from large function,Extract method from large function,YES
+337,Extract method from large function,Extract method from large function,YES
+338,Extract method from large function,Extract method from large function,YES
+339,Extract method from large function,Extract method from large function,YES
+340,Extract method from large function,Extract method from large function,YES
+341,Extract method from large function,Extract method from large function,YES
+342,Extract method from large function,Extract method from large function,YES
+343,Extract method from large function,Extract method from large function,YES
+344,Extract method from large function,Extract method from large function,YES
+345,Restrict Field Visibility,Restrict Field Visibility,YES
+346,Extract method from large function,Extract method from large function,YES
+347,Extract method from large function,Extract method from large function,YES
+348,Extract method from large function,Extract method from large function,YES
+349,Extract method from large function,Extract method from large function,YES
+350,Extract method from large function,Extract method from large function,YES
+351,Extract method from large function,Extract method from large function,YES
+352,Extract method from large function,Extract method from large function,YES
+353,Move logic to another file,Move logic to another file,YES
+354,Extract method from large function,Extract method from large function,YES
+355,Move logic to another file,Move logic to another file,YES
+356,Extract Literals to Constants,Extract Literals to Constants,YES
+357,Move logic to another file,Move logic to another file,YES
+358,Move logic to another file,Move logic to another file,YES
+359,Move logic to another file,Move logic to another file,YES
+360,Move logic to another file,Move logic to another file,YES
+361,Move logic to another file,Move logic to another file,YES
+362,Move logic to another file,Move logic to another file,YES
+363,Move logic to another file,Move logic to another file,YES
+364,Move logic to another file,Move logic to another file,YES
+365,Move logic to another file,Move logic to another file,YES
+366,Move logic to another file,Move logic to another file,YES
+367,Move logic to another file,Move logic to another file,YES
+368,Move logic to another file,Move logic to another file,YES
+369,Move logic to another file,Move logic to another file,YES
+370,Use Builder Pattern,Use Builder Pattern,YES
+371,Use Builder Pattern,Use Builder Pattern,YES
+372,Use Builder Pattern,Simplify Object Construction and Conversion,NO
+373,Use Builder Pattern,Use Builder Pattern,YES
+374,Simplify Object Construction and Conversion,Simplify Object Construction and Conversion,YES
+375,Extract Class to Separate Package,Extract Class to Separate Package,YES
+376,Extract Class to Separate Package,Extract Class to Separate Package,YES
+377,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+378,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+379,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+380,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+381,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+382,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+383,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+384,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+385,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+386,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+387,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+388,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+389,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+390,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+391,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+392,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+393,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+394,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+395,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+396,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+397,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+398,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+399,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+400,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+401,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+402,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+403,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+404,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+405,Include New Comments and Javadoc,Include New Comments and Javadoc,YES
+406,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+407,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+408,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+409,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+410,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+411,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+412,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+413,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+414,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+415,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+416,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+417,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+418,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+419,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+420,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+421,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+422,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+423,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+424,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+425,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+426,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+427,Clarify Comments and Javadoc,Clarify Comments and Javadoc,YES
+428,Reorder Elements,Reorder Elements,YES
+429,Reorder Elements,Introduce Named Overloads,NO
+430,Reorder Elements,Reorder Elements,YES
+431,Reorder Elements,Reorder Elements,YES
+432,Reorder Elements,Reorder Elements,YES
+433,Reorder Elements,Reorder Elements,YES
+434,Reorder Elements,Reorder Elements,YES
+435,Reorder Elements,Reorder Elements,YES
+436,Reorder Elements,Prefer Positive Conditions,NO
+437,Declare One Variable per Line,Declare One Variable per Line,YES
+438,Standardize Indentation,Standardize Indentation,YES
+439,Standardize Indentation,Standardize Indentation,YES
+440,Standardize Indentation,Standardize Indentation,YES
+441,Standardize Indentation,Standardize Indentation,YES
+442,Standardize Indentation,Standardize Indentation,YES
+443,Limit Line Length,Limit Line Length,YES
+444,Limit Line Length,Limit Line Length,YES
+446,Limit Line Length,Declare One Variable per Line,NO
+447,Limit Line Length,Limit Line Length,YES
+448,Improve String Formatting,Improve String Formatting,YES
+449,Limit Line Length,Limit Line Length,YES
+450,Limit Line Length,Limit Line Length,YES
+451,Explicit Imports,Explicit Imports,YES
+452,Explicit Imports,Explicit Imports,YES
+453,Explicit Imports,Explicit Imports,YES
+454,Explicit Imports,Explicit Imports,YES
+455,Explicit Imports,Explicit Imports.,YES
+456,Explicit Imports,Explicit Imports,YES

@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S6437,14,14,TRUSTWORTHY,Revoke and change this password, as it is compromised.,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,
+java:S6905,20,20,EFFICIENT,Don't use the query "SELECT *".,null,
+java:S106,24,24,MODULAR,Replace this use of System.out by a logger.,null,

@@ -1,0 +1,10 @@
+Based on this pull request with the developer description: Change the trinomial operator usage code to make it easier to understand, the code was changed by the developer from paimonSchema.comment =
+           comment == null
+               ? (properties == null ? null : properties.get(PaimonSchemaPropertiesMetadata.COMMENT))
+               : comment; (if dont have code before, the code wasnt exist yet) to if (comment != null) {
+         paimonSchema.comment = comment;
+       } else if (properties != null) {
+         paimonSchema.comment = properties.get(PaimonSchemaPropertiesMetadata.COMMENT);
+       } else {
+         paimonSchema.comment = null;
+       }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

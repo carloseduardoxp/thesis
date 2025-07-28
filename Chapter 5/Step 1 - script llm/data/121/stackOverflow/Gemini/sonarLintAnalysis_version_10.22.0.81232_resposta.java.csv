@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1643,28,28,EFFICIENT,Use a StringBuilder instead.,null,
+java:S1149,34,34,CONVENTIONAL,Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".,null,
+java:S1149,43,43,CONVENTIONAL,Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".,null,
+java:S1135,24,24,COMPLETE,Complete the task associated to this TODO comment.,null,

@@ -1,0 +1,29 @@
+Given the following Java code snippet:
+
+import java.util.Calendar;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        Calendar calendar = Calendar.getInstance();
+        Long max = calendar.getTimeInMillis();
+        int currMonth = calendar.get(Calendar.MONTH);
+        int currYear = calendar.get(Calendar.YEAR);
+        int currDate = calendar.get(Calendar.DAY_OF_MONTH);
+        int expMonth = currMonth + 3/*no_of_month*/;
+        int expYear = currDate;
+        int expDate = calendar.get(Calendar.DAY_OF_MONTH);
+        while (expMonth > 11) {
+            expMonth = expMonth - 12;
+            expYear = expYear + 1; // will increment year as next month falls in next year 
+        }
+        calendar.set(expYear, expMonth, expDate);
+        Long min = calendar.getTimeInMillis();
+        Long range = (max - min) / (60 * 60 * 1000); //no_of_hours
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "currYear"., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "range"., start line = 21, end line = 21, rule key = java:S1481 message = Remove this unused "currYear" local variable., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "range" local variable., start line = 21, end line = 21, rule key = java:S1854 message = Remove this useless assignment to local variable "currYear"., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "range"., start line = 21, end line = 21, rule key = java:S1481 message = Remove this unused "currYear" local variable., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "range" local variable., start line = 21, end line = 21.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

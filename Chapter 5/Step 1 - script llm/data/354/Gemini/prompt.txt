@@ -1,0 +1,50 @@
+Given the following Java code snippet:
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.HashSet; // For demonstration of an unsorted Set
+
+public class SortedSetExample {
+    public static void main(String[] args) {
+        // 1. Using HashSet (no guaranteed order)
+        Set<String> unsortedSet = new HashSet<>();
+        unsortedSet.add("banana");
+        unsortedSet.add("apple");
+        unsortedSet.add("grape");
+        unsortedSet.add("orange");
+        unsortedSet.add("apple"); // Duplicates are not added to a Set
+
+        System.out.println("Unsorted Set (HashSet): " + unsortedSet); 
+        // Output will vary, e.g., [apple, orange, banana, grape] - no specific order
+
+        System.out.println("-------------------------");
+
+        // 2. Using TreeSet (automatically sorted alphabetically)
+        Set<String> sortedSet = new TreeSet<>();
+        sortedSet.add("banana");
+        sortedSet.add("apple");
+        sortedSet.add("grape");
+        sortedSet.add("orange");
+        sortedSet.add("apple"); // Still only one "apple"
+
+        System.out.println("Sorted Set (TreeSet): " + sortedSet);
+        // Output: [apple, banana, grape, orange] - automatically sorted
+        
+        System.out.println("-------------------------");
+
+        // 3. Converting an existing Set to a TreeSet for sorting
+        Set<String> anotherUnsortedSet = new HashSet<>();
+        anotherUnsortedSet.add("zebra");
+        anotherUnsortedSet.add("cat");
+        anotherUnsortedSet.add("dog");
+
+        System.out.println("Another Unsorted Set (HashSet): " + anotherUnsortedSet);
+
+        Set<String> newlySortedSet = new TreeSet<>(anotherUnsortedSet);
+        System.out.println("Newly Sorted Set (from HashSet to TreeSet): " + newlySortedSet);
+        // Output: [cat, dog, zebra]
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1192 message = Define a constant instead of duplicating this literal "apple" 4 times., start line = 10, end line = 10.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,9,9,DISTINCT,Define a constant instead of duplicating this literal "banana" 3 times.,null,
+java:S106,11,11,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,12,12,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,14,14,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,15,15,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,19,19,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,21,21,MODULAR,Replace this use of System.out by a logger.,null,

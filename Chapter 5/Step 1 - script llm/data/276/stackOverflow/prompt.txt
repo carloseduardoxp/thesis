@@ -1,0 +1,14 @@
+Given the following Java code snippet:
+public class Teste {
+
+    public static void main(String[] args) {        
+        String s = "How are you";
+        int cutPos = s.length()/2;
+        String s1 = s.substring(0, cutPos);
+        String s2 = s.substring(cutPos, s.length()); //which is essentially the same as
+        //String s2 = s.substring(cutPos);
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "s2"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "s1"., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "s1" local variable., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "s2" local variable., start line = 7, end line = 7, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "s2"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "s1"., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "s1" local variable., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "s2" local variable., start line = 7, end line = 7, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "s2"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "s1"., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "s1" local variable., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "s2" local variable., start line = 7, end line = 7, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 8, end line = 8.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

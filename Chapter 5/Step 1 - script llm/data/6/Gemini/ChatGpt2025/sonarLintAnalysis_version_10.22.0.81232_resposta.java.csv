@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1104,11,11,MODULAR,Make id a static final constant or non-public and provide accessors if needed.,null,
+java:S1104,12,12,MODULAR,Make name a static final constant or non-public and provide accessors if needed.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,

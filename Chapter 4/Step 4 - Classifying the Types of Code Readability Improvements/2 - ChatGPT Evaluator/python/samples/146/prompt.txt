@@ -1,0 +1,10 @@
+Based on this pull request with the developer description: Invert check and exit early to dedent one level when requiring user confirmation, the code was changed by the developer from def get_user_confirmation_for_overwrite(concrete_specs, args):
+     installed = list(filter(lambda x: x, map(spack.store.db.query_one, concrete_specs)))
+     if not args.yes_to_all:
+         display_args = {"long": True, "show_flags": True, "variants": True}
+ 
+         if installed:
+             tty.msg("The following package specs will be " "reinstalled:\n")
+             spack.cmd.display_specs(installed, **display_args) (if dont have code before, the code wasnt exist yet) to def require_user_confirmation_for_overwrite(concrete_specs, args):
+     if args.yes_to_all:
+         return, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

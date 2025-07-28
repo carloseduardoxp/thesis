@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "convertedString".,null,
+java:S1854,3,3,LOGICAL,Remove this useless assignment to local variable "line".,null,
+java:S1481,3,3,CLEAR,Remove this unused "line" local variable.,null,
+java:S1481,5,5,CLEAR,Remove this unused "convertedString" local variable.,null,

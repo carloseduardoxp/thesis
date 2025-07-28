@@ -1,0 +1,16 @@
+Based on this pull request with the developer description: Its better to use enums instead of switch, the code was changed by the developer from switch (currentWeather) {
+       case COLD:
+         LOGGER.info("The orcs are freezing cold.");
+         break;
+       case RAINY:
+         LOGGER.info("The orcs are dripping wet.");
+         break;
+       case SUNNY:
+         LOGGER.info("The sun hurts the orcs' eyes.");
+         break;
+       case WINDY:
+         LOGGER.info("The orc smell almost vanishes in the wind.");
+         break;
+       default:
+         break;
+     } (if dont have code before, the code wasnt exist yet) to LOGGER.info("The orcs are facing " + currentWeather.getDescription() + " weather now");, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

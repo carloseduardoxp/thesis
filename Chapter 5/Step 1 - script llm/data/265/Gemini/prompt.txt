@@ -1,0 +1,39 @@
+Given the following Java code snippet:
+import java.awt.FlowLayout;
+import javax.swing.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
+public class CheckboxExample {
+    public static void main(String[] args) {
+        // Create a JFrame (the window)
+        JFrame frame = new JFrame("Checkbox Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        frame.setLayout(new FlowLayout()); // Use FlowLayout for simplicity
+
+        // Create a JCheckBox
+        JCheckBox checkBox = new JCheckBox("Agree to Terms");
+
+        // Add an ItemListener to respond to changes
+        checkBox.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    System.out.println("Checkbox is checked!");
+                } else {
+                    System.out.println("Checkbox is unchecked.");
+                }
+            }
+        });
+
+        // Add the checkbox to the frame
+        frame.add(checkBox);
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 18, end line = 18, rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 10, end line = 10, rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 18, end line = 18, rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 10, end line = 10.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,24 @@
+Based on this pull request with the developer description: Replaced repeated `len(board)` with a single variable `n` for efficiency in the `is_safe` function., the code was changed by the developer from for i in range(len(board)):
+         if board[row][i] == 1:
+             return False
+     for i in range(len(board)):
+         if board[i][column] == 1:
+             return False
+     for i, j in zip(range(row, -1, -1), range(column, -1, -1)):
+         if board[i][j] == 1:
+             return False
+     for i, j in zip(range(row, -1, -1), range(column, len(board))):
+         if board[i][j] == 1:
+             return False
+     return True (if dont have code before, the code wasnt exist yet) to n = len(board)  # Size of the board
+ 
+     # Check if there is any queen in the same row, column,
+     # left upper diagonal, and right upper diagonal
+     return (
+         all(board[i][j] != 1 for i, j in zip(range(row, -1, -1), range(column, n)))
+         and all(
+             board[i][j] != 1 for i, j in zip(range(row, -1, -1), range(column, -1, -1))
+         )
+         and all(board[i][j] != 1 for i, j in zip(range(row, n), range(column, n)))
+         and all(board[i][j] != 1 for i, j in zip(range(row, n), range(column, -1, -1)))
+     ), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

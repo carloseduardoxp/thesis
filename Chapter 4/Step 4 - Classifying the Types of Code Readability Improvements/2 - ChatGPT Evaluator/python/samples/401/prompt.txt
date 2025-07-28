@@ -1,0 +1,8 @@
+Based on this pull request with the developer description: Improve readability of default artifacts lists, the code was changed by the developer from LinuxAuditLogs', 'LinuxAuthLogs', 'LinuxCronLogs', 'LinuxWtmp',
+       'ShellHistoryFile', 'ZeitgeistDatabase'
+       # keep-sorted start (if dont have code before, the code wasnt exist yet) to 'LinuxAuditLogs',
+       'LinuxAuthLogs',
+       'LinuxCronLogs',
+       'LinuxWtmp',
+       'ShellHistoryFile',
+       'ZeitgeistDatabase',, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

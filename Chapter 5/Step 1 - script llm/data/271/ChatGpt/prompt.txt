@@ -1,0 +1,22 @@
+Given the following Java code snippet:
+public class ParentClassExample {
+  public static void main(String[] args) {
+     // Get the parent class of a class
+     Class<?> parentClass = ChildClass.class.getSuperclass();
+
+     // Print the name of the parent class
+     System.out.println("The parent class of ChildClass is: " + parentClass.getName());
+  }
+}
+
+class ParentClass {
+  // ...
+}
+
+class ChildClass extends ParentClass {
+  // ...
+}
+
+
+the following improvements are recommended: rule key = java:S2094 message = Remove this empty class, start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

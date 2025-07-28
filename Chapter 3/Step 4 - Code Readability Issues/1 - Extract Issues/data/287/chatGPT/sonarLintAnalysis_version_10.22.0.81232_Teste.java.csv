@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,6,6,DISTINCT,Define a constant instead of duplicating this literal "Hello, world!" 3 times.,null,
+java:S1854,19,19,LOGICAL,Remove this useless assignment to local variable "count".,null,
+java:S1854,20,20,LOGICAL,Remove this useless assignment to local variable "bold".,null,
+java:S1172,17,17,CLEAR,Remove this unused method parameter "message".,null,
+java:S1125,20,20,CONVENTIONAL,Remove the unnecessary boolean literals.,null,

@@ -1,0 +1,1 @@
+Extract Literals to Enum

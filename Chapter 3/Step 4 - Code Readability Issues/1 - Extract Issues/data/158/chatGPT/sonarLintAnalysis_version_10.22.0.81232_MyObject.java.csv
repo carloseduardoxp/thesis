@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,52,52,DISTINCT,Define a constant instead of duplicating this literal "myObject" 3 times.,null,
+java:S1854,59,59,LOGICAL,Remove this useless assignment to local variable "myObject".,null,
+java:S1854,56,56,LOGICAL,Remove this useless assignment to local variable "myObject".,null,
+java:S1481,56,56,CLEAR,Remove this unused "myObject" local variable.,null,
+java:S1481,59,59,CLEAR,Remove this unused "myObject" local variable.,null,

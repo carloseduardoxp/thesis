@@ -1,0 +1,15 @@
+Based on this pull request with the developer description: remove SubmersibleCamera abstraction, the code was changed by the developer from public boolean isUnderWater() {
+         // TODO: Making this as a subscribable value especially for node "ChunksRefractiveReflectiveNode",
+         // TODO: glDisable and glEnable state changes on that node will be dynamically added/removed based on this value.
+         Vector3f cameraPosition = new Vector3f(this.getPosition());
+ 
+         // Compensate for waves
+         if (renderingConfig.isAnimateWater()) {
+             cameraPosition.y -= RenderHelper.evaluateOceanHeightAtPosition(cameraPosition, worldProvider.getTime().getDays());
+         }
+ 
+         if (worldProvider.isBlockRelevant(cameraPosition)) {
+             return worldProvider.getBlock(cameraPosition).isLiquid();
+         }
+         return false;
+     } (if dont have code before, the code wasnt exist yet) to , (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,19 @@
+Given the following Java code snippet:
+public class Teste {
+  public void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+
+    // Set CORS headers
+    response.setHeader("Access-Control-Allow-Origin", "*");
+    response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    response.setHeader("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+
+    // Process request
+    // ...
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1172 message = Remove this unused method parameter "request"., start line = 2, end line = 2.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

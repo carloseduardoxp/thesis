@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1172,35,35,CLEAR,Remove this unused method parameter "name".,null,
+java:S106,62,62,MODULAR,Replace this use of System.out by a logger.,null,

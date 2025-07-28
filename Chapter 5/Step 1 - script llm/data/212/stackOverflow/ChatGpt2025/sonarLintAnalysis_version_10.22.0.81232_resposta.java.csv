@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1118,3,3,CLEAR,Add a private constructor to hide the implicit public one.,null,
+java:S3011,22,22,MODULAR,This accessibility update should be removed.,null,

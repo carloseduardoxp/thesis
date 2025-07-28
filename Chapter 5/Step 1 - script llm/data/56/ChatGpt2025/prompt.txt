@@ -1,0 +1,32 @@
+Given the following Java code snippet:
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
+
+@RestController
+public class MyController {
+
+    @GetMapping("/get-ip")
+    public String getClientIp(HttpServletRequest request) {
+        String ipAddress = request.getHeader("X-Forwarded-For");
+        if (ipAddress == null || ipAddress.isEmpty() || "unknown".equalsIgnoreCase(ipAddress)) {
+            ipAddress = request.getHeader("Proxy-Client-IP");
+        }
+        if (ipAddress == null || ipAddress.isEmpty() || "unknown".equalsIgnoreCase(ipAddress)) {
+            ipAddress = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if (ipAddress == null || ipAddress.isEmpty() || "unknown".equalsIgnoreCase(ipAddress)) {
+            ipAddress = request.getRemoteAddr();
+        }
+        // X-Forwarded-For can return a list of IPs, take the first one
+        if (ipAddress != null && ipAddress.contains(",")) {
+            ipAddress = ipAddress.split(",")[0].trim();
+        }
+        return "Client IP: " + ipAddress;
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1192 message = Define a constant instead of duplicating this literal "unknown" 3 times., start line = 12, end line = 12.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

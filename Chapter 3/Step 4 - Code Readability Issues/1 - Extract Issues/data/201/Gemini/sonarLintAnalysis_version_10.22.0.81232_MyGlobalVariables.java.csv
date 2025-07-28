@@ -1,0 +1,10 @@
+rule key,start line,end line,severity,message,type
+java:S1104,4,4,MODULAR,Make globalCounter a static final constant or non-public and provide accessors if needed.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1444,4,4,MODULAR,Make this "public static globalCounter" field final,null,
+java:S3008,11,11,IDENTIFIABLE,Rename this field "PI_VALUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S2696,18,18,COMPLETE,Make the enclosing method "static" or remove this set.,null,
+java:S106,23,23,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,24,24,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,32,32,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,34,34,MODULAR,Replace this use of System.out by a logger.,null,

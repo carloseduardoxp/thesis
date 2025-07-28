@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: Handle Integer.MIN_VALUE explicitly in PubSubFactory.hashForPubSub., the code was changed by the developer from return Math.max(0, Math.abs(hashKey.toString().hashCode())); (if dont have code before, the code wasnt exist yet) to final int stringHashCode = hashKey.toString().hashCode();
+         if (stringHashCode == Integer.MIN_VALUE) {
+             return 0;
+         } else {
+             return Math.abs(stringHashCode);
+         }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

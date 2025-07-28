@@ -1,0 +1,87 @@
+Given the following Java code snippet:
+enum State {
+    IDLE,
+    RUNNING,
+    PAUSED,
+    STOPPED
+}
+
+enum Event {
+    START,
+    PAUSE,
+    RESUME,
+    STOP
+}
+
+class StateMachine {
+    private State currentState;
+
+    public StateMachine() {
+        // Initialize the state machine to a default state
+        this.currentState = State.IDLE;
+    }
+
+    public State getCurrentState() {
+        return currentState;
+    }
+
+    public void handleEvent(Event event) {
+        switch (currentState) {
+            case IDLE:
+                if (event == Event.START) {
+                    currentState = State.RUNNING;
+                    System.out.println("State changed to RUNNING");
+                }
+                break;
+            case RUNNING:
+                if (event == Event.PAUSE) {
+                    currentState = State.PAUSED;
+                    System.out.println("State changed to PAUSED");
+                } else if (event == Event.STOP) {
+                    currentState = State.STOPPED;
+                    System.out.println("State changed to STOPPED");
+                }
+                break;
+            case PAUSED:
+                if (event == Event.RESUME) {
+                    currentState = State.RUNNING;
+                    System.out.println("State changed to RUNNING");
+                } else if (event == Event.STOP) {
+                    currentState = State.STOPPED;
+                    System.out.println("State changed to STOPPED");
+                }
+                break;
+            case STOPPED:
+                if (event == Event.START) {
+                    currentState = State.RUNNING;
+                    System.out.println("State changed to RUNNING");
+                }
+                break;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        StateMachine stateMachine = new StateMachine();
+
+        System.out.println("Current state: " + stateMachine.getCurrentState());
+
+        // Handle events
+        stateMachine.handleEvent(Event.START);
+        System.out.println("Current state: " + stateMachine.getCurrentState());
+
+        stateMachine.handleEvent(Event.PAUSE);
+        System.out.println("Current state: " + stateMachine.getCurrentState());
+
+        stateMachine.handleEvent(Event.RESUME);
+        System.out.println("Current state: " + stateMachine.getCurrentState());
+
+        stateMachine.handleEvent(Event.STOP);
+        System.out.println("Current state: " + stateMachine.getCurrentState());
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1192 message = Define a constant instead of duplicating this literal "State changed to RUNNING" 3 times., start line = 32, end line = 32, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Current state: " 5 times., start line = 67, end line = 67.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

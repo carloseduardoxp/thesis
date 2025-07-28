@@ -1,0 +1,7 @@
+Based on this pull request with the developer description: Write ternary with if-else to improve readability, the code was changed by the developer from return item -> filterString != null && filterString.trim().length()>0 ? item.getName().startsWith(filterString) : true; (if dont have code before, the code wasnt exist yet) to return item -> {
+    if (filterString != null && filterString.trim().length()>0) {
+     return item.getName().startsWith(filterString);
+    } else {
+     return true;
+    }
+   };, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

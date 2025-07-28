@@ -1,0 +1,11 @@
+Given the following Java code snippet:
+public class Chat {
+    public static void main(String[] args) {
+        final int MAX_USERS = 100;        
+    }
+}
+
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "MAX_USERS"., start line = 3, end line = 3, rule key = java:S1481 message = Remove this unused "MAX_USERS" local variable., start line = 3, end line = 3, rule key = java:S1854 message = Remove this useless assignment to local variable "MAX_USERS"., start line = 3, end line = 3, rule key = java:S1481 message = Remove this unused "MAX_USERS" local variable., start line = 3, end line = 3.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

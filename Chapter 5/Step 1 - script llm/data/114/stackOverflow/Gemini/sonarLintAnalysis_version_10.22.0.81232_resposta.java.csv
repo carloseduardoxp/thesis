@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,8,8,LOGICAL,Remove this useless assignment to local variable "geometryFactory".,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "lat".,null,
+java:S1854,6,6,LOGICAL,Remove this useless assignment to local variable "lon".,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "targetCRS".,null,
+java:S1854,4,4,LOGICAL,Remove this useless assignment to local variable "sourceCRS".,null,
+java:S1481,4,4,CLEAR,Remove this unused "sourceCRS" local variable.,null,
+java:S1481,5,5,CLEAR,Remove this unused "targetCRS" local variable.,null,
+java:S1481,6,6,CLEAR,Remove this unused "lon" local variable.,null,
+java:S1481,7,7,CLEAR,Remove this unused "lat" local variable.,null,
+java:S1481,8,8,CLEAR,Remove this unused "geometryFactory" local variable.,null,

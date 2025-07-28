@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        BufferedReader r = new BufferedReader(new FileReader(myFile));
+        int c;
+        while (-1 != (c = r.read())) {
+            String s = r.readLine();
+            // do something with s
+        }
+        r.close();
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "c"., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "s"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "c" local variable., start line = 9, end line = 9, rule key = java:S1481 message = Remove this unused "s" local variable., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "c"., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "s"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "c" local variable., start line = 9, end line = 9, rule key = java:S1481 message = Remove this unused "s" local variable., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

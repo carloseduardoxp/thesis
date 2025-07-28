@@ -1,0 +1,34 @@
+Given the following Java code snippet:
+import java.io.*;
+import javax.swing.text.*;
+import javax.swing.text.html.*;
+import javax.swing.text.html.parser.*;
+
+public class HtmlParseDemo {
+   public static void main(String [] args) throws Exception {
+       Reader reader = new StringReader("<table><tr><td>Hello</td><td>World!</td></tr></table>");
+       HTMLEditorKit.Parser parser = new ParserDelegator();
+       parser.parse(reader, new HTMLTableParser(), true);
+       reader.close();
+   }
+}
+
+class HTMLTableParser extends HTMLEditorKit.ParserCallback {
+
+    private boolean encounteredATableRow = false;
+
+    public void handleText(char[] data, int pos) {
+        if(encounteredATableRow) System.out.println(new String(data));
+    }
+
+    public void handleStartTag(HTML.Tag t, MutableAttributeSet a, int pos) {
+        if(t == HTML.Tag.TR) encounteredATableRow = true;
+    }
+
+    public void handleEndTag(HTML.Tag t, int pos) {
+        if(t == HTML.Tag.TR) encounteredATableRow = false;
+    }
+}
+
+the following improvements are recommended: rule key = java:S1161 message = Add the "@Override" annotation above this method signature, start line = 19, end line = 19, rule key = java:S1161 message = Add the "@Override" annotation above this method signature, start line = 23, end line = 23, rule key = java:S1161 message = Add the "@Override" annotation above this method signature, start line = 27, end line = 27.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

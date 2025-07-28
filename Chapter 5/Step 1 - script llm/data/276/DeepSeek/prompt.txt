@@ -1,0 +1,29 @@
+Given the following Java code snippet:
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        String str = "Hello, welcome to Java programming";
+        String search = "Java";
+
+// Find first occurrence
+        int position = str.indexOf(search); // returns 18
+
+        if (position != -1) {
+            System.out.println("Found at position: " + position);
+        } else {
+            System.out.println("Not found");
+        }
+
+// Find occurrence starting from specific index
+        int fromIndex = 10;
+        position = str.indexOf(search, fromIndex); // searches from index 10 onward
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "position"., start line = 20, end line = 20.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

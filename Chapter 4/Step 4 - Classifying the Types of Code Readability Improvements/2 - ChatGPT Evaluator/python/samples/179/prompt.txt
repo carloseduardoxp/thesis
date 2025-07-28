@@ -1,0 +1,8 @@
+Based on this pull request with the developer description: move indentation for readability without changing the behavior., the code was changed by the developer from if script_type_out:
+                 if script_type_out.address in self.keys:
+                     self.log.debug('detected tx output', tx=tx.hash_hex, index=index, address=script_type_out.address) (if dont have code before, the code wasnt exist yet) to if not script_type_out:
+                 # it's the only one we know, so log warning
+                 self.log.warn('unknown script')
+                 continue
+             if script_type_out.address not in self.keys:
+                 continue, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

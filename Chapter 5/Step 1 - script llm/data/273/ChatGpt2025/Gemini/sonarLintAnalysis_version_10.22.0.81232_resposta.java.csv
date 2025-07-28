@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "text".,null,
+java:S1481,7,7,CLEAR,Remove this unused "text" local variable.,null,
+java:S125,12,12,CLEAR,This block of commented-out lines of code should be removed.,null,

@@ -1,0 +1,15 @@
+Given the following Java code snippet:
+public class Teste {
+  public static void main(String[] args) {
+    int number = 42;
+    String numberAsString = String.valueOf(number);
+    // or
+    // String numberAsString = Integer.toString(number);
+    System.out.println(numberAsString);
+
+  }
+}
+
+
+the following improvements are recommended: rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 6, end line = 6.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

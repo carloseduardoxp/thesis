@@ -1,0 +1,30 @@
+Given the following Java code snippet:
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+
+public class CsvParser {
+    public static void main(String[] args) {
+        String fileName = "data.csv";
+        
+        try (CSVReader reader = new CSVReader(new FileReader(fileName))) {
+            List<String[]> records = reader.readAll();
+            
+            for (String[] record : records) {
+                for (String field : record) {
+                    System.out.print(field + " | ");
+                }
+                System.out.println();
+            }
+        } catch (IOException | CsvException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S6213 message = Rename this variable to not match a restricted identifier., start line = 15, end line = 15.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

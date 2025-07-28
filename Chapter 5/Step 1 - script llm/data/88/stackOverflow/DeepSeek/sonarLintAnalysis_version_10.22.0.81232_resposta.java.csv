@@ -1,0 +1,11 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S115,5,5,IDENTIFIABLE,Rename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.,null,
+java:S106,17,17,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,20,20,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2234,33,33,CLEAR,Parameters to moveDisks have the same names but not the same order as the method arguments.,null,
+java:S2234,37,37,CLEAR,Parameters to moveDisks have the same names but not the same order as the method arguments.,null,
+java:S106,44,44,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,45,45,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,60,60,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,62,62,MODULAR,Replace this use of System.out by a logger.,null,

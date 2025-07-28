@@ -1,0 +1,32 @@
+Given the following Java code snippet:
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+public class DomXmlParser {
+    public static void main(String[] args) throws Exception {
+        // Parse XML file
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document document = builder.parse("file.xml");
+        
+        // Select all nodes with a specific tag name
+        NodeList nodeList = document.getElementsByTagName("book");
+        
+        // Iterate through selected nodes
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            Node node = nodeList.item(i);
+            System.out.println("Node name: " + node.getNodeName());
+            System.out.println("Node value: " + node.getTextContent());
+        }
+        
+        // Select a single node by ID (if DTD or schema defines IDs)
+        Node singleNode = document.getElementById("book123");
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "singleNode"., start line = 25, end line = 25, rule key = java:S1481 message = Remove this unused "singleNode" local variable., start line = 25, end line = 25, rule key = java:S1854 message = Remove this useless assignment to local variable "singleNode"., start line = 25, end line = 25, rule key = java:S1481 message = Remove this unused "singleNode" local variable., start line = 25, end line = 25.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

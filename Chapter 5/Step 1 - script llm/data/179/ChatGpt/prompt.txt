@@ -1,0 +1,43 @@
+Given the following Java code snippet:
+class Person {
+  private String name;
+  private int age;
+
+  public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+}
+
+public class Teste {
+
+  public static void main(String[] args) {
+    Person person1 = new Person("John Doe", 30);
+    Person person2 = new Person("Jane Smith", 25);
+    person1.setName("John Smith");
+    person2.setAge(26);
+    
+    String name = person1.getName();
+    int age = person2.getAge();
+    
+  }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "age"., start line = 36, end line = 36, rule key = java:S1854 message = Remove this useless assignment to local variable "name"., start line = 35, end line = 35, rule key = java:S1481 message = Remove this unused "name" local variable., start line = 35, end line = 35, rule key = java:S1481 message = Remove this unused "age" local variable., start line = 36, end line = 36, rule key = java:S1854 message = Remove this useless assignment to local variable "age"., start line = 36, end line = 36, rule key = java:S1854 message = Remove this useless assignment to local variable "name"., start line = 35, end line = 35, rule key = java:S1481 message = Remove this unused "name" local variable., start line = 35, end line = 35, rule key = java:S1481 message = Remove this unused "age" local variable., start line = 36, end line = 36.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

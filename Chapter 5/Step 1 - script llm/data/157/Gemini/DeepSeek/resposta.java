@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class SimpleCsvParser {
+
+    public static void main(String[] args) {
+        String csvFilePath = "data.csv"; // Replace with your CSV file path
+        List<List<String>> csvRecords = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                // Split the line by comma. This is the simplest approach.
+                // It will NOT handle commas within quoted fields correctly.
+                String[] values = line.split(",");
+                csvRecords.add(Arrays.asList(values));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Print the parsed data
+        for (List<String> record : csvRecords) {
+            System.out.println(record);
+        }
+    }
+}

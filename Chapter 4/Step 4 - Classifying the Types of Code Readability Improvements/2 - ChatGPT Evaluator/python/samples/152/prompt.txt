@@ -1,0 +1,14 @@
+Based on this pull request with the developer description: Made inferencing methods more consistent with each other. Grouped inferencing statements together in apply methods for easier readability, the code was changed by the developer from actual_1 = infer_entity_value_type_from_feature_views(
+             [Entity(name="id")], [fv1]
+         )
+         actual_2 = infer_entity_value_type_from_feature_views(
+             [Entity(name="id")], [fv2]
+         )
+         assert actual_1 == [Entity(name="id", value_type=ValueType.INT64)]
+         assert actual_2 == [Entity(name="id", value_type=ValueType.STRING)] (if dont have code before, the code wasnt exist yet) to actual_1 = Entity(name="id")
+         actual_2 = Entity(name="id")
+ 
+         update_entities_with_inferred_types_from_feature_views([actual_1], [fv1])
+         update_entities_with_inferred_types_from_feature_views([actual_2], [fv2])
+         assert actual_1 == Entity(name="id", value_type=ValueType.INT64)
+         assert actual_2 == Entity(name="id", value_type=ValueType.STRING), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

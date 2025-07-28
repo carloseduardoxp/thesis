@@ -1,0 +1,21 @@
+Based on this pull request with the developer description: formats generated query strings, the code was changed by the developer from query = (
+                 "query CustomQuery($id: ID!, $param: String) {\\n"
+                 "  query1(id: $id) {\\n"
+                 "    field1\\n"
+                 "    field2 {\\n"
+                 "      fieldb\\n"
+                 "    }\\n"
+                 "    field3\\n"
+                 "  }\\n"
+                 "}\\n" (if dont have code before, the code wasnt exist yet) to query = gql(
+                 """
+                 query CustomQuery($id: ID!, $param: String) {
+                   query1(id: $id) {
+                     field1
+                     field2 {
+                       fieldb
+                     }
+                     field3
+                   }
+                 }
+                 """, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

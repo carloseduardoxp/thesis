@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S2184,60,60,CLEAR,Cast one of the operands of this multiplication operation to a "long".,null,
+java:S2184,61,61,CLEAR,Cast one of the operands of this multiplication operation to a "long".,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1201,55,55,CLEAR,Either override Object.equals(Object), or rename the method to prevent any confusion.,null,

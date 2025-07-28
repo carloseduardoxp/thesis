@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,53,53,DISTINCT,Define a constant instead of duplicating this literal "Hex: " 5 times.,null,
+java:S1192,53,53,DISTINCT,Define a constant instead of duplicating this literal " -> RGB: (" 5 times.,null,
+java:S106,24,24,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,36,36,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,53,53,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,58,58,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,63,63,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,68,68,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,73,73,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,76,76,MODULAR,Replace this use of System.out by a logger.,null,

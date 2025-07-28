@@ -1,0 +1,38 @@
+Given the following Java code snippet:
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        ExecutorService executor = Executors.newFixedThreadPool(4); // Create thread pool
+        List<Future<?>> futures = new ArrayList<>();
+
+        for (Object item : collection) {
+            futures.add(executor.submit(() -> {
+                // Process each item here
+                processItem(item);
+            }));
+        }
+
+// Wait for all tasks to complete
+        for (Future<?> future : futures) {
+            try {
+                future.get(); // Get will block until task completes
+            } catch (InterruptedException | ExecutionException e) {
+                e.printStackTrace();
+            }
+        }
+
+        executor.shutdown(); // Always shutdown the executor
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 14, end line = 14.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

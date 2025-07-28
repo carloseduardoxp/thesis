@@ -1,0 +1,50 @@
+Given the following Java code snippet:
+public class PriorityQueue<T> {
+
+    private java.util.PriorityQueue<IntPriorityComparableWrapper<T>> queue;
+
+    public PriorityQueue() {
+            queue = new java.util.PriorityQueue<IntPriorityComparableWrapper<T>>();
+    }
+
+    public void add( int priority, T object ) {
+            queue.add( new IntPriorityComparableWrapper<T>(object, priority) );
+    }
+
+    public T get() {
+            return (null != queue.peek())? queue.poll().getObject() : null;
+    }
+
+
+    /**
+     * A "wrapper" to impose comparable properties on any object placed in the
+     * queue.
+     */
+    private static class IntPriorityComparableWrapper<T>
+    implements Comparable<IntPriorityComparableWrapper<T>> {
+
+            private T object;
+            private int priority;
+
+            public IntPriorityComparableWrapper( T object, int priority ) {
+                    this.object = object;
+                    this.priority = priority;
+            }
+
+            public int compareTo( IntPriorityComparableWrapper<T> anotherObject ) {
+                    return this.priority - anotherObject.priority;
+            }
+
+            public int getPriority() {
+                    return priority;
+            }
+
+            public T getObject() {
+                    return object;
+            }
+    }
+
+}
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 6, end line = 6, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 10, end line = 10.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

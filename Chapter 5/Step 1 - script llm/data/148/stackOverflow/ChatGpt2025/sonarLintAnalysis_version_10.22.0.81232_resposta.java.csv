@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1186,4,4,COMPLETE,Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.,null,
+java:S1128,1,1,CLEAR,Remove this unused import 'java.util.ArrayList'.,null,

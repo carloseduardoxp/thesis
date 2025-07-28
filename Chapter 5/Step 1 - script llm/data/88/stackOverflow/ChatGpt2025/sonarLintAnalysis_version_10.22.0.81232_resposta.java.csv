@@ -1,0 +1,13 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,13,13,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2234,29,29,CLEAR,Parameters to move have the same names but not the same order as the method arguments.,null,
+java:S2234,33,33,CLEAR,Parameters to move have the same names but not the same order as the method arguments.,null,
+java:S106,40,40,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,41,41,MODULAR,Replace this use of System.out by a logger.,null,
+java:S108,48,48,CLEAR,Remove this block of code, fill it in, or add a comment explaining why it is empty.,null,
+java:S108,52,52,CLEAR,Remove this block of code, fill it in, or add a comment explaining why it is empty.,null,
+java:S108,56,56,CLEAR,Remove this block of code, fill it in, or add a comment explaining why it is empty.,null,
+java:S106,58,58,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,60,60,MODULAR,Replace this use of System.out by a logger.,null,

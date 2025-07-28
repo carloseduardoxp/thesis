@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,17,17,LOGICAL,Remove this useless assignment to local variable "result".,null,
+java:S1854,11,11,LOGICAL,Remove this useless assignment to local variable "result".,null,
+java:S1602,6,6,CLEAR,Remove useless curly braces around statement and then remove useless return keyword (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S1481,11,11,CLEAR,Remove this unused "result" local variable.,null,
+java:S1481,17,17,CLEAR,Remove this unused "result" local variable.,null,

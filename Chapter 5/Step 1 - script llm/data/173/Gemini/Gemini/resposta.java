@@ -1,0 +1,207 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+
+// Event.java
+// This class represents a generic event. Specific events can extend this class.
+class Event {
+    private String name; // The name of the event
+
+    /**
+     * Constructs a new Event with a given name.
+     * @param name The name of the event.
+     */
+    public Event(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Returns the name of the event.
+     * @return The event name.
+     */
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Event [name=" + name + "]";
+    }
+}
+
+// CustomEvent.java
+// An example of a custom event extending the base Event class.
+class CustomEvent extends Event {
+    private String message; // A specific payload for this custom event
+
+    /**
+     * Constructs a new CustomEvent with a name and a message.
+     * @param name The name of the event.
+     * @param message The message associated with this custom event.
+     */
+    public CustomEvent(String name, String message) {
+        super(name);
+        this.message = message;
+    }
+
+    /**
+     * Returns the message of the custom event.
+     * @return The event message.
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    @Override
+    public String toString() {
+        return "CustomEvent [name=" + getName() + ", message=" + message + "]";
+    }
+}
+
+// EventListener.java
+// This interface defines the contract for any class that wants to listen for events.
+interface EventListener {
+    /**
+     * This method is called when an event is fired that this listener is registered for.
+     * @param event The event that was fired.
+     */
+    void onEvent(Event event);
+}
+
+// ConcreteListener.java
+// An example implementation of the EventListener interface.
+class ConcreteListener implements EventListener {
+    private String listenerName; // A name for this listener for identification
+
+    /**
+     * Constructs a new ConcreteListener with a given name.
+     * @param listenerName The name of the listener.
+     */
+    public ConcreteListener(String listenerName) {
+        this.listenerName = listenerName;
+    }
+
+    /**
+     * Handles the incoming event.
+     * If the event is a CustomEvent, it prints the custom message.
+     * Otherwise, it prints the generic event name.
+     * @param event The event that was fired.
+     */
+    @Override
+    public void onEvent(Event event) {
+        System.out.println(listenerName + " received event: " + event.getName());
+        if (event instanceof CustomEvent) {
+            CustomEvent customEvent = (CustomEvent) event;
+            System.out.println("  Custom message: " + customEvent.getMessage());
+        }
+    }
+}
+
+// EventManager.java
+// This class manages event listeners and dispatches events to registered listeners.
+class EventManager {
+    // A map to store listeners, where the key is the event name (String)
+    // and the value is a list of EventListeners registered for that event.
+    private Map<String, List<EventListener>> listeners;
+
+    /**
+     * Constructs a new EventManager.
+     */
+    public EventManager() {
+        this.listeners = new HashMap<>();
+    }
+
+    /**
+     * Registers an event listener for a specific event type.
+     * If the event type does not exist in the map, a new list is created for it.
+     * @param eventName The name of the event to listen for.
+     * @param listener The EventListener instance to register.
+     */
+    public void registerListener(String eventName, EventListener listener) {
+        listeners.computeIfAbsent(eventName, k -> new ArrayList<>()).add(listener);
+        System.out.println("Registered listener " + listener.getClass().getSimpleName() +
+                           " for event: " + eventName);
+    }
+
+    /**
+     * Unregisters an event listener for a specific event type.
+     * @param eventName The name of the event to unregister from.
+     * @param listener The EventListener instance to unregister.
+     */
+    public void unregisterListener(String eventName, EventListener listener) {
+        List<EventListener> eventListeners = listeners.get(eventName);
+        if (eventListeners != null) {
+            eventListeners.remove(listener);
+            System.out.println("Unregistered listener " + listener.getClass().getSimpleName() +
+                               " from event: " + eventName);
+            if (eventListeners.isEmpty()) {
+                listeners.remove(eventName); // Remove the event entry if no listeners remain
+            }
+        }
+    }
+
+    /**
+     * Fires an event, notifying all registered listeners for that event type.
+     * @param event The event to be fired.
+     */
+    public void fireEvent(Event event) {
+        System.out.println("\nFiring event: " + event.getName());
+        List<EventListener> eventListeners = listeners.get(event.getName());
+        if (eventListeners != null && !eventListeners.isEmpty()) {
+            // Iterate over a copy of the list to avoid ConcurrentModificationException
+            // if a listener modifies the list during iteration.
+            for (EventListener listener : new ArrayList<>(eventListeners)) {
+                listener.onEvent(event);
+            }
+        } else {
+            System.out.println("No listeners registered for event: " + event.getName());
+        }
+    }
+}
+
+// Main.java
+// This is the main class to demonstrate the event system.
+public class Main {
+    private static final String USER_LOGGED_IN = "UserLoggedIn";
+    private static final String CUSTOM_ACTION = "CustomAction";
+    private static final String PRODUCT_PURCHASED = "ProductPurchased";
+    private static final String ORDER_PROCESSED = "OrderProcessed";
+    private static final String PRODUCT_VIEWED = "ProductViewed";
+
+    public static void main(String[] args) {
+        // Create an instance of the EventManager
+        EventManager eventManager = new EventManager();
+
+        // Create some listeners
+        ConcreteListener listener1 = new ConcreteListener("Listener A");
+        ConcreteListener listener2 = new ConcreteListener("Listener B");
+        ConcreteListener listener3 = new ConcreteListener("Listener C");
+
+        // Register listeners for different events
+        eventManager.registerListener(USER_LOGGED_IN, listener1);
+        eventManager.registerListener(USER_LOGGED_IN, listener2); // Listener B also listens to UserLoggedIn
+        eventManager.registerListener(PRODUCT_PURCHASED, listener2);
+        eventManager.registerListener(ORDER_PROCESSED, listener3);
+        eventManager.registerListener(CUSTOM_ACTION, listener1);
+        eventManager.registerListener(CUSTOM_ACTION, listener3);
+
+
+        // Fire some events
+        eventManager.fireEvent(new Event(USER_LOGGED_IN));
+        eventManager.fireEvent(new Event(PRODUCT_VIEWED)); // No listeners for this event
+        eventManager.fireEvent(new CustomEvent(CUSTOM_ACTION, "User performed a special action!"));
+        eventManager.fireEvent(new Event(PRODUCT_PURCHASED));
+
+
+        // Unregister a listener
+        eventManager.unregisterListener(USER_LOGGED_IN, listener1);
+
+        // Fire the UserLoggedIn event again to see the effect of unregistration
+        eventManager.fireEvent(new Event(USER_LOGGED_IN));
+
+        // Fire another custom event
+        eventManager.fireEvent(new CustomEvent(CUSTOM_ACTION, "Another custom action occurred!"));
+    }
+}

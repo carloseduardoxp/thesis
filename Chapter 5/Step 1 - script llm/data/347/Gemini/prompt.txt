@@ -1,0 +1,20 @@
+Given the following Java code snippet:
+import java.sql.*;
+
+public class Gemini {
+
+public static void main(String[] args) {
+
+String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+PreparedStatement pstmt = connection.prepareStatement(sql);
+pstmt.setString(1, username); // 1 for the first placeholder
+pstmt.setString(2, password); // 2 for the second placeholder
+ResultSet rs = pstmt.executeQuery();
+// Or pstmt.executeUpdate() for INSERT, UPDATE, DELETE
+
+}
+
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "rs"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "rs" local variable., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "rs"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "rs" local variable., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

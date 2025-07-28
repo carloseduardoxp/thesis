@@ -1,0 +1,10 @@
+Based on this pull request with the developer description: Only added javadoc to improve the readability., the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to /**
+      * This method will do the following steps to get the value of a config option:
+      *
+      * <p>1. get the value from {@link Configuration}. <br>
+      * 2. if key is not found, try to get the value with fallback keys from {@link Configuration}
+      * <br>
+      * 3. if no fallback keys are found, return {@link Optional#empty()}. <br>
+      *
+      * @return the value of the configuration or {@link Optional#empty()}.
+      */, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

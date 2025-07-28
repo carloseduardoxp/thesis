@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+import javax.swing.*;
+import java.awt.*;
+
+public class TextAreaColorExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Change JTextArea Color");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+
+        JTextArea textArea = new JTextArea("This is some text.");
+        
+        // Change background color to light yellow
+        textArea.setBackground(Color.YELLOW);
+        
+        // Change text color to red
+        textArea.setForeground(Color.RED);
+
+        frame.add(new JScrollPane(textArea));
+        frame.setVisible(true);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

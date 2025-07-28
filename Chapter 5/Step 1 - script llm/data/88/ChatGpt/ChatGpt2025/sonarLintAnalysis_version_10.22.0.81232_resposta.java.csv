@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,8,8,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,14,14,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2234,16,16,CLEAR,Parameters to moveDisks have the same names but not the same order as the method arguments.,null,
+java:S106,17,17,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2234,18,18,CLEAR,Parameters to moveDisks have the same names but not the same order as the method arguments.,null,

@@ -1,0 +1,29 @@
+Given the following Java code snippet:
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+public class Teste {
+  public static void main(String[] args) {
+    // reference to a static method
+    Function<String, Integer> parseInt = Integer::parseInt;
+
+    // reference to an instance method of an object of a particular type
+    List<String> list = Arrays.asList("foo", "bar");
+    Function<List<String>, Integer> size = List::size;
+
+    // reference to an instance method of an arbitrary object of a particular type
+    Function<String, Integer> length = String::length;
+
+    // reference to a constructor
+    Supplier<ArrayList<String>> arrayListSupplier = ArrayList::new;
+
+  }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "arrayListSupplier"., start line = 21, end line = 21, rule key = java:S1854 message = Remove this useless assignment to local variable "length"., start line = 18, end line = 18, rule key = java:S1854 message = Remove this useless assignment to local variable "size"., start line = 15, end line = 15, rule key = java:S1854 message = Remove this useless assignment to local variable "list"., start line = 14, end line = 14, rule key = java:S1854 message = Remove this useless assignment to local variable "parseInt"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "parseInt" local variable., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "list" local variable., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "size" local variable., start line = 15, end line = 15, rule key = java:S1481 message = Remove this unused "length" local variable., start line = 18, end line = 18, rule key = java:S1481 message = Remove this unused "arrayListSupplier" local variable., start line = 21, end line = 21, rule key = java:S1854 message = Remove this useless assignment to local variable "arrayListSupplier"., start line = 21, end line = 21, rule key = java:S1854 message = Remove this useless assignment to local variable "length"., start line = 18, end line = 18, rule key = java:S1854 message = Remove this useless assignment to local variable "size"., start line = 15, end line = 15, rule key = java:S1854 message = Remove this useless assignment to local variable "list"., start line = 14, end line = 14, rule key = java:S1854 message = Remove this useless assignment to local variable "parseInt"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "parseInt" local variable., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "list" local variable., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "size" local variable., start line = 15, end line = 15, rule key = java:S1481 message = Remove this unused "length" local variable., start line = 18, end line = 18, rule key = java:S1481 message = Remove this unused "arrayListSupplier" local variable., start line = 21, end line = 21.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

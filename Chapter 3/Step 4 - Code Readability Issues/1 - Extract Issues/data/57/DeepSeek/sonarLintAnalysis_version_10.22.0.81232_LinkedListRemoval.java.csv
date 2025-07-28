@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,21,21,LOGICAL,Remove this useless assignment to local variable "last".,null,
+java:S1854,18,18,LOGICAL,Remove this useless assignment to local variable "first".,null,
+java:S1481,18,18,CLEAR,Remove this unused "first" local variable.,null,
+java:S1481,21,21,CLEAR,Remove this unused "last" local variable.,null,
+java:S106,23,23,MODULAR,Replace this use of System.out by a logger.,null,

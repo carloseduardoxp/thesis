@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Re-ordered arguments of sendResponse(), verifyRequest() to make them consistent between each other, the code was changed by the developer from protected void sendResponse(String versionInfo, List<Any> resources, ResourceType type,
+         String nonce) { (if dont have code before, the code wasnt exist yet) to protected void sendResponse(
+         ResourceType type, List<Any> resources, String versionInfo, String nonce) {, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,18 @@
+Given the following Java code snippet:
+
+import java.util.Set;
+
+
+public class Chat {
+
+    public static void main(String[] args) {
+
+        Set<String> immutableSet = Set.of("A", "B", "C");
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "immutableSet"., start line = 9, end line = 9, rule key = java:S1481 message = Remove this unused "immutableSet" local variable., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "immutableSet"., start line = 9, end line = 9, rule key = java:S1481 message = Remove this unused "immutableSet" local variable., start line = 9, end line = 9.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

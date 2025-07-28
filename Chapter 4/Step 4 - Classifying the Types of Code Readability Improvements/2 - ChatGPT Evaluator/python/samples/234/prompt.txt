@@ -1,0 +1,24 @@
+Based on this pull request with the developer description: Various readability/typos/cleanup fixes - no functionality change.    I tried to make `_save_checkpoint` a bit more readable, but the auto-formatter still makes things harder to read than it can be., the code was changed by the developer from state = {             'module':             self.module_state_dict(),             'optimizer':             self.optimizer.state_dict() if self.optimizer and not self.zero_optimization() else None,
+             'lr_scheduler':
+             self.lr_scheduler.state_dict() if self.lr_scheduler is not None else None,
+             'csr_tensor_module_names':
+             self.csr_tensor_module_names,
+             'skipped_steps':
+             self.skipped_steps,
+             'global_steps':
+             self.global_steps,
+             'global_samples':
+             self.global_samples,
+             'dp_world_size':
+             self.dp_world_size,
+             'mp_world_size':
+             self.mp_world_size
+         } (if dont have code before, the code wasnt exist yet) to state = dict(             module=self.module_state_dict(),             optimizer=self.optimizer.state_dict() lr_scheduler=self.lr_scheduler.state_dict()
+             if self.lr_scheduler is not None else None,
+             csr_tensor_module_names=self.csr_tensor_module_names,
+             skipped_steps=self.skipped_steps,
+             global_steps=self.global_steps,
+             global_samples=self.global_samples,
+             dp_world_size=self.dp_world_size,
+             mp_world_size=self.mp_world_size,
+         ), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

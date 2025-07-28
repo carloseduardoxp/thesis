@@ -1,0 +1,9 @@
+Based on this pull request with the developer description: Improve some comparators using Java 8, the code was changed by the developer from private static final Comparator<TraceRunnable> comparator = new Comparator<TraceRunnable>() {
+     @SuppressWarnings("unchecked")
+     @Override
+     public int compare(TraceRunnable o1, TraceRunnable o2) {
+       return ((Comparable<Runnable>) o1.getRunnable()).compareTo(o2.getRunnable());
+     }
+   }; (if dont have code before, the code wasnt exist yet) to @SuppressWarnings("unchecked")
+   private static final Comparator<TraceRunnable> ELEMENT_COMPARATOR = (o1,
+       o2) -> ((Comparable<Runnable>) o1.getRunnable()).compareTo(o2.getRunnable());, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: simplifying `if` statements for returning bools, the code was changed by the developer from "if value and value.lower() in (""y"", ""yes"", ""true""):
+             return True
+         return False (if dont have code before, the code wasnt exist yet) to return bool(value and value.lower() in (""yes"", ""true"", ""y"")), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

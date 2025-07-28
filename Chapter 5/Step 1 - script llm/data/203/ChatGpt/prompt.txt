@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+import java.util.Collections;
+import java.util.Dictionary;
+import java.util.Hashtable;
+import java.util.List;
+
+public class DictionaryToArray {
+    public static void main(String[] args) {
+        Dictionary<String, Integer> dict = new Hashtable<String, Integer>();
+        dict.put("one", 1);
+        dict.put("two", 2);
+        dict.put("three", 3);
+        
+        List<Integer> values = Collections.list(dict.elements());
+        Integer[] arr = new Integer[values.size()];
+        arr = values.toArray(arr);
+        
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 8, end line = 8.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

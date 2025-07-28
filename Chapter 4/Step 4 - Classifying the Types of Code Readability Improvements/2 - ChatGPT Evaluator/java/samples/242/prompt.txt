@@ -1,0 +1,28 @@
+Based on this pull request with the developer description: It simply flattens the functions, simplifies them when possible, and reorders them to group similar pieces (e.g. all of the inner classes, or all of the static methods) together., the code was changed by the developer from if (this.cardWidth != other.cardWidth) {
+                 return false;
+             }
+             if (this.cardHeight != other.cardHeight) {
+                 return false;
+             }
+             if (this.cardXOffset != other.cardXOffset) {
+                 return false;
+             }
+             if (this.cardYOffset != other.cardYOffset) {
+                 return false;
+             }
+             if (this.hasImage != other.hasImage) {
+                 return false;
+             }
+             if (this.isSelected != other.isSelected) {
+                 return false;
+             }
+             if (this.isChoosable != other.isChoosable) {
+                 return false;
+             }
+             if (this.isPlayable != other.isPlayable) {
+                 return false;
+             }
+             if (this.canAttack != other.canAttack) {
+                 return false;
+             }
+             return this.canBlock == other.canBlock; (if dont have code before, the code wasnt exist yet) to return Objects.equals(this.border, that.border)                     && this.width == that.width                     && this.height == that.height                     && this.cardWidth == that.cardWidth                     && this.cardHeight == that.cardHeight                     && this.cardXOffset == that.cardXOffset                     && this.cardYOffset == that.cardYOffset                     && this.hasImage == that.hasImage                     && this.isSelected == that.isSelected                     && this.isChoosable == that.isChoosable                     && this.isPlayable == that.isPlayable                     && this.canAttack == that.canAttack                     && this.canBlock == that.canBlock;, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

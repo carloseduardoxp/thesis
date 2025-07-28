@@ -1,0 +1,10 @@
+Based on this pull request with the developer description: wraps generated query strings in gql lambda, the code was changed by the developer from self.class_def.lineno = len(self.imports) + 1  if not self.class_def.body:
+             self.class_def.body.append(ast.Pass())
+         return ast.Module(body=self.imports + [self.class_def], type_ignores=[]) (if dont have code before, the code wasnt exist yet) to gql_lambda = generate_trivial_lambda(self.gql_lambda_name, "q")
+         gql_lambda.lineno = len(self.imports) + 1
+         self.class_def.lineno = len(self.imports) + 2
+         if not self.class_def.body:
+             self.class_def.body.append(ast.Pass()) return ast.Module(
+             body=self.imports + [gql_lambda, self.class_def],
+             type_ignores=[],
+         ), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

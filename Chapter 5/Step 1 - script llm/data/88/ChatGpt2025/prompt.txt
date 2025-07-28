@@ -1,0 +1,23 @@
+Given the following Java code snippet:
+public class TowersOfHanoi {
+
+    // Método recursivo para mover os discos
+    public static void solve(int n, char fromRod, char toRod, char auxRod) {
+        if (n == 1) {
+            System.out.println("Mover disco 1 de " + fromRod + " para " + toRod);
+            return;
+        }
+        solve(n - 1, fromRod, auxRod, toRod);
+        System.out.println("Mover disco " + n + " de " + fromRod + " para " + toRod);
+        solve(n - 1, auxRod, toRod, fromRod);
+    }
+
+    public static void main(String[] args) {
+        int n = 3; // número de discos
+        solve(n, 'A', 'C', 'B'); // A: origem, C: destino, B: auxiliar
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S2234 message = Parameters to solve have the same names but not the same order as the method arguments., start line = 9, end line = 9, rule key = java:S2234 message = Parameters to solve have the same names but not the same order as the method arguments., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

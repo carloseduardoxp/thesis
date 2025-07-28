@@ -1,0 +1,75 @@
+Given the following Java code snippet:
+
+public class Teste {
+
+    public SimpleFeature bufferFeature(SimpleFeature feature,
+            Measure<Double, Length> distance) {
+        // extract the geometry
+        GeometryAttribute gProp = feature.getDefaultGeometryProperty();
+        CoordinateReferenceSystem origCRS = gProp.getDescriptor()
+                .getCoordinateReferenceSystem();
+
+        Geometry geom = (Geometry) feature.getDefaultGeometry();
+        Geometry pGeom = geom;
+        MathTransform toTransform, fromTransform = null;
+        // reproject the geometry to a local projection
+        if (!(origCRS instanceof ProjectedCRS)) {
+
+            Point c = geom.getCentroid();
+            double x = c.getCoordinate().x;
+            double y = c.getCoordinate().y;
+
+            String code = "AUTO:42001," + x + "," + y;
+            // System.out.println(code);
+            CoordinateReferenceSystem auto;
+            try {
+                auto = CRS.decode(code);
+                toTransform = CRS.findMathTransform(
+                        DefaultGeographicCRS.WGS84, auto);
+                fromTransform = CRS.findMathTransform(auto,
+                        DefaultGeographicCRS.WGS84);
+                pGeom = JTS.transform(geom, toTransform);
+            } catch (MismatchedDimensionException | TransformException
+                    | FactoryException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+        }
+
+        // buffer
+        Geometry out = buffer(pGeom, distance.doubleValue(SI.METER));
+        Geometry retGeom = out;
+        // reproject the geometry to the original projection
+        if (!(origCRS instanceof ProjectedCRS)) {
+            try {
+                retGeom = JTS.transform(out, fromTransform);
+            } catch (MismatchedDimensionException | TransformException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+        // return a new feature containing the geom
+        SimpleFeatureType schema = feature.getFeatureType();
+        SimpleFeatureTypeBuilder ftBuilder = new SimpleFeatureTypeBuilder();
+        ftBuilder.setCRS(origCRS);
+        //ftBuilder.setDefaultGeometry("buffer");
+        ftBuilder.addAll(schema.getAttributeDescriptors());
+        ftBuilder.setName(schema.getName());
+
+        SimpleFeatureType nSchema = ftBuilder.buildFeatureType();
+        SimpleFeatureBuilder builder = new SimpleFeatureBuilder(nSchema);
+        List<Object> atts = feature.getAttributes();
+        for (int i = 0; i < atts.size(); i++) {
+            if (atts.get(i) instanceof Geometry) {
+                atts.set(i, retGeom);
+            }
+        }
+        SimpleFeature nFeature = builder.buildFeature(null, atts.toArray());
+        return nFeature;
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "nFeature"., start line = 67, end line = 67, rule key = java:S1659 message = Declare "fromTransform" on a separate line., start line = 13, end line = 13, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 22, end line = 22, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 55, end line = 55, rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "nFeature"., start line = 67, end line = 67, rule key = java:S1659 message = Declare "fromTransform" on a separate line., start line = 13, end line = 13, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 22, end line = 22, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 55, end line = 55, rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "nFeature"., start line = 67, end line = 67, rule key = java:S1659 message = Declare "fromTransform" on a separate line., start line = 13, end line = 13, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 22, end line = 22, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 55, end line = 55.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

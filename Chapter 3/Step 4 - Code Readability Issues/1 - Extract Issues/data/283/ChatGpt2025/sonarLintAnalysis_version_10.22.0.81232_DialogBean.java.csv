@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1450,10,10,CLEAR,Remove the "param1" field and declare it as a local variable in the relevant methods.,null,
+java:S1450,11,11,CLEAR,Remove the "param2" field and declare it as a local variable in the relevant methods.,null,
+java:S1068,10,10,CLEAR,Remove this unused "param1" private field.,null,
+java:S1068,11,11,CLEAR,Remove this unused "param2" private field.,null,

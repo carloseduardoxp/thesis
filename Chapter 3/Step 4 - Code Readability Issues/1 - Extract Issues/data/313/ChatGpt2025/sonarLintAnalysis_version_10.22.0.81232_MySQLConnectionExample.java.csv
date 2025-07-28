@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S6437,11,11,TRUSTWORTHY,Revoke and change this password, as it is compromised.,null,
+java:S106,12,12,MODULAR,Replace this use of System.out by a logger.,null,

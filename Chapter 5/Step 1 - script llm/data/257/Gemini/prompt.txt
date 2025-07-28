@@ -1,0 +1,28 @@
+Given the following Java code snippet:
+public interface MyInterface {
+    // Declare abstract methods
+    void doSomething();
+    int calculate(int a, int b);
+
+    // Declare constants (implicitly public static final)
+    String DEFAULT_MESSAGE = "Hello from MyInterface";
+
+    // (Java 8+) Default methods
+    default void logMessage(String message) {
+        System.out.println("Log: " + message);
+    }
+
+    // (Java 8+) Static methods
+    static void printInfo() {
+        System.out.println("This is an interface information.");
+    }
+
+    // (Java 9+) Private methods (can be used by default/static methods)
+    private void helperMethod() {
+        System.out.println("This is a private helper method.");
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1144 message = Remove this unused private "helperMethod" method., start line = 20, end line = 20.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

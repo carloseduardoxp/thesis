@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S101,2,2,IDENTIFIABLE,Rename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1659,5,5,FORMATTED,Declare "a" on a separate line.,null,
+java:S1481,5,5,CLEAR,Remove this unused "a" local variable.,null,
+java:S106,8,8,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1656,7,7,LOGICAL,Remove or correct this useless self-assignment.,null,

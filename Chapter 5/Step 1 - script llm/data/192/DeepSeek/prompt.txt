@@ -1,0 +1,43 @@
+Given the following Java code snippet:
+enum State {
+    IDLE {
+        @Override
+        public State nextState(Event event) {
+            return event == Event.START ? RUNNING : IDLE;
+        }
+    },
+    RUNNING {
+        @Override
+        public State nextState(Event event) {
+            if (event == Event.STOP) return IDLE;
+            if (event == Event.PAUSE) return PAUSED;
+            return RUNNING;
+        }
+    },
+    PAUSED {
+        @Override
+        public State nextState(Event event) {
+            return event == Event.RESUME ? RUNNING : 
+                   event == Event.STOP ? IDLE : PAUSED;
+        }
+    };
+
+    public abstract State nextState(Event event);
+}
+
+enum Event {
+    START, STOP, PAUSE, RESUME
+}
+
+public class StateMachine {
+    private State currentState = State.IDLE;
+
+    public void processEvent(Event event) {
+        currentState = currentState.nextState(event);
+        System.out.println("Event: " + event + ", New State: " + currentState);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S3358 message = Extract this nested ternary operation into an independent statement., start line = 20, end line = 20.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

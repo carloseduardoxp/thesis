@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2201,26,26,LOGICAL,The return value of "contains" must be used.,null,
+java:S2201,29,29,LOGICAL,The return value of "size" must be used.,null,
+java:S106,33,33,MODULAR,Replace this use of System.out by a logger.,null,

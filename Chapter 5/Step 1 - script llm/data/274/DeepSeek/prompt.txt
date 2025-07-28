@@ -1,0 +1,31 @@
+Given the following Java code snippet:
+import javax.swing.*;
+import java.awt.event.*;
+
+public class EnterButtonExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Enter Key Example");
+        JPanel panel = new JPanel();
+        JTextField textField = new JTextField(20);
+        JButton button = new JButton("Submit");
+        
+        // Button action
+        button.addActionListener(e -> {
+            System.out.println("Submitted: " + textField.getText());
+        });
+        
+        // Make button respond to Enter key
+        frame.getRootPane().setDefaultButton(button);
+        
+        panel.add(textField);
+        panel.add(button);
+        frame.add(panel);
+        
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
+}
+
+the following improvements are recommended: rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 12, end line = 12, rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 23, end line = 23, rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 12, end line = 12, rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 23, end line = 23.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

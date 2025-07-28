@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,8,8,LOGICAL,Remove this useless assignment to local variable "xSpeed".,null,
+java:S1854,10,10,LOGICAL,Remove this useless assignment to local variable "xSpeed".,null,
+java:S1854,14,14,LOGICAL,Remove this useless assignment to local variable "ySpeed".,null,
+java:S1854,16,16,LOGICAL,Remove this useless assignment to local variable "ySpeed".,null,
+java:S1481,4,4,CLEAR,Remove this unused "xSpeed" local variable.,null,
+java:S1481,5,5,CLEAR,Remove this unused "ySpeed" local variable.,null,

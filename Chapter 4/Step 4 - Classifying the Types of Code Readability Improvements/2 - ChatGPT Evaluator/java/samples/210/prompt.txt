@@ -1,0 +1,8 @@
+Based on this pull request with the developer description: Fix sonar issues of Replace this "switch" statement by "if" statements to increase readability., the code was changed by the developer from switch (itemType) {
+             case BroadcastRuleNodePathProvider.TABLES:
+                 return new BroadcastTableEventCreator();
+             default:
+                 throw new UnsupportedOperationException(itemType); (if dont have code before, the code wasnt exist yet) to if (itemType.equals(BroadcastRuleNodePathProvider.TABLES)) {
+             return new BroadcastTableEventCreator();
+         }
+         throw new UnsupportedOperationException(itemType);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

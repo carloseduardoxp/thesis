@@ -1,0 +1,15 @@
+Given the following Java code snippet:
+
+import java.time.Instant;
+
+
+public class Teste {
+
+    public static void main(String[] args) {
+        long now = Instant.now().toEpochMilli();
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "now"., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "now" local variable., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "now"., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "now" local variable., start line = 8, end line = 8.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

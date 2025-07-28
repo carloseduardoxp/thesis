@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+class Person {
+    private String name;
+    private int age;
+
+    // getters and setters
+}
+
+public class Teste {
+
+    public static void main(String[] args) {
+        String json = "{\"name\": \"John\", \"age\": 30}";
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        Person person = objectMapper.readValue(json, Person.class);
+
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "person"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "person" local variable., start line = 14, end line = 14, rule key = java:S1068 message = Remove this unused "name" private field., start line = 2, end line = 2, rule key = java:S1068 message = Remove this unused "age" private field., start line = 3, end line = 3, rule key = java:S1854 message = Remove this useless assignment to local variable "person"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "person" local variable., start line = 14, end line = 14, rule key = java:S1068 message = Remove this unused "name" private field., start line = 2, end line = 2, rule key = java:S1068 message = Remove this unused "age" private field., start line = 3, end line = 3, rule key = java:S1854 message = Remove this useless assignment to local variable "person"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "person" local variable., start line = 14, end line = 14, rule key = java:S1068 message = Remove this unused "name" private field., start line = 2, end line = 2, rule key = java:S1068 message = Remove this unused "age" private field., start line = 3, end line = 3.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

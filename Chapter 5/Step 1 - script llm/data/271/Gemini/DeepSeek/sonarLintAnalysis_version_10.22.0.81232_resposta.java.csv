@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1186,3,3,COMPLETE,Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.,null,
+java:S1186,8,8,COMPLETE,Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.,null,
+java:S2133,13,13,EFFICIENT,Remove this object instantiation and use "ChildClass.class" instead.,null,
+java:S106,25,25,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,29,29,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,31,31,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,37,37,MODULAR,Replace this use of System.out by a logger.,null,

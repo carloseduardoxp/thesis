@@ -1,0 +1,32 @@
+Given the following Java code snippet:
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        int[] intarray = {1,2,3,4,5,1,2,3,4,5,1,2,3,4,5};
+    
+        Set<Integer> set = new HashSet<Integer>();
+        for(int i : intarray) {
+            set.add(i);
+        }
+    
+        Iterator<Integer> setitr = set.iterator();
+        for(int pos=0; pos < intarray.length; pos ++) {
+            if(pos < set.size()) {
+                intarray[pos] =setitr.next();
+            } else {
+                intarray[pos]= 0;
+            }
+        }
+    
+        for(int i: intarray)
+        System.out.println(i);
+    }
+}
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 11, end line = 11, rule key = java:S3973 message = Use indentation to denote the code conditionally executed by this "for"., start line = 25, end line = 25, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 11, end line = 11, rule key = java:S3973 message = Use indentation to denote the code conditionally executed by this "for"., start line = 25, end line = 25.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

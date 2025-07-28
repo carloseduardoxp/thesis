@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S135,13,13,FOCUSED,Reduce the total number of break and continue statements in this loop to use at most one.,null,
+java:S106,11,11,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,27,27,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,31,31,MODULAR,Replace this use of System.out by a logger.,null,

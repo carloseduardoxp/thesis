@@ -1,0 +1,13 @@
+Given the following Java code snippet:
+public class Split {
+    public static void main(String argv[]) {
+        String s = "a:b";
+        String res[] = s.split(":");
+        System.out.println(res.length);
+        for (int i = 0; i < res.length; i++)
+            System.out.println(res[i]);
+    }
+}
+
+the following improvements are recommended: rule key = java:S1197 message = Move the array designators [] to the type., start line = 2, end line = 2, rule key = java:S1197 message = Move the array designators [] to the type., start line = 4, end line = 4.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,21,21,LOGICAL,Remove this useless assignment to local variable "line".,null,
+java:S1481,20,20,CLEAR,Remove this unused "line" local variable.,null,

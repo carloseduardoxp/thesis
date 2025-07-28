@@ -1,0 +1,162 @@
+Given the following Java code snippet:
+import java.util.Random;
+
+public class NeuralNetwork {
+    int inputNodes, hiddenNodes, outputNodes;
+    double[][] weightsInputHidden;
+    double[][] weightsHiddenOutput;
+    double[] hiddenBias;
+    double[] outputBias;
+    double learningRate = 0.1;
+
+    Random rand = new Random();
+
+    public NeuralNetwork(int inputNodes, int hiddenNodes, int outputNodes) {
+        this.inputNodes = inputNodes;
+        this.hiddenNodes = hiddenNodes;
+        this.outputNodes = outputNodes;
+
+        weightsInputHidden = new double[hiddenNodes][inputNodes];
+        weightsHiddenOutput = new double[outputNodes][hiddenNodes];
+        hiddenBias = new double[hiddenNodes];
+        outputBias = new double[outputNodes];
+
+        initWeights(weightsInputHidden);
+        initWeights(weightsHiddenOutput);
+        initBias(hiddenBias);
+        initBias(outputBias);
+    }
+
+    private void initWeights(double[][] weights) {
+        for (int i = 0; i < weights.length; i++)
+            for (int j = 0; j < weights[i].length; j++)
+                weights[i][j] = rand.nextDouble() * 2 - 1; // values between -1 and 1
+    }
+
+    private void initBias(double[] bias) {
+        for (int i = 0; i < bias.length; i++)
+            bias[i] = rand.nextDouble() * 2 - 1;
+    }
+
+    private double sigmoid(double x) {
+        return 1 / (1 + Math.exp(-x));
+    }
+
+    private double dsigmoid(double y) {
+        return y * (1 - y); // derivative of sigmoid
+    }
+
+    public double[] feedforward(double[] input) {
+        // Hidden layer
+        double[] hidden = new double[hiddenNodes];
+        for (int i = 0; i < hiddenNodes; i++) {
+            double sum = hiddenBias[i];
+            for (int j = 0; j < inputNodes; j++) {
+                sum += weightsInputHidden[i][j] * input[j];
+            }
+            hidden[i] = sigmoid(sum);
+        }
+
+        // Output layer
+        double[] output = new double[outputNodes];
+        for (int i = 0; i < outputNodes; i++) {
+            double sum = outputBias[i];
+            for (int j = 0; j < hiddenNodes; j++) {
+                sum += weightsHiddenOutput[i][j] * hidden[j];
+            }
+            output[i] = sigmoid(sum);
+        }
+
+        return output;
+    }
+
+    public void train(double[] input, double[] target) {
+        // Forward pass
+        double[] hidden = new double[hiddenNodes];
+        for (int i = 0; i < hiddenNodes; i++) {
+            double sum = hiddenBias[i];
+            for (int j = 0; j < inputNodes; j++) {
+                sum += weightsInputHidden[i][j] * input[j];
+            }
+            hidden[i] = sigmoid(sum);
+        }
+
+        double[] output = new double[outputNodes];
+        for (int i = 0; i < outputNodes; i++) {
+            double sum = outputBias[i];
+            for (int j = 0; j < hiddenNodes; j++) {
+                sum += weightsHiddenOutput[i][j] * hidden[j];
+            }
+            output[i] = sigmoid(sum);
+        }
+
+        // Output error
+        double[] outputErrors = new double[outputNodes];
+        for (int i = 0; i < outputNodes; i++) {
+            outputErrors[i] = target[i] - output[i];
+        }
+
+        // Hidden -> Output weights update
+        for (int i = 0; i < outputNodes; i++) {
+            double gradient = dsigmoid(output[i]) * outputErrors[i] * learningRate;
+            for (int j = 0; j < hiddenNodes; j++) {
+                weightsHiddenOutput[i][j] += gradient * hidden[j];
+            }
+            outputBias[i] += gradient;
+        }
+
+        // Hidden layer error
+        double[] hiddenErrors = new double[hiddenNodes];
+        for (int i = 0; i < hiddenNodes; i++) {
+            double error = 0;
+            for (int j = 0; j < outputNodes; j++) {
+                error += weightsHiddenOutput[j][i] * outputErrors[j];
+            }
+            hiddenErrors[i] = error;
+        }
+
+        // Input -> Hidden weights update
+        for (int i = 0; i < hiddenNodes; i++) {
+            double gradient = dsigmoid(hidden[i]) * hiddenErrors[i] * learningRate;
+            for (int j = 0; j < inputNodes; j++) {
+                weightsInputHidden[i][j] += gradient * input[j];
+            }
+            hiddenBias[i] += gradient;
+        }
+    }
+
+    // Example usage
+    public static void main(String[] args) {
+        NeuralNetwork nn = new NeuralNetwork(2, 4, 1);
+
+        // XOR training data
+        double[][] inputs = {
+            {0, 0},
+            {0, 1},
+            {1, 0},
+            {1, 1}
+        };
+        double[][] targets = {
+            {0},
+            {1},
+            {1},
+            {0}
+        };
+
+        // Train
+        for (int i = 0; i < 10000; i++) {
+            int idx = i % 4;
+            nn.train(inputs[idx], targets[idx]);
+        }
+
+        // Test
+        for (double[] input : inputs) {
+            double[] output = nn.feedforward(input);
+            System.out.printf("Input: %s -> Output: %.4f\n", java.util.Arrays.toString(input), output[0]);
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1659 message = Declare "hiddenNodes" and all following declarations on a separate line., start line = 4, end line = 4, rule key = java:S3776 message = Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed., start line = 72, end line = 72, rule key = java:S3457 message = %n should be used in place of \n to produce the platform-specific line separator., start line = 154, end line = 154, rule key = java:S1659 message = Declare "hiddenNodes" and all following declarations on a separate line., start line = 4, end line = 4, rule key = java:S3776 message = Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed., start line = 72, end line = 72, rule key = java:S3457 message = %n should be used in place of \n to produce the platform-specific line separator., start line = 154, end line = 154, rule key = java:S1659 message = Declare "hiddenNodes" and all following declarations on a separate line., start line = 4, end line = 4, rule key = java:S3776 message = Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed., start line = 72, end line = 72, rule key = java:S3457 message = %n should be used in place of \n to produce the platform-specific line separator., start line = 154, end line = 154.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

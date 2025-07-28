@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        ArrayList<String> values = new ArrayList<String>();
+        values.add("s");
+        values.add("n");
+        values.add("a");
+        values.add("s");
+
+        HashSet hs = new HashSet();
+
+        hs.addAll(values); // demoArrayList= name of arrayList from which u want to remove duplicates 
+
+        values.clear();
+        values.addAll(hs);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 8, end line = 8, rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 14, end line = 14, rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 14, end line = 14, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 8, end line = 8, rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 14, end line = 14, rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 14, end line = 14.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

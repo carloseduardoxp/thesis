@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2094,3,3,CLEAR,Remove this empty class, write its code or make it an "interface".,null,
+java:S3011,17,17,MODULAR,This accessibility update should be removed.,null,
+java:S106,21,21,MODULAR,Replace this use of System.out by a logger.,null,
+java:S3011,24,24,MODULAR,This accessibility bypass should be removed.,null,
+java:S106,25,25,MODULAR,Replace this use of System.out by a logger.,null,

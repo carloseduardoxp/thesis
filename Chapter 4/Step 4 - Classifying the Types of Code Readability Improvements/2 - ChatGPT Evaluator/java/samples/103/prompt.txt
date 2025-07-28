@@ -1,0 +1,11 @@
+Based on this pull request with the developer description: Rearrange for readability, the code was changed by the developer from builder.append(TokenScannerSymbols.TOKEN_EXPR_START_CHAR).append(TokenScannerSymbols.TOKEN_TAG_CHAR).append(" ")
+         .append(getEndName())
+         .append(" ").append(TokenScannerSymbols.TOKEN_TAG_CHAR).append(TokenScannerSymbols.TOKEN_EXPR_END_CHAR); (if dont have code before, the code wasnt exist yet) to String endTag = String.format(
+         "%s%s %s %s%s",
+         TokenScannerSymbols.TOKEN_EXPR_START_CHAR,
+         TokenScannerSymbols.TOKEN_TAG_CHAR,
+         getEndName(),
+         TokenScannerSymbols.TOKEN_TAG_CHAR,
+         TokenScannerSymbols.TOKEN_EXPR_END_CHAR
+     );
+     builder.append(endTag);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

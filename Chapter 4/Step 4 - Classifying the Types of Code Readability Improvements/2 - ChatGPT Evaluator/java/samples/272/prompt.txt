@@ -1,0 +1,29 @@
+Based on this pull request with the developer description: Improved removed loop code. Readability and no unnecessary repetition compared to existing code, the code was changed by the developer from for (int level = 0; level < namespace.levels().length; level++) {
+       String name = namespace.level(level);
+       switch (level) {
+         case 0:
+           parentEntityId = MetalakeMetaService.getInstance().getMetalakeIdByName(name);
+           continue;
+         case 1:
+           parentEntityId =
+               CatalogMetaService.getInstance()
+                   .getCatalogIdByMetalakeIdAndName(parentEntityId, name);
+           continue;
+         case 2:
+           parentEntityId =
+               SchemaMetaService.getInstance().getSchemaIdByCatalogIdAndName(parentEntityId, name);
+           break;
+       } (if dont have code before, the code wasnt exist yet) to if (namespace.levels().length >= 1) {
+       parentEntityId = MetalakeMetaService.getInstance().getMetalakeIdByName(namespace.level(0));
+     }
+ 
+     if (namespace.levels().length >= 2) {
+       parentEntityId =
+           CatalogMetaService.getInstance()
+               .getCatalogIdByMetalakeIdAndName(parentEntityId, namespace.level(1));
+     }
+ 
+     if (namespace.levels().length >= 3) {
+       parentEntityId =
+           SchemaMetaService.getInstance()
+               .getSchemaIdByCatalogIdAndName(parentEntityId, namespace.level(2));, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

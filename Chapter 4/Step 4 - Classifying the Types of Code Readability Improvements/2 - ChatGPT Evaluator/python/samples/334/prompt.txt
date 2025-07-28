@@ -1,0 +1,2 @@
+Based on this pull request with the developer description: Enhanced readability and added comments to the n_queens.py code., the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to # Check if there is any queen in the same row, column,
+     # left upper diagonal, and right upper diagonal, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

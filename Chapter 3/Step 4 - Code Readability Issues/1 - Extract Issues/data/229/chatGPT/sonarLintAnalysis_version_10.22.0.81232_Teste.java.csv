@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1488,8,8,CLEAR,Immediately return this expression instead of assigning it to the temporary variable "content".,null,
+java:S112,7,7,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S1118,5,5,CLEAR,Add a private constructor to hide the implicit public one.,null,

@@ -1,0 +1,13 @@
+Based on this pull request with the developer description: refactor code in ManagedCursorImpl to get rid of 4 FastThreadLocal variables    - it is hard to understand the code and it's not optimal      since it will do object allocations for Long instances stored in the FastThreadLocal       variables.    - there's less overhead in having a simple private class to hold the      fields required for the state    - ordinary local variables cannot be used since .forEach accepts a lambda      and local variables cannot be mutated in a lambda, the code was changed by the developer from private static final FastThreadLocal<Long> tempTotalEntriesToSkip = new FastThreadLocal<>();
+ private static final FastThreadLocal<Long> tempDeletedMessages = new FastThreadLocal<>();
+ private static final FastThreadLocal<PositionImpl> tempStartPosition = new FastThreadLocal<>();
+ private static final FastThreadLocal<PositionImpl> tempEndPosition = new FastThreadLocal<>(); (if dont have code before, the code wasnt exist yet) to private static class InvidualDeletedMessagesHandlingState {
+         long totalEntriesToSkip = 0L;
+         long deletedMessages = 0L;
+         PositionImpl startPosition;
+         PositionImpl endPosition;
+ 
+         InvidualDeletedMessagesHandlingState(PositionImpl startPosition) {
+             this.startPosition = startPosition;
+         }
+     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

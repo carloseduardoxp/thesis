@@ -1,0 +1,17 @@
+Given the following Java code snippet:
+class Parent {
+    String color = "Parent's color";
+}
+
+class Child extends Parent {
+    String color = "Child's color";
+    
+    void printColors() {
+        System.out.println(color);        // Child's color
+        System.out.println(super.color);  // Parent's color
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S2387 message = color is the name of a field in "Parent"., start line = 6, end line = 6.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

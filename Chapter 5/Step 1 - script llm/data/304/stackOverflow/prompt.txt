@@ -1,0 +1,25 @@
+Given the following Java code snippet:
+
+import java.awt.Color;
+import java.util.Random;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        Random ra = new Random();
+        int r, g, b;
+        r = ra.nextInt(255);
+        g = ra.nextInt(255);
+        b = ra.nextInt(255);
+        Color color = new Color(r, g, b);
+        String hex = Integer.toHexString(color.getRGB() & 0xffffff);
+        if (hex.length() < 6) {
+            hex = "0" + hex;
+        }
+        hex = "#" + hex;
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "hex"., start line = 18, end line = 18, rule key = java:S1659 message = Declare "g" and all following declarations on a separate line., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "hex"., start line = 18, end line = 18, rule key = java:S1659 message = Declare "g" and all following declarations on a separate line., start line = 9, end line = 9.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+// A functional interface (single abstract method)
+interface MyFunction {
+    void doSomething(String message);
+}
+
+public class LambdaExample {
+    public static void main(String[] args) {
+        // Using a lambda expression to implement MyFunction
+        MyFunction printer = (msg) -> System.out.println("Message: " + msg);
+
+        printer.doSomething("Hello, Lambda!");
+
+        // Lambda with multiple statements in the body
+        MyFunction calculator = (numStr) -> {
+            int num = Integer.parseInt(numStr);
+            int result = num * 2;
+            System.out.println("Double of " + num + " is: " + result);
+        };
+        calculator.doSomething("10");
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1611 message = Remove the parentheses around the "msg" parameter (sonar.java.source not set. Assuming 8 or greater.), start line = 9, end line = 9, rule key = java:S1611 message = Remove the parentheses around the "numStr" parameter (sonar.java.source not set. Assuming 8 or greater.), start line = 14, end line = 14.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

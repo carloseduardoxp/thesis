@@ -1,0 +1,11 @@
+Given the following Java code snippet:
+public class Teste {
+
+    public static void main(String[] args) { 
+        DateTime dt = new DateTime("04/02/2011 20:27:05");       
+        DateTimeFormat.forPattern("dd/MM/yyyy HH:mm:ss").parseDateTime("04/02/2011 20:27:05");
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "dt"., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "dt" local variable., start line = 4, end line = 4, rule key = java:S1854 message = Remove this useless assignment to local variable "dt"., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "dt" local variable., start line = 4, end line = 4.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,13 @@
+Given the following Java code snippet:
+public class Gemini {
+
+    public static void main(String[] args) {
+        dataType variableName;        
+    }
+}
+
+
+
+
+the following improvements are recommended: rule key = java:S1481 message = Remove this unused "variableName" local variable., start line = 4, end line = 4.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

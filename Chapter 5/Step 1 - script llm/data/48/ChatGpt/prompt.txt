@@ -1,0 +1,17 @@
+Given the following Java code snippet:
+public class AnonymousClassExample {
+    public static void main(String[] args) {
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Hello from anonymous class!");
+            }
+        });
+
+        t.start();
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 3, end line = 3.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

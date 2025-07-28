@@ -1,0 +1,12 @@
+Based on this pull request with the developer description: Improve readability of CompactionService by creating inner class for the implementation of PlanningParameters, the code was changed by the developer from private void planCompaction(CompactionKind kind, Compactable compactable,
+       Consumer<Compactable> completionCallback) {
+     var files = compactable.getFiles(myId, kind); (if dont have code before, the code wasnt exist yet) to private class CpPlanParams implements PlanningParameters {
+     private final CompactionKind kind;
+     private final Compactable comp;
+     private final Compactable.Files files;
+ 
+     public CpPlanParams(CompactionKind kind, Compactable comp, Compactable.Files files) {
+       this.kind = kind;
+       this.comp = comp;
+       this.files = files;
+     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

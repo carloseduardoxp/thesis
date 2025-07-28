@@ -1,0 +1,8 @@
+Based on this pull request with the developer description: Readability counts, code must be self-explanatory, the code was changed by the developer from def read_file(fname):
+     """Read content of a file in project folder."""
+     with (Path(__file__).resolve().parent / fname).open() as file:
+         return file.read() (if dont have code before, the code wasnt exist yet) to def read_file(filename):
+     """Read a text file and return its contents."""
+     project_home = Path(__file__).parent.resolve()
+     file_path = project_home / filename
+     return file_path.read_text(encoding="utf-8"), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

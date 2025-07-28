@@ -1,0 +1,11 @@
+Based on this pull request with the developer description: This includes rearranging the dictionary, changing branding to Adswerve, the code was changed by the developer from params_dict = {'ad_click': ['ad_event_id'],
+                'ad_exposure': ['firebase_screen', 'firebase_screen_id', 'firebase_screen_class', 'exposure_time'], (if dont have code before, the code wasnt exist yet) to params_dict = {
+     "ad_click": [
+         "ad_event_id"
+     ],
+     "ad_exposure": [
+         "firebase_screen",
+         "firebase_screen_id",
+         "firebase_screen_class",
+         "exposure_time",
+     ],, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,31 @@
+Given the following Java code snippet:
+public class MyClass {
+  public void myMethod(int num) {
+      System.out.println("Integer: " + num);
+  }
+  public void myMethod(String str) {
+      System.out.println("String: " + str);
+  }
+}
+
+class Animal {
+  public void makeSound() {
+      System.out.println("The animal makes a sound");
+  }
+}
+
+class Dog extends Animal {
+  public void makeSound() {
+      System.out.println("The dog barks");
+  }
+}
+
+class Cat extends Animal {
+  public void makeSound() {
+      System.out.println("The cat meows");
+  }
+}
+
+
+the following improvements are recommended: rule key = java:S1161 message = Add the "@Override" annotation above this method signature, start line = 17, end line = 17, rule key = java:S1161 message = Add the "@Override" annotation above this method signature, start line = 23, end line = 23.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

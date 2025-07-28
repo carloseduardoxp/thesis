@@ -1,0 +1,11 @@
+Based on this pull request with the developer description: The first conv is combined into the loops., the code was changed by the developer from convs.append(
+             ConvModule(
+                 self.in_channels,
+                 self.channels,
+                 kernel_size=kernel_size,
+                 padding=conv_padding,
+                 dilation=dilation,
+                 conv_cfg=self.conv_cfg,
+                 norm_cfg=self.norm_cfg,
+                 act_cfg=self.act_cfg))
+         for i in range(num_convs - 1): (if dont have code before, the code wasnt exist yet) to , (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

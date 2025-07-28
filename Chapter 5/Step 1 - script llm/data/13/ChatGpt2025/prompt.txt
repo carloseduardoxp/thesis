@@ -1,0 +1,31 @@
+Given the following Java code snippet:
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class Chat {
+
+    public static void main(String[] args) {
+        LinkedList<String> list = new LinkedList<>();
+        list.add("Apple");          // Add at the end
+        list.addFirst("Banana");    // Add at the beginning
+        list.addLast("Cherry");     // Add at the end (same as add())
+        String first = list.getFirst();  // Get the first element
+        String last = list.getLast();    // Get the last element
+        String item = list.get(1);       // Get element at index 1
+        list.removeFirst();        // Remove first element
+        list.removeLast();         // Remove last element
+        list.remove("Apple");      // Remove specific element
+        list.remove(1);            // Remove by index
+        for (String fruit : list) {
+            System.out.println(fruit);
+        }
+        Iterator<String> it = list.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "item"., start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "last"., start line = 12, end line = 12, rule key = java:S1854 message = Remove this useless assignment to local variable "first"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "first" local variable., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "last" local variable., start line = 12, end line = 12, rule key = java:S1481 message = Remove this unused "item" local variable., start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "item"., start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "last"., start line = 12, end line = 12, rule key = java:S1854 message = Remove this useless assignment to local variable "first"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "first" local variable., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "last" local variable., start line = 12, end line = 12, rule key = java:S1481 message = Remove this unused "item" local variable., start line = 13, end line = 13.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

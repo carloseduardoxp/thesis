@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Use enumerate more in PdfWriter., the code was changed by the developer from cast(IndirectObject, self._objects[i]).indirect_reference
+             for i in range(len(self._objects)) (if dont have code before, the code wasnt exist yet) to cast(IndirectObject, obj).indirect_reference
+             for i, obj in enumerate(self._objects), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

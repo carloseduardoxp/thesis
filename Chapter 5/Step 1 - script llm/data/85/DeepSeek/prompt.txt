@@ -1,0 +1,25 @@
+Given the following Java code snippet:
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateConverter {
+    public static void main(String[] args) throws Exception {
+        String numericDate = "2023-12-25"; // or "12/25/2023"
+        
+        // For format "yyyy-MM-dd"
+        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd");
+        // For format "MM/dd/yyyy" use:
+        // SimpleDateFormat inputFormat = new SimpleDateFormat("MM/dd/yyyy");
+        
+        SimpleDateFormat outputFormat = new SimpleDateFormat("MMMM dd, yyyy");
+        
+        Date date = inputFormat.parse(numericDate);
+        String alphanumericDate = outputFormat.format(date);
+        
+        System.out.println(alphanumericDate); // Output: December 25, 2023
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

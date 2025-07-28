@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,18,18,LOGICAL,Remove this useless assignment to local variable "encryptedPassword".,null,
+java:S1854,17,17,LOGICAL,Remove this useless assignment to local variable "encryptionIv".,null,
+java:S1854,11,11,LOGICAL,Remove this useless assignment to local variable "keyStore".,null,
+java:S1481,11,11,CLEAR,Remove this unused "keyStore" local variable.,null,
+java:S1481,17,17,CLEAR,Remove this unused "encryptionIv" local variable.,null,
+java:S1481,18,18,CLEAR,Remove this unused "encryptedPassword" local variable.,null,

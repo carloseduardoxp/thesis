@@ -1,0 +1,11 @@
+Based on this pull request with the developer description: with grouping make sure that the conditions is clear, the code was changed by the developer from or not _TORCH_GREATER_EQUAL_2_0
+     # check packaging because of https://github.com/microsoft/DeepSpeed/pull/2771
+     # remove the packaging check when min version is >=0.8.1
+     and RequirementCache("deepspeed")
+     and RequirementCache("packaging>=20.0") (if dont have code before, the code wasnt exist yet) to or (
+         not _TORCH_GREATER_EQUAL_2_0
+         and RequirementCache("deepspeed")
+         # check packaging because of https://github.com/microsoft/DeepSpeed/pull/2771
+         # remove the packaging check when min version is >=0.8.1
+         and RequirementCache("packaging>=20.0")
+     ), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

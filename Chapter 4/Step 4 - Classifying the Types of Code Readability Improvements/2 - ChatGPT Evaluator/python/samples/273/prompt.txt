@@ -1,0 +1,9 @@
+Based on this pull request with the developer description: Remove SqlAlchemyStore._save_to_db to improve readability., the code was changed by the developer from def _save_to_db(self, session, objs):
+         """
+         Store in db
+         """
+         if type(objs) is list:
+             session.add_all(objs)
+         else:
+             # single object
+             session.add(objs) (if dont have code before, the code wasnt exist yet) to , (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class Teste {
+
+    static <T> Collection<T> intersection(Collection<T> c1, Collection<T> c2) {
+        if (c1.size() < c2.size()) {
+            return intersection(c2, c1);
+        }
+        Set<T> c2set = new HashSet<>(c2);
+        return c1.stream().filter(c2set::contains).distinct().collect(Collectors.toSet());
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S2234 message = Parameters to intersection have the same names but not the same order as the method arguments., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

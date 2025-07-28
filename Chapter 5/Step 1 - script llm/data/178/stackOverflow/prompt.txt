@@ -1,0 +1,29 @@
+Given the following Java code snippet:
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class ClickOnTextField extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        TextField textField = new TextField();
+        textField.setOnMouseClicked(e -> {
+            System.out.println("Clicked");
+        });
+
+        StackPane root = new StackPane(textField);
+        Scene scene = new Scene(root, 350, 120);
+        primaryStage.setScene(scene);;
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+
+the following improvements are recommended: rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 12, end line = 12, rule key = java:S1116 message = Remove this empty statement., start line = 18, end line = 18, rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 12, end line = 12, rule key = java:S1116 message = Remove this empty statement., start line = 18, end line = 18.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

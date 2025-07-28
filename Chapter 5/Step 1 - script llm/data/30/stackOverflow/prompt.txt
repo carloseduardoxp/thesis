@@ -1,0 +1,40 @@
+Given the following Java code snippet:
+
+
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class Main {
+
+    public static void main(String[] args) {
+        ObjectMapper mapper = new ObjectMapper();
+
+        String json = "{\"MovieCount\": 153,\"MoviesList\": [{},{}]}";
+        try {
+            List<Movie> movies = ((MovieWrapper) mapper.readValue(json, MovieWrapper.class)).moviesList;
+            System.out.println(movies.size());
+        }
+        catch (Throwable t) {
+            t.printStackTrace();
+        }
+
+    }
+
+    static class MovieWrapper {
+
+        @JsonProperty(value = "MovieCount")
+        int movieCount;
+        @JsonProperty(value = "MoviesList")
+        List<Movie> moviesList;
+    }
+
+    static class Movie {
+
+    }
+
+}
+
+the following improvements are recommended: rule key = java:S2094 message = Remove this empty class, start line = 32, end line = 32.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

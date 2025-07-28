@@ -1,0 +1,59 @@
+Given the following Java code snippet:
+
+import java.util.*;
+
+public class AccountChangeEvent {
+  private int userId;
+  private String changeType;
+  private Object newValue;
+
+  // constructor, getters and setters
+}
+
+interface AccountChangeListener {
+  void onAccountChange(AccountChangeEvent event);
+}
+
+class Account {
+  private int id;
+  private String name;
+  private List<AccountChangeListener> listeners = new ArrayList<>();
+
+  public void addListener(AccountChangeListener listener) {
+      listeners.add(listener);
+  }
+
+  public void removeListener(AccountChangeListener listener) {
+      listeners.remove(listener);
+  }
+
+  public void setName(String name) {
+      this.name = name;
+      AccountChangeEvent event = new AccountChangeEvent(id, "name", name);
+      notifyListeners(event);
+  }
+
+  private void notifyListeners(AccountChangeEvent event) {
+      for(AccountChangeListener listener : listeners) {
+          listener.onAccountChange(event);
+      }
+  }
+}
+
+class Teste {
+  public static void main(String[] args) {
+    Account account = new Account(1, "John");
+    AccountChangeListener listener = new AccountChangeListener() {
+        @Override
+        public void onAccountChange(AccountChangeEvent event) {
+            System.out.println("Account #" + event.getUserId() + " changed " + event.getChangeType() + " to " + event.getNewValue());
+        }
+    };
+    account.addListener(listener);
+    account.setName("Jane");
+
+  }
+}
+
+the following improvements are recommended: rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 45, end line = 45, rule key = java:S1450 message = Remove the "name" field and declare it as a local variable in the relevant methods., start line = 18, end line = 18, rule key = java:S1068 message = Remove this unused "userId" private field., start line = 5, end line = 5, rule key = java:S1068 message = Remove this unused "changeType" private field., start line = 6, end line = 6, rule key = java:S1068 message = Remove this unused "newValue" private field., start line = 7, end line = 7, rule key = java:S1068 message = Remove this unused "name" private field., start line = 18, end line = 18, rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 45, end line = 45, rule key = java:S1450 message = Remove the "name" field and declare it as a local variable in the relevant methods., start line = 18, end line = 18, rule key = java:S1068 message = Remove this unused "userId" private field., start line = 5, end line = 5, rule key = java:S1068 message = Remove this unused "changeType" private field., start line = 6, end line = 6, rule key = java:S1068 message = Remove this unused "newValue" private field., start line = 7, end line = 7, rule key = java:S1068 message = Remove this unused "name" private field., start line = 18, end line = 18, rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 45, end line = 45, rule key = java:S1450 message = Remove the "name" field and declare it as a local variable in the relevant methods., start line = 18, end line = 18, rule key = java:S1068 message = Remove this unused "userId" private field., start line = 5, end line = 5, rule key = java:S1068 message = Remove this unused "changeType" private field., start line = 6, end line = 6, rule key = java:S1068 message = Remove this unused "newValue" private field., start line = 7, end line = 7, rule key = java:S1068 message = Remove this unused "name" private field., start line = 18, end line = 18.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

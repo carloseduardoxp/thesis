@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S5542,33,33,TRUSTWORTHY,Use another cipher mode or disable padding.,null,
+java:S5542,55,55,TRUSTWORTHY,Use another cipher mode or disable padding.,null,
+java:S106,71,71,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,72,72,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,73,73,MODULAR,Replace this use of System.out by a logger.,null,

@@ -1,0 +1,16 @@
+Given the following Java code snippet:
+import java.util.*;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        Map<Integer, Integer> dict = new HashMap<Integer, Integer>();
+        for (int i = 0; i < array.length; i++) {
+            dict.put(i, array[i]); // autoboxing takes care of primitives
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 6, end line = 6.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

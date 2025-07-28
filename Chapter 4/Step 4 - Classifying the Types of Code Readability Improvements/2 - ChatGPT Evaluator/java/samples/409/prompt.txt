@@ -1,0 +1,20 @@
+Based on this pull request with the developer description: The comment improvements for the `ClimbingStairs` class enhance clarity and adherence to Java documentation standards., the code was changed by the developer from /* A DynamicProgramming solution for Climbing Stairs' problem Returns the
+     distinct ways can you climb to the staircase by either climbing 1 or 2 steps.
+     Link : https://medium.com/analytics-vidhya/leetcode-q70-climbing-stairs-easy-444a4aae54e8
+ */ (if dont have code before, the code wasnt exist yet) to /*
+  * A dynamic programming solution for the "Climbing Stairs" problem.
+  * Returns the no. of distinct ways to climb to the top
+  * of a staircase when you can climb either 1 or 2 steps at a time.
+  *
+  * For example, if there are 5 steps, the possible ways to climb the
+  * staircase are:
+  * 1. 1-1-1-1-1
+  * 2. 1-1-1-2
+  * 3. 1-2-1-1
+  * 4. 2-1-1-1
+  * 5. 2-2-1
+  * 6. 1-1-2-1
+  * 7. 1-2-2
+  * 8. 2-1-2
+  * Ans: 8 ways
+  */, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

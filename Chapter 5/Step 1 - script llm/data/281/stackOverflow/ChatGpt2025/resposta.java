@@ -1,0 +1,71 @@
+public final class Fraction extends Number {
+    private int numerator;
+    private int denominator;
+
+    public Fraction(int numerator, int denominator) {
+        if(denominator == 0)
+            throw new ArithmeticException("Divide by zero.");
+        this.numerator = numerator;
+        this.denominator = denominator;
+    }
+
+    public Fraction(int numerator) {
+        this.numerator = numerator;
+        this.denominator = 1;
+    }
+
+    public int getNumerator() {
+        return this.numerator;
+    }
+
+    public int getDenominator() {
+        return this.denominator;
+    }
+
+    @Override
+    public byte byteValue() {
+        return (byte) this.doubleValue();
+    }
+
+    @Override
+    public double doubleValue() {
+        return ((double) numerator)/((double) denominator);
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) this.doubleValue();
+    }
+
+    @Override
+    public int intValue() {
+        return (int) this.doubleValue();
+    }
+
+    @Override
+    public long longValue() {
+        return (long) this.doubleValue();
+    }
+
+    @Override
+    public short shortValue() {
+        return (short) this.doubleValue();
+    }
+
+    public boolean equals(Fraction frac) {
+        return this.compareTo(frac) == 0;
+    }
+
+    public int compareTo(Fraction frac) {
+        long t = this.getNumerator() * frac.getDenominator();
+        long f = frac.getNumerator() * this.getDenominator();
+        int result = 0;
+        if(t>f) {
+            result = 1;
+        }
+        else if(f>t) {
+            result = -1;
+        }
+        return result;
+    }
+}

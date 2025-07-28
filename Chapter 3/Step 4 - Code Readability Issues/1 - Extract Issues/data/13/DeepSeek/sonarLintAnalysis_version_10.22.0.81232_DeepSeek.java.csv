@@ -1,0 +1,13 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,29,29,LOGICAL,Remove this useless assignment to local variable "size".,null,
+java:S1854,26,26,LOGICAL,Remove this useless assignment to local variable "hasApple".,null,
+java:S1854,17,17,LOGICAL,Remove this useless assignment to local variable "element".,null,
+java:S1854,16,16,LOGICAL,Remove this useless assignment to local variable "last".,null,
+java:S1854,15,15,LOGICAL,Remove this useless assignment to local variable "first".,null,
+java:S1481,15,15,CLEAR,Remove this unused "first" local variable.,null,
+java:S1481,16,16,CLEAR,Remove this unused "last" local variable.,null,
+java:S1481,17,17,CLEAR,Remove this unused "element" local variable.,null,
+java:S1481,26,26,CLEAR,Remove this unused "hasApple" local variable.,null,
+java:S1481,29,29,CLEAR,Remove this unused "size" local variable.,null,
+java:S106,33,33,MODULAR,Replace this use of System.out by a logger.,null,

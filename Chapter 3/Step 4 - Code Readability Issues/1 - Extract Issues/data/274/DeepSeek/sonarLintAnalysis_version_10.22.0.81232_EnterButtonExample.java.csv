@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1602,12,12,CLEAR,Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S106,13,13,MODULAR,Replace this use of System.out by a logger.,null,
+java:S3252,23,23,CLEAR,Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".,null,
+java:S1128,2,2,CLEAR,Remove this unused import 'java.awt.event'.,null,

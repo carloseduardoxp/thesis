@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2293,11,11,CLEAR,Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.),null,
+java:S1854,13,13,LOGICAL,Remove this useless assignment to local variable "myArray".,null,
+java:S1854,10,10,LOGICAL,Remove this useless assignment to local variable "myArray".,null,
+java:S1481,10,10,CLEAR,Remove this unused "myArray" local variable.,null,

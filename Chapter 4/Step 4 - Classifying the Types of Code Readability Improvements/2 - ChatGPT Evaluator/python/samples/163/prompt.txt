@@ -1,0 +1,5 @@
+Based on this pull request with the developer description: Use f-strings on constants for better readability, the code was changed by the developer from WSS_URL = (
+     "wss://speech.platform.bing.com/consumer/speech/synthesize/"
+     + "readaloud/edge/v1?TrustedClientToken="
+     + TRUSTED_CLIENT_TOKEN
+ ) (if dont have code before, the code wasnt exist yet) to WSS_URL = f"wss://{BASE_URL}/edge/v1?TrustedClientToken={TRUSTED_CLIENT_TOKEN}", (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,57 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class FindPatternInFiles {
+
+    public static void findPattern(String folderPath, String searchPattern, boolean useRegex) {
+        File folder = new File(folderPath);
+        File[] files = folder.listFiles();
+
+        if (files != null) {
+            for (File file : files) {
+                if (file.isFile()) {
+                    try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+                        String line;
+                        int lineNumber = 1;
+                        while ((line = reader.readLine()) != null) {
+                            if (useRegex) {
+                                Pattern pattern = Pattern.compile(searchPattern);
+                                Matcher matcher = pattern.matcher(line);
+                                if (matcher.find()) {
+                                    System.out.println("Found in file: " + file.getName() + ", line " + lineNumber + ": " + line);
+                                }
+                            } else {
+                                if (line.contains(searchPattern)) {
+                                    System.out.println("Found in file: " + file.getName() + ", line " + lineNumber + ": " + line);
+                                }
+                            }
+                            lineNumber++;
+                        }
+                    } catch (IOException e) {
+                        System.err.println("Error reading file: " + file.getName() + " - " + e.getMessage());
+                    }
+                }
+            }
+        } else {
+            System.err.println("Could not list files in folder: " + folderPath);
+        }
+    }
+
+    public static void main(String[] args) {
+        String folderPath = "/path/to/your/folder"; // Replace with the actual path to your folder
+        String searchText = "your_pattern"; // Replace with the pattern you want to find
+        boolean useRegularExpression = false; // Set to true if 'searchText' is a regular expression
+
+        findPattern(folderPath, searchText, useRegularExpression);
+
+        // Example using a regular expression to find lines with one or more digits
+        String regexPattern = "\\d+";
+        boolean useRegex = true;
+        System.out.println("\nSearching with regular expression: " + regexPattern);
+        findPattern(folderPath, regexPattern, useRegex);
+    }
+}

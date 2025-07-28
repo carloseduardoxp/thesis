@@ -1,0 +1,85 @@
+// Person.java
+public class Person {
+    private static final String PERSON1_HASHCODE_PREFIX = "person1.hashCode(): ";
+    private String firstName;
+    private String lastName;
+    private int age;
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    // Getters
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    // Override equals()
+    @Override
+    public boolean equals(Object o) {
+        // 1. Check for same object reference
+        if (this == o) return true;
+        // 2. Check for null or different class type
+        if (o == null || getClass() != o.getClass()) return false;
+
+        // 3. Cast the object to Person
+        Person person = (Person) o;
+
+        // 4. Compare significant fields (firstName and lastName in this example)
+        // Use Objects.equals() to handle nulls safely
+        return java.util.Objects.equals(firstName, person.firstName) &&
+               java.util.Objects.equals(lastName, person.lastName);
+    }
+
+    // Override hashCode()
+    @Override
+    public int hashCode() {
+        // Use Objects.hash() for convenience and good practice.
+        // It takes a variable number of arguments and calculates a hash based on them.
+        // It handles nulls automatically.
+        return java.util.Objects.hash(firstName, lastName);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+               "firstName='" + firstName + '\'' +
+               ", lastName='" + lastName + '\'' +
+               ", age=" + age +
+               '}';
+    }
+
+    public static void main(String[] args) {
+        Person person1 = new Person("John", "Doe", 30);
+        Person person2 = new Person("John", "Doe", 25); // Different age, but same first/last name
+        Person person3 = new Person("Jane", "Doe", 30);
+        Person person4 = new Person("John", "Smith", 30);
+
+        System.out.println("person1.equals(person2): " + person1.equals(person2)); // true
+        System.out.println(PERSON1_HASHCODE_PREFIX + person1.hashCode());
+        System.out.println("person2.hashCode(): " + person2.hashCode());
+
+        System.out.println("person1.equals(person3): " + person1.equals(person3)); // false
+        System.out.println(PERSON1_HASHCODE_PREFIX + person1.hashCode());
+        System.out.println("person3.hashCode(): " + person3.hashCode());
+
+        System.out.println("person1.equals(person4): " + person1.equals(person4)); // false
+        System.out.println(PERSON1_HASHCODE_PREFIX + person1.hashCode());
+        System.out.println("person4.hashCode(): " + person4.hashCode());
+
+        // Demonstrating with HashMap
+        java.util.Map<Person, String> personMap = new java.util.HashMap<>();
+        personMap.put(person1, "Details for John Doe (30)");
+        System.out.println("Value for person2 in map: " + personMap.get(person2)); // Should retrieve "Details for John Doe (30)"
+    }
+}

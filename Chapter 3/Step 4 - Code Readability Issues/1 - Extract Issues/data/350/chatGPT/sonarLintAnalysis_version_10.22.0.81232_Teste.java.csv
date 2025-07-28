@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,7,18,LOGICAL,Remove this useless assignment to local variable "array3D".,null,
+java:S1854,4,4,LOGICAL,Remove this useless assignment to local variable "array2D".,null,
+java:S1481,4,4,CLEAR,Remove this unused "array2D" local variable.,null,
+java:S1481,7,7,CLEAR,Remove this unused "array3D" local variable.,null,

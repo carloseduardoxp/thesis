@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,18,19,LOGICAL,Remove this useless assignment to local variable "newList".,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1481,18,18,CLEAR,Remove this unused "newList" local variable.,null,

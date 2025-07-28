@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,11,11,LOGICAL,Remove this useless assignment to local variable "c3".,null,
+java:S1854,10,10,LOGICAL,Remove this useless assignment to local variable "c2".,null,
+java:S1854,9,9,LOGICAL,Remove this useless assignment to local variable "c1".,null,
+java:S1481,9,9,CLEAR,Remove this unused "c1" local variable.,null,
+java:S1481,10,10,CLEAR,Remove this unused "c2" local variable.,null,
+java:S1481,11,11,CLEAR,Remove this unused "c3" local variable.,null,
+java:S106,13,13,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,14,14,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,15,15,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,

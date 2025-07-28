@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1604,7,7,CLEAR,Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,7,11,LOGICAL,Remove this useless assignment to local variable "treeSet".,null,
+java:S1481,7,7,CLEAR,Remove this unused "treeSet" local variable.,null,

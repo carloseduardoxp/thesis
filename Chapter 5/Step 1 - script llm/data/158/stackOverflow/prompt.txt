@@ -1,0 +1,20 @@
+Given the following Java code snippet:
+import java.util.Base64;
+
+import javax.naming.Context;
+
+public class Teste {
+
+    public static void main(String[] args) {  
+        Intent intent = new Intent(new Intent(new String(Base64.decode("Y29tLmFuZHJvaWQudmVuZGluZy5saWNlbnNpbmcuSUxpY2Vuc2luZ1NlcnZpY2U="))));
+        intent.setPackage("com.android.vending");
+        boolean bindResult = mContext
+                                    .bindService(
+                                            intent,
+                                            this, // ServiceConnection.
+                                            Context.BIND_AUTO_CREATE);
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "bindResult"., start line = 10, end line = 14, rule key = java:S1481 message = Remove this unused "bindResult" local variable., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "bindResult"., start line = 10, end line = 14, rule key = java:S1481 message = Remove this unused "bindResult" local variable., start line = 10, end line = 10.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

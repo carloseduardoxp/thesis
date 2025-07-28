@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1488,55,55,CLEAR,Immediately return this expression instead of assigning it to the temporary variable "output".,null,
+java:S106,144,144,MODULAR,Replace this use of System.out by a logger.,null,

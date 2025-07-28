@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,10,10,LOGICAL,Remove this useless assignment to local variable "currYear".,null,
+java:S1854,21,21,LOGICAL,Remove this useless assignment to local variable "range".,null,
+java:S1481,10,10,CLEAR,Remove this unused "currYear" local variable.,null,
+java:S1481,21,21,CLEAR,Remove this unused "range" local variable.,null,

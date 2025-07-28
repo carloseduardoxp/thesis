@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2293,13,13,CLEAR,Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.),null,
+java:S3740,17,17,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S1854,17,17,LOGICAL,Remove this useless assignment to local variable "resp".,null,
+java:S1481,17,17,CLEAR,Remove this unused "resp" local variable.,null,

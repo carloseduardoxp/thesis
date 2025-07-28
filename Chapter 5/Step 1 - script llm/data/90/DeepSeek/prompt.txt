@@ -1,0 +1,16 @@
+Given the following Java code snippet:
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        int intValue = 42;
+        double doubleValue = intValue; // Automatic widening conversion
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "doubleValue"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "doubleValue" local variable., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "doubleValue"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "doubleValue" local variable., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

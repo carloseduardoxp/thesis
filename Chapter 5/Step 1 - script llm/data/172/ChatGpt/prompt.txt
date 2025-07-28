@@ -1,0 +1,24 @@
+Given the following Java code snippet:
+
+import java.util.List;
+
+public class Teste {
+  public static void main(String[] args) {
+    List<MyObject> result = jdbcTemplate.query("SELECT * FROM my_table WHERE id = ?", new Object[]{id},
+        (rs, rowNum) -> {
+            // create MyObject from ResultSet
+            return myObject;
+        });
+
+        if(result.isEmpty()) {
+          // handle case where no records were found
+        } else {
+          // process the results
+        }
+
+  }
+}
+
+
+the following improvements are recommended: rule key = java:S1602 message = Remove useless curly braces around statement and then remove useless return keyword (sonar.java.source not set. Assuming 8 or greater.), start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,25 @@
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+
+public class CsvParser {
+    public static void main(String[] args) {
+        String csvFileName = "data.csv";
+        
+        try (CSVReader reader = new CSVReader(new FileReader(csvFileName))) {
+            List<String[]> records = reader.readAll();
+            
+            for (String[] record : records) {
+                for (String field : record) {
+                    System.out.print(field + " | ");
+                }
+                System.out.println();
+            }
+        } catch (IOException | CsvException e) {
+            e.printStackTrace();
+        }
+    }
+}

@@ -1,0 +1,34 @@
+Based on this pull request with the developer description: Improve the code readability of TimerContext replace if with switch case, the code was changed by the developer from if (StringUtils.equals(level, LoggerUtils.DEBUG)) {
+             LoggerUtils.printIfDebugEnabled(logger, "{} cost time : {} ms", name, contextTime);
+         }
+         if (StringUtils.equals(level, LoggerUtils.INFO)) {
+             LoggerUtils.printIfInfoEnabled(logger, "{} cost time : {} ms", name, contextTime);
+         }
+         if (StringUtils.equals(level, LoggerUtils.TRACE)) {
+             LoggerUtils.printIfTraceEnabled(logger, "{} cost time : {} ms", name, contextTime);
+         }
+         if (StringUtils.equals(level, LoggerUtils.ERROR)) {
+             LoggerUtils.printIfErrorEnabled(logger, "{} cost time : {} ms", name, contextTime);
+         }
+         if (StringUtils.equals(level, LoggerUtils.WARN)) {
+             LoggerUtils.printIfWarnEnabled(logger, "{} cost time : {} ms", name, contextTime);
+         } (if dont have code before, the code wasnt exist yet) to switch (level) {
+             case LoggerUtils.DEBUG:
+                 LoggerUtils.printIfDebugEnabled(logger, "{} cost time : {} ms", name, contextTime);
+                 break;
+             case LoggerUtils.INFO:
+                 LoggerUtils.printIfInfoEnabled(logger, "{} cost time : {} ms", name, contextTime);
+                 break;
+             case LoggerUtils.TRACE:
+                 LoggerUtils.printIfTraceEnabled(logger, "{} cost time : {} ms", name, contextTime);
+                 break;
+             case LoggerUtils.ERROR:
+                 LoggerUtils.printIfErrorEnabled(logger, "{} cost time : {} ms", name, contextTime);
+                 break;
+             case LoggerUtils.WARN:
+                 LoggerUtils.printIfWarnEnabled(logger, "{} cost time : {} ms", name, contextTime);
+                 break;
+             default:
+                 LoggerUtils.printIfErrorEnabled(logger, "level not found , {} cost time : {} ms", name, contextTime);
+                 break;
+         }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

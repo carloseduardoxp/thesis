@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1068,2,2,CLEAR,Remove this unused "param1" private field.,null,
+java:S1068,3,3,CLEAR,Remove this unused "param2" private field.,null,

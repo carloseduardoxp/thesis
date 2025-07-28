@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S117,8,8,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,11,11,LOGICAL,Remove this useless assignment to local variable "str".,null,
+java:S1854,8,8,LOGICAL,Remove this useless assignment to local variable "c_arr".,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "c".,null,
+java:S1481,7,7,CLEAR,Remove this unused "c" local variable.,null,
+java:S1481,8,8,CLEAR,Remove this unused "c_arr" local variable.,null,
+java:S1481,11,11,CLEAR,Remove this unused "str" local variable.,null,

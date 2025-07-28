@@ -1,0 +1,18 @@
+Given the following Java code snippet:
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        int myInt = 100;
+        long myLong = myInt;          // Automatic casting: int to long
+        float myFloat = myInt;        // Automatic casting: int to float
+        double myDouble = myInt;      // Automatic casting: int to double
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "myDouble"., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "myFloat"., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "myLong"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "myLong" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "myFloat" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "myDouble" local variable., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "myDouble"., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "myFloat"., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "myLong"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "myLong" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "myFloat" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "myDouble" local variable., start line = 9, end line = 9.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

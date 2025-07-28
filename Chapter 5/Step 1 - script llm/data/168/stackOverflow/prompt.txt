@@ -1,0 +1,10 @@
+Given the following Java code snippet:
+public class Teste {
+
+    public static void main(String[] args) {        
+        int foo = Integer.parseInt("1");
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "foo"., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "foo" local variable., start line = 4, end line = 4, rule key = java:S1854 message = Remove this useless assignment to local variable "foo"., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "foo" local variable., start line = 4, end line = 4.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

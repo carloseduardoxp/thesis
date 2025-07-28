@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,6,6,LOGICAL,Remove this useless assignment to local variable "input".,null,
+java:S1481,6,6,CLEAR,Remove this unused "input" local variable.,null,
+java:S106,12,12,MODULAR,Replace this use of System.out by a logger.,null,

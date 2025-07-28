@@ -1,0 +1,31 @@
+Based on this pull request with the developer description: Removed continue statements, the code was changed by the developer from private String findTagSha(OpenShiftClient client, String imageStreamName, String namespace) {
+         ImageStream currentImageStream = null;
+ 
+         for (int i = 0; i < imageStreamTagRetries; i++) {
+             if (i > 0) {
+                 log.info("Retrying to find tag on ImageStream %s", imageStreamName);
+                 try {
+                     Thread.sleep(imageStreamTagRetryTimeoutInMillis);
+                 } catch (InterruptedException e) {
+                     log.debug("interrupted", e);
+                     Thread.currentThread().interrupt();
+                 }
+             }
+             currentImageStream = client.imageStreams().inNamespace(namespace).withName(imageStreamName).get();
+             if (currentImageStream == null) {
+                 continue;
+             }
+             ImageStreamStatus status = currentImageStream.getStatus();
+             if (status == null) {
+                 continue;
+             }
+             List<NamedTagEventList> tags = status.getTags();
+             if (tags == null || tags.isEmpty()) {
+                 continue;
+             }       } } (if dont have code before, the code wasnt exist yet) to private String findTagSha(OpenShiftClient client, String imageStreamName, String namespace) {
+         ImageStream currentImageStream = null;
+ 
+         for (int i = 0; i < imageStreamTagRetries; i++) {
+             if (i > 0) {
+                 log.info("Retrying to find tag on ImageStream %s", imageStreamName); sleepThread();
+ }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

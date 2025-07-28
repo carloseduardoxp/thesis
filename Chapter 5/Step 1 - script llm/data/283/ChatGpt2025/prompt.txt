@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+
+import javax.faces.context.FacesContext;
+import javax.annotation.PostConstruct;
+import java.util.Map;
+
+@Named
+@RequestScoped
+public class DialogBean {
+
+    private String param1;
+    private String param2;
+
+    @PostConstruct
+    public void init() {
+        Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+        param1 = params.get("param1");
+        param2 = params.get("param2");
+    }
+
+    // getters and setters
+}
+
+
+the following improvements are recommended: rule key = java:S1450 message = Remove the "param1" field and declare it as a local variable in the relevant methods., start line = 10, end line = 10, rule key = java:S1450 message = Remove the "param2" field and declare it as a local variable in the relevant methods., start line = 11, end line = 11, rule key = java:S1068 message = Remove this unused "param1" private field., start line = 10, end line = 10, rule key = java:S1068 message = Remove this unused "param2" private field., start line = 11, end line = 11, rule key = java:S1450 message = Remove the "param1" field and declare it as a local variable in the relevant methods., start line = 10, end line = 10, rule key = java:S1450 message = Remove the "param2" field and declare it as a local variable in the relevant methods., start line = 11, end line = 11, rule key = java:S1068 message = Remove this unused "param1" private field., start line = 10, end line = 10, rule key = java:S1068 message = Remove this unused "param2" private field., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

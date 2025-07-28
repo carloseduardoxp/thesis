@@ -1,0 +1,13 @@
+Based on this pull request with the developer description: Unwrap unnecessary else., the code was changed by the developer from Matcher m = ExpectedExceptionPattern.matcher(line);
+       if (m.find()) {
+         if (m.group(1).equals("add")) {
+           expectedExceptions.add(Pattern.compile(m.group(2)));
+         } else {
+           // assume add and remove are the only choices
+           expectedExceptions.remove(Pattern.compile(m.group(2)));
+         }
+         return null;
+       } (if dont have code before, the code wasnt exist yet) to Matcher expectedExceptionMatcher = ExpectedExceptionPattern.matcher(line);
+     if (expectedExceptionMatcher.find()) {
+       expectedExceptionMatcherHandler(expectedExceptionMatcher);
+       return null;, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

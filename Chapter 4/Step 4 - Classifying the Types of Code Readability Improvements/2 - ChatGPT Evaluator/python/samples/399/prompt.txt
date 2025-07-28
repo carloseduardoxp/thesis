@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: use line-length=120 for better code readability, the code was changed by the developer from stm = Episodes.__table__.insert().values(
+         series_id=3, season_id=6, episode_id=1, title="TBD"
+     ) (if dont have code before, the code wasnt exist yet) to stm = Episodes.__table__.insert().values(series_id=3, season_id=6, episode_id=1, title="TBD"), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

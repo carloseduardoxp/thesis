@@ -1,0 +1,4 @@
+Based on this pull request with the developer description: parts of the code were refactored to improve its readability., the code was changed by the developer from double_negative = (len(causes) == 1) and (causes[0].is_negated())
+             edge = effect.add_incoming(child=cause_root, negated=(effect.is_negated() != double_negative)) (if dont have code before, the code wasnt exist yet) to is_double_negative = (len(causes) == 1) and (causes[0].is_negated())
+             is_negated=effect.is_negated() != is_double_negative
+             edge = effect.add_incoming(child=cause_root, negated=is_negated), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

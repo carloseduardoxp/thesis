@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+import java.io.IOException;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
+
+public class DirectoryTraverser extends SimpleFileVisitor<Path> {
+    
+    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
+        System.out.println(file);
+        return FileVisitResult.CONTINUE;
+    }
+    
+    public FileVisitResult visitFileFailed(Path file, IOException exc) {
+        System.err.println(exc);
+        return FileVisitResult.CONTINUE;
+    }
+    
+    public static void main(String[] args) throws IOException {
+        Path start = Paths.get("C:/Users/Username/Documents");
+        Files.walkFileTree(start, new DirectoryTraverser());
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1161 message = Add the "@Override" annotation above this method signature, start line = 7, end line = 7, rule key = java:S1161 message = Add the "@Override" annotation above this method signature, start line = 12, end line = 12.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

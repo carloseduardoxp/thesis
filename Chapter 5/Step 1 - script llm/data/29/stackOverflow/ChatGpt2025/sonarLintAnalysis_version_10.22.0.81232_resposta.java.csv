@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S5738,10,10,COMPLETE,Remove this call to a deprecated class, it has been marked for removal.,null,
+java:S2142,20,20,COMPLETE,Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.,null,
+java:S1612,18,18,CLEAR,Replace this lambda with method reference 'this::createGUI'. (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S1948,95,95,LOGICAL,Make non-static "model" transient or serializable.,null,

@@ -1,0 +1,14 @@
+Based on this pull request with the developer description: cleanup: extract duplicate code, the code was changed by the developer from if (oldState == ST_NOT_STARTED) {
+             try {
+                 doStartThread();
+             } catch (Throwable cause) {
+                 STATE_UPDATER.set(this, ST_TERMINATED);
+                 terminationFuture.tryFailure(cause);
+ 
+                 if (!(cause instanceof Exception)) {
+                     // Also rethrow as it may be an OOME for example
+                     PlatformDependent.throwException(cause);
+                 }
+                 return terminationFuture;
+             } (if dont have code before, the code wasnt exist yet) to if (ensureThreadStarted(oldState)) {
+             return terminationFuture;, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

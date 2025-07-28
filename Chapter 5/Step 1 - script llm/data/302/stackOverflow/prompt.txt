@@ -1,0 +1,28 @@
+Given the following Java code snippet:
+
+public class Teste {
+
+    String ssort(String s) {
+        if (s.length() < 2) {
+            return s;
+        }
+
+        int pos = 0;
+        char min = s.charAt(0);
+        for (int i = 1; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c < min) {
+                min = c;
+                pos = i;
+            }
+        }
+
+        System.out.printf("%c | %s\n", min, s.substring(0, pos) + s.substring(pos + 1));
+
+        return min + ssort(s.substring(0, pos) + s.substring(pos + 1));
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S3457 message = %n should be used in place of \n to produce the platform-specific line separator., start line = 19, end line = 19.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

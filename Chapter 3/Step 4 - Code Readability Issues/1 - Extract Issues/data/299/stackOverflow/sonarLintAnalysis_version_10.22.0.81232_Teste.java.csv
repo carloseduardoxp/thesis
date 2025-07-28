@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "playerID".,null,
+java:S2129,4,4,CONVENTIONAL,Remove this "Integer" constructor,null,
+java:S5738,4,4,COMPLETE,Remove this call to a deprecated method, it has been marked for removal.,null,
+java:S2129,5,5,CONVENTIONAL,Remove this "Integer" constructor,null,
+java:S5738,5,5,COMPLETE,Remove this call to a deprecated method, it has been marked for removal.,null,

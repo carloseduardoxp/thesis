@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: This PR replaces usages of constants with explicit variable building at each test method. This keeps future writers from having to scroll up 200+ lines just to see what values are actually being used., the code was changed by the developer from SIMPLE_ANSWER_LIST = (['A'] * 12 + ['B'] * 11 + ['C'] * 10 + ['D'] * 9 +                           ['E'] *  8 + ['F'] *  7 + ['G'] *  6 + ['H'] * 5 +                           ['I'] *  4 + ['J'] *  3 + ['K'] *  2 + ['L']) answer_dicts_list = [
+             self._create_answer_dict(a) for a in self.SIMPLE_ANSWER_LIST] (if dont have code before, the code wasnt exist yet) to answers = (
+             ['A'] * 12 + ['B'] * 11 + ['C'] * 10 + ['D'] * 9 +
+             ['E'] *  8 + ['F'] *  7 + ['G'] *  6 + ['H'] * 5 +
+             ['I'] *  4 + ['J'] *  3 + ['K'] *  2 + ['L'])
+         answer_dicts_list = [self._create_answer_dict(a) for a in answers], (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

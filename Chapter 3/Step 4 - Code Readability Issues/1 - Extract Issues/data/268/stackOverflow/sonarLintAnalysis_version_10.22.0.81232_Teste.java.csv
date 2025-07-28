@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2293,8,8,CLEAR,Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.),null,
+java:S1854,19,19,LOGICAL,Remove this useless assignment to local variable "value".,null,
+java:S1854,18,18,LOGICAL,Remove this useless assignment to local variable "key".,null,
+java:S108,11,11,CLEAR,Remove this block of code, fill it in, or add a comment explaining why it is empty.,null,
+java:S108,14,14,CLEAR,Remove this block of code, fill it in, or add a comment explaining why it is empty.,null,
+java:S1481,18,18,CLEAR,Remove this unused "key" local variable.,null,
+java:S1481,19,19,CLEAR,Remove this unused "value" local variable.,null,

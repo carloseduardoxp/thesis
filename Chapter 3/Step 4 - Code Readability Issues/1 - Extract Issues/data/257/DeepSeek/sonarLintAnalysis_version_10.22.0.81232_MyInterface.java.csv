@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1144,20,20,CLEAR,Remove this unused private "privateMethod" method.,null,
+java:S106,11,11,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,21,21,MODULAR,Replace this use of System.out by a logger.,null,

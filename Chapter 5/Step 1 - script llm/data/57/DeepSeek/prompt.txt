@@ -1,0 +1,30 @@
+Given the following Java code snippet:
+import java.util.LinkedList;
+
+public class LinkedListRemoval {
+    public static void main(String[] args) {
+        LinkedList<String> list = new LinkedList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+        list.add("Date");
+        
+        // Remove by index
+        list.remove(1); // Removes "Banana" (index 1)
+        
+        // Remove by object
+        list.remove("Cherry"); // Removes "Cherry" if present
+        
+        // Remove first element
+        String first = list.removeFirst();
+        
+        // Remove last element
+        String last = list.removeLast();
+        
+        System.out.println(list); // Output: [Apple]
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "last"., start line = 21, end line = 21, rule key = java:S1854 message = Remove this useless assignment to local variable "first"., start line = 18, end line = 18, rule key = java:S1481 message = Remove this unused "first" local variable., start line = 18, end line = 18, rule key = java:S1481 message = Remove this unused "last" local variable., start line = 21, end line = 21, rule key = java:S1854 message = Remove this useless assignment to local variable "last"., start line = 21, end line = 21, rule key = java:S1854 message = Remove this useless assignment to local variable "first"., start line = 18, end line = 18, rule key = java:S1481 message = Remove this unused "first" local variable., start line = 18, end line = 18, rule key = java:S1481 message = Remove this unused "last" local variable., start line = 21, end line = 21.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

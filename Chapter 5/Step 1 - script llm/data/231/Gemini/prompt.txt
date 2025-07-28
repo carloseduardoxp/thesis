@@ -1,0 +1,19 @@
+Given the following Java code snippet:
+
+public class Gemini {
+
+    public static void main(String[] args) {
+
+        int[] original = {1, 2, 3, 4, 5};
+        int[] copied = new int[original.length]; // Must create a new array first
+
+        System.arraycopy(original, 0, copied, 0, original.length);
+
+// copied now contains {1, 2, 3, 4, 5}
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

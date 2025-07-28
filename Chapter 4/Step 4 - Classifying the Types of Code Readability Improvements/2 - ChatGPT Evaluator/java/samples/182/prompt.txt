@@ -1,0 +1,13 @@
+Based on this pull request with the developer description: Predicates and Functions were converted to lambda, the code was changed by the developer from return topicNames.stream().filter(new Predicate<TopicName>() {
+             @Override
+             public boolean test(TopicName topicName) {
+                 return topicName.getNamespace().equals(ns);
+             }
+         }).map(new Function<TopicName, String>() {
+             @Override
+             public String apply(TopicName topicName) {
+                 return topicName.toString();
+             }
+         }).collect(Collectors.toList()); (if dont have code before, the code wasnt exist yet) to return topicNames.stream()
+             .filter(topicName -> topicName.getNamespace().equals(ns))
+             .map(TopicName::toString).collect(Collectors.toList());, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

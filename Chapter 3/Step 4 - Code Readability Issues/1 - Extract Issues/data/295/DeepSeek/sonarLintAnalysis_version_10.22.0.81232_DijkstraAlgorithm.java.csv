@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1210,16,16,COMPLETE,Override "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.,null,
+java:S106,80,80,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,82,82,MODULAR,Replace this use of System.out by a logger.,null,

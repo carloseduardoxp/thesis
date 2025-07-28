@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1450,7,7,CLEAR,Remove the "countDownTimer" field and declare it as a local variable in the relevant methods.,null,
+java:S1068,7,7,CLEAR,Remove this unused "countDownTimer" private field.,null,

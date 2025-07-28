@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: Replacing switch statement by if statements to increase readability, the code was changed by the developer from switch (name) {
+             case SecurityVaultData.PICKETBOX_CLASS_NAME: return SecurityVaultData.class;
+             default: return super.resolveClass(desc); (if dont have code before, the code wasnt exist yet) to if (name.equals(SecurityVaultData.PICKETBOX_CLASS_NAME)) {
+             return SecurityVaultData.class;
+         } else {
+             return super.resolveClass(desc);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

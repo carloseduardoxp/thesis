@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,23,23,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,27,27,MODULAR,Replace this use of System.out by a logger.,null,
+java:S4042,30,30,CONVENTIONAL,Use "java.nio.file.Files#delete" here for better messages on error conditions.,null,
+java:S106,31,31,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,33,33,MODULAR,Replace this use of System.out by a logger.,null,

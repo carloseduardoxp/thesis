@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2293,8,8,CLEAR,Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.),null,
+java:S3740,32,32,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S3012,11,11,CLEAR,Use "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.,null,
+java:S106,14,14,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,15,15,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,19,19,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,22,22,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,23,23,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,27,27,MODULAR,Replace this use of System.out by a logger.,null,
+java:S3776,65,65,FOCUSED,Refactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.,null,

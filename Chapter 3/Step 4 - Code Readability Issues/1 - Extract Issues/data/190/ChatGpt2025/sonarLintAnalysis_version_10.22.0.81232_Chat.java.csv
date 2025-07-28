@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,8,8,LOGICAL,Remove this useless assignment to local variable "name".,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "price".,null,
+java:S1854,6,6,LOGICAL,Remove this useless assignment to local variable "age".,null,
+java:S1481,6,6,CLEAR,Remove this unused "age" local variable.,null,
+java:S1481,7,7,CLEAR,Remove this unused "price" local variable.,null,
+java:S1481,8,8,CLEAR,Remove this unused "name" local variable.,null,
+java:S1481,9,9,CLEAR,Remove this unused "isActive" local variable.,null,

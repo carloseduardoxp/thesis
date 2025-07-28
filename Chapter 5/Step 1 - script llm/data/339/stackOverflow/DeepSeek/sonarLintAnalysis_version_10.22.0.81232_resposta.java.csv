@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1118,6,6,CLEAR,Add a private constructor to hide the implicit public one.,null,
+java:S2234,10,10,CLEAR,Parameters to intersection have the same names but not the same order as the method arguments.,null,

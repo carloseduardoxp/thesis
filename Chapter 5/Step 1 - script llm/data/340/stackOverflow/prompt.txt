@@ -1,0 +1,23 @@
+Given the following Java code snippet:
+public class RandomTest {
+
+    public static void main(String[] args) {
+        int xSpeed = 0;
+        int ySpeed = 0;
+
+        if (Math.random() >= 0.5) {
+            xSpeed = -10;
+        } else {
+            xSpeed = 10;
+        }
+
+        if (Math.random() >= 0.5) {
+            ySpeed = -10;
+        } else {
+            ySpeed = 10;
+        }
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "xSpeed"., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "xSpeed"., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "ySpeed"., start line = 14, end line = 14, rule key = java:S1854 message = Remove this useless assignment to local variable "ySpeed"., start line = 16, end line = 16, rule key = java:S1481 message = Remove this unused "xSpeed" local variable., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "ySpeed" local variable., start line = 5, end line = 5, rule key = java:S1854 message = Remove this useless assignment to local variable "xSpeed"., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "xSpeed"., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "ySpeed"., start line = 14, end line = 14, rule key = java:S1854 message = Remove this useless assignment to local variable "ySpeed"., start line = 16, end line = 16, rule key = java:S1481 message = Remove this unused "xSpeed" local variable., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "ySpeed" local variable., start line = 5, end line = 5.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

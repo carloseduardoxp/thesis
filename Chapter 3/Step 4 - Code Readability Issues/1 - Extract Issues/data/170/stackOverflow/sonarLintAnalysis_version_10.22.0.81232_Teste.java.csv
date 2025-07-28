@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,16,16,LOGICAL,Remove this useless assignment to local variable "str".,null,
+java:S2674,13,13,COMPLETE,Check the return value of the "read" call to see how many bytes were read.,null,
+java:S4719,16,16,CONVENTIONAL,Replace charset name argument with StandardCharsets.UTF_8,null,
+java:S1481,16,16,CLEAR,Remove this unused "str" local variable.,null,

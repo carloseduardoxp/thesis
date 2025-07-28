@@ -1,0 +1,58 @@
+Given the following Java code snippet:
+
+import java.util.*;
+
+public class Pizza {
+
+    private Pizza(Base base, Set<Topping> toppings) {
+        this.base = base;
+        this.toppings = toppings;
+    }
+
+    public static PizzaBuilder createBuilder(Base pizzaBase) {
+        return new PizzaBuilder(new Pizza(pizzaBase, null));
+    }
+
+    public static class PizzaBuilder {
+
+        private PizzaBuilder(Pizza pizza) {
+            this.pizza = pizza;
+        }
+
+        public PizzaBuilder addTopping(Topping topping) {
+            Set<Topping> toppings = null;
+            if (pizza.toppings == null) {
+                toppings = new LinkedHashSet<Topping>(); 
+            }else {
+                toppings = new LinkedHashSet<Topping>(pizza.toppings);
+            }
+            toppings.add(topping);
+            return new PizzaBuilder(new Pizza(pizza.base, toppings));
+        }
+
+        public Pizza build() {
+            return pizza;
+        }
+
+        final private Pizza pizza;
+    }
+
+    public Collection<Topping> getToppings() {
+        return Collections.unmodifiableSet(toppings);
+    }
+
+    enum Base {
+        DEEP_PAN, THIN
+    }
+
+    enum Topping {
+        MOZZARELLA, TOMATO, ANCHOVIES, PEPPERONI
+    }
+
+    final private Base base;
+    final private Set<Topping> toppings;
+
+}
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 24, end line = 24, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 26, end line = 26, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 36, end line = 36, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 51, end line = 51, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 52, end line = 52, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 24, end line = 24, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 26, end line = 26, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 36, end line = 36, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 51, end line = 51, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 52, end line = 52.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

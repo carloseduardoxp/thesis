@@ -1,0 +1,28 @@
+Given the following Java code snippet:
+
+
+class Box<T> {
+
+    private T item;
+
+    public void set(T item) {
+        this.item = item;
+    }
+
+    public T get() {
+        return item;
+    }
+}
+
+public class Chat {
+
+    public static void main(String[] args) {
+        Box<String> stringBox = new Box<>();
+        stringBox.set("Hello");
+        String str = stringBox.get();
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 21, end line = 21, rule key = java:S1481 message = Remove this unused "str" local variable., start line = 21, end line = 21, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 21, end line = 21, rule key = java:S1481 message = Remove this unused "str" local variable., start line = 21, end line = 21.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: This commit removes the querySymbol-extension logic because QueriedDocTableFetchPushDown already handles _score columns itself., the code was changed by the developer from List<Symbol> orderBySymbols = ImmutableList.<Symbol>of(a, x);
+ List<Symbol> outputs = ImmutableList.<Symbol>of(bothFun);
+ FetchRequiredVisitor.Context context = context(orderBySymbols);
+ assertThat(FetchRequiredVisitor.INSTANCE.process(outputs, context), is(false)); (if dont have code before, the code wasnt exist yet) to List<Symbol> orderBySymbols = ImmutableList.of(a, x);
+ List<Symbol> outputs = ImmutableList.of(bothFun);
+ assertThat(FetchFeasibility.isFetchFeasible(outputs, orderBySymbols), is(false));, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

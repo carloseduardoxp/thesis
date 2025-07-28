@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: Improve readability of expected outputs using dedent in ``pandas/tests/io/formats/test_to_string.py``, the code was changed by the developer from expected = "months\n0 2016-01\n1 2016-02" (if dont have code before, the code wasnt exist yet) to expected = dedent(
+         """\
+         months
+         0 2016-01
+         1 2016-02"""
+     ), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

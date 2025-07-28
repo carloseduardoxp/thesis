@@ -1,0 +1,19 @@
+Given the following Java code snippet:
+import java.util.*;
+
+public class Teste {
+  public static void main(String[] args) {
+    List<Integer> originalList = new ArrayList<>();
+    originalList.add(1);
+    originalList.add(2);
+    originalList.add(3);
+
+    List<Integer> newList = new ArrayList<>(originalList);
+
+
+  }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "newList"., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "newList" local variable., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "newList"., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "newList" local variable., start line = 10, end line = 10.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

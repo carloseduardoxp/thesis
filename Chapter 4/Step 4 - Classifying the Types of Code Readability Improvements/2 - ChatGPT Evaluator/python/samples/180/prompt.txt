@@ -1,0 +1,18 @@
+Based on this pull request with the developer description: I have made some stylistic improvements, the code was changed by the developer from for t in tapes:
+    shape_and_dtype = _create_shape_dtype_struct(t, device)
+    if len(t.trainable_params) == 1:
+       shape_dtypes.append(shape_and_dtype)
+    else:
+       num_measurements = len(t.measurements)
+       if num_measurements == 1:
+          s = [shape_and_dtype for _ in range(len(t.trainable_params))]
+          shape_dtypes.append(tuple(s))
+       else:
+          s = [tuple(_s for _ in range(len(t.trainable_params))) for _s in shape_and_dtype]
+          shape_dtypes.append(tuple(s)) (if dont have code before, the code wasnt exist yet) to shape_dtype = _jac_shape_dtype_struct(tape, device)
+ for param_idx in original_trainable_parameters:
+    if param_idx in tape.trainable_params:
+       p_jac = jacs
+    p_jac = _empty_jacs_for_shape(shape_dtype)
+    intermediate_jacs.append(p_jac)
+    return tuple(intermediate_jacs), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

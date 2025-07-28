@@ -1,0 +1,24 @@
+Based on this pull request with the developer description: avoid use of logical OR |
+ 
+ Whilst using a logical OR | for this felt novel at the time, it has now tripped up two codereviewers on separate occasions who appropriately reach the conclusion that it's likely a mistake. It's not a functionality mistake, but it is a readability mistake. Lets not waste anyone else's time., the code was changed by the developer from if url and (             _set_webhook(  _build_url(
+                     device,
+                     url, camera,
+             )
+             | _set_webhook(  _build_url(
+                     device,
+                     url,  KEY_WEB_HOOK_STORAGE_ENABLED,
+                 camera,
+             )
+         ):
+             hass.async_create_task(client.async_set_camera(camera_id, camera)) (if dont have code before, the code wasnt exist yet) to if url:
+             set_motion_event = _set_webhook(
+                 _build_url(
+                     device,
+                     url,  KEY_WEB_HOOK_NOTIFICATIONS_ENABLED,
+                 camera,
+             )  _build_url(
+                     device,
+                     url, KEY_WEB_HOOK_STORAGE_ENABLED,
+                 camera,
+             ) if set_motion_event or set_storage_event:
+                 hass.async_create_task(client.async_set_camera(camera_id, camera)), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

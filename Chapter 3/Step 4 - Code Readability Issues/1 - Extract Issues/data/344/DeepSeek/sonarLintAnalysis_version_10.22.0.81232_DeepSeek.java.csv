@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,13,16,LOGICAL,Remove this useless assignment to local variable "newStream2".,null,
+java:S1854,10,10,LOGICAL,Remove this useless assignment to local variable "newStream".,null,
+java:S1481,10,10,CLEAR,Remove this unused "newStream" local variable.,null,
+java:S1481,13,13,CLEAR,Remove this unused "newStream2" local variable.,null,

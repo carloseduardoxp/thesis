@@ -1,0 +1,47 @@
+Given the following Java code snippet:
+import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        WebView myWebView = findViewById(R.id.my_webview);
+
+        // Enable JavaScript (important for many websites)
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        // Set a WebViewClient to handle page navigation within the WebView itself
+        // Without this, links might open in the device's default browser
+        myWebView.setWebViewClient(new WebViewClient());
+
+        // Load a URL
+        myWebView.loadUrl("https://www.example.com");
+
+        // Or load an HTML string
+        // String htmlData = "<html><body><h1>Hello, WebView!</h1></body></html>";
+        // myWebView.loadData(htmlData, "text/html", "UTF-8");
+    }
+
+    // Handle back button presses within the WebView
+    @Override
+    public void onBackPressed() {
+        WebView myWebView = findViewById(R.id.my_webview);
+        if (myWebView.canGoBack()) {
+            myWebView.goBack();
+        } else {
+            super.onBackPressed();
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 28, end line = 28.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

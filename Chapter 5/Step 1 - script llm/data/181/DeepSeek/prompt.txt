@@ -1,0 +1,17 @@
+Given the following Java code snippet:
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        String text = "Hello\nWorld\r\nJava";
+        String result = text.replaceAll("\\r|\\n", "");
+        System.out.println(result); // Output: HelloWorldJava
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S6035 message = Replace this alternation with a character class., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,2 @@
+Based on this pull request with the developer description: fixed docstring, the code was changed by the developer from a list of dictionaries which include the input file,
+     the output directory, and the definitions object (if dont have code before, the code wasnt exist yet) to a list of input file paths, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

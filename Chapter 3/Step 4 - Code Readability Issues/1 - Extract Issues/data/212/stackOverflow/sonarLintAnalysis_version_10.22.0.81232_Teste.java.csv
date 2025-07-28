@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S112,19,19,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S1144,6,6,CLEAR,Remove this unused private "getField" method.,null,
+java:S1118,4,4,CLEAR,Add a private constructor to hide the implicit public one.,null,
+java:S3011,14,14,MODULAR,This accessibility update should be removed.,null,

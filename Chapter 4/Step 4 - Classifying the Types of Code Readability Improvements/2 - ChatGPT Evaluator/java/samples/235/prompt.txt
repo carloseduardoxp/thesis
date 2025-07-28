@@ -1,0 +1,4 @@
+Based on this pull request with the developer description: Use ASMs new Iterable API for better readability, the code was changed by the developer from AbstractInsnNode i = methodNode.instructions.getFirst();
+ while (i != null) {     filter(i, output);
+     i = i.getNext(); } (if dont have code before, the code wasnt exist yet) to for (final AbstractInsnNode i : methodNode.instructions) {
+     filter(i, output); }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,4 @@
+Based on this pull request with the developer description: Switching some iterates and append patterns with function + tuple with generator pattern., the code was changed by the developer from for t in tapes:
+         shape_and_dtype = _create_shape_dtype_struct(t, device)
+         shape_dtypes.append(shape_and_dtype)
+     return tuple(shape_dtypes) (if dont have code before, the code wasnt exist yet) to return tuple(jax.ShapeDtypeStruct(tuple(s), d) for s, d in zip(shape, tape_dtype)), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

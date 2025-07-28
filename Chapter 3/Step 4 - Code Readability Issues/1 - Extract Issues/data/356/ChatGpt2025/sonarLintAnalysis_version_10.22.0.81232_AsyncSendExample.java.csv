@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1602,5,5,CLEAR,Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S1612,5,5,CLEAR,Replace this lambda with method reference 'AsyncSendExample::sendData'. (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2142,20,20,COMPLETE,Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.,null,
+java:S106,23,23,MODULAR,Replace this use of System.out by a logger.,null,

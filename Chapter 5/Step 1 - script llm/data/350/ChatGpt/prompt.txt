@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+public class Teste {
+  public static void main(String[] args) {
+    // Syntax to initialize a 2D array of integers
+    int[][] array2D = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+    // Syntax to initialize a 3D array of strings
+    String[][][] array3D = {
+        {
+            {"a", "b", "c"},
+            {"d", "e", "f"},
+            {"g", "h", "i"}
+        },
+        {
+            {"j", "k", "l"},
+            {"m", "n", "o"},
+            {"p", "q", "r"}
+        }
+    };
+
+  }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "array3D"., start line = 7, end line = 18, rule key = java:S1854 message = Remove this useless assignment to local variable "array2D"., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "array2D" local variable., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "array3D" local variable., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "array3D"., start line = 7, end line = 18, rule key = java:S1854 message = Remove this useless assignment to local variable "array2D"., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "array2D" local variable., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "array3D" local variable., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

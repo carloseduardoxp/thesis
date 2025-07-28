@@ -1,0 +1,12 @@
+Based on this pull request with the developer description: ReplicationClient.java and ThriftServerBindsBeforeZooKeeperLockIT.java contain instances of 'while' loops which never loop. In the case of ReplicationClient, the loop is always entered but either returns or throws an exception. ThriftServerBindsBeforeZooKepperLockIT contains three 'while' blocks that never loop. Each of the outer 'while' blocks contan another 'while' which does loop until a condition is met resulting in a 'return' case being satisfied. The outer loop does not appear to be necessary in each of these cases. These loops have been removed to increase readability of the code., the code was changed by the developer from while (true) {
+       int freePort = PortUtils.getRandomFreePort();
+       String monitorUrl = "http://localhost:" + freePort;
+       Process monitor = null;
+       try {
+         LOG.debug("Starting standby monitor on {}", freePort);
+         monitor = startProcess(cluster, ServerType.MONITOR, freePort); (if dont have code before, the code wasnt exist yet) to int freePort = PortUtils.getRandomFreePort();
+     String monitorUrl = "http://localhost:" + freePort;
+     Process monitor = null;
+     try {
+       LOG.debug("Starting standby monitor on {}", freePort);
+       monitor = startProcess(cluster, ServerType.MONITOR, freePort);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

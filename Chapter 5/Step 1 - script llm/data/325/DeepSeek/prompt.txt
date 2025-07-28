@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+import javax.swing.*;
+
+public class ButtonExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Button Example");
+        JButton button = new JButton("Initial Text");
+        
+        // Change button text later
+        button.setText("New Text");
+        
+        frame.add(button);
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 13, end line = 13.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

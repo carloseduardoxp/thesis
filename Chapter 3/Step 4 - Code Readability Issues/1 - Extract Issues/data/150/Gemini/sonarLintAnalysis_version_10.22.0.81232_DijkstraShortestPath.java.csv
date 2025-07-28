@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S117,78,78,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S117,79,79,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S117,80,80,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S117,81,81,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S117,82,82,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1210,20,20,COMPLETE,Override "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.,null,
+java:S106,98,98,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,99,99,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,103,103,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,104,104,MODULAR,Replace this use of System.out by a logger.,null,

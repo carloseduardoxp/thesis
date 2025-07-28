@@ -1,0 +1,456 @@
+Rename variable for readability
+Change variable names to improve readability
+Rename a few variables for readability
+Modify variable names to enhance readability
+Rename method & variables for better readability
+Rename variable for improved readability
+Improves swerve variable naming for better readability.
+Improve variable names
+Rename some customer cases test names in order to improve readability
+rename CORS related tests for improved readability
+Rename field for better readability
+Renamed some members for better readability.
+Rename some customer cases test names in order to improve readability
+Rename `checkEffectConstraints` to what it does
+Renaming ProxyMethodMapper::createCustomHeaderMethod to createNoCustomHeaderMethod
+renaming method in test to help readability
+Improve readability of method arguments be renaming `headers` argument to `customHeaders`
+Rename method AbstractPendingTransactionsSorter::signalInvalidTransaction to better express its semantic
+The latch's name made it seem like it was a mock
+ForClauseLocalToRowClosure is renamed to ForClausedLocalTupleToRowClosure (clarity for additions to coming with RumbleML)
+readability fixes method name
+Rename 2 methods for clarity
+Change `file` key on `param` to `path` because the value may be either a file or a directory path.
+`PostStateProcessor#setNextEveryStatePerProcessor` -> `PostStateProcessor#setNextEveryStatePreProcessor`  - `StreamPostStateProcessor#nextStatePerProcessor` -> `StreamPostStateProcessor#nextStatePreProcessor`  - `StreamPostStateProcessor#nextEveryStatePerProcessor` -> `StreamPostStateProcessor#nextEveryStatePreProcessor`
+Removed dir abbreviation and replaced with directory
+use underscore for better readability
+use underscore for better readability
+Rename DefaultClientConfig > DefaultGrpcClientConfig
+Follow reviewers suggestions
+rename AsyncResponseTypeFactory to ResponseTypeFactory
+Rename codecClazz to codecClazzProp to make it clearer 
+Replace meaningless method names
+Minor code changes and renames
+Rename binary_soft_classification evaluation to outlier_detection
+rename RelevanceSystem's methods
+Renaming and tidy up to increase clarity.
+Also rename the method to better describe what it's for.
+Renamed DependendencySubstitutions.hasRules to .rulesMayAddProjectDependency, since this better reflects the method intent
+Rename UnitOfWork.loadRestoredOutput() to loadAlreadyProducedOutput()
+Renamed variable names to enhance readability.
+Rename method to maxDurability
+Rename method and classes for better clarity
+Mark deprecated variables and methods.
+Mark deprecated variables and methods.
+Mark deprecated variables and methods.
+Mark deprecated variables and methods.
+Mark deprecated variables and methods.
+Mark deprecated variables and methods.
+Mark deprecated variables and methods.
+Mark deprecated variables and methods.
+Mark deprecated variables and methods.
+Maybe it will improve the readability if @Override annotation is applied over the run() method since Sender class implements Runnable
+`@Override` to the method in the implementation class 
+@OverRide can improve code readability and help compiler check method relationship between superclass and subclass.
+Add annotations to methods and parameters.
+missing NonNull
+Use support annotations to avoid NullPointerException.
+add Nullable tag
+Start to use @VisibleForTesting in Netty 5 to make it easier to users to understand what to expect.
+Add @FunctionalInterface
+Add GuardedBy and make synchronization more obviously correct
+use final variables where possible
+This can be final
+refactor: simple code
+No impact, this simply marks an immutable field final for readability.
+Make class variables static if possible.
+consistently use this. in constructor
+move config variable name to constant
+Reused the hardcoded constraint & parameter IDs from the scrutinizer classes into the test classes respectively
+This PR replaces the usage of 0 with a constant, to improve readability and so it can be tracked and if needed, replaced
+Added some constants to make assertions for the same values easier to read/conceptualize
+Substituting @value("${local.server.port}") with @LocalServerPort
+facilitate the understanding of http status codes in tests
+hard-coded Http values to constants
+Finalize local vars and add KEY_PREFIX constant
+setPerm(Constants.AUTHORIZE_WRITABLE_PERM) in grantProjectbyCode()
+ I struggled quite a bit to understand what the parameter value `3` of the `gpioCfgInterfaces` call actually means. So in my first commit I m suggesting to dissolve the magic value `3` by using new constants that I m adding to `PiGpioConst`. I ve taken the constants from https://github.com/joan2937/pigpio/blob/master/pigpio.h. 
+Inlining more of the setup makes it more readable
+Replace hardcoded "member-1" strings with existing MEMBER_ID constant
+Use constants for some Strings. Introduce constants for some Strings that indicate no data in Tab class
+Replaced magic constant on CreateTimerPanel with a specific variable for readability
+replace two methods with constant value for readability
+ I think the constant name could easier to read
+use assertj more readable (left to right)
+Improve the readability of tests.
+Don't mock Files.exists
+simplified JUnit expressions
+Converted test assertion methods to assertThat() to improve code readability
+Use Hamcrest matchers and assertThat() in ReindexRenamedSettingTests to improve readability
+Improve assertions readability with assertJ
+Introduce AssertJ for better test code readability when it comes to testing as it's very expressive and makes the code easy to read.    I figured that I'll introduce it and rewrite a bunch of Test classes to show how it makes certain things easier to test.
+Usage of appropriate assert statements
+Replace assertTrue(x instanceof b) with assertThat().isInstanceOf
+Replace old-style JTH assertions with newer methods for improved readability.
+use Collections.singletonList instead of Arrays.asList
+Refactored the Functional Interface to the Specialized Primitive Functional Interface
+Replace Jetbrains' @NotNull with Androidx' @NonNull annotatiation.
+Arrays.asList` to `Collections.singletonList
+Arrays.asList to Collections.singletonList
+code readability refactoring
+Reorder HoodieTimeline#compareTimestamp arguments for better readability reads nicely as (instantTime1, GREATER_OR_EQUAL, instantTime2) etc
+Improve the readability of the getOrder method `Ordered.LOWEST_PRECEDENCE + 1` is equal to `Ordered.HIGHEST_PRECEDENCE`, using `Ordered.HIGHEST_PRECEDENCE` is more readable.
+Rearrange for readability
+Split up some single lines of code to make it easier to read
+Improving code readability - Extracting actual and expected variables, so the types are visible in the tests.
+Handle Integer.MIN_VALUE explicitly in PubSubFactory.hashForPubSub
+Rewrites sliding window code to be more readable.
+introduce boolean for more readability
+Cleaned up updatePartInUseData method by restructuring conditional logic for better readability. Reduced nesting and eliminated redundant checks to streamline execution.
+return early
+invert ifs and exit early
+Add early return null cases
+Cleanup largely by removing unnecessary else{} blocks to return-early checks.
+as a part of which early returns are introduced where suitable
+Invert if condition for better readability
+Invert 2 null checks for better readability
+removed empty block
+Simplify condition
+Change the trinomial operator usage code to make it easier to understand 
+Remove ternary operator for better readability
+overly complicated boolean expressions simplified
+Write ternary with if-else to improve readability
+Use NodeType enum instead of Strings
+Use Enum as mode for ReplacingSymbolVisitor
+Make `checkConstraints` return an enum describing what each number means
+Change boolean to enum for readability
+Make private field actually private.
+Make PlayerHolder.bound private
+making few methods that don't need to be package-internal as private.
+Added _ separator in numbers to ease reading
+Convert some int literals to binary for clarity of the mechanism
+Make long constants end in L for legibility
+Remove unnecessary instance variable in QueryStringQueryParser
+minor reorganization to reduce static variables and clarify flow of control for Omex exporting.
+Added helpers for single-resource sendResponse(), verifyRequest(), etc, to skip single-element collection so it's a bit easier to read
+replace the boolean that was added as a parameter with a separate method with a different name which internally references a private method that uses the boolean flag
+Don't return a bare list.
+Improve code readability by passing in the fileComparisonsRDD in bloom index
+These are generic-ed off in the other instanceof checks, these ones don't need to be different
+some deprecations fixed around StandardCharsets.UTF_8
+Added a break to a for loop
+Use custom exception
+use abstract list type for method param
+readability improvement with boolean expression
+Improve code clarity by using Arrays.copyOf()
+mprove readability by removing boilerplate code
+clean up some ImmutableMaps
+Improve readability of the test by simplifying its parameters generator
+Improve readability by removing boilerplate code
+Asserts.java simple and format
+using the min, max might make the code a little easier to read
+Use functional programming to improve code readability I refactored methods to use Java 8's streams API to improve readability
+Use min or max method of Math to improve readability
+replaced iteartion with bulk operation
+Use TimeUnit instead of plain number to improve readability
+This PR refactors code of LES parallel calculation to be easier to understand (byproduct of adding parallel formula in tooltip
+Also converted the longs to use the `NanoTime` object
+ Modify the equals compare method
+ Use an empty collection instead of null return value
+Using Collection.size() to test for emptiness works, but using Collection.isEmpty() makes the code more readable 
+Use collection.isEmpty() when possible
+Use isEmpty() for improved readability
+Simplify if conditions.
+use isEmpty() where possible - readability
+removed unnecessary unboxing
+Remove redundant code and improve readability
+Properly declare testExpectStrs, expectedExceptions to be lists of patterns.
+Changed the sort method interface for easy readability
+Changed Collections.sort(profiles, Collections. Profile>reverseOrder()); to    profiles.sort(Collections.reverseOrder()); for easy understanding.
+Cleaning up double wrapping in unmodifiableList.
+Added var for local variables in cases var is improving readability
+chore: Use getOrDefault instead of Optional.ofNullable.orElse to aid in readability
+use pattern matching for instanceof where applicable
+Replace instanceof / cast with Java 17 instanceof pattern matching.
+This moves all the wrapper type construction in the code and tests to use the static constructor.
+Remove unnecessary object manipulation across method calls
+``stream().forEach()`` replaced with ``forEach()`` for better readability
+use lambda functions for Schedulers.io()
+code is definitely much more readable without all the anonymous inner class boilerplate.
+try out Java8 lambdas to get a feel for them (terminal code)
+The anonymous classes were converted to lambda in the places where it improves readability and decreases the lines of code.
+Predicates and Functions were converted to lambda
+replace some lambda expressions to method reference to improve code readability.
+Introduce Lambdas  to improve on readability and reduce boilerplate code.
+Replaced code with lambdas
+Improve some comparators using Java 8
+Slightly improve readability and performance using lambas
+Use of lambda expression to improve readability.
+Inline constant-true method call. 
+Use of forEach to remove uggly generic loop
+Predicates and Functions were converted to lambda
+Using streams instead of loops for input/output
+Asserts.java simple and format.
+introduce lambdas
+Replace CAS loop by updateAndGet to improve readability
+Use more functional style to improve code readability
+Reduce loops to streams.
+Leverage Optional.orElseThrow to increase code readability
+ improves array parsing readability.
+It simply flattens the functions, simplifies them when possible, and reorders them to group similar pieces (e.g. all of the inner classes, or all of the static methods) together.
+Replaced while-loop with if-loop after determining while-loop was only run at most once each time.
+Remove non-looping 'while' loops
+excessive nesting through conditional statements (if-else) are refactored to reduce complexity and improve readability
+Reduce nesting  
+less indentation
+Extraction of Nested Logic
+This commit regroups the conditions 
+ Improve code readability by removing the nested if loop
+Changing switch statement to if/else statement for greater clarity
+Fix sonar issues of Replace this "switch" statement by "if" statements to increase readability.
+Replacing switch statement by if statements to increase readability
+Changed switch to if-else to increase readability for Elytro
+Fix sonar issues of Replace this "switch" statement by "if" statements to increase readability.
+Replacing switch statement by if statements to increase readability
+Changed switch to if-else to increase readability for Elytro
+Improve the code readability of TimerContext replace if with switch case
+Changing if-else-if ladder to switch statement for better readability
+Approve ExpectedStrings by way of inspections -- ifs to switch, 
+ code readability on viz.starselection
+[refactor] modify the control flow code to improve code readability
+Unwrap unnecessary else.
+Improve condition for more readability some codebase conditions are too complex and we can make it simple for readability purpose.
+Fix checkstyle issues.
+Remove redundant else
+Move Transactions into try-with-resource
+converted auto closable resources to use try with resources
+Implement the try-with-resources construct available in Java 7+ where applicable.
+Use try-with-resource in 'Dockerfile#parse()'
+use try with resources
+Use try-resource.
+Remove redundant local variables from services' implementation
+use objectmapper in both directions, enhance readability
+Improve Readability in Admin Service Clients
+Simplify setHoveredFriend to allow clearer variable names
+Use ASMs new Iterable API for better readability
+This commit removes the querySymbol-extension logic because QueriedDocTableFetchPushDown already handles _score columns itself.
+Some rewrting in Java 8 style
+Replace functional anonymous methods with method references
+replace lambda with a method reference for better readability
+Replace one liner lambdas with expression lambdas
+Improve readability by replacing lambda with method reference
+It simply flattens the functions, simplifies them when possible, and reorders them to group similar pieces (e.g. all of the inner classes, or all of the static methods) together.
+redundant 'if' statements
+collapse simple bool return.
+Asserts.java simple and format.
+Unnecessary types
+Diamond operator
+removed redundant Typedefinition
+Replace string concatination inside an append call with a chained append calls to make the code a tad easier to read
+I have replaced string concatenation with Log4j ParameterizedMessage in 40 files.
+Removed null checks before checking instanceof as null case is handled.
+pointless boolean expressions eliminated
+Add static import statements for Assert to improve the readability of the tests
+Remove Assert. in the tests to improve readability
+Remove YarnException and IOException, because they are all subclasses of Throwable.
+Replaces manual exception handling with the testing framework's built-in features (e.g., assertThrows), improving readability, 
+remove unnecessary braces
+This PR adds lombok to the step-builder pattern, making the code cleaner and easier to read/maintain
+Replaced for loops with for each for better code readability.
+Its better to use enums instead of switch
+Extract duplicate code
+Extract method "assertConfigHasPlugins"
+cleanup: extract duplicate code into method
+This PR removes the duplicated point at ViaInstructions. 
+Also, many of the values in that constructor are the default values in the Builder class so they can be omitted, which removes a fair bit of duplicate code.
+hoisted common expressions out of if/else blocks
+Refactor Compression.java in order to remove duplicate code and restructure the class to make it easier to read overall.
+Reduce verbosity and more idiomatic use of keyword.
+PR refactors duplicate code by extracting a new method
+merge `testInvalidQueryTypeConfiguration`, `testNonExistentGroup` with    other `testInvalid` test cases
+Improve readability and remove duplication in ItemsetBinding.initReferences
+Improved removed loop code. Readability and no unnecessary repetition compared to existing code
+Unnecessary blank lines through files are removed along with extraneous comment lines
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Remove commented code.
+Cleanup improves code readability and maintainability
+Cleanup unused imports
+Remove Unused Imports
+removing static import in ProxyMethodParameterProcessor
+chore: remove unused import
+Remove unused import
+remove unnecessary throws
+useless throws declarations 
+Remove redundant exception to improve readability
+Declared exceptions that are not thrown
+Unreachable throw statements clutter code and may cause static analysis warnings
+It's better to avoid specifying the time limit and rely on the default value that is 10 seconds.
+The ReadEntity, and WriteEntity parameters in TaskCompiler#optimizeOperatorPlan are passed in this method and various subsequent ones but they are never actually used so they can be removed.
+remove unused constructor parameter
+remove unnecessary readFields parameter   
+Refactor HiveProject removing unused fields
+Introducing a new static flag to prevent instantiation via reflection is unnecessary
+removes some variables that are only used once, again to improve readability
+remove main method
+Remove now-unused method
+Removing unused and incorrectly documented constructor from SnapshotDeletionsInProgress
+Remote unneeded try
+removing unnecessary method calls indirections and resulting unused methods
+Also removed getEnclosingClass() which is now  available in JDK itself
+removes the checks that compare the Ca truststore file as a whole. These checks are only passing because in the Ca class in some cases we reuse the data directly, rather than instantiating a new hashmap. The tests don't need to check the whether it is the exact same file, and in testExpiredCertsGetRemovedAuto we actually wouldn't expect the file to be the same. Since there are already checks that the correct cert is present in the truststore, the asserts that compare the whole file can be removed
+Refactor HiveProject removing unused methods 
+Removed unused methods and overloaded write methods
+Remove some unnecessary methods
+remove SubmersibleCamera abstraction
+Remove redundant null checks
+Optimize logic to improve code readability
+Removed continue statements
+if (true) return patterns are redundant and misleading
+remove this. where possible
+Keep only @nullable annotation for readability
+Improve code readability,remove the continue keyword
+Removed goto statement
+This PR unifies the functionality of NonGreedyNumberOfInvocationsChecker, NumberOfInvocationsCheckerInOrder and NumberOfInvocationsChecker in static methods of the type NumberOfInvocationsChecker
+Break down large method to smaller ones to be more readable and reduce the scope of variables with similar names
+This makes it easier to isolate the different operations and see what is going on
+A method extraction that improves readability of AutodetectProcessManager.openJob ever so slightly
+Mostly readability changes and reduction of some method sizes
+use consistent, human readable context names
+EmptyLineSeparator for multiple single type variables on line
+Extract methods for creating JSON objects 
+Extracting a method to make things more readable
+refactor code in ManagedCursorImpl to get rid of 4 FastThreadLocal variables    - it is hard to understand the code and it's not optimal      since it will do object allocations for Long instances stored in the FastThreadLocal       variables.    - there's less overhead in having a simple private class to hold the      fields required for the state    - ordinary local variables cannot be used since .forEach accepts a lambda      and local variables cannot be mutated in a lambda
+Separating responsibilities to improve readability and maintainability
+just breaks the code into smaller pieces
+extract some methods for readability
+extract additional private methods to improve readability and reduce method length
+Small changes related to increase code readability by extracting some code blocks into separate methods
+Simple series of Extract Method operations.
+Some parts of the code have issues with logic consistency and readability
+Break up the 272 lines long CatalogItemProcessor.process() method into  smaller chunks for each CatalogInfo type needing specialized processing.  
+Removed redundancy of schema generation for each tuple.
+Split out most sections into self-contained methods with a single objective. Code is now longer, but less convoluted and with less anonymous nested things.
+The hope here is that by drying up across both where possible and splitting the logic to different   methods for both otherwise, the corner become easier to understand. 
+This PR pulls out the common asserts that check the certificate files and key files are all present and not null.
+extracts a method to limit the  scope of the `AbstractRunnable`.
+feat: encapsulate start end time set function.
+Extract shortName method
+Refactored Thread.sleep() to common function
+This PR introduces some methods for converting between Mired, Kelvin, and percentages to make more explicit where the corresponding conversions happen in the converter.    
+ Rearranging the `BallerinaClientGenerator` class by dividing each part of syntax tree generation to separate functions. This will increase the readability and maintainability of the code. 
+ extract `queryTypeSelectionCriteria` method 
+Unnecessary variable initialization. For the cases where Unnecessary variable initialization was found, the code has been rewritten with smaller methods, making the code easier to understand
+ContainerStorageManager has gotten very unwieldy with 1000+ LOC of highly complex and invocation-order dependent logic. It also does too much by trying to manage side inputs lifecycle along with regular state stores'.     Changes:       1. Separated side inputs (and standby) related store creation and restore logic into a separate SideInputsManager class.      2. Separated helper methods into a ContainerStorageManagerUtil class, and made them all static to ensure that they don't mutate class fields.    
+Split `CosIdIntervalShardingAlgorithmTest` by sharding-value type to improve readability.
+This PR refactors the logic to create the entity, and moves the creation logic to `EntitTypes` class. 
+moving test sql to a yaml file for better readability - hard-coded string needs to follow checkstyle. also it cannot be directly copied.
+Refactor KNNVectorFieldType from KNNVectorFieldMapper to a separate class for better readability.
+Refactor KNNVectorFieldType from KNNVectorFieldMapper to a separate class for better readability.
+This utility class effectively addresses the issue of null or inappropriate page or limit values by providing a default value. It enhances the readability of the code by implementing more easily understandable methods
+Auditor class: Only reserved to do some necessary initialization work, scheduling of various detection tasks  2. Separate monitoring metrics into `AuditorStats`  3. Separate the auditBookies task to the `AuditorBookieCheckTask`  4. Separate the checkAllLedgers task into the `AuditorCheckAllLedgersTask`  5. Separate placementPolicyCheck task into `AuditorPlacementPolicyCheckTask`  6. Separate replicasCheck to `AuditorReplicasCheckTask`
+Extract a named class from this lambda
+Created ProjectImportService to separate behavior from ExampleService. Also importProject from LibraryService moved to ProjectImportService
+Move select-list / group-by semantic check into dedicated class
+Move ExecutionResult and ExecutionOutcome into ExecutionEngine
+Improve readability of CompactionService by creating inner class for the implementation of PlanningParameters
+name more anonymous classes in ServerImpl
+move all index interfaces and definitions out of CorfuTable and into a separate class.
+First part of ChunkProviders refactoring - extract releveance system code.
+Moves two method into separate class to enable unit test (next PR). The code is same except one method that has been split into smaller one to improve readability.
+Use a proper builder pattern for `SourceTestStep` and `SinkTestStep` 
+The JinjavaConfig constructor had too many parameters. This replaces that constructor with one that just takes in a Builder. It is both easier to read 
+There is no need to use a mock here.
+Extracted set kernel size and stride from constructor to builder methods.
+Chain setters and extract reused getter into a var
+Move CORS related tests into separate package and group in classes together relevant tests.
+Moved the big inner AbstractPendingTransactionsSorter.LowestInvalidNonceCache to package outer class
+Add comments between logical blocks  - Add comments explaining some xDS/gRPC nuances
+added comments for readability
+Add Comments 
+Added more javadoc comments
+Add comments to cleaner code for better readability
+add doc
+Only added javadoc to improve the readability.
+Add javadoc 
+Add comment to FilePerChunkStrategy for readability
+Add in code comments.
+Add in code comments.
+Add in code comments.
+Add in code comments.
+Add in code comments.
+Add in code comments.
+Add in code comments.
+Add in code comments.
+Add in code comments.
+Add javadocs to methods
+Enhance comments
+Add in code comments.
+Add in code comments.
+Add in code comments.
+Add javadocs to RelevanceSystem
+Add a comment
+Improve documentation
+document UnitOfWork.loadRestoredOutput() to loadAlreadyProducedOutput()
+Added documentation for the method
+add comments back
+ It corrects a few typos, but mostly it adds hyphens or blanks or camelCase to emphasize word boundaries
+Rewrites comment to read better Rewrites comment to correct typo: word "loose"
+improve comment readability
+The comment improvements for the `ClimbingStairs` class enhance clarity and adherence to Java documentation standards
+Fixed typo error for better readability
+Perform refactoring of AnnotationLocationCheck to increase code readability. Improve javadoc
+Improve `TrieImp.java` comments
+Improve javadoc
+Clean up some typos
+improve readability of documentation
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Update Javadoc for variables and methods
+Re-ordered arguments of sendResponse(), verifyRequest() to make them consistent between each other, and upcoming similar verifyMetadata helpers
+Improve readability of Node transform/forEach typed methods by moving the "type token" to the front of the method, before the lambda declaration
+To make a diff against the upstream version of the file easier to read
+Reorder methods in BlobStoreRepository to match ES upstream
+Improves method order for better readability
+align declare and init order
+reorder methods so that helper methods are last
+Reorder Access modifiers as per JSR standard
+A non-empty string should be on the left side of the equal
+Use one line for each declaration, it enhances code readability
+Adds new line breaks to a code that seems packed up
+Whitespace
+Fix indentation in switch cases
+Noticed this paragraphing problem and I found it confusing
+Set continuation indent to 4
+olution was a bit improved due to place the only character patter per line to increase readability and make maintenance easier
+Applies the rectangle rule to some extremely long lines to improve readability and sets the maximum line length at 240 columns
+Generate more readable annotations
+Extracted each layer parameter to separate line
+chore: reformat code
+Use text block to improve readability of test
+Refactor Hive Split classes for readability
+The changes include breaking down longer lines of codes into multiple lines to improve code readability
+Removed wildcard imports from Functions.java
+Fix checkstyle issues
+improve imports
+ Updated examples module sources to comply with the check-style requirements
+Polishing imports
+Substitute * imports with separated import statements

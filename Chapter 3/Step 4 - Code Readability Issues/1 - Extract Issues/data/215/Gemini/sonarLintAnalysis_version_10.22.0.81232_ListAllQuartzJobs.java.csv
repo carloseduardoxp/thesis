@@ -1,0 +1,13 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3776,14,14,FOCUSED,Refactor this method to reduce its Cognitive Complexity from 34 to the 15 allowed.,null,
+java:S106,24,24,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,30,30,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,33,33,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,39,39,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,45,45,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,51,51,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,54,54,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,58,58,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,60,60,MODULAR,Replace this use of System.out by a logger.,null,
+java:S125,71,71,CLEAR,This block of commented-out lines of code should be removed.,null,

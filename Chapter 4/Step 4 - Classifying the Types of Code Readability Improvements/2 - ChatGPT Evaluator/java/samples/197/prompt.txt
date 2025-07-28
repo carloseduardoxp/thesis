@@ -1,0 +1,12 @@
+Based on this pull request with the developer description: Reduce loops to streams., the code was changed by the developer from for (Pattern expectedException : expectedExceptions) {
+       if (expectedException.matcher(line).find()) {
+         return true;
+       }
+     }
+     for (Pattern testExpectStr : testExpectStrs) {
+       if (testExpectStr.matcher(line).find()) {
+         return true;
+       }
+     }
+     return false; (if dont have code before, the code wasnt exist yet) to return expectedExceptions.stream().anyMatch(expected -> expected.matcher(line).find())
+         || testExpectStrs.stream().anyMatch(testExpected -> testExpected.matcher(line).find());, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

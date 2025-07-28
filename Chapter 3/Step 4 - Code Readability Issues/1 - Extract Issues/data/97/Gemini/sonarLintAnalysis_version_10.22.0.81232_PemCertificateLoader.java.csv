@@ -1,0 +1,10 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S112,10,10,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S5361,14,14,EFFICIENT,Replace this call to "replaceAll()" by a call to the "replace()" method.,null,
+java:S5361,13,13,EFFICIENT,Replace this call to "replaceAll()" by a call to the "replace()" method.,null,
+java:S106,52,52,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,53,53,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,54,54,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,55,55,MODULAR,Replace this use of System.out by a logger.,null,
+java:S125,58,58,CLEAR,This block of commented-out lines of code should be removed.,null,

@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,26,26,LOGICAL,Remove this useless assignment to local variable "principal".,null,
+java:S106,18,18,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,23,23,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1481,26,26,CLEAR,Remove this unused "principal" local variable.,null,

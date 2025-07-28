@@ -1,0 +1,19 @@
+Given the following Java code snippet:
+
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.TimeZone;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        long test_timestamp = 1499070300L;
+        LocalDateTime date
+                = LocalDateTime.ofInstant(Instant.ofEpochMilli(test_timestamp), TimeZone
+                        .getDefault().toZoneId());
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "date"., start line = 11, end line = 12, rule key = java:S1481 message = Remove this unused "date" local variable., start line = 10, end line = 10, rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "date"., start line = 11, end line = 12, rule key = java:S1481 message = Remove this unused "date" local variable., start line = 10, end line = 10, rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "date"., start line = 11, end line = 12, rule key = java:S1481 message = Remove this unused "date" local variable., start line = 10, end line = 10.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

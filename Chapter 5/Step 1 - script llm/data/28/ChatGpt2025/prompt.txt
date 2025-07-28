@@ -1,0 +1,35 @@
+Given the following Java code snippet:
+import java.io.*;
+import java.nio.file.*;
+import java.util.regex.*;
+
+public class PatternFinder {
+    public static void main(String[] args) {
+        String folderPath = "C:/example/folder"; // Change this to your folder path
+        String regex = "\\bhello\\b"; // Example pattern: exact word "hello"
+        Pattern pattern = Pattern.compile(regex);
+
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(folderPath))) {
+            for (Path filePath : stream) {
+                if (Files.isRegularFile(filePath)) {
+                    System.out.println("Searching in: " + filePath.getFileName());
+                    try {
+                        String content = Files.readString(filePath);
+                        Matcher matcher = pattern.matcher(content);
+                        while (matcher.find()) {
+                            System.out.println("Found: \"" + matcher.group() + "\" at index " + matcher.start());
+                        }
+                    } catch (IOException e) {
+                        System.err.println("Error reading file: " + filePath + " - " + e.getMessage());
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error accessing directory: " + e.getMessage());
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1141 message = Extract this nested try block into a separate method., start line = 15, end line = 15.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

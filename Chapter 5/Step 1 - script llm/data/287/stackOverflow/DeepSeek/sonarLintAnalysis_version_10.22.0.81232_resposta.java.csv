@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1118,1,1,CLEAR,Add a private constructor to hide the implicit public one.,null,
+java:S1450,3,3,CLEAR,Remove the "param1" field and declare it as a local variable in the relevant methods.,null,
+java:S1450,4,4,CLEAR,Remove the "param2" field and declare it as a local variable in the relevant methods.,null,
+java:S1068,3,3,CLEAR,Remove this unused "param1" private field.,null,
+java:S1068,4,4,CLEAR,Remove this unused "param2" private field.,null,

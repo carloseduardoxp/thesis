@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: Added a break to a for loop, the code was changed by the developer from for (int i=pos; !more && i<node.children.size(); i++)
+                     if (node.children.get(i).tagName.equals(child.tagName))                                  more = true; (if dont have code before, the code wasnt exist yet) to for (int i = pos; i < node.children.size(); i++) {
+                     if (node.children.get(i).tagName.equals(child.tagName)) {
+                         more = true;
+                         break;
+                     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

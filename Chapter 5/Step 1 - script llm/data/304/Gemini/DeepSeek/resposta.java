@@ -1,0 +1,84 @@
+import java.awt.Color;
+
+public class ColorConverter {
+    private static final String HEX_PREFIX = "Hex: ";
+    private static final String RGB_PREFIX = " -> RGB: (";
+
+    /**
+     * Converts a hexadecimal color string to a java.awt.Color object.
+     * Supports formats like "#RRGGBB" or "RRGGBB".
+     *
+     * @param hexColor The hexadecimal color string.
+     * @return A Color object representing the hexadecimal color, or null if the format is invalid.
+     */
+    public static Color hexToRgb(String hexColor) {
+        if (hexColor == null || hexColor.isEmpty()) {
+            return null;
+        }
+
+        // Remove the "#" if it exists
+        if (hexColor.startsWith("#")) {
+            hexColor = hexColor.substring(1);
+        }
+
+        // Check if the hex color string has a valid length (6 characters for RRGGBB)
+        if (hexColor.length() != 6) {
+            System.err.println("Invalid hexadecimal color format. Expected 6 characters (e.g., RRGGBB).");
+            return null;
+        }
+
+        try {
+            // Parse the red, green, and blue components
+            int red = Integer.parseInt(hexColor.substring(0, 2), 16);
+            int green = Integer.parseInt(hexColor.substring(2, 4), 16);
+            int blue = Integer.parseInt(hexColor.substring(4, 6), 16);
+
+            return new Color(red, green, blue);
+        } catch (NumberFormatException e) {
+            System.err.println("Invalid hexadecimal color character. Please use 0-9 and A-F.");
+            return null;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Example usage:
+        String hex1 = "#FF0000"; // Red
+        String hex2 = "00FF00";   // Green
+        String hex3 = "#0000FF"; // Blue
+        String hex4 = "#FFA500"; // Orange
+        String hex5 = "123456";   // A shade of gray/blue
+        String hex6 = "#ABC";    // Invalid length
+        String hex7 = "#GHIJKL"; // Invalid characters
+
+        Color color1 = hexToRgb(hex1);
+        if (color1 != null) {
+            System.out.println(HEX_PREFIX + hex1 + RGB_PREFIX + color1.getRed() + ", " + color1.getGreen() + ", " + color1.getBlue() + ")");
+        }
+
+        Color color2 = hexToRgb(hex2);
+        if (color2 != null) {
+            System.out.println(HEX_PREFIX + hex2 + RGB_PREFIX + color2.getRed() + ", " + color2.getGreen() + ", " + color2.getBlue() + ")");
+        }
+
+        Color color3 = hexToRgb(hex3);
+        if (color3 != null) {
+            System.out.println(HEX_PREFIX + hex3 + RGB_PREFIX + color3.getRed() + ", " + color3.getGreen() + ", " + color3.getBlue() + ")");
+        }
+
+        Color color4 = hexToRgb(hex4);
+        if (color4 != null) {
+            System.out.println(HEX_PREFIX + hex4 + RGB_PREFIX + color4.getRed() + ", " + color4.getGreen() + ", " + color4.getBlue() + ")");
+        }
+
+        Color color5 = hexToRgb(hex5);
+        if (color5 != null) {
+            System.out.println(HEX_PREFIX + hex5 + RGB_PREFIX + color5.getRed() + ", " + color5.getGreen() + ", " + color5.getBlue() + ")");
+        }
+
+        System.out.println("\nTesting invalid inputs:");
+        hexToRgb(hex6); // Should print an error
+        hexToRgb(hex7); // Should print an error
+        hexToRgb("");    // Should return null and not print an error
+        hexToRgb(null);  // Should return null and not print an error
+    }
+}

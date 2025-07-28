@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,24,24,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,62,62,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1854,79,82,LOGICAL,Remove this useless assignment to local variable "embossedImage".,null,
+java:S1481,79,79,CLEAR,Remove this unused "embossedImage" local variable.,null,

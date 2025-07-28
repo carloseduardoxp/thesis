@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: Slightly improve readability and performance using lambas, the code was changed by the developer from getCache().get(LAZY_CROSS_REFERENCES_RESOLVED, this, new Provider<LazyResolutionFlag>() {
+             @Override
+             public LazyResolutionFlag get() {
+               return lazyLinking;
+             }
+           }); (if dont have code before, the code wasnt exist yet) to getCache().get(LAZY_CROSS_REFERENCES_RESOLVED, this, () -> lazyLinking);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

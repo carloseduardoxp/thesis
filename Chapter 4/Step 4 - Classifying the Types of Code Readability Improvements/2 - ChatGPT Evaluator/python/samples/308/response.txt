@@ -1,0 +1,1 @@
+Extract logic to Dataclass

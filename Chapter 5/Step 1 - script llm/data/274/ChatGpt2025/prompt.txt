@@ -1,0 +1,33 @@
+Given the following Java code snippet:
+import javax.swing.*;
+
+public class EnterButtonExample {
+    public static void main(String[] args) {
+        // Create the frame
+        JFrame frame = new JFrame("Enter Button Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+
+        // Create a button
+        JButton button = new JButton("Click Me");
+        
+        // Add an ActionListener to the button to define what happens when it's clicked
+        button.addActionListener(e -> {
+            System.out.println("Button clicked!");
+        });
+
+        // Create a KeyListener to detect the Enter key press
+        frame.getRootPane().setDefaultButton(button); // Set the default button for Enter key press
+
+        // Set up layout and add the button
+        JPanel panel = new JPanel();
+        panel.add(button);
+        frame.add(panel);
+
+        frame.setVisible(true);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 7, end line = 7, rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 14, end line = 14, rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 7, end line = 7, rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 14, end line = 14.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

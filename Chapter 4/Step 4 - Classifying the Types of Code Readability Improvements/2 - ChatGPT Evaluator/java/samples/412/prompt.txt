@@ -1,0 +1,11 @@
+Based on this pull request with the developer description: Improve `TrieImp.java` comments, the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to /**
+      * Deletes a word from the Trie.
+      * <p>
+      * The method traverses the Trie to find the word and marks its end flag as
+      * false.
+      * It returns true if the word was successfully deleted, false if the word
+      * wasn't found.
+      *
+      * @param word The word to be deleted from the Trie.
+      * @return true if the word was found and deleted, false if it was not found.
+      */, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

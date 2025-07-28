@@ -1,0 +1,22 @@
+Given the following Java code snippet:
+class Animal {
+    // Animal class code
+}
+
+class Dog extends Animal {
+    // Dog class code
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        
+        // Get the parent class name (superclass)
+        Class<?> parentClass = dog.getClass().getSuperclass();
+        System.out.println("Parent class name: " + parentClass.getName());
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S2094 message = Remove this empty class, start line = 1, end line = 1.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

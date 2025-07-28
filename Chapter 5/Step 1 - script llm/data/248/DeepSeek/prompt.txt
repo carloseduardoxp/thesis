@@ -1,0 +1,17 @@
+Given the following Java code snippet:
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        String str = "apple,banana,orange";
+        String[] fruits = str.split(","); // Split by comma
+
+// Result: ["apple", "banana", "orange"]
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "fruits"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "fruits" local variable., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "fruits"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "fruits" local variable., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

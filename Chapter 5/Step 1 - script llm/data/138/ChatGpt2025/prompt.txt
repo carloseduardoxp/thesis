@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+import java.util.*;
+
+public class Chat {
+
+    public static void main(String[] args) {
+
+        List<String> list = new ArrayList<>();
+        List<String> toAdd = Arrays.asList("A", "B", "C");
+
+// Adicionando cada elemento da lista toAdd em list usando lambda
+        toAdd.forEach(item -> list.add(item));
+
+// Agora list contém: ["A", "B", "C"]
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1612 message = Replace this lambda with method reference 'list::add'. (sonar.java.source not set. Assuming 8 or greater.), start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

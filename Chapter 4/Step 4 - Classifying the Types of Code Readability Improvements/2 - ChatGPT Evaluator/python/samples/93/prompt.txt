@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Refactored `lower` built-in method.  Part of an overall refactoring to unify code generator logic and built-in methods generation., the code was changed by the developer from (Opcode.PUSHINT8, Integer(32).to_byte_array(signed=True))
+ (Opcode.ADD, b'') (if dont have code before, the code wasnt exist yet) to code_generator.convert_literal(ord('a') - ord('A'))
+ code_generator.convert_operation(BinaryOp.Add, is_internal=True), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,2 @@
+Based on this pull request with the developer description: add some code comments to echo(), the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to # Get stack frame *before* running the echoed code. The frame's
+         # line number will point to the `st.echo` statement we're running., (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

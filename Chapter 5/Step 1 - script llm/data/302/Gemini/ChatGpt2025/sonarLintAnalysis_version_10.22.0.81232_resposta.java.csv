@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3012,25,25,CLEAR,Use "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.,null,
+java:S106,54,54,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,59,59,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,63,63,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,66,66,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,72,72,MODULAR,Replace this use of System.out by a logger.,null,

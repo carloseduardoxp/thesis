@@ -1,0 +1,16 @@
+Given the following Java code snippet:
+
+public class Gemini {
+
+    public static void main(String[] args) {
+
+        int[][] twoDArray; // Declares a 2D integer array
+        String[][][] threeDArray; // Declares a 3D String array
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1481 message = Remove this unused "twoDArray" local variable., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "threeDArray" local variable., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

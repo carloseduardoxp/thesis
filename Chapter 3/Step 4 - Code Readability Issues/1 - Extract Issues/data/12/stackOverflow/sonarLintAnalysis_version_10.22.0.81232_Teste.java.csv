@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1197,6,6,FORMATTED,Move the array designators [][] to the type.,null,
+java:S106,12,12,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,
+java:S131,20,20,CLEAR,Add a default case to this switch.,null,
+java:S106,22,22,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,25,25,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,28,28,MODULAR,Replace this use of System.out by a logger.,null,

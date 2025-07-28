@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2094,1,1,CLEAR,Remove this empty class, write its code or make it an "interface".,null,
+java:S2094,6,6,CLEAR,Remove this empty class, write its code or make it an "interface".,null,

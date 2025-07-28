@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1481,6,6,CLEAR,Remove this unused "twoDArray" local variable.,null,
+java:S1481,7,7,CLEAR,Remove this unused "threeDArray" local variable.,null,

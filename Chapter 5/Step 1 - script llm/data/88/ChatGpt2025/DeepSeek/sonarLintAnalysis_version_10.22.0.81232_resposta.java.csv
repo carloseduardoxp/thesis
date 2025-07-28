@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1135,3,3,COMPLETE,Complete the task associated to this TODO comment.,null,
+java:S106,6,6,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2234,9,9,CLEAR,Parameters to solve have the same names but not the same order as the method arguments.,null,
+java:S106,10,10,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2234,11,11,CLEAR,Parameters to solve have the same names but not the same order as the method arguments.,null,

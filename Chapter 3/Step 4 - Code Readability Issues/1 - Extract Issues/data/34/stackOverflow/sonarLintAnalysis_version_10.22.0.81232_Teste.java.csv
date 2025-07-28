@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,9,9,LOGICAL,Remove this useless assignment to local variable "b".,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "theByteArray".,null,
+java:S1481,5,5,CLEAR,Remove this unused "theByteArray" local variable.,null,
+java:S2130,9,9,CONVENTIONAL,Use "Byte.parseByte" for this string-to-byte conversion.,null,
+java:S1481,9,9,CLEAR,Remove this unused "b" local variable.,null,

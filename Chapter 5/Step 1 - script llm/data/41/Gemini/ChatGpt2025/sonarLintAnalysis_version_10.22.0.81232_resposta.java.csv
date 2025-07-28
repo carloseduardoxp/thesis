@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1905,9,9,CLEAR,Remove this unnecessary cast to "OperatingSystemMXBean".,null,
+java:S106,11,11,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,20,20,MODULAR,Replace this use of System.out by a logger.,null,

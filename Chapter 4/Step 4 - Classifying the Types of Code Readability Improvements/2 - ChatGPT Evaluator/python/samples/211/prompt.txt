@@ -1,0 +1,10 @@
+Based on this pull request with the developer description: In many places, an f-string could have been used but it was not used, So I used f-strings in those places., the code was changed by the developer from # keys as one_hot
+         keys = []
+         for i in range(50):
+             keys.append([1, 0, 0])
+         for i in range(50, 100):
+             keys.append([0, 1, 0])
+         for i in range(100, 150):
+             keys.append([0, 0, 1]) (if dont have code before, the code wasnt exist yet) to keys = [[1, 0, 0] for _ in range(50)]
+         keys.extend([0, 1, 0] for _ in range(50, 100))
+         keys.extend([0, 0, 1] for _ in range(100, 150)), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

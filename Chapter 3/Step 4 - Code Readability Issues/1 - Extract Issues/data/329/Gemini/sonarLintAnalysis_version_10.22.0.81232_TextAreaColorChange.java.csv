@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3252,9,9,CLEAR,Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".,null,
+java:S125,21,21,CLEAR,This block of commented-out lines of code should be removed.,null,

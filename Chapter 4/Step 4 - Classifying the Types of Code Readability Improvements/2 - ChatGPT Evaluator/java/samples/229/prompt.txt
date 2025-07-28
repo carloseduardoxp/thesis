@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: use try with resources, the code was changed by the developer from InputStream is = zip.openStream();
+         try {
+             new FilePath(target).unzipFrom(is);
+         } finally {
+             is.close();
+         } (if dont have code before, the code wasnt exist yet) to try (InputStream is = zip.openStream()) {             new FilePath(target).unzipFrom(is); }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

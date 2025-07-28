@@ -1,0 +1,25 @@
+Given the following Java code snippet:
+
+public class Gemini {
+
+    public static void main(String[] args) {
+
+        float f1 = 3.14f;
+        int roundedF1 = Math.round(f1); // roundedF1 will be 3
+
+        float f2 = 3.7f;
+        int roundedF2 = Math.round(f2); // roundedF2 will be 4
+
+        float f3 = 3.5f;
+        int roundedF3 = Math.round(f3); // roundedF3 will be 4
+
+        double d1 = -2.5;
+        long roundedD1 = Math.round(d1); // roundedD1 will be -2
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "roundedD1"., start line = 16, end line = 16, rule key = java:S1854 message = Remove this useless assignment to local variable "roundedF3"., start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "roundedF2"., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "roundedF1"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "roundedF1" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "roundedF2" local variable., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "roundedF3" local variable., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "roundedD1" local variable., start line = 16, end line = 16, rule key = java:S1854 message = Remove this useless assignment to local variable "roundedD1"., start line = 16, end line = 16, rule key = java:S1854 message = Remove this useless assignment to local variable "roundedF3"., start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "roundedF2"., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "roundedF1"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "roundedF1" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "roundedF2" local variable., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "roundedF3" local variable., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "roundedD1" local variable., start line = 16, end line = 16.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

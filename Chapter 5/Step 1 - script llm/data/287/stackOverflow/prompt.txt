@@ -1,0 +1,32 @@
+Given the following Java code snippet:
+public class Foo {
+    private final String param1;
+    private final String param2;
+
+    private Foo(Builder builder) {
+      this.param1 = builder.param1;
+      this.param2 = builder.param2;
+    }
+
+    public static class Builder {
+      private String param1 = "defaultParam1";
+      private String param2 = "defaultParam2";
+
+      public Builder param1(String param1) {
+        this.param1 = param1;
+        return this;
+      }
+
+      public Builder param2(String param2) {
+        this.param2 = param2;
+        return this;
+      }
+
+      public Foo build() {
+        return new Foo(this);
+      }
+    }
+  }
+
+the following improvements are recommended: rule key = java:S1068 message = Remove this unused "param1" private field., start line = 2, end line = 2, rule key = java:S1068 message = Remove this unused "param2" private field., start line = 3, end line = 3.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

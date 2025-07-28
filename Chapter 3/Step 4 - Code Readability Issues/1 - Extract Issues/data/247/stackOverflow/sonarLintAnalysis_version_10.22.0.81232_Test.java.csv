@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1604,12,12,CLEAR,Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S112,20,20,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S112,30,30,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S106,6,6,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,15,15,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1161,19,19,CLEAR,Add the "@Override" annotation above this method signature,null,

@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3740,8,8,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S3740,9,9,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S3740,10,10,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S1854,11,11,LOGICAL,Remove this useless assignment to local variable "o".,null,
+java:S1854,10,10,LOGICAL,Remove this useless assignment to local variable "v".,null,
+java:S1854,9,9,LOGICAL,Remove this useless assignment to local variable "k".,null,
+java:S1481,9,9,CLEAR,Remove this unused "k" local variable.,null,
+java:S1481,10,10,CLEAR,Remove this unused "v" local variable.,null,
+java:S1197,11,11,FORMATTED,Move the array designators [] to the type.,null,
+java:S1481,11,11,CLEAR,Remove this unused "o" local variable.,null,

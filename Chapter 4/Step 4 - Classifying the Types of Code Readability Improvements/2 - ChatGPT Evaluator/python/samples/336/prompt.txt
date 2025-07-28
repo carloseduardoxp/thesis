@@ -1,0 +1,13 @@
+Based on this pull request with the developer description: adding a docstring to the _mask_is_list_like_rectangle function, the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to """
+     Check if the input mask is list-like and not an instance of
+     specific geometric types.
+     Parameters
+     ----------
+     mask : GeoDataFrame, GeoSeries, (Multi)Polygon, list-like
+         Polygon vector layer used to clip ``gdf``.
+     Returns
+     -------
+     bool
+         True if `mask` is list-like and not an instance of `GeoDataFrame`,
+         `GeoSeries`, `Polygon`, or `MultiPolygon`, otherwise False.
+     """, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,15 @@
+Given the following Java code snippet:
+class GlobalVars {
+    public static int globalCount = 0;
+    public static String appName = "MyApp";
+}
+public class Main {
+    public static void main(String[] args) {
+        GlobalVars.globalCount = 10;
+        System.out.println(GlobalVars.appName); // Output: MyApp
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1444 message = Make this "public static globalCount" field final, start line = 2, end line = 2, rule key = java:S1444 message = Make this "public static appName" field final, start line = 3, end line = 3.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

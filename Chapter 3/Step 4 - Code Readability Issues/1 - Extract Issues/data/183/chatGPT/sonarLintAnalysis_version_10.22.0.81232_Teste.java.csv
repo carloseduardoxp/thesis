@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "str1".,null,
+java:S1854,4,4,LOGICAL,Remove this useless assignment to local variable "newStr".,null,
+java:S1481,4,4,CLEAR,Remove this unused "newStr" local variable.,null,

@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1659,9,9,FORMATTED,Declare "mouseY" on a separate line.,null,
+java:S5738,6,6,COMPLETE,Remove this call to a deprecated class, it has been marked for removal.,null,
+java:S1161,11,11,CLEAR,Add the "@Override" annotation above this method signature,null,
+java:S1161,29,29,CLEAR,Add the "@Override" annotation above this method signature,null,

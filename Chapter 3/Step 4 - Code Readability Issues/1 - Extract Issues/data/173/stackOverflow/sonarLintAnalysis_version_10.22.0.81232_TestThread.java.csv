@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S2184,30,30,CLEAR,Cast one of the operands of this multiplication operation to a "long".,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1068,11,11,CLEAR,Remove this unused "lastPushTime" private field.,null,

@@ -1,0 +1,19 @@
+Given the following Java code snippet:
+public class Teste {
+
+    
+    public static void main(String[] args) {
+        String g = "line";
+        //string to char
+        char c = g.charAt(0);
+        char[] c_arr = g.toCharArray();
+        //char to string
+        char[] charArray = {'a', 'b', 'c'};
+        String str = String.valueOf(charArray);
+        //(or iterate the charArray and append each character to str -> str+=charArray[i])
+    }
+    
+}
+
+the following improvements are recommended: rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "c_arr"., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "c"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "c" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "c_arr" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "str" local variable., start line = 11, end line = 11, rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "c_arr"., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "c"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "c" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "c_arr" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "str" local variable., start line = 11, end line = 11, rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "c_arr"., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "c"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "c" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "c_arr" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "str" local variable., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

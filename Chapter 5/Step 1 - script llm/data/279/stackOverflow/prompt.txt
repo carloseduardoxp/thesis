@@ -1,0 +1,17 @@
+Given the following Java code snippet:
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        int[] values = new int[16];
+        List<Integer> list = Arrays.asList(values);
+        list.forEach(n -> System.out.println(n));
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1612 message = Replace this lambda with method reference 'System.out::println'. (sonar.java.source not set. Assuming 8 or greater.), start line = 10, end line = 10.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

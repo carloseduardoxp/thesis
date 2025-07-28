@@ -1,0 +1,28 @@
+Given the following Java code snippet:
+public class Teste {
+
+    public static void main(String[] args) {        
+        //common to all the cases
+        FirefoxProfile prof = new FirefoxProfile();
+
+        //Case:1 - Use this case to set download this code to your browser's default location
+        //prof.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip");
+
+        //Case:2 - Download file to Desktop
+        //prof.setPreference("browser.download.folderList", 0);
+        //prof.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip");
+
+        //Case:3 - Download to custom folder path. Replace d:\\selenium with your Download Location 
+        prof.setPreference("browser.download.dir","D:\\selenium\\");
+        prof.setPreference("browser.download.folderList", 2);
+        prof.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip");
+
+        //This will work for all cases mentioned above
+        WebDriver driver = new FirefoxDriver(prof);
+        driver.get("http://docs.seleniumhq.org/download/");
+        driver.findElement(By.xpath("//tr[1]/td[4]/a[text()='Download']")).click();
+    }
+}
+
+the following improvements are recommended: rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 8, end line = 8, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

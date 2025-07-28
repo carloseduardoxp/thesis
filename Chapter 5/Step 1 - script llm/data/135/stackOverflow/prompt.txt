@@ -1,0 +1,20 @@
+Given the following Java code snippet:
+public class Teste {
+
+    public static long getPID() {
+        String processName = java.lang.management.ManagementFactory.getRuntimeMXBean().getName();
+        if (processName != null && processName.length() > 0) {
+            try {
+                return Long.parseLong(processName.split("@")[0]);
+            }
+            catch (Exception e) {
+                return 0;
+            }
+        }
+    
+        return 0;
+    }
+}
+
+the following improvements are recommended: rule key = java:S7158 message = Use isEmpty() to check whether a string is empty or not., start line = 5, end line = 5.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

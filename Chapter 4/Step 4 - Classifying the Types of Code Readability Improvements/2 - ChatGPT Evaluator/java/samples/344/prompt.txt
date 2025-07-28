@@ -1,0 +1,9 @@
+Based on this pull request with the developer description: This PR pulls out the common asserts that check the certificate files and key files are all present and not null., the code was changed by the developer from assertThat(clusterCaCertData.keySet(), is(Set.of(CA_CRT, CA_STORE, CA_STORE_PASSWORD)));
+         assertThat(clusterCaCertData.get(CA_CRT), is(notNullValue()));
+         assertThat(clusterCaCertData.get(CA_STORE), is(notNullValue()));
+         assertThat(clusterCaCertData.get(CA_STORE_PASSWORD), is(notNullValue())); (if dont have code before, the code wasnt exist yet) to private void assertCertDataNotNull(Map<String, String> certData) {
+         assertThat(certData.keySet(), is(Set.of(CA_CRT, CA_STORE, CA_STORE_PASSWORD)));
+         assertThat(certData.get(CA_CRT), is(notNullValue()));
+         assertThat(certData.get(CA_STORE), is(notNullValue()));
+         assertThat(certData.get(CA_STORE_PASSWORD), is(notNullValue()));
+     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

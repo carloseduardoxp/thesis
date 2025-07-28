@@ -1,0 +1,12 @@
+Based on this pull request with the developer description: remove "skip monitoring lock for the files in the same run.", the useless statement., the code was changed by the developer from def initReplicasInContainer(self, rucioClient):
+         """
+         Get replicas from transfer and publish container and assign it to
+         self.replicasInContainer as key-value pare of containerName and map of
+         LFN2Dataset.
+         :param rucioClient: Rucio Client
+         :type rucioClient: rucio.client.client.Client
+         """
+         replicasInContainer = {}
+         replicasInContainer[self.transferContainer] = self.populateLFN2DatasetMap(self.transferContainer, rucioClient)
+         replicasInContainer[self.publishContainer] = self.populateLFN2DatasetMap(self.publishContainer, rucioClient)
+         self.replicasInContainer = replicasInContainer (if dont have code before, the code wasnt exist yet) to , (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

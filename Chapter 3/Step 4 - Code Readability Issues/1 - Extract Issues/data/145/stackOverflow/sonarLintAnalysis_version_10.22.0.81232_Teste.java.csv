@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1075,21,21,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,
+java:S2677,27,27,COMPLETE,Use or store the value returned from "readLine" instead of throwing it away.,null,

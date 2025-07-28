@@ -1,0 +1,11 @@
+Based on this pull request with the developer description: Long ternary expressions in keyword arguments are hard to follow. Break  them out in local variables., the code was changed by the developer from url=url
+                 if url
+                 else None,  # must use the http or https scheme, cannot be ""
+                 status=state_to_set
+                 if isinstance(state_to_set, GithubCheckRunStatus)
+                 else GithubCheckRunStatus.completed,
+                 conclusion=state_to_set
+                 if isinstance(state_to_set, GithubCheckRunResult)
+                 else None, (if dont have code before, the code wasnt exist yet) to status = (                 state_to_set                 if isinstance(state_to_set, GithubCheckRunStatus)                 else GithubCheckRunStatus.completed             )             conclusion = (                 state_to_set if isinstance(state_to_set, GithubCheckRunResult) else None             ) url=url or None,  # must use the http or https scheme, cannot be ""
+                 status=status,
+                 conclusion=conclusion,, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

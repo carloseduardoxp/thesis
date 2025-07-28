@@ -1,0 +1,12 @@
+Based on this pull request with the developer description: moving test sql to a yaml file for better readability - hard-coded string needs to follow checkstyle. also it cannot be directly copied., the code was changed by the developer from public static Object[][] ssbQueryDataProvider() {
+     // TODO: refactor these out to .sql files
+     return new Object[][]{
+         new Object[]{"select sum(CAST(LO_EXTENDEDPRICE AS DOUBLE) * LO_DISCOUNT) as revenue "
+             + " from lineorder, dates where LO_ORDERDATE = D_DATEKEY and D_YEAR = 1993 "
+             + " and LO_DISCOUNT between 1 and 3 and LO_QUANTITY < 25; \n"}, (if dont have code before, the code wasnt exist yet) to sqls:
+   # SSB Q1
+   - |
+     select sum(CAST(LO_EXTENDEDPRICE AS DOUBLE) * LO_DISCOUNT) as revenue
+     from lineorder, dates where LO_ORDERDATE = D_DATEKEY and D_YEAR = 1993
+     and LO_DISCOUNT between 1 and 3 and LO_QUANTITY < 25;
+   - |, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

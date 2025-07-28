@@ -1,0 +1,40 @@
+Given the following Java code snippet:
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+
+public class MonitorLister {
+    public static void main(String[] args) {
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice[] screenDevices = ge.getScreenDevices();
+
+        System.out.println("Found " + screenDevices.length + " screen(s):");
+
+        for (int i = 0; i < screenDevices.length; i++) {
+            GraphicsDevice gd = screenDevices[i];
+            System.out.println("\n--- Monitor " + i + " ---");
+            System.out.println("ID String: " + gd.getIDstring());
+            System.out.println("Default Configuration Bounds: " + gd.getDefaultConfiguration().getBounds());
+
+            // You can also get more detailed information about the current display mode
+            java.awt.DisplayMode dm = gd.getDisplayMode();
+            System.out.println("Current Display Mode: " +
+                               dm.getWidth() + "x" + dm.getHeight() +
+                               " @" + dm.getRefreshRate() + "Hz " +
+                               dm.getBitDepth() + "-bit");
+
+            // List all supported display modes (optional, can be very long)
+            /*
+            System.out.println("Supported Display Modes:");
+            for (DisplayMode mode : gd.getDisplayModes()) {
+                System.out.println("  " + mode.getWidth() + "x" + mode.getHeight() +
+                                   " @" + mode.getRefreshRate() + "Hz " +
+                                   mode.getBitDepth() + "-bit");
+            }
+            */
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 26, end line = 26.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

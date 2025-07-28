@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,6,6,LOGICAL,Remove this useless assignment to local variable "toRemove".,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "original".,null,
+java:S1481,5,5,CLEAR,Remove this unused "original" local variable.,null,
+java:S1481,6,6,CLEAR,Remove this unused "toRemove" local variable.,null,

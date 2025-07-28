@@ -1,0 +1,1 @@
+Replace Anonymous Class With Functional Style

@@ -1,0 +1,7 @@
+Based on this pull request with the developer description: Use of forEach to remove uggly generic loop, the code was changed by the developer from for (Class<?> parameter : gatewayMethod.getParameterTypes()) {
+             if (CommandCallback.class.isAssignableFrom(parameter)) {
+                 return true;
+             }
+         }
+         return false; (if dont have code before, the code wasnt exist yet) to return Stream.of(gatewayMethod.getParameterTypes())
+                 .anyMatch(CommandCallback.class::isAssignableFrom);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        String str = "12/9/2010 4:39:38 PM";
+
+        DateFormat formatter;
+
+        Date date;
+
+        formatter = new SimpleDateFormat("M/dd/yyyy H:m:s a");
+
+        date = (Date) formatter.parse(str);
+
+        System.out.println("date printed " + formatter.format(date));
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1905 message = Remove this unnecessary cast to "Date"., start line = 17, end line = 17.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

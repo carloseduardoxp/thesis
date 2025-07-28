@@ -1,0 +1,10 @@
+Based on this pull request with the developer description: The CodeBuild class had similar issues as the CodePipeline class where the line length requirement was not met. Plus code readability was not terrific either.  Fixed the readability by properly breaking the lines. Another pass of refactoring code too., the code was changed by the developer from def __init__(self, scope: core.Construct, id: str, shared_modules_bucket: str, deployment_region_kms: str, map_params: dict, target, **kwargs): #pylint: disable=W0622 (if dont have code before, the code wasnt exist yet) to def __init__(
+         self,
+         scope: core.Construct,
+         id: str,
+         shared_modules_bucket: str,
+         deployment_region_kms: str,
+         map_params: dict,
+         target,
+         **kwargs,
+     ):, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

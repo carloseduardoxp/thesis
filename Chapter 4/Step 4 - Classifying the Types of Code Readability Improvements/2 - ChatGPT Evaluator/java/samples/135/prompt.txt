@@ -1,0 +1,8 @@
+Based on this pull request with the developer description: Added helpers for single-resource sendResponse(), verifyRequest(), etc, to skip single-element collection so it's a bit easier to read, the code was changed by the developer from protected abstract void verifyRequest(Node node, String versionInfo, List<String> resources,
+         ResourceType type, String nonce); (if dont have code before, the code wasnt exist yet) to protected abstract void verifyRequest(
+         ResourceType type, List<String> resources, String versionInfo, String nonce, Node node);
+ 
+     protected void verifyRequest(
+         ResourceType type, String resource, String versionInfo, String nonce, Node node) {
+       verifyRequest(type, ImmutableList.of(resource), versionInfo, nonce, node);
+     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

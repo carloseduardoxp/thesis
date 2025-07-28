@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,10,10,LOGICAL,Remove this useless assignment to local variable "anotherString".,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "charArray".,null,
+java:S1854,6,6,LOGICAL,Remove this useless assignment to local variable "firstChar".,null,
+java:S1481,6,6,CLEAR,Remove this unused "firstChar" local variable.,null,
+java:S1481,7,7,CLEAR,Remove this unused "charArray" local variable.,null,
+java:S1481,10,10,CLEAR,Remove this unused "anotherString" local variable.,null,

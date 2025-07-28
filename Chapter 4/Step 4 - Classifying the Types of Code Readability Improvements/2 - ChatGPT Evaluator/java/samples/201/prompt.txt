@@ -1,0 +1,8 @@
+Based on this pull request with the developer description: Replaced while-loop with if-loop after determining while-loop was only run at most once each time., the code was changed by the developer from for (int i = 0; i < endRows.size() && j < maxSplits; i++) {
+       pos += r;
+       while (pos > 1) {
+         subset.add(endRows.get(i));
+         j++;
+         pos -= 1;
+       } (if dont have code before, the code wasnt exist yet) to if (existingSplits.size() <= maxSplits) {
+       return existingSplits;, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

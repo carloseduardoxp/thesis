@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: `__getitem__` is never called with more than a single arg, and we can  just use normal indexing on _mask both for getting and for setting., the code was changed by the developer from def __getitem__(self, *args):
+         return self._mask.__getitem__(*args) (if dont have code before, the code wasnt exist yet) to def __getitem__(self, args):
+         return self._mask[args], (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

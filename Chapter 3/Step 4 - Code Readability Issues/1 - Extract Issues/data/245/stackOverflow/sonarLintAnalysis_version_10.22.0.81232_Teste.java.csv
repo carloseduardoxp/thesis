@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1488,67,67,CLEAR,Immediately return this expression instead of assigning it to the temporary variable "nFeature".,null,
+java:S1659,13,13,FORMATTED,Declare "fromTransform" on a separate line.,null,
+java:S125,22,22,CLEAR,This block of commented-out lines of code should be removed.,null,
+java:S1135,33,33,COMPLETE,Complete the task associated to this TODO comment.,null,
+java:S1135,47,47,COMPLETE,Complete the task associated to this TODO comment.,null,
+java:S125,55,55,CLEAR,This block of commented-out lines of code should be removed.,null,

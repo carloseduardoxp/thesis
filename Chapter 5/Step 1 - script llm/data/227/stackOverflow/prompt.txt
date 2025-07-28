@@ -1,0 +1,17 @@
+Given the following Java code snippet:
+public class Teste {
+
+    public static void main(String[] args) {        
+        // Array of doubles
+        double[] array_doubles = {2.5, 6.2, 8.2, 4846.354, 9.6};
+
+        // First position
+        double firstNum = array_doubles[0]; // 2.5
+
+        // Last position
+        double lastNum = array_doubles[array_doubles.length - 1]; // 9.6
+    }
+}
+
+the following improvements are recommended: rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 5, end line = 5, rule key = java:S1854 message = Remove this useless assignment to local variable "lastNum"., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "firstNum"., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "firstNum" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "lastNum" local variable., start line = 11, end line = 11, rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 5, end line = 5, rule key = java:S1854 message = Remove this useless assignment to local variable "lastNum"., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "firstNum"., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "firstNum" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "lastNum" local variable., start line = 11, end line = 11, rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 5, end line = 5, rule key = java:S1854 message = Remove this useless assignment to local variable "lastNum"., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "firstNum"., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "firstNum" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "lastNum" local variable., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

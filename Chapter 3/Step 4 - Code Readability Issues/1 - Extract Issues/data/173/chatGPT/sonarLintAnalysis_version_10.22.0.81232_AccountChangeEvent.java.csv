@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1604,45,45,CLEAR,Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1450,18,18,CLEAR,Remove the "name" field and declare it as a local variable in the relevant methods.,null,
+java:S106,48,48,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1068,5,5,CLEAR,Remove this unused "userId" private field.,null,
+java:S1068,6,6,CLEAR,Remove this unused "changeType" private field.,null,
+java:S1068,7,7,CLEAR,Remove this unused "newValue" private field.,null,
+java:S1068,18,18,CLEAR,Remove this unused "name" private field.,null,

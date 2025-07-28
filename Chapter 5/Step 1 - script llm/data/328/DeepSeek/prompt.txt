@@ -1,0 +1,38 @@
+Given the following Java code snippet:
+// Extending Thread class
+class MyThread extends Thread {
+    public void run() {
+        // Task to be performed
+        System.out.println("Thread running: " + Thread.currentThread().getName());
+    }
+}
+
+// Implementing Runnable interface
+class MyRunnable implements Runnable {
+    public void run() {
+        // Task to be performed
+        System.out.println("Runnable running: " + Thread.currentThread().getName());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Approach 1: Extending Thread
+        MyThread thread1 = new MyThread();
+        thread1.start();
+        
+        // Approach 2: Implementing Runnable
+        Thread thread2 = new Thread(new MyRunnable());
+        thread2.start();
+        
+        // Approach 3: Lambda expression (Java 8+)
+        Thread thread3 = new Thread(() -> {
+            System.out.println("Lambda running: " + Thread.currentThread().getName());
+        });
+        thread3.start();
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1161 message = Add the "@Override" annotation above this method signature, start line = 3, end line = 3, rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 28, end line = 28, rule key = java:S1161 message = Add the "@Override" annotation above this method signature, start line = 3, end line = 3, rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 28, end line = 28.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

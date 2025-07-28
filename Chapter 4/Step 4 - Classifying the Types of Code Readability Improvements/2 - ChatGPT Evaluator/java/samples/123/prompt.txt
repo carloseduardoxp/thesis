@@ -1,0 +1,13 @@
+Based on this pull request with the developer description: Use NodeType enum instead of Strings, the code was changed by the developer from private static final List<String> NODE_TYPES = Arrays.asList(
+       DruidNodeDiscoveryProvider.NODE_TYPE_BROKER,
+       DruidNodeDiscoveryProvider.NODE_TYPE_OVERLORD,
+       DruidNodeDiscoveryProvider.NODE_TYPE_HISTORICAL,
+       DruidNodeDiscoveryProvider.NODE_TYPE_PEON,
+       DruidNodeDiscoveryProvider.NODE_TYPE_ROUTER,
+       DruidNodeDiscoveryProvider.NODE_TYPE_MM (if dont have code before, the code wasnt exist yet) to private static final List<NodeType> NODE_TYPES = Arrays.asList(
+       NodeType.BROKER,
+       NodeType.OVERLORD,
+       NodeType.HISTORICAL,
+       NodeType.PEON,
+       NodeType.ROUTER,
+       NodeType.MIDDLE_MANAGER, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

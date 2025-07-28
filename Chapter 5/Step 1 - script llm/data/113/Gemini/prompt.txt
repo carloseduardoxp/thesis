@@ -1,0 +1,23 @@
+Given the following Java code snippet:
+
+public class Gemini {
+
+    public static void main(String[] args) {
+
+// Declaration and instantiation of a 2D integer array (3 rows, 4 columns)
+        int[][] matrix = new int[3][4];
+
+// You can also declare and initialize it directly:
+        int[][] anotherMatrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "anotherMatrix"., start line = 10, end line = 14, rule key = java:S1854 message = Remove this useless assignment to local variable "matrix"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "matrix" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "anotherMatrix" local variable., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "anotherMatrix"., start line = 10, end line = 14, rule key = java:S1854 message = Remove this useless assignment to local variable "matrix"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "matrix" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "anotherMatrix" local variable., start line = 10, end line = 10.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

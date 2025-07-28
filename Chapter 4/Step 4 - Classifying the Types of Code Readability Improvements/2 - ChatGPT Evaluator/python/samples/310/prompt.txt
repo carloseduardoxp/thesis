@@ -1,0 +1,4 @@
+Based on this pull request with the developer description: Previously, all components of the vector db CDK would pass data around as a `Chunk`, which is:  * the text  * the metadata  * the record that created the chunk  * the embedding    As not all of these are available at all times, checks in a bunch of places were necessary.    This PR refactors this by passing "Documents" to the embedder, which is just the text and the record, because that's what's required for running the embedding., the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to @dataclass
+ class Document:
+     page_content: str
+     record: AirbyteRecordMessage, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

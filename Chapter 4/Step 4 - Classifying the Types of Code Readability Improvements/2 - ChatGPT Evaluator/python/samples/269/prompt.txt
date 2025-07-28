@@ -1,0 +1,12 @@
+Based on this pull request with the developer description: Also, removed the lingering PPT example benchmark code which was being rendered., the code was changed by the developer from import random
+ import time
+ 
+ 
+ def runtime_computation():
+     """Runtime computation consuming between 0 and 5 seconds."""
+     time.sleep(random.uniform(0, 5))
+ 
+ 
+ def memory_computation():
+     """Memory computation for a random list up to 512 samples."""
+     return [0] * random.randint(0, 512) (if dont have code before, the code wasnt exist yet) to , (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

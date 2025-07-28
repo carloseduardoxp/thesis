@@ -1,0 +1,73 @@
+import java.util.HashMap; // Import the HashMap class
+import java.util.Map;   // Import the Map interface
+
+public class HashMapExample {
+    private static final String ALICE = "Alice";
+
+    public static void main(String[] args) {
+        // 1. Declaring and initializing a HashMap
+        // The Map interface is typically used for type hinting,
+        // and HashMap is the concrete implementation.
+        // <KeyType, ValueType>
+        Map<String, Integer> studentAges = new HashMap<>();
+
+        // 2. Adding key-value pairs to the HashMap using put()
+        studentAges.put(ALICE, 20);
+        studentAges.put("Bob", 22);
+        studentAges.put("Charlie", 21);
+        studentAges.put(ALICE, 21); // If a key already exists, its value is updated
+
+        System.out.println("HashMap after adding elements: " + studentAges);
+
+        // 3. Accessing values using get()
+        int aliceAge = studentAges.get(ALICE);
+        System.out.println("Alice's age: " + aliceAge);
+
+        // Accessing a non-existent key returns null
+        Integer davidAge = studentAges.get("David");
+        System.out.println("David's age: " + davidAge); // Output: null
+
+        // 4. Checking if a key exists using containsKey()
+        boolean hasBob = studentAges.containsKey("Bob");
+        System.out.println("Does HashMap contain Bob? " + hasBob);
+
+        // 5. Checking if a value exists using containsValue()
+        boolean hasAge20 = studentAges.containsValue(20);
+        System.out.println("Does HashMap contain age 20? " + hasAge20);
+
+        // 6. Removing a key-value pair using remove()
+        studentAges.remove("Bob");
+        System.out.println("HashMap after removing Bob: " + studentAges);
+
+        // 7. Getting the size of the HashMap
+        int size = studentAges.size();
+        System.out.println("Size of HashMap: " + size);
+
+        // 8. Iterating over the HashMap
+        System.out.println("\nIterating through the HashMap:");
+        // Using entrySet() to get both key and value
+        for (Map.Entry<String, Integer> entry : studentAges.entrySet()) {
+            System.out.println("Student: " + entry.getKey() + ", Age: " + entry.getValue());
+        }
+
+        // Using keySet() to get only keys
+        System.out.println("\nIterating through keys:");
+        for (String name : studentAges.keySet()) {
+            System.out.println("Student Name: " + name);
+        }
+
+        // Using values() to get only values
+        System.out.println("\nIterating through values:");
+        for (Integer age : studentAges.values()) {
+            System.out.println("Age: " + age);
+        }
+
+        // 9. Clearing the HashMap
+        studentAges.clear();
+        System.out.println("HashMap after clearing: " + studentAges);
+
+        // 10. Checking if the HashMap is empty
+        boolean isEmpty = studentAges.isEmpty();
+        System.out.println("Is HashMap empty? " + isEmpty);
+    }
+}

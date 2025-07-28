@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: code is definitely much more readable without all the anonymous inner class boilerplate., the code was changed by the developer from ComponentModuleMetadataProcessor NO_OP = new ComponentModuleMetadataProcessor() {
+         @Override
+         public ModuleReplacementsData getModuleReplacements() {
+             return ModuleReplacementsData.NO_OP;
+         }
+     }; (if dont have code before, the code wasnt exist yet) to ComponentModuleMetadataProcessor NO_OP = () -> ModuleReplacementsData.NO_OP;, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

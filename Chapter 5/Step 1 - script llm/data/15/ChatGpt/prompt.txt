@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+
+public class TextFileWriter {
+    public static void main(String[] args) throws IOException {
+        String html = "<html><body><h1>Hello World</h1></body></html>";
+        Document document = Jsoup.parse(html);
+
+        String title = document.getElementById("title").text(); // Get text content of an element with ID "title"
+        String heading = document.getElementsByTag("h1").text(); // Get text content of all h1 elements
+
+        document.body().append("<p>This is a paragraph</p>"); // Add a new paragraph to the body
+
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "heading"., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "title"., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "title" local variable., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "heading" local variable., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "heading"., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "title"., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "title" local variable., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "heading" local variable., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,11 @@
+Given the following Java code snippet:
+public class Hello 
+{
+    public static void main (String args[]) 
+    {
+       System.out.println ("Hello World!");
+    }
+}
+
+the following improvements are recommended: rule key = java:S1197 message = Move the array designators [] to the type., start line = 3, end line = 3.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

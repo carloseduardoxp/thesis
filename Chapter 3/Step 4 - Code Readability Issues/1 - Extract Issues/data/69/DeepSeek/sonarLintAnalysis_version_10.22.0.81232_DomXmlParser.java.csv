@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,25,25,LOGICAL,Remove this useless assignment to local variable "singleNode".,null,
+java:S106,20,20,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,21,21,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1481,25,25,CLEAR,Remove this unused "singleNode" local variable.,null,

@@ -1,0 +1,43 @@
+Given the following Java code snippet:
+
+import java.util.List;
+
+public class Teste {
+
+    public void scheduleManagementEmail(ManagementEmailConfig managementEmailConfig, Scheduler scheduler) throws SchedulerException {
+        logger.debug("Scheduling Management Email "
+                + managementEmailConfig.getManagementEmailConfigId());
+
+        String jobKey = "SendManagementEmailJob_"
+                + managementEmailConfig.getManagementEmailConfigId();
+        Class<? extends Job> jobClass = SendManagementEmailJob.class;
+        JobDetail job = JobBuilder.newJob(jobClass).withIdentity(new JobKey(jobKey)).build();
+        Trigger trigger = sendManagementEmailJob.getTriggerWithSchedule(managementEmailConfig);
+        trigger.getJobDataMap().put("managementEmailConfigId", managementEmailConfig.getManagementEmailConfigId());
+        if (!scheduler.checkExists(new JobKey(jobKey))) {
+            scheduler.scheduleJob(job, trigger);
+        }
+        debugPrintJobs();
+    }
+
+    public void debugPrintJobs() {
+        Scheduler scheduler = getScheduler();
+        try {
+            // All scheduled jobs
+            for (String groupName : scheduler.getJobGroupNames()) {
+                for (JobKey jobKey : scheduler.getJobKeys(GroupMatcher.jobGroupEquals(groupName))) {
+                    JobDetail jobDetail = scheduler.getJobDetail(jobKey);
+                    final List<? extends Trigger> triggersOfJob = scheduler.getTriggersOfJob(jobKey);
+                    // Do something with the info you just got
+                    // ...
+                }
+            }
+        } catch (SchedulerException e) {
+            log.error("Retrieving jobs", e);
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "jobDetail"., start line = 28, end line = 28, rule key = java:S1854 message = Remove this useless assignment to local variable "triggersOfJob"., start line = 29, end line = 29, rule key = java:S1481 message = Remove this unused "jobDetail" local variable., start line = 28, end line = 28, rule key = java:S1481 message = Remove this unused "triggersOfJob" local variable., start line = 29, end line = 29, rule key = java:S1854 message = Remove this useless assignment to local variable "jobDetail"., start line = 28, end line = 28, rule key = java:S1854 message = Remove this useless assignment to local variable "triggersOfJob"., start line = 29, end line = 29, rule key = java:S1481 message = Remove this unused "jobDetail" local variable., start line = 28, end line = 28, rule key = java:S1481 message = Remove this unused "triggersOfJob" local variable., start line = 29, end line = 29.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

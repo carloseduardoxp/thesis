@@ -1,0 +1,30 @@
+Given the following Java code snippet:
+
+import java.io.FileInputStream;
+
+public class Teste {
+
+    public static void main(String[] args) {        
+        FileInputStream fis = new FileInputStream(
+            new File("D:\\workspace\\Writesheet.xlsx"));
+            @SuppressWarnings("resource")
+            XSSFWorkbook workbook = new XSSFWorkbook(fis);
+            XSSFSheet spreadsheet = workbook.getSheetAt(0);
+      
+            int lastcell=spreadsheet.getRow(0).getLastCellNum();
+            //Non empty Last cell Number or index return
+      
+            for(int i=0;i<=lastcell;i++)
+            {
+                try
+                {
+                    System.out.println(CellReference.convertNumToColString(i));
+                }catch(Exception e)
+                {}
+            }
+            fis.close();
+    }
+}
+
+the following improvements are recommended: rule key = java:S108 message = Remove this block of code, start line = 22, end line = 22.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

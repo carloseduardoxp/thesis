@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1874,10,10,CONVENTIONAL,Remove this use of "newInstance"; it is deprecated.,null,
+java:S1854,15,15,LOGICAL,Remove this useless assignment to local variable "a".,null,
+java:S1481,15,15,CLEAR,Remove this unused "a" local variable.,null,

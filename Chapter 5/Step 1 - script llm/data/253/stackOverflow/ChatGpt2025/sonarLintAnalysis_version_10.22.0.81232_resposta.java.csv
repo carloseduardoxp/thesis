@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1075,21,21,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,
+java:S1075,22,22,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,
+java:S1075,24,24,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,
+java:S899,39,39,COMPLETE,Do something with the "boolean" value returned by "delete".,null,
+java:S4042,39,39,CONVENTIONAL,Use "java.nio.file.Files#delete" here for better messages on error conditions.,null,
+java:S899,90,90,COMPLETE,Do something with the "boolean" value returned by "delete".,null,
+java:S4042,90,90,CONVENTIONAL,Use "java.nio.file.Files#delete" here for better messages on error conditions.,null,

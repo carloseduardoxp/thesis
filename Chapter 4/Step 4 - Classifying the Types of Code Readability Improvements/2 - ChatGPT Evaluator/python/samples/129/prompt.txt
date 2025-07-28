@@ -1,0 +1,11 @@
+Based on this pull request with the developer description: we can use a dictionary instead of multiple if-else statements to map the "method" name to its corresponding functions., the code was changed by the developer from if "download_report" == method:
+     return report_downloader.download_report()
+   elif "prepare_bq" == method:
+     return ml_builder.prepare_bq()
+   elif "detect_anomalies" == method:
+     return anomaly_detector.detect_and_notify()
+   else: (if dont have code before, the code wasnt exist yet) to METHODS_MAP = {
+     "download_report": report_downloader.download_report,
+     "prepare_bq": ml_builder.prepare_bq,
+     "detect_anomalies": anomaly_detector.detect_and_notify,
+ }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

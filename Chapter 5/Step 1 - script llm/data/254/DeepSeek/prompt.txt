@@ -1,0 +1,35 @@
+Given the following Java code snippet:
+import java.util.Objects;
+
+public class Employee {
+    private final int id;
+    private final String name;
+    private final Department department;
+    
+    // Constructor
+    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id &&
+               Objects.equals(name, employee.name) &&
+               Objects.equals(department, employee.department);
+    }
+    
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, department);
+    }
+}
+
+class Department {
+    private String name;
+    private String location;
+    
+    // equals() and hashCode()
+}
+
+the following improvements are recommended: rule key = java:S1068 message = Remove this unused "name" private field., start line = 27, end line = 27, rule key = java:S1068 message = Remove this unused "location" private field., start line = 28, end line = 28.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

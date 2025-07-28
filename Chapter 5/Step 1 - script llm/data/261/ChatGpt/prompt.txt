@@ -1,0 +1,22 @@
+Given the following Java code snippet:
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class Teste {
+  public static void main(String[] args) {
+    long milliseconds = System.currentTimeMillis();
+    TimeZone timeZone = TimeZone.getTimeZone("America/New_York");
+    Date date = new Date(milliseconds);
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    dateFormat.setTimeZone(timeZone);
+    String formattedDate = dateFormat.format(date);
+
+
+  }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "formattedDate"., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "formattedDate" local variable., start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "formattedDate"., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "formattedDate" local variable., start line = 13, end line = 13.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

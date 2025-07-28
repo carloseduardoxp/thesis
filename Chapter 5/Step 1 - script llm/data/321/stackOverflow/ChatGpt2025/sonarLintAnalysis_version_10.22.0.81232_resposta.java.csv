@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,30,30,LOGICAL,Remove this useless assignment to local variable "nSshPort".,null,
+java:S1481,30,30,CLEAR,Remove this unused "nSshPort" local variable.,null,
+java:S6437,45,45,TRUSTWORTHY,Revoke and change this password, as it is compromised.,null,

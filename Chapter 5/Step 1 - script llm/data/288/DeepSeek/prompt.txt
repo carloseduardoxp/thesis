@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class ApiService {
+    
+    public ResponseEntity<String> callExternalApi() {
+        RestTemplate restTemplate = new RestTemplate();
+        String apiUrl = "https://api.example.com/data";
+        
+        // For GET request
+        ResponseEntity<String> response = restTemplate.getForEntity(apiUrl, String.class);
+        
+        // For POST request
+        // HttpHeaders headers = new HttpHeaders();
+        // headers.setContentType(MediaType.APPLICATION_JSON);
+        // HttpEntity<String> request = new HttpEntity<>("{\"key\":\"value\"}", headers);
+        // ResponseEntity<String> response = restTemplate.postForEntity(apiUrl, request, String.class);
+        
+        return response;
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "response"., start line = 11, end line = 11, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 14, end line = 14, rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "response"., start line = 11, end line = 11, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 14, end line = 14.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

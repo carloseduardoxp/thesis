@@ -1,0 +1,32 @@
+Given the following Java code snippet:
+class MyObject {
+    int value;
+    
+    MyObject(int val) {
+        this.value = val;
+    }
+}
+
+public class ReferenceTest {
+    
+    public static void modifyObject(MyObject obj) {
+        // This change will be visible outside the method
+        obj.value = 100;
+        
+        // This reassignment won't affect the original reference
+        obj = new MyObject(50);
+    }
+    
+    public static void main(String[] args) {
+        MyObject myObj = new MyObject(10);
+        System.out.println("Before: " + myObj.value); // Output: 10
+        
+        modifyObject(myObj);
+        
+        System.out.println("After: " + myObj.value);  // Output: 100 (not 50)
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "obj"., start line = 16, end line = 16.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

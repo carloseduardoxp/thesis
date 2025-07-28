@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S128,13,13,CLEAR,End this switch case with an unconditional break, return or throw statement.,null,
+java:S128,11,11,CLEAR,End this switch case with an unconditional break, return or throw statement.,null,
+java:S128,9,9,CLEAR,End this switch case with an unconditional break, return or throw statement.,null,
+java:S106,10,10,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,12,12,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,14,14,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,

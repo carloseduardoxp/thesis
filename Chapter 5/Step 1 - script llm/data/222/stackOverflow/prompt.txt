@@ -1,0 +1,23 @@
+Given the following Java code snippet:
+public class Teste {
+
+    @Test
+    public void sampleTest(){
+        int i = 5;
+        incrementBy100(i);
+        System.out.println("passed ==> "+ i);
+        Integer j = new Integer(5);
+        incrementBy100(j);
+        System.out.println("passed ==> "+ j);
+    }
+    /**
+     * @param i
+     */
+    private void incrementBy100(int i) {
+        i += 100;
+        System.out.println("incremented = "+ i);
+    }
+}
+
+the following improvements are recommended: rule key = java:S2129 message = Remove this "Integer" constructor, start line = 8, end line = 8.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

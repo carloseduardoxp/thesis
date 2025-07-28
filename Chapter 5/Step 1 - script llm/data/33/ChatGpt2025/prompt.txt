@@ -1,0 +1,34 @@
+Given the following Java code snippet:
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.*;
+
+public class SortIPAddresses {
+    public static void main(String[] args) throws UnknownHostException {
+        List<String> ipList = Arrays.asList(
+            "192.168.1.5",
+            "10.0.0.1",
+            "172.16.0.1",
+            "192.168.0.1"
+        );
+
+        ipList.sort(Comparator.comparing(SortIPAddresses::ipToLong));
+
+        for (String ip : ipList) {
+            System.out.println(ip);
+        }
+    }
+
+    private static long ipToLong(String ipAddress) {
+        String[] parts = ipAddress.split("\\.");
+        long result = 0;
+        for (String part : parts) {
+            result = result << 8 | Integer.parseInt(part);
+        }
+        return result;
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1130 message = Remove the declaration of thrown exception 'java.net.UnknownHostException', start line = 6, end line = 6.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

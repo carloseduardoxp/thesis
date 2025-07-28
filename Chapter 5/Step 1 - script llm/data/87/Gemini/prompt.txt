@@ -1,0 +1,53 @@
+Given the following Java code snippet:
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+public class AnnotationProcessor {
+
+    public static void main(String[] args) {
+        // Process class annotation
+        Class<MyAnnotatedClass> clazz = MyAnnotatedClass.class;
+        if (clazz.isAnnotationPresent(MyCustomAnnotation.class)) {
+            MyCustomAnnotation classAnnotation = clazz.getAnnotation(MyCustomAnnotation.class);
+            System.out.println("Class Annotation: ");
+            System.out.println("  Value: " + classAnnotation.value());
+            System.out.println("  Count: " + classAnnotation.count());
+            System.out.println("  Enabled: " + classAnnotation.enabled());
+            System.out.println("  Tags: " + String.join(", ", classAnnotation.tags()));
+        }
+
+        // Process method annotation
+        try {
+            Method method = clazz.getMethod("myAnnotatedMethod");
+            if (method.isAnnotationPresent(MyCustomAnnotation.class)) {
+                MyCustomAnnotation methodAnnotation = method.getAnnotation(MyCustomAnnotation.class);
+                System.out.println("\nMethod Annotation (myAnnotatedMethod): ");
+                System.out.println("  Value: " + methodAnnotation.value());
+                System.out.println("  Count: " + methodAnnotation.count());
+                System.out.println("  Enabled: " + methodAnnotation.enabled());
+                System.out.println("  Tags: " + String.join(", ", methodAnnotation.tags()));
+            }
+        } catch (NoSuchMethodException e) {
+            System.err.println("Method not found: " + e.getMessage());
+        }
+
+        // Process field annotation
+        try {
+            Field field = clazz.getDeclaredField("myAnnotatedField");
+            if (field.isAnnotationPresent(MyCustomAnnotation.class)) {
+                MyCustomAnnotation fieldAnnotation = field.getAnnotation(MyCustomAnnotation.class);
+                System.out.println("\nField Annotation (myAnnotatedField): ");
+                System.out.println("  Value: " + fieldAnnotation.value());
+                System.out.println("  Count: " + fieldAnnotation.count());
+                System.out.println("  Enabled: " + fieldAnnotation.enabled());
+                System.out.println("  Tags: " + String.join(", ", fieldAnnotation.tags()));
+            }
+        } catch (NoSuchFieldException e) {
+            System.err.println("Field not found: " + e.getMessage());
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1192 message = Define a constant instead of duplicating this literal "  Tags: " 3 times., start line = 15, end line = 15, rule key = java:S1192 message = Define a constant instead of duplicating this literal "  Count: " 3 times., start line = 13, end line = 13, rule key = java:S1192 message = Define a constant instead of duplicating this literal "  Enabled: " 3 times., start line = 14, end line = 14, rule key = java:S1192 message = Define a constant instead of duplicating this literal "  Value: " 3 times., start line = 12, end line = 12.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

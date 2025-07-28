@@ -1,0 +1,16 @@
+Given the following Java code snippet:
+public class Gemini {
+    public static void main(String[] args) {
+        final int MAX_VALUE = 100;
+        // MAX_VALUE = 200; // This would result in a compile-time error
+
+        final String NAME;
+        NAME = "Alice";
+        // NAME = "Bob";   // This would also result in a compile-time error
+    }
+}
+
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "NAME"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "MAX_VALUE"., start line = 3, end line = 3, rule key = java:S1481 message = Remove this unused "MAX_VALUE" local variable., start line = 3, end line = 3, rule key = java:S1481 message = Remove this unused "NAME" local variable., start line = 6, end line = 6, rule key = java:S1854 message = Remove this useless assignment to local variable "NAME"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "MAX_VALUE"., start line = 3, end line = 3, rule key = java:S1481 message = Remove this unused "MAX_VALUE" local variable., start line = 3, end line = 3, rule key = java:S1481 message = Remove this unused "NAME" local variable., start line = 6, end line = 6.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

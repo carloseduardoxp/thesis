@@ -1,0 +1,13 @@
+rule key,start line,end line,severity,message,type
+java:S117,47,47,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S117,95,95,IDENTIFIABLE,Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,122,122,DISTINCT,Define a constant instead of duplicating this literal "To vertex " 4 times.,null,
+java:S1210,29,29,COMPLETE,Override "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.,null,
+java:S106,119,119,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,122,122,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,124,124,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,128,128,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,150,150,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,153,153,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,155,155,MODULAR,Replace this use of System.out by a logger.,null,

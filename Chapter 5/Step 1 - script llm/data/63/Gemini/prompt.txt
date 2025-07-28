@@ -1,0 +1,31 @@
+Given the following Java code snippet:
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class RemoveFromArray {
+    public static void main(String[] args) {
+        String[] originalArray = {"apple", "banana", "cherry", "date", "banana"};
+        String elementToRemove = "banana";
+
+        // Convert the array to an ArrayList
+        List<String> list = new ArrayList<>(Arrays.asList(originalArray));
+
+        // Remove the first occurrence of the element
+        list.remove(elementToRemove);
+        System.out.println("After removing first '" + elementToRemove + "': " + list);
+
+        // To remove all occurrences, you can use a loop or removeAll
+        list = new ArrayList<>(Arrays.asList(originalArray)); // Reset the list
+        list.removeAll(List.of(elementToRemove)); // Requires Java 9+ or create a Collection manually
+        System.out.println("After removing all '" + elementToRemove + "': " + list);
+
+        // If you need to go back to a String array
+        String[] newArray = list.toArray(new String[0]);
+        System.out.println("New array: " + Arrays.toString(newArray));
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1192 message = Define a constant instead of duplicating this literal "banana" 3 times., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,15 @@
+Based on this pull request with the developer description: workflow conditionals/IFs cleanup: my main issue with the workflow was the accelerate workflow stuff was a bit complicated, with a bunch of conditions and nested ifs that went a few levels deep. In my proposed changes for the workflow, IFs would only go a single level deep., the code was changed by the developer from if self.download_dependencies:
+             actions += [install_action, CleanUpAction(self.dependencies_dir)]
+             if self.combine_dependencies:
+                 # Auto dependency layer disabled, first build
+                 actions += [
+                     esbuild_with_deps,
+                     MoveDependenciesAction(source_dir, scratch_dir, self.dependencies_dir),
+                 ]
+             else:
+                 # Auto dependency layer enabled, first build
+                 actions += esbuild_no_deps + [MoveDependenciesAction(source_dir, scratch_dir, self.dependencies_dir)] (if dont have code before, the code wasnt exist yet) to # if we downloaded dependencies, we have to update dependencies_dir
+             self.actions += [
+                 CleanUpAction(self.dependencies_dir),
+                 MoveDependenciesAction(self.source_dir, self.scratch_dir, self.dependencies_dir),
+             ], (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,19 @@
+Based on this pull request with the developer description: merge insertErrors logic., the code was changed by the developer from if not result:        
+    result = response
+ else:
+    new_errors = response.get('insertErrors')
+    if not new_errors:
+       continue
+ 
+    if result.get('insertErrors'):
+       result['insertErrors'].extend(new_errors)
+    else:
+       result['insertErrors'] = new_errors (if dont have code before, the code wasnt exist yet) to if not result:        
+    result = response
+    continue
+ 
+ new_errors = response.get('insertErrors')
+ if not new_errors:
+    continue
+ 
+ result.setdefault('insertErrors', []).extend(new_errors), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

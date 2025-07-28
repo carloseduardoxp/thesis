@@ -1,0 +1,13 @@
+rule key,start line,end line,severity,message,type
+java:S1104,5,5,MODULAR,Make numDisks a static final constant or non-public and provide accessors if needed.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1444,5,5,MODULAR,Make this "public static numDisks" field final,null,
+java:S2386,7,7,CONVENTIONAL,Make this member "protected".,null,
+java:S106,14,14,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,17,17,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2234,30,30,CLEAR,Parameters to move have the same names but not the same order as the method arguments.,null,
+java:S2234,34,34,CLEAR,Parameters to move have the same names but not the same order as the method arguments.,null,
+java:S106,41,41,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,42,42,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,56,56,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,58,58,MODULAR,Replace this use of System.out by a logger.,null,

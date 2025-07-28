@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,16,16,DISTINCT,Use already-defined constant 'QUERY_PARAMETER_VCARD_NO_PHOTO' instead of duplicating its value here.,null,
+java:S1854,18,18,LOGICAL,Remove this useless assignment to local variable "uri".,null,
+java:S1481,18,18,CLEAR,Remove this unused "uri" local variable.,null,

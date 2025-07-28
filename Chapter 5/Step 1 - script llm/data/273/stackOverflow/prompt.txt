@@ -1,0 +1,38 @@
+Given the following Java code snippet:
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class Teste {
+
+    public static String getStringFromInputStream(InputStream inputStream) {
+
+        BufferedReader bufferedReader = null;
+        StringBuilder stringBuilder = new StringBuilder();
+        String line;
+    
+        try {
+            bufferedReader = new BufferedReader(new InputStreamReader(
+                    inputStream));
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuilder.append(line);
+            }
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+        } finally {
+            if (bufferedReader != null) {
+                try {
+                    bufferedReader.close();
+                } catch (IOException e) {
+                    logger.error(e.getMessage());
+                }
+            }
+        }
+        return stringBuilder.toString();
+    }
+}
+
+the following improvements are recommended: rule key = java:S2093 message = Change this "try" to a try-with-resources. (sonar.java.source not set. Assuming 7 or greater.), start line = 15, end line = 15.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

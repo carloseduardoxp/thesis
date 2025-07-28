@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2133,14,14,EFFICIENT,Remove this object instantiation and use "Dog.class" instead.,null,
+java:S106,18,18,MODULAR,Replace this use of System.out by a logger.,null,

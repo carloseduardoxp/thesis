@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S115,3,3,IDENTIFIABLE,Rename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.,null,
+java:S106,7,7,MODULAR,Replace this use of System.out by a logger.,null,

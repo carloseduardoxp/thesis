@@ -1,0 +1,14 @@
+Based on this pull request with the developer description: Rework conditional in install_from_active_environment to reduce nesting in the function, the code was changed by the developer from if specs:
+         if not reporter.filename:
+             reporter.filename = default_log_file(specs[0])
+         reporter.specs = specs
+ 
+         tty.msg("Installing environment {0}".format(env.name))
+         with reporter("build"):
+             env.install_all(**install_kwargs) (if dont have code before, the code wasnt exist yet) to if not specs:
+         msg = "{0} environment has no specs to install".format(env.name)
+         tty.msg(msg)
+         return
+ 
+     if not reporter.filename:
+         reporter.filename = default_log_file(specs[0]), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

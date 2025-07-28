@@ -1,0 +1,29 @@
+Given the following Java code snippet:
+
+import java.util.Arrays;
+
+public class ArrayHelper {
+
+    public static void main(String[] args) {
+        String[] items = new String[]{"a", "b", "c"};
+
+        items = ArrayHelper.push(items, "d");
+        items = ArrayHelper.push(items, "e");
+
+        items = ArrayHelper.pop(items);
+    }
+    
+    public static <T> T[] push(T[] arr, T item) {
+        T[] tmp = Arrays.copyOf(arr, arr.length + 1);
+        tmp[tmp.length - 1] = item;
+        return tmp;
+    }
+
+    public static <T> T[] pop(T[] arr) {
+        T[] tmp = Arrays.copyOf(arr, arr.length - 1);
+        return tmp;
+    }
+}
+
+the following improvements are recommended: rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "tmp"., start line = 22, end line = 22, rule key = java:S1854 message = Remove this useless assignment to local variable "items"., start line = 12, end line = 12, rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "tmp"., start line = 22, end line = 22, rule key = java:S1854 message = Remove this useless assignment to local variable "items"., start line = 12, end line = 12.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

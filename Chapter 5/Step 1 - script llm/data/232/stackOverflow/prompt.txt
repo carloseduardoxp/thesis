@@ -1,0 +1,13 @@
+Given the following Java code snippet:
+public class Root<T> {
+
+    T var;
+
+    public Root(Class<T> klass) {
+        var = klass.newInstance();
+    }
+
+}
+
+the following improvements are recommended: rule key = java:S6213 message = Rename this variable to not match a restricted identifier., start line = 3, end line = 3.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

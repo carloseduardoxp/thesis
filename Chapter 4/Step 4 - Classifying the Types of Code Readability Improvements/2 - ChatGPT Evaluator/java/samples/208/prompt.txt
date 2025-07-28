@@ -1,0 +1,4 @@
+Based on this pull request with the developer description: Improve code readability by removing the nested if loop, the code was changed by the developer from if (!Objects.equals(sessionState, session.sessionState)) {
+             return false;
+         }
+         return true; (if dont have code before, the code wasnt exist yet) to return Objects.equals(sessionState, session.sessionState);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

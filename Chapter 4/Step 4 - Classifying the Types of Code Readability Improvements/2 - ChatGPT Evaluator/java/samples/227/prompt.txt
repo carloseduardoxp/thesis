@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Implement the try-with-resources construct available in Java 7+ where applicable., the code was changed by the developer from Scanner scanner = null;
+           try {
+             scanner = new Scanner(new File(value), UTF_8); (if dont have code before, the code wasnt exist yet) to try (Scanner scanner = new Scanner(new File(value), UTF_8)) {, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

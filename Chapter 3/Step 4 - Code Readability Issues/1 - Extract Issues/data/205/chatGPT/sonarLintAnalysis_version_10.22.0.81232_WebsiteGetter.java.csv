@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1149,15,15,CONVENTIONAL,Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".,null,
+java:S1854,12,12,LOGICAL,Remove this useless assignment to local variable "status".,null,
+java:S1481,12,12,CLEAR,Remove this unused "status" local variable.,null,
+java:S106,21,21,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,23,23,MODULAR,Replace this use of System.out by a logger.,null,

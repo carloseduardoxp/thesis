@@ -1,0 +1,6 @@
+Based on this pull request with the developer description: Simplified Conditional for API Call  Reduced redundant conditions for determining when to call the OpenAI API., the code was changed by the developer from if len(sys.argv) > 1:
+             if yes:
+                 call_openai_api(docs, folder_name)
+             else:
+                 get_user_permission(docs, folder_name) (if dont have code before, the code wasnt exist yet) to if len(sys.argv) > 1 and yes:
+             call_openai_api(docs, folder_name), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

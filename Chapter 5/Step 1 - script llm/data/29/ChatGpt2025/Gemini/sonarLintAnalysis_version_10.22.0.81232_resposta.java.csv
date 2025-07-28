@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1948,7,7,LOGICAL,Make non-static "img" transient or serializable.,null,
+java:S5738,6,6,COMPLETE,Remove this call to a deprecated class, it has been marked for removal.,null,
+java:S106,16,16,MODULAR,Replace this use of System.out by a logger.,null,

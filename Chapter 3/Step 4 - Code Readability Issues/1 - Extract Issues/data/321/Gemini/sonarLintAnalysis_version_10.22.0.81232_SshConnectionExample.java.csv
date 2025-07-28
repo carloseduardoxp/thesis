@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S125,23,23,CLEAR,This block of commented-out lines of code should be removed.,null,
+java:S106,36,36,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,38,38,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,51,51,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,53,53,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,58,58,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,61,61,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,64,64,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,81,81,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2093,19,19,CONVENTIONAL,Change this "try" to a try-with-resources. (sonar.java.source not set. Assuming 7 or greater.),null,

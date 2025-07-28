@@ -1,0 +1,9 @@
+Based on this pull request with the developer description: clean up some ImmutableMaps, the code was changed by the developer from ImmutableMap.Builder<XdsLocality, LocalityLbInfo> builder = ImmutableMap.builder();
+           for (Map.Entry<XdsLocality, LocalityLbInfo> entry : localityMap.entrySet()) {
+             if (!entry.getKey().equals(locality)) {
+               builder.put(entry);
+             }
+           }
+           localityMap = builder.build(); (if dont have code before, the code wasnt exist yet) to Map<XdsLocality, LocalityLbInfo> copy = new LinkedHashMap<>(localityMap);
+           copy.remove(locality);
+           localityMap = ImmutableMap.copyOf(copy);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

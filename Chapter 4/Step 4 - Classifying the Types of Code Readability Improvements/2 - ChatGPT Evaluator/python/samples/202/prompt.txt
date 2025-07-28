@@ -1,0 +1,2 @@
+Based on this pull request with the developer description: Remove unneeded code
+ This function is no longer needed., the code was changed by the developer from shared = len(set_a.intersection(set_b)) (if dont have code before, the code wasnt exist yet) to both = len(set_a & set_b), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

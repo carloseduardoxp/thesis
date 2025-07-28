@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1068,9,9,CLEAR,Remove this unused "username" private field.,null,
+java:S1068,10,10,CLEAR,Remove this unused "password" private field.,null,
+java:S1068,11,11,CLEAR,Remove this unused "role" private field.,null,

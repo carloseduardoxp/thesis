@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1604,9,9,CLEAR,Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,9,14,LOGICAL,Remove this useless assignment to local variable "files".,null,
+java:S1075,8,8,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,
+java:S1481,9,9,CLEAR,Remove this unused "files" local variable.,null,

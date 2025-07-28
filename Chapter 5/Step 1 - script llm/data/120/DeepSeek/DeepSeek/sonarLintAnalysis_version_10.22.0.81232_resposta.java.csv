@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2201,5,5,LOGICAL,The return value of "replace" must be used.,null,
+java:S2201,6,6,LOGICAL,The return value of "replaceFirst" must be used.,null,

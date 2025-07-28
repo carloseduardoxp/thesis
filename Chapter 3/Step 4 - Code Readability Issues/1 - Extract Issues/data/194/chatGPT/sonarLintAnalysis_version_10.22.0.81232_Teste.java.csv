@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "newArray".,null,
+java:S1481,5,5,CLEAR,Remove this unused "newArray" local variable.,null,
+java:S3012,12,12,CLEAR,Use "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.,null,

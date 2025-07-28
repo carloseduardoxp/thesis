@@ -1,0 +1,50 @@
+Based on this pull request with the developer description: name more anonymous classes in ServerImpl, the code was changed by the developer from wrappedExecutor.execute(new ContextRunnable(context) {
+           @Override
+           public void runInContext() {
+             ServerStreamListener listener = NOOP_LISTENER;
+             try {
+               ServerMethodDefinition<?, ?> method = registry.lookupMethod(methodName);
+               if (method == null) {
+                 method = fallbackRegistry.lookupMethod(methodName, stream.getAuthority());
+               }
+               if (method == null) {
+                 Status status = Status.UNIMPLEMENTED.withDescription(
+                     "Method not found: " + methodName);
+                 // TODO(zhangkun83): this error may be recorded by the tracer, and if it's kept in
+                 // memory as a map whose key is the method name, this would allow a misbehaving
+                 // client to blow up the server in-memory stats storage by sending large number of
+                 // distinct unimplemented method
+                 // names. (https://github.com/grpc/grpc-java/issues/2285)
+                 stream.close(status, new Metadata());
+                 context.cancel(null);
+                 return;
+               }
+               listener = startCall(stream, methodName, method, headers, context, statsTraceCtx);
+             } catch (RuntimeException e) {
+               stream.close(Status.fromThrowable(e), new Metadata());
+               context.cancel(null);
+               throw e;
+             } catch (Error e) {
+               stream.close(Status.fromThrowable(e), new Metadata()); (if dont have code before, the code wasnt exist yet) to final class StreamCreated extends ContextRunnable {
+ 
+         StreamCreated() {
+           super(context);
+         }
+ 
+         @Override
+         public void runInContext() {
+           ServerStreamListener listener = NOOP_LISTENER;
+           try {
+             ServerMethodDefinition<?, ?> method = registry.lookupMethod(methodName);
+             if (method == null) {
+               method = fallbackRegistry.lookupMethod(methodName, stream.getAuthority());
+             }
+             if (method == null) {
+               Status status = Status.UNIMPLEMENTED.withDescription(
+                   "Method not found: " + methodName);
+               // TODO(zhangkun83): this error may be recorded by the tracer, and if it's kept in
+               // memory as a map whose key is the method name, this would allow a misbehaving
+               // client to blow up the server in-memory stats storage by sending large number of
+               // distinct unimplemented method
+               // names. (https://github.com/grpc/grpc-java/issues/2285)
+               stream.close(status, new Metadata());, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

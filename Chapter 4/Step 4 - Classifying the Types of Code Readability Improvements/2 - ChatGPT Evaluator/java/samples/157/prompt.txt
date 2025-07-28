@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Also converted the longs to use the `NanoTime` object., the code was changed by the developer from protected final long idleReportingPeriodNanos;
+   private volatile long idlePeriodStartNanos = 0L; (if dont have code before, the code wasnt exist yet) to protected final long idleReportingPeriodMillis;
+   private volatile Timer idlePeriodTimer = null;, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

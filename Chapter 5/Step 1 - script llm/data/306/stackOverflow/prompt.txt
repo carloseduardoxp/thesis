@@ -1,0 +1,32 @@
+Given the following Java code snippet:
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+class A {
+
+    private B[] b;
+    //getter setter
+}
+
+class B {
+
+    private String id;
+    //getter setter
+}
+
+public class Teste {
+
+    public static void main(String[] args) {
+        Stream<String> lines = Files.lines(Paths.get("file.json"));
+        lines.map(x -> (A) gson.fromJson(x, type)).flatMap(a -> Arrays.stream(a.getB()))
+                .map(B::getId)
+                .collect(Collectors.toList());
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1068 message = Remove this unused "b" private field., start line = 9, end line = 9, rule key = java:S1068 message = Remove this unused "id" private field., start line = 15, end line = 15.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

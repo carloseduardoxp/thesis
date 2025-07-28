@@ -1,0 +1,10 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1168,19,19,CLEAR,Return an empty array instead of null.,null,
+java:S4830,22,22,TRUSTWORTHY,Enable server certificate validation on this SSL/TLS connection.,null,
+java:S4830,26,26,TRUSTWORTHY,Enable server certificate validation on this SSL/TLS connection.,null,
+java:S4423,32,32,TRUSTWORTHY,Change this code to use a stronger protocol.,null,
+java:S5527,40,40,COMPLETE,Enable server hostname verification on this SSL/TLS connection.,null,
+java:S106,54,54,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,57,57,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,60,60,MODULAR,Replace this use of System.out by a logger.,null,

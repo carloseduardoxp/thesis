@@ -1,0 +1,13 @@
+Based on this pull request with the developer description: Make `checkConstraints` return an enum describing what each number means, the code was changed by the developer from int checkConstraints(Modifiers mods) {
+     // Return value:
+     // -1: item violates a constraint, don't use it
+     // 0: item not relevant to any constraints
+     // 1: item meets a constraint, give it special handling
+     if (mods == null) return 0; (if dont have code before, the code wasnt exist yet) to enum Constraint {
+     /** Item violates a constraint, don't use it */
+     VIOLATES,
+     /** Item not relevant to any constraints */
+     IRRELEVANT,
+     /** Item meets a constraint, give it special handling */
+     MEETS
+   }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

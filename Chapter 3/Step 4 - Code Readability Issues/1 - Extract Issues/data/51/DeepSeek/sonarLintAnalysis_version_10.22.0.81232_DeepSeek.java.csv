@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,8,8,DISTINCT,Define a constant instead of duplicating this literal "banana" 4 times.,null,
+java:S1192,8,8,DISTINCT,Define a constant instead of duplicating this literal "apple" 6 times.,null,
+java:S1854,29,29,LOGICAL,Remove this useless assignment to local variable "flattened".,null,
+java:S1854,28,28,LOGICAL,Remove this useless assignment to local variable "uniqueItems".,null,
+java:S106,11,11,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,12,12,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,23,23,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,25,25,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1481,28,28,CLEAR,Remove this unused "uniqueItems" local variable.,null,
+java:S1481,29,29,CLEAR,Remove this unused "flattened" local variable.,null,

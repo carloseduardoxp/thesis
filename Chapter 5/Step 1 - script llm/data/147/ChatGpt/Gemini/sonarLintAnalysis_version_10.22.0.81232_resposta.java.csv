@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,9,9,LOGICAL,Remove this useless assignment to local variable "future3".,null,
+java:S1854,5,5,LOGICAL,Remove this useless assignment to local variable "futureResult".,null,
+java:S1481,5,5,CLEAR,Remove this unused "futureResult" local variable.,null,
+java:S1481,9,9,CLEAR,Remove this unused "future3" local variable.,null,

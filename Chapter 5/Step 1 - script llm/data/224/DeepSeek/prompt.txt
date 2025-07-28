@@ -1,0 +1,22 @@
+Given the following Java code snippet:
+
+import java.util.ArrayList;
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Orange");
+
+        boolean exists = list.contains("Banana"); // returns true
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "exists"., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "exists" local variable., start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "exists"., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "exists" local variable., start line = 13, end line = 13.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

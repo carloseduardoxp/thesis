@@ -1,0 +1,38 @@
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.Popup;
+import javax.swing.PopupFactory;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a new JFrame
+        JFrame frame = new JFrame("PopupWindow Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create a new JPanel
+        JPanel panel = new JPanel(new FlowLayout());
+        panel.setPreferredSize(new Dimension(200, 100));
+
+        // Create a new JLabel
+        JLabel label = new JLabel("This is a popup window!");
+
+        // Add the label to the panel
+        panel.add(label);
+
+        // Create a new PopupFactory
+        PopupFactory factory = PopupFactory.getSharedInstance();
+
+        // Create a new Popup
+        Popup popup = factory.getPopup(frame, panel, 100, 100);
+
+        // Show the Popup
+        popup.show();
+
+        // Pack and display the JFrame
+        frame.pack();
+        frame.setVisible(true);
+    }
+}

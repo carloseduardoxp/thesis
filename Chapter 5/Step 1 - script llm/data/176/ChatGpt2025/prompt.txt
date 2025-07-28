@@ -1,0 +1,34 @@
+Given the following Java code snippet:
+import java.awt.*;
+
+import javax.swing.*;
+
+public class MultiMonitorExample {
+    public static void main(String[] args) {
+        // Get the graphics environment
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice[] screens = ge.getScreenDevices();
+
+        // Loop through all available screens
+        for (int i = 0; i < screens.length; i++) {
+            GraphicsDevice screen = screens[i];
+
+            // Create a JFrame for this screen
+            JFrame frame = new JFrame("Monitor #" + (i + 1));
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(400, 300);
+            frame.setUndecorated(false); // Set to true if you want full screen
+
+            // Get the bounds of this screen
+            Rectangle bounds = screen.getDefaultConfiguration().getBounds();
+            frame.setLocation(bounds.x + 50, bounds.y + 50); // Offset a bit from top-left
+
+            frame.add(new JLabel("This is monitor #" + (i + 1), SwingConstants.CENTER), BorderLayout.CENTER);
+            frame.setVisible(true);
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 17, end line = 17.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

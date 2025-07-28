@@ -1,0 +1,15 @@
+Based on this pull request with the developer description: Extract callback for readability   I know that a lot of similar classes use the `on_results=lambda x: serialize(x, ...)` pattern (I'm fine with lambdas generally) but this is one of the only multiline ones with a big compound expression., the code was changed by the developer from on_results=lambda x: serialize(
+                     x,
+                     request.user,
+                     ProjectSummarySerializer(
+                         environment_id=self._get_environment_id_from_request(
+                             request, organization.id
+                         ),
+                         stats_period=stats_period,
+                     ),
+                 ), (if dont have code before, the code wasnt exist yet) to def serialize_on_result(result):
+                 environment_id = self._get_environment_id_from_request(request, organization.id)
+                 serializer = ProjectSummarySerializer(
+                     environment_id=environment_id, stats_period=stats_period,
+                 )
+                 return serialize(result, request.user, serializer), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

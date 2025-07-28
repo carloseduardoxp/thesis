@@ -1,0 +1,25 @@
+Given the following Java code snippet:
+
+public class DeepSeek {
+
+    public static Object[] removeElement(Object[] originalArray, int indexToRemove) {
+        if (originalArray == null || indexToRemove < 0 || indexToRemove >= originalArray.length) {
+            return originalArray;
+        }
+
+        Object[] newArray = new Object[originalArray.length - 1];
+
+        for (int i = 0, j = 0; i < originalArray.length; i++) {
+            if (i != indexToRemove) {
+                newArray[j++] = originalArray[i];
+            }
+        }
+
+        return newArray;
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S127 message = Refactor the code in order to not assign to this loop counter from within the loop body., start line = 13, end line = 13.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

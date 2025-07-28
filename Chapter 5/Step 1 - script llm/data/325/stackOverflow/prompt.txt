@@ -1,0 +1,50 @@
+Given the following Java code snippet:
+
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Actions extends JFrame implements ActionListener {
+
+    JPanel pnl = new JPanel();
+    ImageIcon ic1 = new ImageIcon("/home/mudit/Downloads/duke.png");
+    JButton btn1 = new JButton("Click", ic1);
+    JTextArea ta = new JTextArea(5, 37);
+
+    public static void main(String[] args) {
+        Actions gui = new Actions();
+    }
+
+    public Actions() {
+        super("Swing Window");
+        setSize(500, 300);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        add(pnl);
+        btn1.setHorizontalTextPosition(JButton.CENTER);
+        btn1.setVerticalTextPosition(JButton.BOTTOM);
+        ta.setLineWrap(true);
+        ta.setWrapStyleWord(true);
+        pnl.add(btn1);
+        pnl.add(ta);
+        btn1.setEnabled(true);
+        ta.setText("Button is enabled");
+        btn1.addActionListener(this);
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent event) {
+        if (event.getSource() == btn1) {
+            if (event.getSource() == btn1) {
+                if (ta.getText().equals("Button is enabled")) {
+                    ta.setText("Button is Clicked");
+                } else {
+                    ta.setText("Button is enabled");
+                }
+            }
+
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1066 message = Merge this if statement with the enclosing one., start line = 35, end line = 35, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Button is enabled" 3 times., start line = 28, end line = 28, rule key = java:S1854 message = Remove this useless assignment to local variable "gui"., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "gui" local variable., start line = 13, end line = 13, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "CENTER"., start line = 21, end line = 21, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "BOTTOM"., start line = 22, end line = 22, rule key = java:S1066 message = Merge this if statement with the enclosing one., start line = 35, end line = 35, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Button is enabled" 3 times., start line = 28, end line = 28, rule key = java:S1854 message = Remove this useless assignment to local variable "gui"., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "gui" local variable., start line = 13, end line = 13, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "CENTER"., start line = 21, end line = 21, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "BOTTOM"., start line = 22, end line = 22, rule key = java:S1066 message = Merge this if statement with the enclosing one., start line = 35, end line = 35, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Button is enabled" 3 times., start line = 28, end line = 28, rule key = java:S1854 message = Remove this useless assignment to local variable "gui"., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "gui" local variable., start line = 13, end line = 13, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "CENTER"., start line = 21, end line = 21, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "BOTTOM"., start line = 22, end line = 22, rule key = java:S1066 message = Merge this if statement with the enclosing one., start line = 35, end line = 35, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Button is enabled" 3 times., start line = 28, end line = 28, rule key = java:S1854 message = Remove this useless assignment to local variable "gui"., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "gui" local variable., start line = 13, end line = 13, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "CENTER"., start line = 21, end line = 21, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "BOTTOM"., start line = 22, end line = 22, rule key = java:S1066 message = Merge this if statement with the enclosing one., start line = 35, end line = 35, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Button is enabled" 3 times., start line = 28, end line = 28, rule key = java:S1854 message = Remove this useless assignment to local variable "gui"., start line = 13, end line = 13, rule key = java:S1481 message = Remove this unused "gui" local variable., start line = 13, end line = 13, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "CENTER"., start line = 21, end line = 21, rule key = java:S3252 message = Use static access with "javax.swing.SwingConstants" for "BOTTOM"., start line = 22, end line = 22.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

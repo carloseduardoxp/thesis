@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,21,21,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,34,34,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,46,46,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,50,50,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,53,53,MODULAR,Replace this use of System.out by a logger.,null,

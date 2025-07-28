@@ -1,0 +1,27 @@
+Based on this pull request with the developer description: Improve readability of Node transform/forEach typed methods by moving the "type token" to the front of the method, before the lambda declaration., the code was changed by the developer from return plan.transformExpressionsUp(u -> {            
+                 Collection<Attribute> childrenOutput = new LinkedHashSet<>();
+                 for (LogicalPlan child : plan.children()) {
+                     childrenOutput.addAll(child.output());
+                 }
+                 NamedExpression named = resolveAgainstList(u, childrenOutput);                
+                 if (named != null) {
+                     if (log.isTraceEnabled()) {
+                         log.trace("Resolved {} to {}", u, named);
+                     }
+                     return named;
+                 }
+                 return u;
+             }, UnresolvedAttribute.class); (if dont have code before, the code wasnt exist yet) to return plan.transformExpressionsUp(UnresolvedAttribute.class, u -> {
+                 Collection<Attribute> childrenOutput = new LinkedHashSet<>();
+                 for (LogicalPlan child : plan.children()) {
+                     childrenOutput.addAll(child.output());
+                 }
+                 NamedExpression named = resolveAgainstList(u, childrenOutput);
+                 if (named != null) {
+                     if (log.isTraceEnabled()) {
+                         log.trace("Resolved {} to {}", u, named);
+                     }
+                     return named;
+                 }
+                 return u;
+             });, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

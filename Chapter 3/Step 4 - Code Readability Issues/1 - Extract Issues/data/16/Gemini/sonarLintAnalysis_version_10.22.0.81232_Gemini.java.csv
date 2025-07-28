@@ -1,0 +1,11 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,4,4,DISTINCT,Define a constant instead of duplicating this literal "Thread " 3 times.,null,
+java:S106,4,4,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,7,7,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2142,10,10,COMPLETE,Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.,null,
+java:S106,14,14,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,25,25,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,28,28,MODULAR,Replace this use of System.out by a logger.,null,
+java:S2142,31,31,COMPLETE,Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.,null,
+java:S106,35,35,MODULAR,Replace this use of System.out by a logger.,null,

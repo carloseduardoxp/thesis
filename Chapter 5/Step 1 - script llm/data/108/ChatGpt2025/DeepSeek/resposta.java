@@ -1,0 +1,148 @@
+import java.util.Random;
+
+public class NeuralNetwork {
+    int inputNodes;
+    int hiddenNodes;
+    int outputNodes;
+    double[][] weightsInputHidden;
+    double[][] weightsHiddenOutput;
+    double[] hiddenBias;
+    double[] outputBias;
+    double learningRate = 0.1;
+
+    Random rand = new Random();
+
+    public NeuralNetwork(int inputNodes, int hiddenNodes, int outputNodes) {
+        this.inputNodes = inputNodes;
+        this.hiddenNodes = hiddenNodes;
+        this.outputNodes = outputNodes;
+
+        weightsInputHidden = new double[hiddenNodes][inputNodes];
+        weightsHiddenOutput = new double[outputNodes][hiddenNodes];
+        hiddenBias = new double[hiddenNodes];
+        outputBias = new double[outputNodes];
+
+        initWeights(weightsInputHidden);
+        initWeights(weightsHiddenOutput);
+        initBias(hiddenBias);
+        initBias(outputBias);
+    }
+
+    private void initWeights(double[][] weights) {
+        for (int i = 0; i < weights.length; i++)
+            for (int j = 0; j < weights[i].length; j++)
+                weights[i][j] = rand.nextDouble() * 2 - 1; // values between -1 and 1
+    }
+
+    private void initBias(double[] bias) {
+        for (int i = 0; i < bias.length; i++)
+            bias[i] = rand.nextDouble() * 2 - 1;
+    }
+
+    private double sigmoid(double x) {
+        return 1 / (1 + Math.exp(-x));
+    }
+
+    private double dsigmoid(double y) {
+        return y * (1 - y); // derivative of sigmoid
+    }
+
+    private double[] calculateHiddenLayer(double[] input) {
+        double[] hidden = new double[hiddenNodes];
+        for (int i = 0; i < hiddenNodes; i++) {
+            double sum = hiddenBias[i];
+            for (int j = 0; j < inputNodes; j++) {
+                sum += weightsInputHidden[i][j] * input[j];
+            }
+            hidden[i] = sigmoid(sum);
+        }
+        return hidden;
+    }
+
+    private double[] calculateOutputLayer(double[] hidden) {
+        double[] output = new double[outputNodes];
+        for (int i = 0; i < outputNodes; i++) {
+            double sum = outputBias[i];
+            for (int j = 0; j < hiddenNodes; j++) {
+                sum += weightsHiddenOutput[i][j] * hidden[j];
+            }
+            output[i] = sigmoid(sum);
+        }
+        return output;
+    }
+
+    public double[] feedforward(double[] input) {
+        double[] hidden = calculateHiddenLayer(input);
+        return calculateOutputLayer(hidden);
+    }
+
+    public void train(double[] input, double[] target) {
+        // Forward pass
+        double[] hidden = calculateHiddenLayer(input);
+        double[] output = calculateOutputLayer(hidden);
+
+        // Output error
+        double[] outputErrors = new double[outputNodes];
+        for (int i = 0; i < outputNodes; i++) {
+            outputErrors[i] = target[i] - output[i];
+        }
+
+        // Hidden -> Output weights update
+        for (int i = 0; i < outputNodes; i++) {
+            double gradient = dsigmoid(output[i]) * outputErrors[i] * learningRate;
+            for (int j = 0; j < hiddenNodes; j++) {
+                weightsHiddenOutput[i][j] += gradient * hidden[j];
+            }
+            outputBias[i] += gradient;
+        }
+
+        // Hidden layer error
+        double[] hiddenErrors = new double[hiddenNodes];
+        for (int i = 0; i < hiddenNodes; i++) {
+            double error = 0;
+            for (int j = 0; j < outputNodes; j++) {
+                error += weightsHiddenOutput[j][i] * outputErrors[j];
+            }
+            hiddenErrors[i] = error;
+        }
+
+        // Input -> Hidden weights update
+        for (int i = 0; i < hiddenNodes; i++) {
+            double gradient = dsigmoid(hidden[i]) * hiddenErrors[i] * learningRate;
+            for (int j = 0; j < inputNodes; j++) {
+                weightsInputHidden[i][j] += gradient * input[j];
+            }
+            hiddenBias[i] += gradient;
+        }
+    }
+
+    public static void main(String[] args) {
+        NeuralNetwork nn = new NeuralNetwork(2, 4, 1);
+
+        // XOR training data
+        double[][] inputs = {
+            {0, 0},
+            {0, 1},
+            {1, 0},
+            {1, 1}
+        };
+        double[][] targets = {
+            {0},
+            {1},
+            {1},
+            {0}
+        };
+
+        // Train
+        for (int i = 0; i < 10000; i++) {
+            int idx = i % 4;
+            nn.train(inputs[idx], targets[idx]);
+        }
+
+        // Test
+        for (double[] input : inputs) {
+            double[] output = nn.feedforward(input);
+            System.out.printf("Input: %s -> Output: %.4f%n", java.util.Arrays.toString(input), output[0]);
+        }
+    }
+}

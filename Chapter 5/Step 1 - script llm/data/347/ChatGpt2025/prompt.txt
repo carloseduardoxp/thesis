@@ -1,0 +1,20 @@
+Given the following Java code snippet:
+import java.sql.*;
+
+public class Chat {
+
+    public static void main(String[] args) {
+
+        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setString(1, username);
+        stmt.setString(2, password);
+        ResultSet rs = stmt.executeQuery();
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "rs"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "rs" local variable., start line = 11, end line = 11, rule key = java:S1854 message = Remove this useless assignment to local variable "rs"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "rs" local variable., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,4,4,LOGICAL,Remove this useless assignment to local variable "num2".,null,
+java:S1905,4,4,CLEAR,Remove this unnecessary cast to "double".,null,
+java:S1481,4,4,CLEAR,Remove this unused "num2" local variable.,null,

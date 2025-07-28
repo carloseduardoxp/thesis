@@ -1,0 +1,29 @@
+Given the following Java code snippet:
+
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
+
+public class Teste {
+
+    public static void main(String[] args) {
+        Robot robot = new Robot();    
+        Rectangle screenRect = new Rectangle(0, 0, 0, 0);
+        for (GraphicsDevice gd : GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()) {
+            screenRect = screenRect.union(gd.getDefaultConfiguration().getBounds());
+        }
+        BufferedImage capture = new Robot().createScreenCapture(screenRect);
+
+        ImageIO.write(capture, "bmp", new File("printscreen.bmp"));
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "robot"., start line = 15, end line = 15, rule key = java:S1481 message = Remove this unused "robot" local variable., start line = 15, end line = 15, rule key = java:S1854 message = Remove this useless assignment to local variable "robot"., start line = 15, end line = 15, rule key = java:S1481 message = Remove this unused "robot" local variable., start line = 15, end line = 15.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

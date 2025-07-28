@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+class ClassA  extends Draw{
+
+    public ClassA(){
+        super();
+    }
+
+} 
+
+public class ClassC {
+
+    public getParent(Object a_class)
+    {
+
+        String superClass = a_class.getClass().getSuperclass().getName();
+
+    }
+}
+
+the following improvements are recommended: rule key = java:S117 message = Rename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

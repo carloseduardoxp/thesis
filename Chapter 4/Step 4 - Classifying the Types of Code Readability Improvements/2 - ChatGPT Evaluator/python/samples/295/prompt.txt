@@ -1,0 +1,13 @@
+Based on this pull request with the developer description: Split long functions into multiple logical units, the code was changed by the developer from def install(parser, args, **kwargs):
+     # TODO: unify args.verbose?
+     tty.set_verbose(args.verbose or args.install_verbose)
+ 
+     if args.help_cdash:
+         parser = argparse.ArgumentParser(
+             formatter_class=argparse.RawDescriptionHelpFormatter,
+             epilog=textwrap.dedent(
+                 """\ (if dont have code before, the code wasnt exist yet) to def _print_cdash_help():
+     parser = argparse.ArgumentParser(
+         formatter_class=argparse.RawDescriptionHelpFormatter,
+         epilog=textwrap.dedent(
+             """\, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,5 @@
+Based on this pull request with the developer description: Use of Optional.orElseThrow allows to verify the optional is not empty before assigning to a variable. This subsequently removes need for Optional.get() calls., the code was changed by the developer from Optional<QualifiedName> prefix = statement.getName().getPrefix();
+         if (prefix.isEmpty()) {
+             throw semanticException(MISSING_TABLE, statement, "Table must be specified");
+         } (if dont have code before, the code wasnt exist yet) to QualifiedName prefix = statement.getName().getPrefix()
+                 .orElseThrow(() -> semanticException(MISSING_TABLE, statement, "Table must be specified"));, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,126 @@
+Given the following Java code snippet:
+//import java.io.InputStream;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class DataBase {
+
+    public void LoadDriver() {
+
+        // Load the JDBC-ODBC bridge driver
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException ee) {
+            ee.printStackTrace();
+        }
+    }
+
+    // 2.open a data source name by means of the jdbcodbcdriver.
+    static void connect() throws SQLException {
+
+        // Connect to the database
+        Connection con = DriverManager.getConnection("jdbc:mysql:host/databasename", "root", "admin");
+        Statement stmt = con.createStatement();
+        // Shut off autocommit
+        con.setAutoCommit(false);
+
+        System.out.println("1.Insert 2.Delete 3.Update 4.Select");
+        Scanner s = new Scanner(System.in);
+        int x;
+        x = s.nextInt();
+
+        String query; // SQL select string
+        ResultSet rs; // SQL query results
+        boolean more; // "more rows found" switch
+        String v1, v2; // Temporary storage results
+
+        Vector<Object> results = new Vector<Object>(10);
+
+        if (x == 1) {
+
+            try {
+                stmt.executeUpdate("INSERT INTO employee( emp_id,emp_name ) VALUES ( '122','shiva' ) ");
+            } catch (Exception e) {
+                System.out.println("Exception " + e);
+                e.printStackTrace();
+            }
+        }
+
+        if (x == 2) {
+
+            try {
+                stmt.executeUpdate("DELETE from employee where emp_id='102' ");
+            } catch (Exception e) {
+                System.out.println("Exception " + e);
+                e.printStackTrace();
+            }
+        }
+
+        if (x == 3) {
+
+            try {
+                stmt
+                        .executeUpdate("UPDATE employee SET emp_name = 'madavan' where emp_id='20'; ");
+            } catch (Exception e) {
+                System.out.println("Exception " + e);
+                e.printStackTrace();
+            }
+        }
+
+        query = "SELECT * FROM employee ";
+        try {
+            rs = stmt.executeQuery(query);
+            // Check to see if any rows were read
+            more = rs.next();
+            if (!more) {
+
+                System.out.println("No rows found.");
+                return;
+            }
+
+            // Loop through the rows retrieved from the query
+            while (more) {
+
+                v1 = "ID: " + rs.getInt("emp_id");
+                v2 = "Name: " + rs.getString("emp_name");
+
+                System.out.println(v1);
+                System.out.println(v2);
+                System.out.println("");
+
+                results.addElement(v1 + "\n" + v2 + "\n");
+
+                more = rs.next();
+            }
+            rs.close();
+
+        } catch (SQLException e) {
+            System.out.println("" + results.size() + "results where found.");
+        } finally {
+            stmt.close();
+        }
+    }
+
+    public static void main(String[] args) throws SQLException {
+        String str = "y";
+        do {
+            DataBase s = new DataBase();
+            s.LoadDriver();
+            DataBase.connect();
+            Scanner sc = new Scanner(System.in);
+            System.out.println("DO u Want to PROCEED TO QUERY : ");
+            str = sc.next();
+        } while (str != "n");
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 42, end line = 42, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Exception " 3 times., start line = 49, end line = 49, rule key = java:S100 message = Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 13, end line = 13, rule key = java:S4925 message = Remove this "Class.forName()", start line = 17, end line = 17, rule key = java:S1659 message = Declare "v2" on a separate line., start line = 40, end line = 40, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 110, end line = 110, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 42, end line = 42, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Exception " 3 times., start line = 49, end line = 49, rule key = java:S100 message = Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 13, end line = 13, rule key = java:S4925 message = Remove this "Class.forName()", start line = 17, end line = 17, rule key = java:S1659 message = Declare "v2" on a separate line., start line = 40, end line = 40, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 110, end line = 110, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 42, end line = 42, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Exception " 3 times., start line = 49, end line = 49, rule key = java:S100 message = Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 13, end line = 13, rule key = java:S4925 message = Remove this "Class.forName()", start line = 17, end line = 17, rule key = java:S1659 message = Declare "v2" on a separate line., start line = 40, end line = 40, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 110, end line = 110, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 42, end line = 42, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Exception " 3 times., start line = 49, end line = 49, rule key = java:S100 message = Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 13, end line = 13, rule key = java:S4925 message = Remove this "Class.forName()", start line = 17, end line = 17, rule key = java:S1659 message = Declare "v2" on a separate line., start line = 40, end line = 40, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 110, end line = 110, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 42, end line = 42, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Exception " 3 times., start line = 49, end line = 49, rule key = java:S100 message = Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 13, end line = 13, rule key = java:S4925 message = Remove this "Class.forName()", start line = 17, end line = 17, rule key = java:S1659 message = Declare "v2" on a separate line., start line = 40, end line = 40, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 110, end line = 110, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 42, end line = 42, rule key = java:S1192 message = Define a constant instead of duplicating this literal "Exception " 3 times., start line = 49, end line = 49, rule key = java:S100 message = Rename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'., start line = 13, end line = 13, rule key = java:S4925 message = Remove this "Class.forName()", start line = 17, end line = 17, rule key = java:S1659 message = Declare "v2" on a separate line., start line = 40, end line = 40, rule key = java:S1854 message = Remove this useless assignment to local variable "str"., start line = 110, end line = 110.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

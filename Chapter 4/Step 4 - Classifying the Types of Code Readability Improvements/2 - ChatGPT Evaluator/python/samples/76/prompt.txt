@@ -1,0 +1,10 @@
+Based on this pull request with the developer description: New pylint allows you to seperately set a maximum number of total aguments and a maximum number of positional arguments. This gave us lots of warnings on the number of functions that had a confusingly high number of arguments.    Rather than just up the limit in pylintrc it seems like good practice to make many of these arguments keyword only. This make code more clear, and more robust as we go forward., the code was changed by the developer from def __init__(self, name, position, explode_translation, size, fastener_type, direction_axis): (if dont have code before, the code wasnt exist yet) to def __init__(
+         self,
+         name:str,
+         *,
+         position:tuple[float, float, float]=(0.0, 0.0, 0.0),
+         explode_translation:tuple[float, float, float]=(0.0, 0.0, 0.0),
+         size:str="M3-0.5",
+         fastener_type:str="iso7380_1",
+         direction_axis:str="-Z"
+     ):, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

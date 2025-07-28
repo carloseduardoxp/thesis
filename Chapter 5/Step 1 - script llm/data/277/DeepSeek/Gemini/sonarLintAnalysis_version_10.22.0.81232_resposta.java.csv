@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S6395,5,5,CLEAR,Unwrap this unnecessarily grouped subpattern.,null,
+java:S106,26,26,MODULAR,Replace this use of System.out by a logger.,null,
+java:S5843,5,5,CLEAR,Simplify this regular expression to reduce its complexity from 24 to the 20 allowed.,null,

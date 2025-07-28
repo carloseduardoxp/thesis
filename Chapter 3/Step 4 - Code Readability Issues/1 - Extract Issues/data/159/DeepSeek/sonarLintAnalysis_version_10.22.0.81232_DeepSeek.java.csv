@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,9,9,LOGICAL,Remove this useless assignment to local variable "myDouble".,null,
+java:S1854,8,8,LOGICAL,Remove this useless assignment to local variable "myFloat".,null,
+java:S1854,7,7,LOGICAL,Remove this useless assignment to local variable "myLong".,null,
+java:S1481,7,7,CLEAR,Remove this unused "myLong" local variable.,null,
+java:S1481,8,8,CLEAR,Remove this unused "myFloat" local variable.,null,
+java:S1481,9,9,CLEAR,Remove this unused "myDouble" local variable.,null,

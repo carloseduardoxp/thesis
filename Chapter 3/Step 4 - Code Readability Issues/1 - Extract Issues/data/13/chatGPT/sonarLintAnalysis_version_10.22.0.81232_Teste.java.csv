@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,19,19,LOGICAL,Remove this useless assignment to local variable "size".,null,
+java:S1481,19,19,CLEAR,Remove this unused "size" local variable.,null,

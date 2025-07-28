@@ -1,0 +1,12 @@
+Based on this pull request with the developer description: remove main method, the code was changed by the developer from public static void main(String[] args) {
+         String str1 = "DSGSHSRGSRHTRD";
+         String str2 = "DATRGAGTSHS";
+         String lcs = getLCS(str1, str2);
+ 
+         // Print LCS
+         if (lcs != null) {
+             System.out.println("String 1: " + str1);
+             System.out.println("String 2: " + str2);
+             System.out.println("LCS: " + lcs);
+             System.out.println("LCS length: " + lcs.length());
+         } (if dont have code before, the code wasnt exist yet) to , (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,18 @@
+Based on this pull request with the developer description: Reduce nesting, the code was changed by the developer from if (hcm.virtualHosts() != null) {         ImmutableMap<Route, ServerInterceptor> interceptors = generatePerRouteInterceptors(                 hcm.httpFilterConfigs(), hcm.virtualHosts());         return new AtomicReference<>(ServerRoutingConfig.create(hcm.virtualHosts(),interceptors)); } else {         RouteDiscoveryState rds = routeDiscoveryStates.get(hcm.rdsName());         checkNotNull(rds, "rds");         AtomicReference<ServerRoutingConfig> serverRoutingConfigRef = new AtomicReference<>();         if (rds.savedVirtualHosts != null) {           ImmutableMap<Route, ServerInterceptor> interceptors = generatePerRouteInterceptors(               hcm.httpFilterConfigs(), rds.savedVirtualHosts);           ServerRoutingConfig serverRoutingConfig =               ServerRoutingConfig.create(rds.savedVirtualHosts, interceptors);           serverRoutingConfigRef.set(serverRoutingConfig);         } else {           serverRoutingConfigRef.set(ServerRoutingConfig.FAILING_ROUTING_CONFIG);         }         savedRdsRoutingConfigRef.put(filterChain, serverRoutingConfigRef);         return serverRoutingConfigRef; } (if dont have code before, the code wasnt exist yet) to if (hcm.virtualHosts() != null) {         interceptors = generatePerRouteInterceptors(hcm.httpFilterConfigs(), hcm.virtualHosts());
+         return new AtomicReference<>(ServerRoutingConfig.create(hcm.virtualHosts(), interceptors));
+ }
+ 
+ RouteDiscoveryState rds = routeDiscoveryStates.get(hcm.rdsName());
+  checkNotNull(rds, "rds");
+ 
+ ServerRoutingConfig routingConfig;
+ ImmutableList<VirtualHost> savedVhosts = rds.savedVirtualHosts;
+ if (savedVhosts != null) {
+     interceptors = generatePerRouteInterceptors(hcm.httpFilterConfigs(), savedVhosts);
+     routingConfig = ServerRoutingConfig.create(savedVhosts, interceptors); } else {      routingConfig = ServerRoutingConfig.FAILING_ROUTING_CONFIG;
+ }
+ 
+ AtomicReference<ServerRoutingConfig> routingConfigRef = new AtomicReference<>(routingConfig);
+ savedRdsRoutingConfigRef.put(filterChain, routingConfigRef);
+ return routingConfigRef;
+ }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

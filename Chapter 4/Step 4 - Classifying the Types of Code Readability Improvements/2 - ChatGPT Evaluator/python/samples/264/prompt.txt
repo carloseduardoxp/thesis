@@ -1,0 +1,9 @@
+Based on this pull request with the developer description: * Remove unnecessary `MetricConfiguration` sorting from `ParameterBuilder.get_metrics()` (this is done later by `AttributedResolvedMetrics` anyway)., the code was changed by the developer from metrics_to_resolve = sorted(
+             metrics_to_resolve,
+             key=lambda metric_configuration_element: (
+                 metric_configuration_element.metric_value_kwargs_id,
+                 batch_id_ordering[
+                     metric_configuration_element.metric_domain_kwargs["batch_id"]
+                 ],
+             ),
+         ) (if dont have code before, the code wasnt exist yet) to , (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

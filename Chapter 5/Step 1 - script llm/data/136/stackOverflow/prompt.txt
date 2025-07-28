@@ -1,0 +1,18 @@
+Given the following Java code snippet:
+
+public class TestClass {
+
+    public static void main(String[] args) {
+        TestClass test = new TestClass();
+        test.doSth();
+    }
+
+    public void doSth() {
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1186 message = Add a nested comment explaining why this method is empty, start line = 9, end line = 9.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

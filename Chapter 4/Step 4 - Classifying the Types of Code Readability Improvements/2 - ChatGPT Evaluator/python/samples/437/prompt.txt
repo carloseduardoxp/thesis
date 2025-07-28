@@ -1,0 +1,8 @@
+Based on this pull request with the developer description: Shorten long lines, the code was changed by the developer from if not online_egtb_cfg.get("enabled", False) or game.state[f"{wb}time"] < online_egtb_cfg.get("min_time", 20) * 1000 or board.uci_variant not in ["chess", "antichess", "atomic"] and online_egtb_cfg.get("source", "lichess") == "lichess" or board.uci_variant != "chess" and online_egtb_cfg.get("source", "lichess") == "chessdb" or pieces > online_egtb_cfg.get("max_pieces", 7) or board.castling_rights: to if (not use_online_egtb
+             or game.state[f"{wb}time"] < minimum_time
+             or board.uci_variant not in ["chess", "antichess", "atomic"]
+             and source == "lichess"
+             or board.uci_variant != "chess"
+             and source == "chessdb"
+             or pieces > online_egtb_cfg.get("max_pieces", 7)
+             or board.castling_rights):, please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label

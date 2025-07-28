@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1068,9,9,CLEAR,Remove this unused "b" private field.,null,
+java:S1068,15,15,CLEAR,Remove this unused "id" private field.,null,

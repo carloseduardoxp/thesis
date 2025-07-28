@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,9,13,LOGICAL,Remove this useless assignment to local variable "users".,null,
+java:S1481,9,9,CLEAR,Remove this unused "users" local variable.,null,

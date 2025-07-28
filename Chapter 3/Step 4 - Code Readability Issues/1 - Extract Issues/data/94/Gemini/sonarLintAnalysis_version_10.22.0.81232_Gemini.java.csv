@@ -1,0 +1,13 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,139,139,LOGICAL,Remove this useless assignment to local variable "emptyIterator".,null,
+java:S106,124,124,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,127,127,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,130,130,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,135,135,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,138,138,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1481,139,139,CLEAR,Remove this unused "emptyIterator" local variable.,null,
+java:S125,142,142,CLEAR,This block of commented-out lines of code should be removed.,null,
+java:S106,144,144,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,147,147,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,154,154,MODULAR,Replace this use of System.out by a logger.,null,

@@ -1,0 +1,19 @@
+Given the following Java code snippet:
+
+
+public class GeoTiffCreator {
+
+    public static void main(String[] args) throws Exception {
+        CoordinateReferenceSystem sourceCRS = CRS.decode("EPSG:4326", true);
+        CoordinateReferenceSystem targetCRS = CRS.decode("EPSG:32612");
+        MathTransform transformToEpsg4326 = CRS.findMathTransform(targetCRS, sourceCRS);
+        double lon = geo_data.getModelTiePoints()[3];// 175784.99999999997 - X
+        double lat = geo_data.getModelTiePoints()[4];// 5842215.0   - Y
+        GeometryFactory geometryFactory = new GeometryFactory(new PrecisionModel(), 32612);
+        Geometry pointUpperLeft = geometryFactory.createPoint(new Coordinate(lon, lat));
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "pointUpperLeft"., start line = 12, end line = 12, rule key = java:S1854 message = Remove this useless assignment to local variable "transformToEpsg4326"., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "transformToEpsg4326" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "pointUpperLeft" local variable., start line = 12, end line = 12, rule key = java:S1854 message = Remove this useless assignment to local variable "pointUpperLeft"., start line = 12, end line = 12, rule key = java:S1854 message = Remove this useless assignment to local variable "transformToEpsg4326"., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "transformToEpsg4326" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "pointUpperLeft" local variable., start line = 12, end line = 12.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,36,36,LOGICAL,Remove this useless assignment to local variable "age".,null,
+java:S1854,35,35,LOGICAL,Remove this useless assignment to local variable "name".,null,
+java:S1481,35,35,CLEAR,Remove this unused "name" local variable.,null,
+java:S1481,36,36,CLEAR,Remove this unused "age" local variable.,null,

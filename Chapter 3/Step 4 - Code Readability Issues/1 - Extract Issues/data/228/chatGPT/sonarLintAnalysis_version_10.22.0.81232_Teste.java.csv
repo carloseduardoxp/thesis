@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,4,4,LOGICAL,Remove this useless assignment to local variable "title".,null,
+java:S1481,4,4,CLEAR,Remove this unused "title" local variable.,null,

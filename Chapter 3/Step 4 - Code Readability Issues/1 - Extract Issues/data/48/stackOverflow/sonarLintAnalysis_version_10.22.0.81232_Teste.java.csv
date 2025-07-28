@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3740,8,8,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S3740,8,8,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S1854,8,14,LOGICAL,Remove this useless assignment to local variable "treeSetObj".,null,
+java:S1481,8,8,CLEAR,Remove this unused "treeSetObj" local variable.,null,

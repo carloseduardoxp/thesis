@@ -1,0 +1,25 @@
+Given the following Java code snippet:
+
+public class DeepSeek {
+
+    public static void main(String[] args) {
+        // Usage:
+        int[] numbers = {1, 2, 3, 4, 5};
+        numbers = popLastElement(numbers); // removes 5
+    }
+
+    public static int[] popLastElement(int[] array) {
+        if (array == null || array.length == 0) {
+            return array;
+        }
+
+        int[] newArray = new int[array.length - 1];
+        System.arraycopy(array, 0, newArray, 0, array.length - 1);
+        return newArray;
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "numbers"., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

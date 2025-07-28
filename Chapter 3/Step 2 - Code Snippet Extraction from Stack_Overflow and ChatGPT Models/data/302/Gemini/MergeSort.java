@@ -1,0 +1,78 @@
+
+public class MergeSort {
+
+    public static void mergeSort(int[] arr) {
+        if (arr == null || arr.length <= 1) {
+            return; // Already sorted or empty
+        }
+        int[] temp = new int[arr.length]; // Temporary array for merging
+        mergeSort(arr, temp, 0, arr.length - 1);
+    }
+
+    private static void mergeSort(int[] arr, int[] temp, int left, int right) {
+        if (left < right) {
+            int mid = left + (right - left) / 2; // Calculate the middle point
+            mergeSort(arr, temp, left, mid);      // Sort the first half
+            mergeSort(arr, temp, mid + 1, right); // Sort the second half
+            merge(arr, temp, left, mid, right);   // Merge the sorted halves
+        }
+    }
+
+    private static void merge(int[] arr, int[] temp, int left, int mid, int right) {
+        // Copy both halves into the temporary array
+        for (int i = left; i <= right; i++) {
+            temp[i] = arr[i];
+        }
+
+        int i = left;      // Pointer for the first half
+        int j = mid + 1;   // Pointer for the second half
+        int k = left;      // Pointer for the original array
+
+        // Merge the two halves back into the original array
+        while (i <= mid && j <= right) {
+            if (temp[i] <= temp[j]) {
+                arr[k] = temp[i];
+                i++;
+            } else {
+                arr[k] = temp[j];
+                j++;
+            }
+            k++;
+        }
+
+        // Copy remaining elements of the first half (if any)
+        while (i <= mid) {
+            arr[k] = temp[i];
+            i++;
+            k++;
+        }
+
+        // Copy remaining elements of the second half (if any) - no need, as they are already in correct position relative to the first half
+        // But for completeness and clarity, it's often included if the first half was exhausted.
+        // In this specific implementation with the while (i <= mid) loop, the remaining from the second half will naturally be placed at the end if the first half finished first.
+    }
+
+    public static void main(String[] args) {
+        int[] data = {12, 11, 13, 5, 6, 7};
+        System.out.println("Original Array:");
+        printArray(data);
+
+        mergeSort(data);
+
+        System.out.println("Sorted Array (Merge Sort):");
+        printArray(data);
+
+        int[] data2 = {38, 27, 43, 3, 9, 82, 10};
+        System.out.println("\nOriginal Array 2:");
+        printArray(data2);
+        mergeSort(data2);
+        System.out.println("Sorted Array 2 (Merge Sort):");
+        printArray(data2);
+    }
+
+    public static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}

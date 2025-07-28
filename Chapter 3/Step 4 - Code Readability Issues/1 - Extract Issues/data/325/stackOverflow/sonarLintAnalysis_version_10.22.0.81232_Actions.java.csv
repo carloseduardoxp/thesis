@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1066,35,35,CLEAR,Merge this if statement with the enclosing one.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,28,28,DISTINCT,Define a constant instead of duplicating this literal "Button is enabled" 3 times.,null,
+java:S1854,13,13,LOGICAL,Remove this useless assignment to local variable "gui".,null,
+java:S1481,13,13,CLEAR,Remove this unused "gui" local variable.,null,
+java:S3252,21,21,CLEAR,Use static access with "javax.swing.SwingConstants" for "CENTER".,null,
+java:S3252,22,22,CLEAR,Use static access with "javax.swing.SwingConstants" for "BOTTOM".,null,

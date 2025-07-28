@@ -1,0 +1,13 @@
+
+import java.util.Set;
+
+
+public class Chat {
+
+    public static void main(String[] args) {
+
+        Set<String> immutableSet = Set.of("A", "B", "C");
+
+    }
+
+}

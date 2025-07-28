@@ -1,0 +1,15 @@
+Given the following Java code snippet:
+
+public class Gemini {
+
+    public static void main(String[] args) {
+
+        String[] stringArray = originalString.split(delimiter);
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "stringArray"., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "stringArray" local variable., start line = 6, end line = 6, rule key = java:S1854 message = Remove this useless assignment to local variable "stringArray"., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "stringArray" local variable., start line = 6, end line = 6.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

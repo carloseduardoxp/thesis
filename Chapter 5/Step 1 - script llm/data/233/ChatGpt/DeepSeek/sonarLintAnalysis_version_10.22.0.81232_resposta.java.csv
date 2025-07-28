@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2201,10,10,LOGICAL,The return value of "parseInt" must be used.,null,
+java:S2201,12,12,LOGICAL,The return value of "size" must be used.,null,
+java:S2201,13,13,LOGICAL,The return value of "length" must be used.,null,

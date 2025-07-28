@@ -1,0 +1,17 @@
+Based on this pull request with the developer description: Refactor DAG_SCRIPT variable in test_trigger_dagrun for readability, the code was changed by the developer from DAG_SCRIPT = (
+     "from datetime import datetime\n\n"
+     "from airflow.models import DAG\n"
+     "from airflow.operators.empty import EmptyOperator\n\n"
+     "dag = DAG(\n"
+     f"dag_id='{TRIGGERED_DAG_ID}', \n"
+     "default_args={'start_date': datetime(2019, 1, 1)}, \n"
+     "schedule=None,\n"
+     ")\n"
+     'task = EmptyOperator(task_id="test", dag=dag)' (if dont have code before, the code wasnt exist yet) to DAG_SCRIPT = f"""\
+ from datetime import datetime
+ from airflow.models import DAG
+ from airflow.operators.empty import EmptyOperator
+ dag = DAG(
+     dag_id='{TRIGGERED_DAG_ID}',
+     default_args={{'start_date': datetime(2019, 1, 1)}},
+     schedule_interval=None, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

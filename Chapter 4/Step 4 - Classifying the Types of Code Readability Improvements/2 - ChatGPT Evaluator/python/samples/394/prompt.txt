@@ -1,0 +1,14 @@
+Based on this pull request with the developer description: Update pack formatting and improve readability, the code was changed by the developer from status_dict = {0: "EFI_SUCCESS", 1: "EFI_LOAD_ERROR", 2: "EFI_INVALID_PARAMETER", 3: "EFI_UNSUPPORTED", 4: "EFI_BAD_BUFFER_SIZE", 5: "EFI_BUFFER_TOO_SMALL", 6: "EFI_NOT_READY", 7: "EFI_DEVICE_ERROR", 8: "EFI_WRITE_PROTECTED", 9: "EFI_OUT_OF_RESOURCES", 14: "EFI_NOT_FOUND", 26: "EFI_SECURITY_VIOLATION"} (if dont have code before, the code wasnt exist yet) to status_dict = {
+             0: "EFI_SUCCESS",
+             1: "EFI_LOAD_ERROR",
+             2: "EFI_INVALID_PARAMETER",
+             3: "EFI_UNSUPPORTED",
+             4: "EFI_BAD_BUFFER_SIZE",
+             5: "EFI_BUFFER_TOO_SMALL",
+             6: "EFI_NOT_READY",
+             7: "EFI_DEVICE_ERROR",
+             8: "EFI_WRITE_PROTECTED",
+             9: "EFI_OUT_OF_RESOURCES",
+             14: "EFI_NOT_FOUND",
+             26: "EFI_SECURITY_VIOLATION"
+         }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

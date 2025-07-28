@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,35,35,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,37,37,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,39,39,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1130,49,49,CLEAR,Remove the declaration of thrown exception 'java.io.UnsupportedEncodingException', as it cannot be thrown from method's body.,null,
+java:S5542,50,50,TRUSTWORTHY,Use another cipher mode or disable padding.,null,
+java:S5542,66,66,TRUSTWORTHY,Use another cipher mode or disable padding.,null,

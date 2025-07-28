@@ -1,0 +1,2 @@
+Based on this pull request with the developer description: Improved dostrings, the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to """Convert a number to a string with units. If value is a string it's returned as is.
+         Parameters, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

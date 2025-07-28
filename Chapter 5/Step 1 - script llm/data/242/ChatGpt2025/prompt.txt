@@ -1,0 +1,50 @@
+Given the following Java code snippet:
+import android.os.CountDownTimer;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView countdownText;
+    private CountDownTimer countDownTimer;
+    private long timeLeftInMillis = 60000; // 1 minute in milliseconds
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        countdownText = findViewById(R.id.countdown_text);
+        
+        startTimer();
+    }
+
+    private void startTimer() {
+        countDownTimer = new CountDownTimer(timeLeftInMillis, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeftInMillis = millisUntilFinished;
+                updateCountDownText();
+            }
+
+            @Override
+            public void onFinish() {
+                countdownText.setText("Finished!");
+            }
+        }.start();
+    }
+
+    private void updateCountDownText() {
+        int minutes = (int) (timeLeftInMillis / 1000) / 60;
+        int seconds = (int) (timeLeftInMillis / 1000) % 60;
+
+        String timeFormatted = String.format("%02d:%02d", minutes, seconds);
+
+        countdownText.setText(timeFormatted);
+    }
+
+    // Optional: add pause, resume, reset methods if needed
+}
+
+
+the following improvements are recommended: rule key = java:S1450 message = Remove the "countDownTimer" field and declare it as a local variable in the relevant methods., start line = 7, end line = 7, rule key = java:S1068 message = Remove this unused "countDownTimer" private field., start line = 7, end line = 7, rule key = java:S1450 message = Remove the "countDownTimer" field and declare it as a local variable in the relevant methods., start line = 7, end line = 7, rule key = java:S1068 message = Remove this unused "countDownTimer" private field., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

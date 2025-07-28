@@ -1,0 +1,22 @@
+Given the following Java code snippet:
+
+public class Teste {
+
+    public static void main(String[] args) {
+        BlockingScheduler scheduler = new BlockingScheduler();
+
+        scheduler.execute(() -> {
+            Flowable.range(1, 10)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(scheduler)
+                    .doAfterTerminate(() -> scheduler.shutdown())
+                    .subscribe(v -> System.out.println(v + " on " + Thread.currentThread()));
+        });
+
+        System.out.println("BlockingScheduler finished");
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

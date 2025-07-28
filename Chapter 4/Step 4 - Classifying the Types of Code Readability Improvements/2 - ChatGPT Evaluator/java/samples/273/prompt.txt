@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Unnecessary blank lines through files are removed along with extraneous comment lines, the code was changed by the developer from //    public Location getLocation() {
+ //        return location;
+ //    } (if dont have code before, the code wasnt exist yet) to , (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

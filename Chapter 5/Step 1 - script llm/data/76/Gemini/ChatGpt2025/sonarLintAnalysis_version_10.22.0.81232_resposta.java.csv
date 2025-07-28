@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S6548,1,1,MODULAR,A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.,null,
+java:S3077,8,8,CLEAR,Use a thread-safe type; adding "volatile" is not enough to make this field thread-safe.,null,
+java:S106,38,38,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,48,48,MODULAR,Replace this use of System.out by a logger.,null,

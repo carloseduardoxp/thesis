@@ -1,0 +1,7 @@
+Given the following Java code snippet:
+public class MyReference {
+    public static TextView myTextView = new TextView();
+}
+
+the following improvements are recommended: rule key = java:S1444 message = Make this "public static myTextView" field final, start line = 2, end line = 2.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

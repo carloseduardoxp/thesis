@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,19,19,LOGICAL,Remove this useless assignment to local variable "receivedObject".,null,
+java:S1481,19,19,CLEAR,Remove this unused "receivedObject" local variable.,null,
+java:S1068,6,6,CLEAR,Remove this unused "name" private field.,null,
+java:S1068,7,7,CLEAR,Remove this unused "value" private field.,null,

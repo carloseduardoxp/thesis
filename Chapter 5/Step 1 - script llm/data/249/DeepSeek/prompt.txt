@@ -1,0 +1,13 @@
+Given the following Java code snippet:
+public class RemoveNumbers {
+    public static void main(String[] args) {
+        String input = "Order 123 for 5 items at 19.99 each";
+        String output = input.replaceAll("[0-9]", "");
+        System.out.println("Original: " + input);
+        System.out.println("Without numbers: " + output);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 4, end line = 4.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

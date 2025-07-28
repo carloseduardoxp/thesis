@@ -1,0 +1,1 @@
+Extract Lambda into a Named Function

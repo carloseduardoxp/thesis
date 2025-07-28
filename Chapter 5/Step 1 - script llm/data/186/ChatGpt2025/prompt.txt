@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+
+public class Chat {
+
+    public static void main(String[] args) {
+
+        int day = 2;
+
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+            case 2:
+                System.out.println("Tuesday");
+            case 3:
+                System.out.println("Wednesday");
+            default:
+                System.out.println("Another day");
+        }
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S128 message = End this switch case with an unconditional break, start line = 13, end line = 13, rule key = java:S128 message = End this switch case with an unconditional break, start line = 11, end line = 11, rule key = java:S128 message = End this switch case with an unconditional break, start line = 9, end line = 9.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

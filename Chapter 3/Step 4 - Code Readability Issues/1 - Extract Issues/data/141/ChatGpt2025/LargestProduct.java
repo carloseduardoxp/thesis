@@ -1,0 +1,21 @@
+public class LargestProduct {
+    public static void main(String[] args) {
+        int maxProduct = 0;
+        int num1 = 0, num2 = 0;
+
+        // Loop through all pairs from 1 to 999
+        for (int i = 1; i < 1000; i++) {
+            for (int j = i; j < 1000; j++) {  // start j at i to avoid repeats
+                int product = i * j;
+                if (product > maxProduct) {
+                    maxProduct = product;
+                    num1 = i;
+                    num2 = j;
+                }
+            }
+        }
+
+        System.out.println("Largest product: " + maxProduct);
+        System.out.println("Numbers: " + num1 + " and " + num2);
+    }
+}

@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,13,13,LOGICAL,Remove this useless assignment to local variable "param2".,null,
+java:S1854,12,12,LOGICAL,Remove this useless assignment to local variable "param1".,null,
+java:S1481,12,12,CLEAR,Remove this unused "param1" local variable.,null,
+java:S1481,13,13,CLEAR,Remove this unused "param2" local variable.,null,

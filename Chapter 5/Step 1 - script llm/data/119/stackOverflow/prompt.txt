@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+
+public class Menu_SPPAJ extends Activity {
+
+    public static Context context;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        //TODO write your onCreate code
+        context = this;
+    }
+
+    public static void onRefreshList() {
+        model.requery();
+        list_terbaru.setAdapter(new Adapter_Spaj_Terbaru(((Activity) context), model));
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S101 message = Rename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'., start line = 2, end line = 2, rule key = java:S1444 message = Make this "public static context" field final, start line = 4, end line = 4, rule key = java:S101 message = Rename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'., start line = 2, end line = 2, rule key = java:S1444 message = Make this "public static context" field final, start line = 4, end line = 4.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,23 @@
+Given the following Java code snippet:
+
+public class Swap_Numbers {
+
+    public static void main(String[] args) {
+
+        int numTens[] = {1, 2, 3, 4, 5}; // First array of numbers
+        int numHundred[] = {100, 200, 300, 400, 500}; //Second Array of Numbers
+
+        for (int i = 0; i < numTens.length; i++) {
+            numTens[i] = numTens[i] + numHundred[i];      // statement 1
+            numHundred[i] = numTens[i] - numHundred[i];   // statement 2
+            numTens[i] = numTens[i] - numHundred[i];      // statement 3
+        }
+
+        System.out.println(numTens[3]); // I want my numTens displays numHundred
+        System.out.println(numHundred[4]); // I want my numHundred displays numTens
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S101 message = Rename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'., start line = 2, end line = 2, rule key = java:S1197 message = Move the array designators [] to the type., start line = 6, end line = 6, rule key = java:S1197 message = Move the array designators [] to the type., start line = 7, end line = 7, rule key = java:S101 message = Rename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'., start line = 2, end line = 2, rule key = java:S1197 message = Move the array designators [] to the type., start line = 6, end line = 6, rule key = java:S1197 message = Move the array designators [] to the type., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

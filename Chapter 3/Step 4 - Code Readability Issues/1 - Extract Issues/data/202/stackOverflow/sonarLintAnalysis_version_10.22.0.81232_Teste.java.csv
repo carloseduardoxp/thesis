@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3740,9,9,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S1854,9,9,LOGICAL,Remove this useless assignment to local variable "response".,null,
+java:S1481,9,9,CLEAR,Remove this unused "response" local variable.,null,

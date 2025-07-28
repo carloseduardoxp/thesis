@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,13,15,LOGICAL,Remove this useless assignment to local variable "flatArray".,null,
+java:S1197,7,7,FORMATTED,Move the array designators [] to the type.,null,
+java:S1197,8,8,FORMATTED,Move the array designators [] to the type.,null,
+java:S1197,9,9,FORMATTED,Move the array designators [] to the type.,null,
+java:S1197,11,11,FORMATTED,Move the array designators [][] to the type.,null,
+java:S1481,13,13,CLEAR,Remove this unused "flatArray" local variable.,null,

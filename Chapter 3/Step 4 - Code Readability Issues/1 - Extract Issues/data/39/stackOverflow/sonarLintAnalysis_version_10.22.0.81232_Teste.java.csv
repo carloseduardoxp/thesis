@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,18,18,LOGICAL,Remove this useless assignment to local variable "imageLabel".,null,
+java:S106,13,13,MODULAR,Replace this use of System.out by a logger.,null,
+java:S125,14,14,CLEAR,This block of commented-out lines of code should be removed.,null,
+java:S3252,18,18,CLEAR,Use static access with "javax.swing.SwingConstants" for "CENTER".,null,
+java:S1481,18,18,CLEAR,Remove this unused "imageLabel" local variable.,null,
+java:S125,21,21,CLEAR,This block of commented-out lines of code should be removed.,null,

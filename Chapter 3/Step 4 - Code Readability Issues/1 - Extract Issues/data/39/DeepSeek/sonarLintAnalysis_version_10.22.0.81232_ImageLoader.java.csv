@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,11,11,DISTINCT,Define a constant instead of duplicating this literal "/images/myimage.png" 3 times.,null,
+java:S1854,11,11,LOGICAL,Remove this useless assignment to local variable "icon".,null,
+java:S1854,15,15,LOGICAL,Remove this useless assignment to local variable "image".,null,
+java:S1854,18,19,LOGICAL,Remove this useless assignment to local variable "toolkitImage".,null,
+java:S1481,11,11,CLEAR,Remove this unused "icon" local variable.,null,
+java:S1481,15,15,CLEAR,Remove this unused "image" local variable.,null,
+java:S1481,18,18,CLEAR,Remove this unused "toolkitImage" local variable.,null,

@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,41,41,DISTINCT,Define a constant instead of duplicating this literal "Member " 3 times.,null,
+java:S1602,16,16,CLEAR,Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.),null,
+java:S106,17,17,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,31,31,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,41,41,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,45,45,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,48,48,MODULAR,Replace this use of System.out by a logger.,null,

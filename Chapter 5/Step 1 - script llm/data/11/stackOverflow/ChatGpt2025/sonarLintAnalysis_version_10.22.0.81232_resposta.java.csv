@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1130,17,17,CLEAR,Remove the declaration of thrown exception 'java.security.spec.InvalidParameterSpecException', as it cannot be thrown from method's body.,null,
+java:S5542,18,18,TRUSTWORTHY,Use a secure cipher mode.,null,
+java:S1130,25,25,CLEAR,Remove the declaration of thrown exception 'java.security.spec.InvalidParameterSpecException', as it cannot be thrown from method's body.,null,
+java:S1130,25,25,CLEAR,Remove the declaration of thrown exception 'java.security.InvalidAlgorithmParameterException', as it cannot be thrown from method's body.,null,
+java:S5542,26,26,TRUSTWORTHY,Use a secure cipher mode.,null,

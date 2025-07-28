@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: This PR introduces some methods for converting between Mired, Kelvin, and percentages to make more explicit where the corresponding conversions happen in the converter., the code was changed by the developer from kelvinMax = (int) (1e6 / kMax); (if dont have code before, the code wasnt exist yet) to kelvinMax = miredToKelvin(minTemperatureInMired);  private int miredToKelvin(int temperatureInMired) {
+         return (int) (1e6 / temperatureInMired);
+     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,11 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2129,24,24,CONVENTIONAL,Remove this "String" constructor,null,
+java:S106,34,34,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,36,36,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,38,38,MODULAR,Replace this use of System.out by a logger.,null,
+java:S5542,49,49,TRUSTWORTHY,Use another cipher mode or disable padding.,null,
+java:S4719,53,53,CONVENTIONAL,Replace charset name argument with StandardCharsets.UTF_8,null,
+java:S5542,65,65,TRUSTWORTHY,Use another cipher mode or disable padding.,null,
+java:S4719,67,67,CONVENTIONAL,Replace charset name argument with StandardCharsets.UTF_8,null,
+java:S1130,70,70,CLEAR,Remove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.,null,

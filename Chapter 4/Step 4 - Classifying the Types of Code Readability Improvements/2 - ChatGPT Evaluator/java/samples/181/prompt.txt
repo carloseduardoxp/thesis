@@ -1,0 +1,17 @@
+Based on this pull request with the developer description: The anonymous classes were converted to lambda in the places where it improves readability and decreases the lines of code., the code was changed by the developer from executor.execute(new Runnable() {
+             @Override
+             public void run() {
+                 try {
+                     for (int i = 0; i < N; i++) {
+                         c1.markDelete(position);
+                     }
+                     counter.countDown();
+                 } catch (Exception e) {
+                     e.printStackTrace(); (if dont have code before, the code wasnt exist yet) to executor.execute(() -> {
+             try {
+                 for (int i = 0; i < N; i++) {
+                     c1.markDelete(position);
+                 }
+                 counter.countDown();
+             } catch (Exception e) {
+                 e.printStackTrace();, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

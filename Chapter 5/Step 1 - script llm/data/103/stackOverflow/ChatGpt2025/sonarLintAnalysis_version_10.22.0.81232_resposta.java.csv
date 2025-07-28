@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1186,5,5,COMPLETE,Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.,null,
+java:S6548,1,1,MODULAR,A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.,null,

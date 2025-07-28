@@ -1,0 +1,16 @@
+Given the following Java code snippet:
+public class A
+{
+    public A() { }
+}
+class B extends A
+{
+    public B() { }
+}
+class C extends B
+{
+    public C() { }
+}
+
+the following improvements are recommended: rule key = java:S1186 message = Add a nested comment explaining why this method is empty, start line = 3, end line = 3, rule key = java:S1186 message = Add a nested comment explaining why this method is empty, start line = 7, end line = 7, rule key = java:S1186 message = Add a nested comment explaining why this method is empty, start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

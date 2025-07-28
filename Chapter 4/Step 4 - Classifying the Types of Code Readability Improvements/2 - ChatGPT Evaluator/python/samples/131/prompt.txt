@@ -1,0 +1,10 @@
+Based on this pull request with the developer description: Scalable Code for Language Support  Introduced a dictionary-based approach for language support, making it more scalable. This ensures that new languages can be added in the future with minimal changes, as opposed to multiple conditional statements., the code was changed by the developer from if formats == 'py':
+         functions_dict, classes_dict = extract_py(dir)
+     elif formats == 'js':
+         functions_dict, classes_dict = extract_js(dir)
+     elif formats == 'java':
+         functions_dict, classes_dict = extract_java(dir) (if dont have code before, the code wasnt exist yet) to extraction_functions = {
+     'py': extract_py,
+     'js': extract_js,
+     'java': extract_java
+     }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

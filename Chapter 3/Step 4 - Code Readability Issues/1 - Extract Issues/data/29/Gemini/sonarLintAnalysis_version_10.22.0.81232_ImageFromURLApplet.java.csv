@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1450,9,9,CLEAR,Remove the "imageURL" field and declare it as a local variable in the relevant methods.,null,
+java:S1948,8,8,LOGICAL,Make non-static "image" transient or serializable.,null,
+java:S5738,6,6,COMPLETE,Remove this call to a deprecated class, it has been marked for removal.,null,
+java:S1075,10,10,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,

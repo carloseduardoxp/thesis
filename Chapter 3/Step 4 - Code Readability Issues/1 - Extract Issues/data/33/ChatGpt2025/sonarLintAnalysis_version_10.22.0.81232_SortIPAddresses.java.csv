@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1130,6,6,CLEAR,Remove the declaration of thrown exception 'java.net.UnknownHostException', as it cannot be thrown from method's body.,null,
+java:S106,17,17,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1128,1,1,CLEAR,Remove this unused import 'java.net.InetAddress'.,null,

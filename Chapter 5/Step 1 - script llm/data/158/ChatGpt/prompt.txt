@@ -1,0 +1,68 @@
+Given the following Java code snippet:
+public class MyObject implements Parcelable {
+  private String name;
+  private int age;
+
+  public MyObject(String name, int age) {
+      this.name = name;
+      this.age = age;
+  }
+
+  public String getName() {
+      return name;
+  }
+
+  public int getAge() {
+      return age;
+  }
+
+  protected MyObject(Parcel in) {
+      name = in.readString();
+      age = in.readInt();
+  }
+
+  public static final Creator<MyObject> CREATOR = new Creator<MyObject>() {
+      @Override
+      public MyObject createFromParcel(Parcel in) {
+          return new MyObject(in);
+      }
+
+      @Override
+      public MyObject[] newArray(int size) {
+          return new MyObject[size];
+      }
+  };
+
+  @Override
+  public int describeContents() {
+      return 0;
+  }
+
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+      dest.writeString(name);
+      dest.writeInt(age);
+  }
+}
+
+class Teste {
+  public static void main(String[] args) {
+    MyObject myObject = new MyObject("John Doe", 30);
+
+    Intent intent = new Intent(this, MyActivity.class);
+    intent.putExtra("myObject", myObject);
+    startActivity(intent);
+
+    Intent intent = getIntent();
+    MyObject myObject = (MyObject) intent.getSerializableExtra("myObject");
+
+    Intent intent = getIntent();
+    MyObject myObject = intent.getParcelableExtra("myObject");
+
+
+
+  }
+}
+
+the following improvements are recommended: rule key = java:S1192 message = Define a constant instead of duplicating this literal "myObject" 3 times., start line = 52, end line = 52, rule key = java:S1854 message = Remove this useless assignment to local variable "myObject"., start line = 59, end line = 59, rule key = java:S1854 message = Remove this useless assignment to local variable "myObject"., start line = 56, end line = 56, rule key = java:S1481 message = Remove this unused "myObject" local variable., start line = 56, end line = 56, rule key = java:S1481 message = Remove this unused "myObject" local variable., start line = 59, end line = 59, rule key = java:S1192 message = Define a constant instead of duplicating this literal "myObject" 3 times., start line = 52, end line = 52, rule key = java:S1854 message = Remove this useless assignment to local variable "myObject"., start line = 59, end line = 59, rule key = java:S1854 message = Remove this useless assignment to local variable "myObject"., start line = 56, end line = 56, rule key = java:S1481 message = Remove this unused "myObject" local variable., start line = 56, end line = 56, rule key = java:S1481 message = Remove this unused "myObject" local variable., start line = 59, end line = 59, rule key = java:S1192 message = Define a constant instead of duplicating this literal "myObject" 3 times., start line = 52, end line = 52, rule key = java:S1854 message = Remove this useless assignment to local variable "myObject"., start line = 59, end line = 59, rule key = java:S1854 message = Remove this useless assignment to local variable "myObject"., start line = 56, end line = 56, rule key = java:S1481 message = Remove this unused "myObject" local variable., start line = 56, end line = 56, rule key = java:S1481 message = Remove this unused "myObject" local variable., start line = 59, end line = 59.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

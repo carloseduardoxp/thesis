@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+
+import java.util.Iterator;
+
+public class Teste {
+
+    
+    public static void main(String[] args) {
+        Iterator<JsonNode> itr = rootNode.iterator();
+
+        while(itr.hasNext()){
+            JsonNode personNode = itr.next();
+            if(personNode  instanceof ObjectNode){
+               if (personNode.has("keyToRemove")) {
+                 // ObjectNode object = (ObjectNode) personNode;  
+                 // object.remove("keyToRemove");
+                 itr.remove();
+               }
+            }
+        };
+    }
+    
+}
+
+the following improvements are recommended: rule key = java:S1066 message = Merge this if statement with the enclosing one., start line = 13, end line = 13, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 14, end line = 14, rule key = java:S1116 message = Remove this empty statement., start line = 19, end line = 19, rule key = java:S1066 message = Merge this if statement with the enclosing one., start line = 13, end line = 13, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 14, end line = 14, rule key = java:S1116 message = Remove this empty statement., start line = 19, end line = 19, rule key = java:S1066 message = Merge this if statement with the enclosing one., start line = 13, end line = 13, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 14, end line = 14, rule key = java:S1116 message = Remove this empty statement., start line = 19, end line = 19.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

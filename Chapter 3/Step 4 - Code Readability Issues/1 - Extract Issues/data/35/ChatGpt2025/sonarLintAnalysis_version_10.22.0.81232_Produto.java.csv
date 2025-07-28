@@ -1,0 +1,3 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S125,11,11,CLEAR,This block of commented-out lines of code should be removed.,null,

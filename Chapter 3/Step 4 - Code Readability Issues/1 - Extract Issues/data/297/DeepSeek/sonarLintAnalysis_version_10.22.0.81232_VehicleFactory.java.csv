@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,23,23,LOGICAL,Remove this useless assignment to local variable "car".,null,
+java:S1481,23,23,CLEAR,Remove this unused "car" local variable.,null,

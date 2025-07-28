@@ -1,0 +1,2 @@
+Based on this pull request with the developer description: I added some comments in the file., the code was changed by the developer from  (if dont have code before, the code wasnt exist yet) to # Note that x is a batch of examples:
+         # because of BatchNorm we cannot define the forward pass in the network for a single example., (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

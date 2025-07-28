@@ -1,0 +1,37 @@
+Given the following Java code snippet:
+import java.util.*;
+
+public class Example {
+    public static void main(String[] args) {
+        String text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae ante a dolor dapibus convallis. Sed varius posuere sagittis. Vestibulum auctor, ipsum id ultrices lobortis, velit ipsum blandit nulla, eu cursus eros leo vitae erat. Duis sed ipsum at purus ullamcorper faucibus. Nullam in arcu ac ante ullamcorper pretium.";
+
+        HashMap<Character, Integer> counts = new HashMap<Character, Integer>();
+        for (char c : text.toCharArray()) {
+            if (Character.isLetter(c)) {
+                c = Character.toLowerCase(c);
+                if (counts.containsKey(c)) {
+                    counts.put(c, counts.get(c) + 1);
+                } else {
+                    counts.put(c, 1);
+                }
+            }
+        }
+
+        List<Map.Entry<Character, Integer>> entries = new ArrayList<Map.Entry<Character, Integer>>(counts.entrySet());
+        Collections.sort(entries, new Comparator<Map.Entry<Character, Integer>>() {
+            public int compare(Map.Entry<Character, Integer> a, Map.Entry<Character, Integer> b) {
+                return b.getValue().compareTo(a.getValue());
+            }
+        });
+
+        System.out.println("Top 5 characters:");
+        for (int i = 0; i < 5 && i < entries.size(); i++) {
+            Map.Entry<Character, Integer> entry = entries.get(i);
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 20, end line = 20, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 7, end line = 7, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 19, end line = 19, rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 20, end line = 20, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 7, end line = 7, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 19, end line = 19.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

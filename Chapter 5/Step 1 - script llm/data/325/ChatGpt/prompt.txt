@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+public class ButtonExample {
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Button Example");
+            JButton button = new JButton("Click Me!");
+
+            button.addActionListener(e -> {
+                button.setText("Clicked!");
+            });
+
+            frame.add(button);
+            frame.pack();
+            frame.setVisible(true);
+        });
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1602 message = Remove useless curly braces around statement (sonar.java.source not set. Assuming 8 or greater.), start line = 12, end line = 12.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

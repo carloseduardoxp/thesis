@@ -1,0 +1,24 @@
+Given the following Java code snippet:
+
+import java.util.*;
+
+public class Teste {
+
+    public static void main(String[] args) {        
+        List<Integer> nums = new ArrayList<Integer>();
+        nums.add(61);
+        nums.add(42);
+        nums.add(83);
+        nums.add(94);
+        nums.add(15);
+        //Tosort the collections uncomment the below line
+        //Collections.sort(nums); 
+        
+        Collections.reverse(nums);
+        
+        System.out.println(nums);
+    }
+}
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 7, end line = 7, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 14, end line = 14, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 7, end line = 7, rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 14, end line = 14.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

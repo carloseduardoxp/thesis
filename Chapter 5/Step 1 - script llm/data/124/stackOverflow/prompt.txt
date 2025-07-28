@@ -1,0 +1,17 @@
+Given the following Java code snippet:
+public class Teste {
+
+    public static void main(String[] args) {        
+        String date1 = "07/01/2017";
+        if (date1.matches("^([0-9]{1,2}/){2}[0-9]{2,4}$")) {
+            System.out.println("Date in MM/dd/yyyy format");
+        } else if (date1.matches("^[0-9]{2,4}(-[0-9]{1,2}){2}\\s[0-9]{1,2}(:[0-9]{1,2}){2}\\.[0-9]{1,}$")) {
+            System.out.println("Date in yyyy-MM-dd hh:mm:ss.t format");
+        } else {
+            System.err.println("Unsupported Date format.");
+        }
+    }
+}
+
+the following improvements are recommended: rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 5, end line = 5, rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 5, end line = 5, rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 7, end line = 7, rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 7, end line = 7, rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 7, end line = 7, rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 7, end line = 7, rule key = java:S6353 message = Use concise quantifier syntax '+' instead of '{1, start line = 7, end line = 7, rule key = java:S6353 message = Use concise character class syntax '\\d' instead of '[0-9]'., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

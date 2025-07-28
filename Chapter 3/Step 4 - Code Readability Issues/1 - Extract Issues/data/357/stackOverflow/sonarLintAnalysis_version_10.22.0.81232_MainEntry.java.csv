@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1075,7,7,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,
+java:S1197,19,19,FORMATTED,Move the array designators [] to the type.,null,
+java:S106,23,23,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,27,27,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1858,27,27,CLEAR,"getName" returns a string, there's no need to call "toString()".,null,

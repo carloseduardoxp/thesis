@@ -1,0 +1,7 @@
+Based on this pull request with the developer description: Reduce verbosity and more idiomatic use of keyword., the code was changed by the developer from synchronized (this) {                     remove0(ctx);                 } synchronized (this) {
+                     remove0(ctx);
+                 } synchronized (this) {
+                     remove0(ctx);
+                 } synchronized (this) {
+                     remove0(ctx);
+                 } (if dont have code before, the code wasnt exist yet) to atomicRemoveFromHandlerList(ctx); private synchronized void atomicRemoveFromHandlerList(AbstractChannelHandlerContext ctx) {         AbstractChannelHandlerContext prev = ctx.prev;         AbstractChannelHandlerContext next = ctx.next;         prev.next = next; }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

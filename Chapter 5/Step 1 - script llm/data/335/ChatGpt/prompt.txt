@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+
+import java.util.ArrayList;
+
+public class Teste {
+  public static void main(String[] args) {
+    ArrayList<String> arrayList = new ArrayList<String>();
+    arrayList.add("one");
+    arrayList.add("two");
+    arrayList.add("three");
+
+    String[] array = arrayList.toArray(new String[arrayList.size()]);
+
+    // Now you can use the 'array' as an array of strings.
+
+  }
+}
+
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 6, end line = 6, rule key = java:S1854 message = Remove this useless assignment to local variable "array"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "array" local variable., start line = 11, end line = 11, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 6, end line = 6, rule key = java:S1854 message = Remove this useless assignment to local variable "array"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "array" local variable., start line = 11, end line = 11, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 6, end line = 6, rule key = java:S1854 message = Remove this useless assignment to local variable "array"., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "array" local variable., start line = 11, end line = 11.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

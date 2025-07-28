@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Update simple_paths.py to improve readability of the BFS., the code was changed by the developer from def _all_simple_paths_multigraph(G, source, targets, cutoff):
+  visited = dict.fromkeys([source]) (if dont have code before, the code wasnt exist yet) to def _all_simple_paths_multigraph(G, source, targets, cutoff):
+     visited = {source: True}, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

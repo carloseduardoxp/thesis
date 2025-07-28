@@ -1,0 +1,436 @@
+improve code readability by renaming variable names
+Fixing a misnamed variable in count_diffs()
+improve code readability by renaming variable names
+`plaintext` to `vote` for clarity
+Global variables that were still lowercase were made uppercase to clearly distinguish them from local variables
+renames a few variables to be more descriptive
+changed names of classes in _telemetry
+Refactor `_check_feature` to `_validate_feature_name` for clarity
+Rename update to rest method to reflect state change
+parameter names were kind of coupled to scratch and artifacts directory, so I changed them to accept a working directory and an output directory
+I am working on adding list of enum support to options, cleaning up the code as I try to figure out how things work
+renamed method
+Renames variables trying to use the same variables shown in the reference
+Renames some functions and variables
+[MAINTENANCE] rename map_metric.py to map_metric_provider.py (with DeprecationWarning) for a better code readability/interpretability
+Improve readability around a variable name
+ensuring consistent variable naming across _clip_gdf_with_mask and clip functions by renaming the "mask_is_list_like" variable to "clipping_by_rectangle"
+Add _hr suffix to increase readability
+Changing `_HAS_VIDEO_DECODER` to `_HAS_GPU_VIDEO_DECODER` for improved readability
+Adjust context id variable names in the logbook processor to improve readability
+Renames some constants in **test_storage.py**
+Cleanup variable naming for better readability
+Small cosmetic updates in keras mixed precision to improve readability     rename variable (commit message)
+Rename variable to enhance readability
+I have changed the "Head" to "head"(making it more Pythonic) and also "tamp" to "temp"(Better readability) in singly linked list(under data structures)
+Increased Readability Of Variables
+Renamed `matches` to `problems`.  - Updated some variable names
+Hopefully it improves the code readability by renaming `run_in_check_mode` parameter to `force_exec_in_check_mode` in the `_exec` function used in multiple modules
+Enhance variable naming for better readability
+changes the names of a few functions
+Rename stages and ops for readability
+Rename KustoIngestClient to QueuedIngestClient for readability
+Variable have understandable name that clearly describes it's functionality
+including some variable naming
+some minor pep8, the majority are naming variables
+cuts a pair of duplicate function named and gets rid of an 'invalid escape sequence' warning
+improves code readability by renaming a variable that did not make sense
+Rename the variables  in NeighborSampler for better readability
+The name is not accurate. Rename it to improve readability  After `load_packages_and_modules`, the entities become **registrable**
+Update person variable name for readability
+Update naming for pipeline components to improve readability
+Rename common variable for a bit more readability
+a bunch of renamed variables to hopefully make it clearer what this function is doing
+Modify names of variables in `ParameterBuilder` test modules to better communicate their meanings
+Make the  conn view tests more readable by renaming some variables
+Renamed command_parser method to core_commands_parse for clarity
+Rename gelu_act to activatioin
+Renamed a few variables to better convey their properties (e.g. `specs` -> `concrete_specs`)
+parts of the code were refactored to improve its readability
+Improve readability + formatting
+Integrated task exception handling directly within the task function
+parts of the code were refactored to improve its readability
+Noticed there was a discrepancy in some newer scripts there is the use of: u = htm.ureg However, in older scripts, this is not the case. Gone through and updated all the scripts to use the same format, improving the consistency in the repo and the readability of the units
+Replace eval with converting object to bytes
+This code optimization enhances code readability and maintainability by utilizing aliases, simplified activation function selection, and consistent function definitions
+updated hyperopt loss sharpe loss method for better readability to make it more consistent with the final version of sharpe loss daily loss method
+We introduce a new variable representing the dict passed to rng config to increase clarity of the test in question
+refactor long strings of A.dot(B.dot(C)) into matmuls
+Replaced repeated `len(board)` with a single variable `n` for efficiency in the `is_safe` function
+I added the casting method to Stable Diffusion source as y-vectorfield-fj(my previous account name)
+I feel ashamed that it took me 3 attempts to get it (probably) right. But I feel it was maybe worth it. PEP20 says it all
+`opi/__init__.py`  - saving the results of `get_cpu_arch()` in a variable to reuse them (**L307-320**)
+stage[0] is assumed to be for sources, 1: and onwards is  patches/resources, make that a bit more clear.    the implementation isn't very satisfactory cause it fetches  some (unconditional) patches too, but does not apply them, because  that requires a concrete spec.    patches are only applied upon install, at which point even  more may be fetched
+Breaks the `seed_offset` into two lines. The first does the hashing (and uses the default encoding). The second maps the hashed value to an integer (making the `base` argument explicit)   
+I am working on adding list of enum support to options, cleaning up the code as I try to figure out how things work
+Clarify the type of 'event_object'
+access the row fields by field name instead of index
+Added type hints and return types:      Enhances code readability and maintainability.      Improves static type checking capabilities
+Added type hints (compatibility: python3.5+)
+This begins with making the data easier to understand and reason around
+Fix type hints in several modules
+Add type hints in a couple of places in `expectation.py`  
+Improve readability of patchmatch.py by adding type annotations
+clarify some argument types by adding type hinting
+Few minor improvements
+New pylint allows you to seperately set a maximum number of total aguments and a maximum number of positional arguments. This gave us lots of warnings on the number of functions that had a confusingly high number of arguments.    Rather than just up the limit in pylintrc it seems like good practice to make many of these arguments keyword only. This make code more clear, and more robust as we go forward
+Small internal refactoring to avoid usage of index-based access such as `url[1]` or `response[2]`, hopefully making the HTTP proxy implementation even easier to read. :-)
+Improve readability by packing frequently used variables into namedtuples
+simplifying `if` statements [unneeded `not`]
+Simplify logical expressions
+Address anti-pattern in conditionals: Use `if foo is not None` instead  of `if not foo is None` and `if foo not in (set)` instead of `if not foo  in (set)`
+Stylistic change - prefer direct logic instead of inverted logic
+improve readability: avoid double negative
+Change "not all" to "any" for ease of readability
+Address late review on readability sensor code
+fix readability of conditional
+fix double negative if-clause for better readability
+simplify condition, improve readability
+Negated conditions are more difficult to read than positive ones, so it is best to avoid them where we can. By swapping the `if` and `else` conditions around we can invert the condition and make it positive
+on  `standard_package_names` function:      * I used `name.endswith` instead of using the complex expression `name.rsplit('.')[-1]`
+Moving to use `self.executor.map` for consistency with preprocessing. Internally executor.map does the same thing
+Change read-only properties to `@cached_property` for readability and speed improvements
+Refactored `lower` built-in method.  Part of an overall refactoring to unify code generator logic and built-in methods generation
+Refactored `count` built-in method.  Part of an overall refactoring to unify code generator logic and built-in methods generation
+Refactored `dict.copy` built-in method.  Part of an overall refactoring to unify code generator logic and built-in methods generation
+Refactored `upper` built-in method.  Part of an overall refactoring to unify code generator logic and built-in methods generation.  
+Refactored `list` `remove` built-in method.  Part of an overall refactoring to unify code generator logic and built-in methods generation.  
+Refactored `list` `insert` built-in method.  Part of an overall refactoring to unify code generator logic and built-in methods generation. 
+Used pathlib instead of manipulating path strings with the os module (compatibility: python3.4+)
+use default *math* function `log10()` instead of `log()` with parameter `10` (**L443**)  
+I've had a few people ask what these hard coded constants are in the tokenizer and I think this improves that a great deal.
+This PR changes `graphconverter.py` by using constants instead of hard-coded strings
+I added an option to control batch_size.
+Use named variables instead of in-line expressions (see `draw_or_resign()` in lichess-bot.py) 
+This PR changes `eventconnector.py` by using constants instead of hard-coded strings (issue #44).  
+Renaming Metric Name Suffixes using Enum Values for Better Code Readability 
+Picking up on an idea I used during my [dogfooding of the "Introduction to `iiif-prezi3`" lightning talk](https://digitaldogsbody.net/iiif/prezi3): due to the structure of the recipes, there are a lot of `id` fields that have a common start, so this PR adds a `base_url` variable and uses it in the various bits of manifest data, meaning that the resulting code looks a bit less cluttered (IMO)
+`EchoTest.test_echo` is parameterized
+echo_test: parameterize tests
+This PR updates test names to enhance readability by adding id parameters in pytest.mark.parametrize.
+Pure MAINT:   minimally change the looping logic into test parametrization  
+Increased readability for assertions
+Use set operations in tests for readability I opted to use methods instead of operators partly because there is no operator equivalent for `isdisjoint()` (and partly because I prefer them).
+Improved readability of regular expression      By removing single charecter alternation     And keeping a charecter set instead      
+This PR cleans up the readability of multiple regular expressions by removing nonessential escaping, converting from: r'^libfuzzer\_sys\:\:initialize' to: r'^libfuzzer_sys::initialize'
+`bin/opi`  - update search regex: (**L24**)    - `\\d` for `0-9`    - `*` instead of `{0,}`  
+reformat "regex poison" posts for legibility
+Name the argument _emit_ast on public APIs and emit_ast on internal APIs.
+improve readability of JsonRpcClient, internalize private logic
+Class methods that are for internal use should begin with a `_`  
+Prefix most rules in lax module with underscores to improve readability of autogenerated docs.
+rename newly introduced modules to make them private symbolically
+Improved error handling and readability of extractor
+Use `@abstractmethod` decorator when needed to make code consistent.
+function signature
+Replace timestep parameters with frequency to improve readability and robustness
+Use underscores in numeric literals to improve readability
+Also, 1e6 is easier for a human to parse than counting zeros in 1000000.
+we can use a dictionary instead of multiple if-else statements to map the "method" name to its corresponding functions.
+Optimize the get_prompt function by using a dictionary to map ActionType to hints, thus avoiding repetitions and making the code more readable and maintainable.
+Scalable Code for Language Support  Introduced a dictionary-based approach for language support, making it more scalable. This ensures that new languages can be added in the future with minimal changes, as opposed to multiple conditional statements.    
+This commit includes modifications to the code in asort.py to improve code formatting and readability according to the PEP 8 style guidelines. The changes include consistent indentation, proper spacing around operators, proper capitalization of comments, and using parentheses for print statements for compatibility with Python 3.    Please note that these changes are purely stylistic and do not affect the functionality of the script. The goal is to enhance code maintainability and readability.
+ `opi/plugins/yandex-browser.py`  - get last part of split string with `[-1]` instead of `[2]`   
+Make `ParameterBuilder.get_batch_ids()` use the  latest  `Batch` more reliably.  
+catch exception SerializedDagNotFound and raise NotFound
+Module tests.fixtures.transformer_test_data  tests/fixtures/transformer_test_data.py:79:8: W0719: Raising too general exception: Exception (broad-exception-raised)  ```  
+Avoid using bare `except`  
+inline
+When I worked on PR #750 based on the implemention of the `grdview` function, I found that the `grdview` codes are a little difficult to understand. The main reason is that `contextlib.ExitStack()` is new to me. Another reason is that these two codes `fname = stack.enter_context(file_context)` and `arg_str = " ".join([fname, build_arg_string(kwargs)])` are separated by the long `if` block.     
+`all_input_tokens` and `all_spaces` should not be member variables. First time call `custom_tokenizer()` is fine, but the second time call returns an unexpected result.
+code readability improvements [e.g., replacing long attributes such as `self.prior.kernel(...)` with `kernel = self.prior.kernel` then `kernel(...)`].
+`doc = custom_tokenizer()` is not quite easy to understand because `TokenPreservingTokenizer.__call__` has a different API from spaCy's `Tokenizer.__call__`, which takes a string as an input.  
+Honestly I had no idea what `torch.ones([]) * self.config.logit_scale_init_value` would return - it's not documented either.    ~Proposing to change it to a very clear `torch.tensor(1.0)` which leaves no doubt to what it does.~    Proposing to change it to a very clear `torch.tensor(self.config.logit_scale_init_value)` which leaves no doubt to what it does.
+with grouping make sure that the conditions is clear
+Group tuples for readability
+Invert check and exit early to dedent one level when requiring user confirmation
+Long ternary expressions in keyword arguments are hard to follow. Break  them out in local variables
+This PR replaces usages of constants with explicit variable building at each test method. This keeps future writers from having to scroll up 200+ lines just to see what values are actually being used
+Hypothetically, an object with any type passed to this function with an encode, or a decode method could return True instead of raising a TypeError. This may never happen in real life, but still I feel it can be written in a different way. 've refactored the function to make it more readable, and safer by using the isinstance function in Python
+Streamlined the gathering and processing of asyncio tasks
+wraps generated query strings in gql lambda
+Made inferencing methods more consistent with each other. Grouped inferencing statements together in apply methods for easier readability
+Improved codacy
+This removes lambdas
+Move calling 'report_task_accepted()' to improve clarity
+Improve readability by packing frequently used variables into namedtuples
+`default_answer` for `ask_yes_or_no()` is now `'y'` (**L423**, plugins)
+In many places, an f-string could have been used but it was not used, So I used f-strings in those places
+I also made a few other minor tweaks (use f-strings, etc.)
+Update function `gps_quality_check` in `traj2stats` module to match PEP8 styling
+Use f-strings instead of % syntax
+hanged concatenation of strings to f-strings to improve readability and unify the code
+Use f-strings on constants for better readability
+Use f-strings, improve code readability
+Changed .format to f-string for better readability and performance as per PEP 498
+changed concatenation of strings to f-strings to improve readability and unify with the rest of code
+replaced concatenation to f-strings to improve readability and unify
+сhanged concatenation of strings to f-strings to improve readability and unify with the rest of code
+use fstrings for better readability
+Refactor DAG_SCRIPT variable in test_trigger_dagrun for readability
+Improve readability + formatting
+Tweaks markers for readability
+Reformatted files for better readability and according to latest Python standards by using f-strings instead of the old literal formatting method. To do this I used the automated tool [Flynt]
+hanged concatenation of strings to f-strings to improve readability
+moved every string concatinatin of to an f-String    
+Shorten lines with string bool expressions
+Improve readability of expected outputs using dedent in ``pandas/tests/io/formats/test_to_string.py``
+formats generated query strings 
+move indentation for readability without changing the behavior.
+Extract code from the forward mode `execute_wrapper_jvp` into `_empty_jacs_for_shape` and `_switched_jacobian`.  I will freely admit I'm confused by the code of `_switched_jacobian`, but it works and passes tests.    
+BigQuery insert: improve the readability of the merge insertErrors logic.
+set_agent_state_to: Consolidated new_state checks into a single if..elif structure, replacing multiple parallel if statements  
+workflow conditionals/IFs cleanup: my main issue with the workflow was the accelerate workflow stuff was a bit complicated, with a bunch of conditions and nested ifs that went a few levels deep. In my proposed changes for the workflow, IFs would only go a single level deep.    
+The current Figure.plot codes are difficult to read and maintain. This PR refactors the codes to make it easier to read by grouping the codes based on the data kind.
+Improve readability by reducing indentation.    
+In some places, if conditions could be merged but they were not, So, I merged them. 
+For better readability, I placed common loop of if-else, outside.
+Simplified Conditional for API Call  Reduced redundant conditions for determining when to call the OpenAI API.   
+Rework conditional in install_from_active_environment to reduce nesting in the function
+Simplify move overhead calculation
+The only point to using it is with `break`. (but it doesn't lead to a bug, just a harder to understand the code) So I'm proposing to remove the `else` control and just run the code in its branch normally since it *always* gets executed as there is no `break` statement.    And the objective of this code is to always be run if I understand it correctly. So let's make it loud and clear.   
+simplify *if* statement for setting the `weight` of a result (**L348**)  
+Improved code readability by removing unnecessary else statement
+Module thumbor.utils  thumbor/utils.py:92:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)  
+This pull request refactors the error handling in the OutputParser component to improve code readability. The changes include updating the error messages and removing unnecessary else statements. These improvements enhance the maintainability of the codebase and make it easier to understand and debug any potential issues.
+In addition, parts of the code were refactored to improve its readability
+Slightly improve readability in reading finite-fault data when the shakemap is missing
+Combined checks for str, int, and tuple into a single isinstance call using a tuple of types. This reduces redundancy, improves clarity and performance . The TypeError is preserved to handle unsupported types
+decouples attribute assignment from code logic - which simplifies things further
+This modifies some of the logic blocks to improve readability.    It also skips a conversion from cjson to cjson in Avogadro2, and  just keeps the cjson that was passed in
+simplified if statement for checking list/string len  
+Remove unneeded code This function is no longer needed.
+This pull request resolves the remaining "Use of len(sequence) as condition value in Python" code quality issues found in codefactor.io, with the intention of making progress towards issue #316.    Changes proposed in this pull request:  - Replace `len(jparams)` with `jparams` in condition in `generator/wrapper_gen.py`  - Replace `len(ifcs)` with `ifcs` in condition in `generator/gen_daal4py.py`  - Replace `len(ns)` with `len(ns) != 0` for readability in `generator/gen_daal4py.py`
+Minor improvements in syntax (removing superfluous parentheses)
+This commit includes modifications to the code in asort.py to improve code formatting and readability according to the PEP 8 style guidelines. The changes include consistent indentation, proper spacing around operators, proper capitalization of comments, and using parentheses for print statements for compatibility with Python 3.    Please note that these changes are purely stylistic and do not affect the functionality of the script. The goal is to enhance code maintainability and readability.
+avoid use of logical OR | Whilst using a logical OR | for this felt novel at the time, it has now tripped up two codereviewers on separate occasions who appropriately reach the conclusion that it's likely a mistake. It's not a functionality mistake, but it is a readability mistake. Lets not waste anyone else's time
+Simplified boundary check logic in within_bounds function    - Removed redundant 'elif' condition that duplicated the 'if' logic.   - Improved code readability by using a single 'else' block to handle out-of-bounds cases.  - The refactored logic maintains the same functionality while reducing unnecessary complexity
+group the conditions with parenthesis for better readability
+simplified add_tool for improved readability
+Replaced a few nested for loops with itertools.product
+In many places, an f-string could have been used but it was not used, So I used f-strings in those places. 
+Switching some iterates and append patterns with function + tuple with generator pattern.    
+simplify loop with `any` call    
+Improve code readability by making better use of pathlib.
+Optimized return_details function:      Replaced unnecessary conversion to list with a set data structure. `target_urls` are not being accessed by index after removing duplicates. Code in`github_scrapers`:        Old code: `target_urls = list(set(target_urls))`        New Code: `target_urls = set(target_urls)`       Reduces memory usage by avoiding redundant data storage.      
+The Path() constructor already handles both str and Path types effectively.
+Shorten lines with dict.get() default arguments
+Update simple_paths.py to improve readability of the BFS. There is at least one place in NetworkX that uses collections.OrderedDict as a substitute for an insertion-ordered set. This is an undesirable workaround: it makes code harder than necessary to read.
+on `standard_paths function`:      * I used `os.path.isdir` instead of `try: ... except OSError: pass`  for checking if `lib-dynload` exists
+Concise String Manipulation  Optimized the string manipulation method for joining parts of a title
+use `str.endswith()` instead of string comparison by range (**L23**)   
+Module thumbor.config  thumbor/config.py:914:12: R1713: Consider using str.join(sequence) for concatenating strings from an iterable (consider-using-join)  
+simplifying `if` statements for returning bools   
+Simplify `if-else` 
+Change read-only properties to `@cached_property` for readability and speed improvements
+change to import name of `CSET.recipes` during testing. Just a minor cleanup to readability. 
+Shorten imports for better readability
+Remove the `np.` prefix as those two functions and this constant are imported directly.
+Change `chtrig +1` in this line into `chtrig` only.  
+Rm unnecessary binding of local variable.
+Fix incorrect capitalization of `Dict` type hint that does not specify the key and value types. 
+Add `schema()` and `field()` sugar to improve readability of tests
+`__getitem__` is never called with more than a single arg, and we can  just use normal indexing on _mask both for getting and for setting.   
+Various readability/typos/cleanup fixes - no functionality change.    I tried to make `_save_checkpoint` a bit more readable, but the auto-formatter still makes things harder to read than it can be.
+Use enumerate for readability
+Use enumerate more in PdfWriter
+I also made a few other minor tweaks (while -> for)
+the `node_classification` package was implemented in such a way that there were a lot of simple (one-or-few-liner) expressions that were wrapped up in "helper" functions. In principle this was done because the functionality was reused in both the `harmonic_function` and `local_and_global_consistency` functions, but IMO the code is improved by reducing the indirection introduced by all the utility functions.
+Edit a line to ``self(x)`` for readability
+In the "top-level" ThreadPoolExecutor used for threading plugin execution, increase readability and reliability by wrapping it in a with context manager, so that the pool's cleanup is run in all situations explicitly
+Save `centroids` and `embeddings` in a dictionary with their "feature_name" as the key. This cleans up some code in `_get_cost_matrix` as well.  
+simplified an area with duplicated code.
+ Improved the performance test readability, added functions to remove some dup codes.     
+removed duplicated code  - use create_jwt function where applicable  this addresses #74
+As many tokenzer variations are added, its complexity is increasing and it is hard to understand what each code block means. We better clean up duplicated code and enhance code readability.  
+This PR improves readability for backend tests.Since CNTK added, it becomes hard to add something into backend tests due to many hardcoded and cntk-specific patchwork. I think it is better to clean up the current tests first in order to write new tests for increasing test coverages. Especially, this PR focuses on integration of `cntk_check_*_tensor_operation` into `check_*_tensor_operation`.
+Refactor splitter code to enhance readability (DRY principle).   
+I introduced a new `_create_label_group` method to the `PyBadger` class to help improve code readability and reduce code duplication.    
+I knew how these blocks worked off-hand and it caused some confusion, so I'm trying to rewrite the logic in a (hopefully) clearer fashion.  
+The first conv in the previous implementation is unnecessary since the input channels can be determined when passing parameters.    ## Modification    The first conv is combined into the loops. Thus, the readability and structure are improved..  
+Remove unnecessary code duplication in `validator.py`  
+Shorten long lines and reduce code repetition
+Minor PR for refactoring a test. I rewrote the test because I was going to add zarr as another test case, then decided OME-Zarr warrants its own operator and won't go here.    I think the refactoring is still helpful in its own right. It makes the difference between the test cases clearer, and makes sure the h5 and n5 tests don't depend on each other (plus it's a bit shorter :smile: ).    The actual test cases covered and how they're implemented could be improved I think. I'm also not sure about the value of the third test using `.Output.meta.ram_usage_per_requested_pixel = 1000000.0` to force writing in tiny blocks. This test takes 0.5s to run, which is a long time for a test case that seems unnecessary to cover to me. But I intentionally purely refactored here to make review easier.    Note: Squash-merge when re-integrating to main
+deduplicate URL building for GPG key in `install_binary()` (**L394**) 
+It was suggested to use a paramterized test to avoid code duplication in tests.   
+Remove `initReplicasInContainer()` and use `populateLFN2DatasetMap()` directly where it needed.  
+This CL also fixes a code duplication issue in thumbor/utils.py
+remove "skip monitoring lock for the files in the same run.", the useless statement.
+removed 3 functions in _telemetry  
+`interview.file_name` was never used. Made clearer which label is being used where by using `interview_label` directly, and basing new `package_title` off of the `interview_label` to reduce chance of errors in the 2-3 places we were previously using the same regex to get the package title.  
+Remove backwards compatibility patches 
+Also deletes two unused methods.   
+Functions that are not used anywhere should be removed, even if they were used previously   
+Remove unnecessary `MetricConfiguration` sorting from `ParameterBuilder.get_metrics()` (this is done later by `AttributedResolvedMetrics` anyway). 
+Removed dead code
+removes one unused one. This tag is also being used to demarcate our intention to make our first major release when this PR is merged.
+It removes a lot of unnecessary code
+Eliminating some single line functions: `process_single_shape` and `_filter_zero_tangents`    
+Also, removed the lingering PPT example benchmark code which was being rendered.
+raise `NotFound` if no dag return based on the given `dag_id` 
+Removed SkipLines function and implemented the same functionality through the more concise `filter` function  - fix: removed extraneous filter
+Remove unneeded code This function is no longer needed.
+Remove SqlAlchemyStore._save_to_db to improve readability.
+the removed else-clauses in the for-loops were not tested. And other parts of the code would break anyway...    
+by joining via dataset collection element, and only bringing in the dataset collection if we're filtering against the collection.
+removes redundant code, as:  ```  self.model = model if model is not None else None  ```  and  ```  self.model = model  ```  are the same
+Delete unused exception variable
+Also remove unused DEFAULT_ANNOTATION_FLAG
+`opi/plugins/__init__.py`  - removing `(object)` inheritance as not needed in *python3*  
+Remove chtrig from this definition's argoments since it's not used in the definition itself
+removed unuses imports  
+Also removed some lines of code in headers which weren't used in certain scripts
+Remove old commented out code and the backward compat patch
+ Remove inverse of g constant - Inverse of g can be easier calculated when needed and does not have to be export with constants
+Changed named lambdas into function declarations (pep8 E731)
+Replace long lambda with local function
+Extract callback for readability   I know that a lot of similar classes use the `on_results=lambda x: serialize(x, ...)` pattern (I'm fine with lambdas generally) but this is one of the only multiline ones with a big compound expression.
+avoid to use overly complex "filter" and "lambda"
+moves 3 of those checks to separate methods:  - one for `hass-relative-import`  - one for `hass-component-root-import`  - one for `hass-import-constant-alias`    
+I refactorized the code to distinguish more easily between forward passes at inference time and forwards passes at train time
+Refactor `MetricCalculator.compute_metrics()`, `Validator.graph_validate()`, and `ParameterBuilder.get_metrics()` for better separability of `ValidationGraph` construction, graph resolution, and error reporting.   
+Extract the parametrize() block of code into methods for better  readability 
+primarily focuses on extracting certain private functions without introduce any functional changes
+Split `MetricsCalculator.compute_metrics()` into `ValidationGraph` construction phase and graph resolution phase
+Split long functions into multiple logical units
+splits the continuation in broadcasting into separate closures that we can more easily refactor
+so this breaks the logic out into more helpers
+moved the parameter checks to their own function
+Move the course copy logic to a private function
+Split CPU-only Linux libs into own function to make if-else statement clearer
+thorough reorganization of L052, splitting the long, complex `_eval()` function into several smaller, easier to understand functions
+makes completion api a lot easier to read and maintain. before it has one spaghetti function spanning few hundred lines, after this PR, the situation should be greatly improved. chat completion api doesn't have this problem because it is fairly modularized.     I'm doing this in preparation for batch completions support
+All introduced methods are quite short, so primarily for readability
+Extract out `_grad_transform_jac_via_callaback` and `_device_method_jac_via_callback` to being global functions with explicit argument lists, instead of depending on closure. This reduces nesting, allows the functions to be experimented on and tested independently, and makes the dependencies explicit. The previous syntax also called local variables like `params` the same thing as a parameter from outer scope
+on_event: Refactored event processing by splitting it into two distinct functions: _handle_action and _handle_observation 
+The method `ExecutionEngine.resolve_metrics()` is being refactored into two principal parts: gathering aggregated and non-aggregated metric computation specifications, and resolving the corresponding metrics.  The non-aggregated metrics are resolved by calling their function.  The aggregated metrics are bundled (for efficiency).  Code readability is improved
+Try to improve readability of binary ops by reorganize it as a `BinaryOp` class.  This pull request focuses on improving the readability and maintainability of the binary operation utility code within the Snowflake query compiler. The changes primarily involve refactoring the binary operation functions into a new `BinaryOp` class and updating the relevant method calls throughout the codebase
+Create formal `ValidationDependencies` `dataclass` object
+Moved to dataclass for easier handling and better readability
+Previously, all components of the vector db CDK would pass data around as a `Chunk`, which is:  * the text  * the metadata  * the record that created the chunk  * the embedding    As not all of these are available at all times, checks in a bunch of places were necessary.    This PR refactors this by passing "Documents" to the embedder, which is just the text and the record, because that's what's required for running the embedding.
+For exports and variables we want a type and usage to accompany the proof types. This change is significant because it changes the proofs from NameTuples to frozen dataclasses. This gives the same immutability but the flexibility to have non essential information stored for serializing.
+Pulls `st.echo` out of `__init__.py` and into `echo.py`
+The `GMT_DATASET` data structure was originally added in #2729, with nested classes defined like `GMT_DATASET`->`GMT_DATATABLE`->`GMT_DATASEGMENT`.    the nested classes are difficult to read and maintain.    This PR moves the `GMT_DATATABLE`/`GMT_DATASEGMENT` classes outside of the `GMT_DATASET` class
+This set of commits adds a few new mixin classes to the pyDeltaRCM project that are inherited by the more general Tools class.     The divisions are as follows:   - `water_tools` contains all the methods required for conducting water routing steps.  - `sed_tools` contains all methods for morphodynamics steps only.   - `shared_tools` contains methods shared across `water_tools` and `sed_tools`  - `init_tools` contains methods for setting up the model domain.  - `Tools` inherits all these classes, and then mixes them into the primary methods that include the main model processes for each time step.    This pull request closes #11
+Split Large Code Files for Improved Manageability and Readability  Optimized codebase for manageability and readability by splitting large files into smaller
+Splitting the `linter.py` and formatters in separate files
+Refactor code to improve readability for new developer. This remove most of the logic from `__init__.py` and `__main.py`.
+moved decompose method to variable_manager
+Move RemoteFunctionClient to a separate module remote_function_client
+We used gitfilesplit to split it into several shorter files for readability.
+Add ireq.is_direct property, for readability
+Added function docstring and comments explaining the base case, maximizer and minimizer turns.  
+adds documentation of all functions to explain their purposes and what arguments are being passed around. It also adds more inline comments to explain various different scenarios that might arise, particularly around empty keys or various non-matching cases. 
+Improved dostrings
+Adds some annotations to unintuitive functions/methods
+Minor addition of comments
+adds some comments and improves readability in general
+add some code comments to echo()
+Adds mostly comments 
+added Documentation where commands had none  
+added comments   to improve readability and comprehensibility.
+I added some comments in the file.  
+Add return types and docstrings for several methods.    
+Enhanced readability and added comments to the n_queens.py code.
+Enhance code readability and docstring for Worker
+adding a docstring to the _mask_is_list_like_rectangle function     
+code clean up: added comments, docstrings
+add some docs    
+A few more docstrings with examples and adding some explicit documentation on closure variables to docstrings. 
+No functional changes, just added comments
+I found that the `grdview` codes are a little difficult to understand. 
+Add comments for each config argument and improve general readability.
+Add descriptive docstrings to metric computation methods.  
+Code readability improvements in Client class and methods in json_client
+Add a comment for readability in `BaseParser`
+Add comments and tiny refactor.
+Add a comment for readability
+Added some comments to help with future work on Koza internals. (This is mainly for me; as my brain breaks when seeing a "while not filter" )
+Add comments 
+Improve readability across indicators
+Use `:ivar:` to document class fields.        Using class fields documentation renders the code less readable. In my last commit, I introduced such documentation type.        This commit is to use the `:ivar:` tag to document a class field.    The last SPDX package objects added (`PackageComment` and `PackaheHomePage`) had an invalid JSON representation.    The tag for `PackageComment` is `"comment"`, not `"comments"`.  The tag for `PackageHomePage` is `"homepage"`, not `"homePage"`.
+Correct `get_parameters` API docstrings example, and improve explanation and readability in Fetching parameters section  
+Sentences were observed running into each other due to lack of line breaks.  Changes in this PR modify code comments to remove linebreaks and improve readability in RTD.    
+Edit pass for grammar and style
+Edit for grammar and style.   
+Improve readability of `formataddr` docstring
+Improve readability of `formataddr` docstring
+Improve readability of `formataddr` docstring
+updating and improving the documentation and code readability of the ecg_process() function.   
+Added several commas to improve readability of instructions.   
+corrected letter case for better readability in sklearn/metrics/_classification.py /
+I suggest some improvements in clarity in the documentation for `permutation_test_score`.    changes include:  - clarify in Userguide that `permutation_test_score` can be used on more than on classifiers  - mentioning `n_jobs` after sentence on brute force procedure  - readability on some difficult to understand sentences  - in example, clear distinguishing between original data and data without permutations (as the term "original data" was used in two different contexts for different things)  - add conclusions on results from `permutation_test_score` in example: what does the result infer for the null hypothesis?  - call p_value a proportion instead of a percentage    
+Various readability/typos/cleanup fixes
+This pull request fixes typos and improves the code readability in the project.
+fixing some comment typos.
+Fix type hint warning in `validator.py` by adding `Union` of proper type for Batch list. 
+Always use `n_samples` first when comparing to `n_features` in comments.    
+Typo fixed
+Improve readability around typos in docs; docstrings
+This workflow will install the dependencies, run tests and lint every push
+Update docs.
+Update classes' documentation
+Increased Readability Of Variables
+fix typos and comments
+Add return types and docstrings for several methods.    
+improve docstrings
+and fixed the docstrings up a bit
+Fix outdated comment
+Clarified comment; ignoring .DS_Store
+Simplify comments
+Corrects a few typos (including: Unknonw   Unknown, firefox   Firefox, buku   Buku, and json   JSON where appropriate).   
+fixed docstring
+refactored the Documentation comments to an unified standard ("normal englisch sentences")  
+Update docstrings
+and move the related comment closer to the corresponding match statement
+Number One thousand is written as 1.000 which can misinterpreted with one point zero zero zero.  To improve the readability period is replaced with comma
+code clean up: added comments, docstrings
+Add explanation of `chtrig` indexing starting from 1 for human readability in all the docstrings
+Docs and comments consistency and readability improvement
+`plaintext` to `vote` for clarity
+Format docstring to improve readability
+Docstrings are not necessary for functions that one could reasonably expect to be intuitive at first glance
+The CodeBuild class had similar issues as the CodePipeline class where the line length requirement was not met. Plus code readability was not terrific either.  Fixed the readability by properly breaking the lines. Another pass of refactoring code too
+Update pack formatting and improve readability
+I added some newlines to make it easier for me to read
+I've improved the readability of the imports from pyparsing and the `grammar()` function
+Split up dict definition into multiple lines
+function imports: Return readability
+use line-length=120 for better code readability
+This includes rearranging the dictionary, changing branding to Adswerve
+Improve readability of default artifacts lists
+Added line for better readability of nodes
+Because 50 characters is still extraordinarily long and will render a lot of lines unreadable in the YAML, limiting to 35 characters instead
+autoformatting everything, to make PEP happy (line length, blank lines,..)
+update whitespace for readability
+Long lines (  140 characters) were split for better readability
+fix ruff lint error
+Class methods that are for external use should be be at the top of the class   Moves functions around to be in a more intuitive place   The ordering of class methods should generally follow the ordering in which they are called (to minimize big jumps when ctrl-clicking)   
+To increase readability, I modified the code order of inference process in YOLO layer
+Reordering short fields to be at the top, and moving long fields to be in the same order shown on the UI  - conditions  - filters  - actions
+reorganize the ordering of attributes and methods to improve readability
+relocated _deprecated_oauth_aliases list of deprecated config and the deprecated/removed config to the end of config declarations
+Moved imports to the top of the file
+Only moving methods around to make reading these files easier (no logic changes).    Re-ordering these methods to follow:  1. Implemented/Overridden methods.  2. Non '_' prepended methods aka. 'Public' instance methods.  3. '_' prepended methods aka. 'Private' instance methods.   4. @staticmethods
+output spacing for improved readability
+This commit includes modifications to the code in asort.py to improve code formatting and readability according to the PEP 8 style guidelines. The changes include consistent indentation, proper spacing around operators, proper capitalization of comments, and using parentheses for print statements for compatibility with Python 3.    Please note that these changes are purely stylistic and do not affect the functionality of the script. The goal is to enhance code maintainability and readability
+Update function `gps_quality_check` in `traj2stats` module to match PEP8 styling
+Reformatting to comply with PEP8 style convention and improving readability
+Some style errors fixes following PEP8 rules. Also It gives more code style consistency
+Auto fix view.py to conform to the PEP 8 style guide
+Auto fix update-version.py to conform to the PEP 8 style guide
+Minor improvements in syntax (adding spaces where recommended by PEP8)
+Delete trailing whitespace
+if color_space == "RGB ":
+fix styles
+Minor formatting clean up for better code readability
+Fix Flake8
+reformatting file with Python black
+black
+Black
+Also adds a very small change from running black
+rearranging white space to be readable
+ignore Pylint warnings for better readability
+This PR changes the lines with multiple operations separated by semicolons into one operation per line, improving readability. There are also a bunch of automatic editor whitespace removal changes
+Format hid reports for better readability
+ref(group_details): Formatting tweak for readability

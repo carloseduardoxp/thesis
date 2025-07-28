@@ -1,0 +1,7 @@
+Based on this pull request with the developer description: EmptyLineSeparator for multiple single type variables on line, the code was changed by the developer from return astType == TokenTypes.STATIC_INIT
+                 || astType == TokenTypes.INSTANCE_INIT
+                 || astType == TokenTypes.METHOD_DEF
+                 || astType == TokenTypes.CTOR_DEF
+                 || astType == TokenTypes.COMPACT_CTOR_DEF; (if dont have code before, the code wasnt exist yet) to return TokenUtil.isOfType(astType,
+             TokenTypes.STATIC_INIT, TokenTypes.INSTANCE_INIT, TokenTypes.METHOD_DEF,
+             TokenTypes.CTOR_DEF, TokenTypes.COMPACT_CTOR_DEF);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

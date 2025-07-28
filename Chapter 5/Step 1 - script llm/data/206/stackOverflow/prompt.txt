@@ -1,0 +1,31 @@
+Given the following Java code snippet:
+import java.util.*;
+import java.util.stream.IntStream;
+
+public class Teste {
+
+    public static Map<String, List<Integer>> fizzBuzz(int n) {
+        Map<String, List<Integer>> map = new HashMap<>();
+        List<Integer> fizz = new ArrayList<>(), //
+                buzz = new ArrayList<>(), //
+                fizzbuzz = new ArrayList<>();
+        IntStream.rangeClosed(1, n).forEachOrdered(i -> {
+            boolean f = i % 3 == 0, b = i % 5 == 0;
+            if (f && b) {
+                fizzbuzz.add(i);
+            } else if (f) {
+                fizz.add(i);
+            } else if (b) {
+                buzz.add(i);
+            }
+        });
+        map.put("Fizz", fizz);
+        map.put("Buzz", buzz);
+        map.put("FizzBuzz", fizzbuzz);
+        return map;
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1659 message = Declare "buzz" and all following declarations on a separate line., start line = 9, end line = 9, rule key = java:S1659 message = Declare "b" on a separate line., start line = 12, end line = 12.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

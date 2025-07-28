@@ -1,0 +1,9 @@
+Based on this pull request with the developer description: Rewrites sliding window code to be more readable., the code was changed by the developer from var loops = Math.max(1, sortedFiles.size() - maxFilesToCompact + 1);
+     for (int i = 0; i < loops; i++) {
+       var filesToCompact = findDataFilesToCompact(
+           sortedFiles.subList(i, Math.min(sortedFiles.size(), maxFilesToCompact) + i), ratio); (if dont have code before, the code wasnt exist yet) to int windowStart = 0;
+     int windowEnd = Math.min(sortedFiles.size(), maxFilesToCompact);
+ 
+     while (windowEnd <= sortedFiles.size()) {
+       var filesToCompact =
+           findDataFilesToCompact(sortedFiles.subList(windowStart, windowEnd), ratio);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

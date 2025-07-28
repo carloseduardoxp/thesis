@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3011,18,18,MODULAR,This accessibility update should be removed.,null,
+java:S106,22,22,MODULAR,Replace this use of System.out by a logger.,null,
+java:S3011,25,25,MODULAR,This accessibility bypass should be removed.,null,
+java:S106,26,26,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1068,4,4,CLEAR,Remove this unused "secret" private field.,null,

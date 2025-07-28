@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2147,24,24,DISTINCT,Combine this catch with the one at line 21, which has the same body. (sonar.java.source not set. Assuming 7 or greater.),null,
+java:S3011,34,34,MODULAR,This accessibility update should be removed.,null,

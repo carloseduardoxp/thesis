@@ -1,0 +1,3 @@
+Based on this pull request with the developer description: Replaced for loops with for each for better code readability., the code was changed by the developer from for (int i = 0, count = forest.length; i < count; i++) {
+         forest[i].v(message, args); (if dont have code before, the code wasnt exist yet) to for (Tree tree : forest){
+        tree.v(message, args);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

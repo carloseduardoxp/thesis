@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1141,15,15,CLEAR,Extract this nested try block into a separate method.,null,
+java:S1643,17,17,EFFICIENT,Use a StringBuilder instead.,null,
+java:S1854,25,25,LOGICAL,Remove this useless assignment to local variable "error".,null,
+java:S1659,14,14,FORMATTED,Declare "line1" on a separate line.,null,
+java:S1481,14,14,CLEAR,Remove this unused "line1" local variable.,null,
+java:S1481,24,24,CLEAR,Remove this unused "error" local variable.,null,

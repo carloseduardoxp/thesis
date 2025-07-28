@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1172,10,10,CLEAR,Remove this unused method parameter "nSshPort".,null,
+java:S4925,44,44,CLEAR,Remove this "Class.forName()", it is useless. (sonar.java.source not set. Assuming 6 or greater.),null,
+java:S6437,46,46,TRUSTWORTHY,Revoke and change this password, as it is compromised.,null,

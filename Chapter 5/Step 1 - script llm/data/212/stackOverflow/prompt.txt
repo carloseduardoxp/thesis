@@ -1,0 +1,26 @@
+Given the following Java code snippet:
+
+import java.lang.reflect.Field;
+
+public class Teste {
+
+    private static Field getField(Class<?> clazz, String fieldName) {
+        Class<?> tmpClass = clazz;
+        do {
+            for ( Field field : tmpClass.getDeclaredFields() ) {
+                String candidateName = field.getName();
+                if ( ! candidateName.equals(fieldName) ) {
+                    continue;
+                }
+                field.setAccessible(true);
+                return field;
+            }
+            tmpClass = tmpClass.getSuperclass();
+        } while ( clazz != null );
+        throw new RuntimeException("Field '" + fieldName +
+            "' not found on class " + clazz);
+    }
+}
+
+the following improvements are recommended: rule key = java:S112 message = Define and throw a dedicated exception instead of using a generic one., start line = 19, end line = 19, rule key = java:S1144 message = Remove this unused private "getField" method., start line = 6, end line = 6, rule key = java:S112 message = Define and throw a dedicated exception instead of using a generic one., start line = 19, end line = 19, rule key = java:S1144 message = Remove this unused private "getField" method., start line = 6, end line = 6.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S5842,5,5,LOGICAL,Rework this part of the regex to not match the empty string.,null,
+java:S6397,5,5,CLEAR,Replace this character class by the character itself.,null,
+java:S6397,5,5,CLEAR,Replace this character class by the character itself.,null,
+java:S106,26,26,MODULAR,Replace this use of System.out by a logger.,null,
+java:S5843,5,5,CLEAR,Simplify this regular expression to reduce its complexity from 28 to the 20 allowed.,null,

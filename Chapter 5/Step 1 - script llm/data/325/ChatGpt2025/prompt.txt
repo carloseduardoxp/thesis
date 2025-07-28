@@ -1,0 +1,25 @@
+Given the following Java code snippet:
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.FlowLayout;
+
+public class ChangeButtonTextExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Button Text Change");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        frame.setLayout(new FlowLayout());
+
+        JButton button = new JButton("Click Me!");
+        frame.add(button);
+
+        // Change button text after 2 seconds (just for demonstration)
+        new javax.swing.Timer(2000, e -> button.setText("Text Changed!")).start();
+
+        frame.setVisible(true);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 8, end line = 8.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

@@ -1,0 +1,19 @@
+Given the following Java code snippet:
+
+import java.lang.reflect.Method;
+import java.net.*;
+
+public class Teste {
+
+    public void main() {
+        URLClassLoader child = new URLClassLoader(myJar.toURL(), this.getClass().getClassLoader());
+        Class classToLoad = Class.forName("com.MyClass", true, child);
+        Method method = classToLoad.getDeclaredMethod("myMethod");
+        Object instance = classToLoad.newInstance();
+        Object result = method.invoke(instance);
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "result"., start line = 12, end line = 12, rule key = java:S1481 message = Remove this unused "result" local variable., start line = 12, end line = 12, rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "result"., start line = 12, end line = 12, rule key = java:S1481 message = Remove this unused "result" local variable., start line = 12, end line = 12, rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "result"., start line = 12, end line = 12, rule key = java:S1481 message = Remove this unused "result" local variable., start line = 12, end line = 12.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

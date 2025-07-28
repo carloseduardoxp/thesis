@@ -1,0 +1,57 @@
+Given the following Java code snippet:
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+// Concrete Product 1
+class HtmlButton implements Button {
+    @Override
+    public void render() {
+        System.out.println("<button>Test Button</button>");
+        onClick();
+    }
+
+    @Override
+    public void onClick() {
+        System.out.println("Click! Button says - 'Hello World! (HTML)'");
+    }
+}
+// Concrete Product 2
+
+
+public class WindowsButton implements Button {
+    JFrame frame = new JFrame();
+    JPanel panel = new JPanel();
+    JButton button;
+
+    @Override
+    public void render() {
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JLabel label = new JLabel("Hello World!");
+        label.setHorizontalAlignment(SwingConstants.CENTER);
+
+        button = new JButton("Click me!");
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onClick();
+            }
+        });
+
+        panel.add(label);
+        panel.add(button);
+        frame.add(panel);
+
+        frame.setSize(300, 200);
+        frame.setVisible(true);
+    }
+
+    @Override
+    public void onClick() {
+        System.out.println("Click! Button says - 'Hello World! (Windows)'");
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 33, end line = 33, rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 28, end line = 28, rule key = java:S1604 message = Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.), start line = 33, end line = 33, rule key = java:S3252 message = Use static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE"., start line = 28, end line = 28.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

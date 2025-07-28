@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,14,14,LOGICAL,Remove this useless assignment to local variable "array2".,null,
+java:S1854,12,12,LOGICAL,Remove this useless assignment to local variable "array".,null,
+java:S125,11,11,CLEAR,This block of commented-out lines of code should be removed.,null,
+java:S1481,12,12,CLEAR,Remove this unused "array" local variable.,null,
+java:S1481,14,14,CLEAR,Remove this unused "array2" local variable.,null,

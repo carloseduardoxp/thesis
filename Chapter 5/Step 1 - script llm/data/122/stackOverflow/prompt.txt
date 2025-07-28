@@ -1,0 +1,24 @@
+Given the following Java code snippet:
+
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
+
+public class Teste {
+
+    public static void main(String[] args) {        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+        String timestamp = "2016-02-16 11:00:02";
+        TemporalAccessor temporalAccessor = formatter.parse(timestamp);
+        LocalDateTime localDateTime = LocalDateTime.from(temporalAccessor);
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(localDateTime, ZoneId.systemDefault());
+        Instant result = Instant.from(zonedDateTime);
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "result"., start line = 18, end line = 18, rule key = java:S1481 message = Remove this unused "result" local variable., start line = 18, end line = 18, rule key = java:S1854 message = Remove this useless assignment to local variable "result"., start line = 18, end line = 18, rule key = java:S1481 message = Remove this unused "result" local variable., start line = 18, end line = 18.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

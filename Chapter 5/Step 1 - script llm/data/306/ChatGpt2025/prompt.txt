@@ -1,0 +1,18 @@
+Given the following Java code snippet:
+public class Person {
+    private int id;
+    private String name;
+
+    public Person(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1068 message = Remove this unused "name" private field., start line = 3, end line = 3.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

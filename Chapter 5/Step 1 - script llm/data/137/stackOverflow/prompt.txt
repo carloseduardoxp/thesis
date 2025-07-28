@@ -1,0 +1,51 @@
+Given the following Java code snippet:
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class CancelSupport {
+
+    public static class CommandExecutor implements Runnable {
+
+        private BlockingQueue<String> queue;
+        public static final String POISON_PILL = "stopnow";
+
+        public CommandExecutor(BlockingQueue<String> queue) {
+            this.queue = queue;
+        }
+
+        @Override
+        public void run() {
+            boolean stop = false;
+            while (!stop) {
+                try {
+                    String command = queue.take();
+                    if (POISON_PILL.equals(command)) {
+                        stop = true;
+                    } else {
+                        // do command
+                        System.out.println(command);
+                    }
+                } catch (InterruptedException e) {
+                    stop = true;
+                }
+            }
+            System.out.println("Stopping execution");
+        }
+
+    }
+
+    public static void main(String[] args) {
+        BlockingQueue<String> queue = new LinkedBlockingQueue<String>();
+        Thread t = new Thread(new CommandExecutor(queue));
+        queue.put("hello");
+        queue.put("world");
+        t.start();
+        Thread.sleep(1000);
+        queue.put("stopnow");
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 38, end line = 38, rule key = java:S1192 message = Use already-defined constant 'POISON_PILL' instead of duplicating its value here., start line = 44, end line = 44, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 38, end line = 38, rule key = java:S1192 message = Use already-defined constant 'POISON_PILL' instead of duplicating its value here., start line = 44, end line = 44.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

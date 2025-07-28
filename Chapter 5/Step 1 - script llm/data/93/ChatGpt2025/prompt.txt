@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n = 10; // Number of terms to display
+        int a = 0, b = 1;
+
+        System.out.print("Fibonacci sequence: ");
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1659 message = Declare "b" on a separate line., start line = 4, end line = 4.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

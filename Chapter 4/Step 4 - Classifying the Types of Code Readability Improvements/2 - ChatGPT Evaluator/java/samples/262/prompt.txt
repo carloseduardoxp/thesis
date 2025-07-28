@@ -1,0 +1,16 @@
+Based on this pull request with the developer description: Extract method "assertConfigHasPlugins", the code was changed by the developer from assertEquals(requestedPlugins.size(), cfg.getPlugins().size());          List<String> cfgPluginInfo = new ArrayList<>();         List<String> requestedPluginInfo = new ArrayList<>();          for (Plugin p : cfg.getPlugins()) {             cfgPluginInfo.add(p.toString());         }         for (Plugin p : requestedPlugins) {             requestedPluginInfo.add(p.toString());         }          Collections.sort(cfgPluginInfo);         Collections.sort(requestedPluginInfo);          assertEquals(requestedPluginInfo, cfgPluginInfo);  assertEquals(requestedPlugins.size(), cfg.getPlugins().size());
+ 
+         List<String> cfgPluginInfo = new ArrayList<>();
+         List<String> requestedPluginInfo = new ArrayList<>();
+ 
+         for (Plugin p : cfg.getPlugins()) {
+             cfgPluginInfo.add(p.toString());
+         }
+         for (Plugin p : requestedPlugins) {
+             requestedPluginInfo.add(p.toString());
+         }
+ 
+         Collections.sort(cfgPluginInfo);
+         Collections.sort(requestedPluginInfo);
+ 
+         assertEquals(requestedPluginInfo, cfgPluginInfo); (if dont have code before, the code wasnt exist yet) to assertConfigHasPlugins(cfg, requestedPlugins);, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

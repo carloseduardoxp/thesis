@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2094,3,3,CLEAR,Remove this empty class, write its code or make it an "interface".,null,
+java:S1118,8,8,CLEAR,Add a private constructor to hide the implicit public one.,null,
+java:S1854,26,26,LOGICAL,Remove this useless assignment to local variable "obj2".,null,
+java:S1854,22,22,LOGICAL,Remove this useless assignment to local variable "obj1".,null,
+java:S1481,22,22,CLEAR,Remove this unused "obj1" local variable.,null,
+java:S2440,26,26,LOGICAL,Remove this instantiation of "C".,null,
+java:S1481,26,26,CLEAR,Remove this unused "obj2" local variable.,null,

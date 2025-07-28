@@ -1,0 +1,45 @@
+Given the following Java code snippet:
+
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.InvalidParameterSpecException;
+import java.util.Base64;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
+
+public class Teste {
+
+    private final static String TOKEN_KEY = "fqJfdzGDvfwbedsKSUGty3VZ9taXxMVw";
+
+    public String encryptMsg(String message, SecretKey secret)
+            throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidParameterSpecException, IllegalBlockSizeException, BadPaddingException, UnsupportedEncodingException {
+        Cipher cipher = null;
+        cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+        cipher.init(Cipher.ENCRYPT_MODE, secret);
+        byte[] cipherText = cipher.doFinal(message.getBytes("UTF-8"));
+        return Base64.encodeToString(cipherText, Base64.NO_WRAP);
+    }
+
+    public String decryptMsg(String cipherText, SecretKey secret)
+            throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidParameterSpecException, InvalidAlgorithmParameterException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException, UnsupportedEncodingException {
+        Cipher cipher = null;
+        cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+        cipher.init(Cipher.DECRYPT_MODE, secret);
+        byte[] decode = Base64.decode(cipherText, Base64.NO_WRAP);
+        String decryptString = new String(cipher.doFinal(decode), "UTF-8");
+        return decryptString;
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "decryptString"., start line = 36, end line = 36, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 19, end line = 19, rule key = java:S4719 message = Replace charset name argument with StandardCharsets.UTF_8, start line = 26, end line = 26, rule key = java:S4719 message = Replace charset name argument with StandardCharsets.UTF_8, start line = 36, end line = 36, rule key = java:S1068 message = Remove this unused "TOKEN_KEY" private field., start line = 19, end line = 19, rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "decryptString"., start line = 36, end line = 36, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 19, end line = 19, rule key = java:S4719 message = Replace charset name argument with StandardCharsets.UTF_8, start line = 26, end line = 26, rule key = java:S4719 message = Replace charset name argument with StandardCharsets.UTF_8, start line = 36, end line = 36, rule key = java:S1068 message = Remove this unused "TOKEN_KEY" private field., start line = 19, end line = 19, rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "decryptString"., start line = 36, end line = 36, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 19, end line = 19, rule key = java:S4719 message = Replace charset name argument with StandardCharsets.UTF_8, start line = 26, end line = 26, rule key = java:S4719 message = Replace charset name argument with StandardCharsets.UTF_8, start line = 36, end line = 36, rule key = java:S1068 message = Remove this unused "TOKEN_KEY" private field., start line = 19, end line = 19, rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "decryptString"., start line = 36, end line = 36, rule key = java:S1124 message = Reorder the modifiers to comply with the Java Language Specification., start line = 19, end line = 19, rule key = java:S4719 message = Replace charset name argument with StandardCharsets.UTF_8, start line = 26, end line = 26, rule key = java:S4719 message = Replace charset name argument with StandardCharsets.UTF_8, start line = 36, end line = 36, rule key = java:S1068 message = Remove this unused "TOKEN_KEY" private field., start line = 19, end line = 19.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

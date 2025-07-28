@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3740,11,11,COMPLETE,Provide the parametrized type for this generic.,null,
+java:S106,18,18,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1481,28,28,CLEAR,Remove this unused "sourceGeometry" local variable.,null,
+java:S108,34,34,CLEAR,Remove this block of code, fill it in, or add a comment explaining why it is empty.,null,

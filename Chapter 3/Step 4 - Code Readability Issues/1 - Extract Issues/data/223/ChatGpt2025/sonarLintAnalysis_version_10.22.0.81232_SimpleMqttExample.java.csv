@@ -1,0 +1,8 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S2142,53,53,COMPLETE,Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.,null,
+java:S106,19,19,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,24,24,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,29,29,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,45,45,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,51,51,MODULAR,Replace this use of System.out by a logger.,null,

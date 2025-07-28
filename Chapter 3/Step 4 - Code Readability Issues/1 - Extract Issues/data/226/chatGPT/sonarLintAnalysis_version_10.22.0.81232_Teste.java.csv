@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1066,20,20,CLEAR,Merge this if statement with the enclosing one.,null,
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S112,21,21,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S1854,8,8,LOGICAL,Remove this useless assignment to local variable "parser".,null,
+java:S1481,8,8,CLEAR,Remove this unused "parser" local variable.,null,

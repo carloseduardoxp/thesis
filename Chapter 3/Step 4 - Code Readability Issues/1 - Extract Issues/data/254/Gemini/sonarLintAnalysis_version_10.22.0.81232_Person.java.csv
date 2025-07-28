@@ -1,0 +1,13 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1192,68,68,DISTINCT,Define a constant instead of duplicating this literal "person1.hashCode(): " 3 times.,null,
+java:S106,67,67,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,68,68,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,69,69,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,71,71,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,72,72,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,73,73,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,75,75,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,76,76,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,77,77,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,82,82,MODULAR,Replace this use of System.out by a logger.,null,

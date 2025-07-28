@@ -1,0 +1,12 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S112,13,13,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S112,26,26,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S112,37,37,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S5542,27,27,TRUSTWORTHY,Use another cipher mode or disable padding.,null,
+java:S4719,29,29,CONVENTIONAL,Replace charset name argument with StandardCharsets.UTF_8,null,
+java:S5542,45,45,TRUSTWORTHY,Use another cipher mode or disable padding.,null,
+java:S4719,48,48,CONVENTIONAL,Replace charset name argument with StandardCharsets.UTF_8,null,
+java:S106,58,58,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,59,59,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,60,60,MODULAR,Replace this use of System.out by a logger.,null,

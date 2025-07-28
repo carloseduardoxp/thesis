@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1640,22,29,EFFICIENT,Convert this Map to an EnumMap.,null,
+java:S3599,22,29,CLEAR,Use another way to initialize this instance.,null,
+java:S1171,22,22,CLEAR,Move the contents of this initializer to a standard constructor or to field initializers.,null,

@@ -1,0 +1,16 @@
+Given the following Java code snippet:
+import java.sql.*;
+
+public class Teste {
+
+    public static void main(String[] args) {        
+        PreparedStatement preparedStatement = con.PreparedStatement(
+            "SELECT * FROM MY_TABLE WHERE condition1 = ? AND condition2 = ?");
+        preparedStatement.setString(1,condition1_value);
+        preparedStatement.setString(2,condition2_value);
+        ResultSet rs = preparedStatement.executeQuery();
+    }
+}
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "rs"., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "rs" local variable., start line = 10, end line = 10, rule key = java:S1854 message = Remove this useless assignment to local variable "rs"., start line = 10, end line = 10, rule key = java:S1481 message = Remove this unused "rs" local variable., start line = 10, end line = 10.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

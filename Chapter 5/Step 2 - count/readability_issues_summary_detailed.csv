@@ -1,0 +1,16 @@
+llm_fixed,category,corrected,not_corrected,introduced
+ChatGpt2025,Clarify Code Intent,155,9,5
+ChatGpt2025,Clean Up,288,82,72
+ChatGpt2025,Convention,87,9,8
+ChatGpt2025,Improve Code Modularity,16,2,1
+ChatGpt2025,Prefer Concise Code,143,4,12
+DeepSeek,Clarify Code Intent,154,10,1
+DeepSeek,Clean Up,310,60,46
+DeepSeek,Convention,88,8,8
+DeepSeek,Improve Code Modularity,15,3,2
+DeepSeek,Prefer Concise Code,146,1,6
+Gemini,Clarify Code Intent,159,5,1
+Gemini,Clean Up,303,67,66
+Gemini,Convention,93,3,2
+Gemini,Improve Code Modularity,17,1,1
+Gemini,Prefer Concise Code,146,1,2

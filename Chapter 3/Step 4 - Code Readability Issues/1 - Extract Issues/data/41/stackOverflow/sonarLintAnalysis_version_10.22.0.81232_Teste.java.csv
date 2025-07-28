@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1144,9,9,CLEAR,Remove this unused private "printUsage" method.,null,
+java:S1118,7,7,CLEAR,Add a private constructor to hide the implicit public one.,null,
+java:S3011,12,12,MODULAR,This accessibility update should be removed.,null,
+java:S106,21,21,MODULAR,Replace this use of System.out by a logger.,null,

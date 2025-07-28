@@ -1,0 +1,5 @@
+Based on this pull request with the developer description: Removed goto statement, the code was changed by the developer from TAG_EVENT_LIST:             for (NamedTagEventList list : tags) {                 List<TagEvent> items = list.getItems();                 if (items == null || items.isEmpty()) {                     continue TAG_EVENT_LIST;                  }             } (if dont have code before, the code wasnt exist yet) to if (latestTag != null && StringUtils.isNotBlank(latestTag.getImage())) {
+                     String image = latestTag.getImage();
+                     log.info("Found tag on ImageStream " + imageStreamName + " tag: " + image);
+                     return image;
+                 }, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

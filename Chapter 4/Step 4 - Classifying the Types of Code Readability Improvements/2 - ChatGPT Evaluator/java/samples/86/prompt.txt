@@ -1,0 +1,5 @@
+Based on this pull request with the developer description: Don't mock Files.exists, the code was changed by the developer from mockStatic(Files.class);
+ 
+         when(Files.exists(any(Path.class))).thenReturn(false);
+         assertEquals(false, pluginList.fileExists(pluginFile)); (if dont have code before, the code wasnt exist yet) to File notExistingFile = new File("/file/that/does/not/exist.yaml");
+         assertEquals(false, pluginList.fileExists(notExistingFile));, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S127,13,13,CLEAR,Refactor the code in order to not assign to this loop counter from within the loop body.,null,
+java:S1118,2,2,CLEAR,Add a private constructor to hide the implicit public one.,null,

@@ -1,0 +1,112 @@
+
+import java.io.IOException;
+import java.nio.file.*;
+
+public class FileWatcherExample {
+
+    private static final String DIRECTORY_TO_WATCH = "/tmp/watched_dir"; // Or adjust for Windows: "C:\\temp\\watched_dir"
+    private static final String FILE_TO_WATCH = "my_important_file.txt";
+
+    public static void main(String[] args) {
+        Path dirPath = Paths.get(DIRECTORY_TO_WATCH);
+
+        // Ensure the directory exists
+        try {
+            if (!Files.exists(dirPath)) {
+                Files.createDirectories(dirPath);
+                System.out.println("Created directory: " + dirPath);
+            }
+        } catch (IOException e) {
+            System.err.println("Error creating directory: " + e.getMessage());
+            return;
+        }
+
+        // Create a WatchService in a separate thread
+        Thread watcherThread = new Thread(() -> {
+            try (WatchService watchService = FileSystems.getDefault().newWatchService()) {
+                // Register the directory for create, delete, and modify events
+                dirPath.register(
+                    watchService,
+                    StandardWatchEventKinds.ENTRY_CREATE,
+                    StandardWatchEventKinds.ENTRY_DELETE,
+                    StandardWatchEventKinds.ENTRY_MODIFY
+                );
+
+                System.out.println("Watching directory: " + dirPath);
+                System.out.println("Looking for changes to: " + FILE_TO_WATCH);
+
+                WatchKey key;
+                while ((key = watchService.take()) != null) { // Blocks until an event occurs
+                    for (WatchEvent<?> event : key.pollEvents()) {
+                        WatchEvent.Kind<?> kind = event.kind();
+                        Path changedFile = (Path) event.context();
+
+                        // Filter for the specific file we want to watch
+                        if (changedFile != null && changedFile.getFileName().toString().equals(FILE_TO_WATCH)) {
+                            System.out.println("Event kind: " + kind + ". File: " + changedFile.getFileName());
+
+                            if (kind == StandardWatchEventKinds.ENTRY_CREATE) {
+                                System.out.println(FILE_TO_WATCH + " was created!");
+                                // Perform actions on file creation
+                            } else if (kind == StandardWatchEventKinds.ENTRY_MODIFY) {
+                                System.out.println(FILE_TO_WATCH + " was modified!");
+                                // Perform actions on file modification
+                            } else if (kind == StandardWatchEventKinds.ENTRY_DELETE) {
+                                System.out.println(FILE_TO_WATCH + " was deleted!");
+                                // Perform actions on file deletion
+                            }
+                        }
+                    }
+
+                    // Reset the key for future events, or break if no longer valid
+                    boolean valid = key.reset();
+                    if (!valid) {
+                        System.out.println("WatchKey is no longer valid for " + dirPath + ". Exiting watcher.");
+                        break;
+                    }
+                }
+            } catch (IOException e) {
+                System.err.println("Error with WatchService: " + e.getMessage());
+            } catch (InterruptedException e) {
+                System.out.println("File watcher thread interrupted.");
+            }
+        }, "FileWatcherThread");
+
+        watcherThread.start();
+
+        // You can add some main thread logic here, or just let the watcher run
+        System.out.println("Main thread running. Press Ctrl+C to exit.");
+
+        // Example: Create, modify, and delete the file after a delay
+        try {
+            Thread.sleep(5000); // Wait for a few seconds
+
+            Path targetFile = dirPath.resolve(FILE_TO_WATCH);
+
+            System.out.println("\n--- Simulating file operations ---");
+
+            // Create the file
+            Files.write(targetFile, "Hello, watch service!".getBytes(), StandardOpenOption.CREATE);
+            System.out.println("Created: " + targetFile);
+            Thread.sleep(2000);
+
+            // Modify the file
+            Files.write(targetFile, "\nAdding more content.".getBytes(), StandardOpenOption.APPEND);
+            System.out.println("Modified: " + targetFile);
+            Thread.sleep(2000);
+
+            // Delete the file
+            Files.delete(targetFile);
+            System.out.println("Deleted: " + targetFile);
+            Thread.sleep(2000);
+
+            System.out.println("--- Simulation complete ---");
+
+        } catch (IOException | InterruptedException e) {
+            System.err.println("Simulation error: " + e.getMessage());
+        } finally {
+            // Interrupt the watcher thread when the main thread finishes or on exit
+            watcherThread.interrupt();
+        }
+    }
+}

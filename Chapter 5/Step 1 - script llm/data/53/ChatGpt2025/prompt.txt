@@ -1,0 +1,40 @@
+Given the following Java code snippet:
+import org.apache.cxf.endpoint.Client;
+import org.apache.cxf.frontend.ClientProxy;
+import org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor;
+import org.apache.wss4j.dom.handler.WSHandlerConstants;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class SoapClientWithSignature {
+
+    public static void main(String[] args) {
+        // Assume you have a generated CXF client proxy, e.g.
+        // MyServicePortType service = new MyService().getMyServicePort();
+
+        MyServicePortType service; // your service proxy
+
+        Client client = ClientProxy.getClient(service);
+
+        Map<String, Object> outProps = new HashMap<>();
+        outProps.put(WSHandlerConstants.ACTION, WSHandlerConstants.SIGNATURE);
+        outProps.put(WSHandlerConstants.USER, "mykeyalias");
+
+        // Path to keystore
+        outProps.put(WSHandlerConstants.SIG_PROP_FILE, "client_sign.properties");
+
+        // Key password
+        outProps.put(WSHandlerConstants.PW_CALLBACK_CLASS, ClientKeystorePasswordCallback.class.getName());
+
+        WSS4JOutInterceptor wssOut = new WSS4JOutInterceptor(outProps);
+        client.getOutInterceptors().add(wssOut);
+
+        // Now when you invoke service methods, the request will be signed
+        service.myOperation();
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S125 message = This block of commented-out lines of code should be removed., start line = 13, end line = 13.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

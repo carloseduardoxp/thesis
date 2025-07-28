@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S112,30,30,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S5993,13,13,CLEAR,Change the visibility of this constructor to "protected".,null,
+java:S106,77,77,MODULAR,Replace this use of System.out by a logger.,null,

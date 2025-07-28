@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S3776,10,10,FOCUSED,Refactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.,null,
+java:S106,25,25,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,29,29,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,35,35,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,40,40,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,54,54,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1075,45,45,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,

@@ -1,0 +1,41 @@
+Given the following Java code snippet:
+import java.io.IOException;
+import java.nio.file.*;
+import java.util.concurrent.TimeUnit;
+
+public class DirectoryWatcherService {
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+        Path dir = Paths.get("path/to/your/directory");
+        WatchService watchService = FileSystems.getDefault().newWatchService();
+        dir.register(watchService, StandardWatchEventKinds.ENTRY_CREATE, StandardWatchEventKinds.ENTRY_DELETE, StandardWatchEventKinds.ENTRY_MODIFY);
+        System.out.println("Watching directory: " + dir.toAbsolutePath());
+
+        while (true) {
+            WatchKey key = watchService.poll(10, TimeUnit.SECONDS);
+            if (key == null) {
+                System.out.println("No activity after 10 seconds");
+                continue;
+            }
+
+            for (WatchEvent<?> event : key.pollEvents()) {
+                WatchEvent.Kind<?> kind = event.kind();
+                if (kind == StandardWatchEventKinds.OVERFLOW) {
+                    continue;
+                }
+
+                Path path = ((WatchEvent<Path>) event).context();
+                System.out.println(kind + " - " + path);
+            }
+
+            if (!key.reset()) {
+                System.out.println("Key is no longer valid");
+                break;
+            }
+        }
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S135 message = Reduce the total number of break and continue statements in this loop to use at most one., start line = 13, end line = 13.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

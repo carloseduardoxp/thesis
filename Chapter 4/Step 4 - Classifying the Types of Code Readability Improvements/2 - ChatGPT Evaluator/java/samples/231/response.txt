@@ -1,0 +1,1 @@
+Inline redundant return variables

@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,15,15,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,32,32,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,37,37,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,60,60,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1075,52,52,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,

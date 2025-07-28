@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,57,57,LOGICAL,Remove this useless assignment to local variable "output".,null,
+java:S106,44,44,MODULAR,Replace this use of System.out by a logger.,null,
+java:S1481,57,57,CLEAR,Remove this unused "output" local variable.,null,
+java:S106,62,62,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,77,77,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,79,79,MODULAR,Replace this use of System.err by a logger.,null,
+java:S106,87,87,MODULAR,Replace this use of System.out by a logger.,null,

@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+public class Teste {
+
+    public String getSwappedString(String s)
+    {
+        char ac[] = s.toCharArray();
+        for(int i = 0; i < s.length(); i++)
+        {
+        if(ac[i] == 'H')
+            ac[i]='W';
+        else if(ac[i] == 'W')
+            ac[i] = 'H'; 
+        }
+        
+        s = new String(ac);
+        return s;
+    }
+}
+
+the following improvements are recommended: rule key = java:S1197 message = Move the array designators [] to the type., start line = 5, end line = 5.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

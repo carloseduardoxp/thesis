@@ -1,0 +1,6 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,59,59,MODULAR,Replace this use of System.err by a logger.,null,
+java:S1068,67,67,CLEAR,Remove this unused "name" private field.,null,
+java:S1068,72,72,CLEAR,Remove this unused "status" private field.,null,
+java:S1068,73,73,CLEAR,Remove this unused "message" private field.,null,

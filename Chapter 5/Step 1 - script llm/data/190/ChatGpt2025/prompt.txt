@@ -1,0 +1,18 @@
+Given the following Java code snippet:
+
+public class Chat {
+
+    public static void main(String[] args) {
+
+        int age = 25;           // Declare an integer variable 'age' and assign 25
+        double price = 19.99;   // Declare a double variable 'price' and assign 19.99
+        String name = "John";   // Declare a String variable 'name' and assign "John"
+        boolean isActive = true; // Declare a boolean variable 'isActive' and assign true
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "name"., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "price"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "age"., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "age" local variable., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "price" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "name" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "isActive" local variable., start line = 9, end line = 9, rule key = java:S1854 message = Remove this useless assignment to local variable "name"., start line = 8, end line = 8, rule key = java:S1854 message = Remove this useless assignment to local variable "price"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "age"., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "age" local variable., start line = 6, end line = 6, rule key = java:S1481 message = Remove this unused "price" local variable., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "name" local variable., start line = 8, end line = 8, rule key = java:S1481 message = Remove this unused "isActive" local variable., start line = 9, end line = 9.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

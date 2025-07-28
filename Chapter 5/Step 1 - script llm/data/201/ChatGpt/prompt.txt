@@ -1,0 +1,14 @@
+Given the following Java code snippet:
+public class MyClass {
+  // This is a global variable
+  public static int myGlobalVariable = 10;
+  
+  public static void main(String[] args) {
+      // Use the global variable
+      System.out.println(myGlobalVariable);
+  }
+}
+
+
+the following improvements are recommended: rule key = java:S1444 message = Make this "public static myGlobalVariable" field final, start line = 3, end line = 3.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

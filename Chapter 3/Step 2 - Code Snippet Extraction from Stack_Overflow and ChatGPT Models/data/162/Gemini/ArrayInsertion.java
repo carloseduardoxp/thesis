@@ -1,0 +1,44 @@
+import java.util.Arrays;
+
+public class ArrayInsertion {
+
+    public static int[] insertElement(int[] originalArray, int elementToInsert, int position) {
+        if (position < 0 || position > originalArray.length) {
+            System.out.println("Invalid position for insertion.");
+            return originalArray; // Or throw an exception
+        }
+
+        int[] newArray = new int[originalArray.length + 1];
+
+        // Copy elements before the insertion point
+        for (int i = 0; i < position; i++) {
+            newArray[i] = originalArray[i];
+        }
+
+        // Insert the new element
+        newArray[position] = elementToInsert;
+
+        // Shift and copy remaining elements
+        for (int i = position; i < originalArray.length; i++) {
+            newArray[i + 1] = originalArray[i];
+        }
+
+        return newArray;
+    }
+
+    public static void main(String[] args) {
+        int[] myArray = {10, 20, 30, 40, 50};
+        int element = 25;
+        int position = 2; // Insert at index 2 (between 20 and 30)
+
+        System.out.println("Original Array: " + Arrays.toString(myArray));
+
+        int[] updatedArray = insertElement(myArray, element, position);
+
+        System.out.println("Updated Array: " + Arrays.toString(updatedArray));
+
+        // Example with invalid position
+        updatedArray = insertElement(myArray, 99, 10);
+        System.out.println("Array after invalid insertion attempt: " + Arrays.toString(updatedArray));
+    }
+}

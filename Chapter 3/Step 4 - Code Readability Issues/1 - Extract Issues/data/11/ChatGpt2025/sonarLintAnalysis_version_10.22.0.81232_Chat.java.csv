@@ -1,0 +1,9 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S112,9,9,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S112,17,17,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S5542,10,10,TRUSTWORTHY,Use a secure padding scheme.,null,
+java:S5542,18,18,TRUSTWORTHY,Use a secure padding scheme.,null,
+java:S106,35,35,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,36,36,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,37,37,MODULAR,Replace this use of System.out by a logger.,null,

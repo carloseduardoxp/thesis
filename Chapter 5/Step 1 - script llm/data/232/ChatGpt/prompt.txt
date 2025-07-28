@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+public class Teste {
+  public void main() {
+    Class<T> clazz = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+    T instance = clazz.newInstance();
+
+    Constructor<T> constructor = clazz.getDeclaredConstructor();
+    T instance = constructor.newInstance();
+
+  }
+
+  public static <T> MyGenericClass<T> createInstance(Class<T> clazz) throws InstantiationException, IllegalAccessException {
+    T instance = clazz.newInstance();
+    return new MyGenericClass<T>(instance);
+  }
+
+}
+
+
+the following improvements are recommended: rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "instance"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "instance"., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "instance" local variable., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "instance" local variable., start line = 7, end line = 7, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "instance"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "instance"., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "instance" local variable., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "instance" local variable., start line = 7, end line = 7, rule key = java:S2293 message = Replace the type specification in this constructor call with the diamond operator ("<>"). (sonar.java.source not set. Assuming 7 or greater.), start line = 13, end line = 13, rule key = java:S1854 message = Remove this useless assignment to local variable "instance"., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "instance"., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "instance" local variable., start line = 4, end line = 4, rule key = java:S1481 message = Remove this unused "instance" local variable., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

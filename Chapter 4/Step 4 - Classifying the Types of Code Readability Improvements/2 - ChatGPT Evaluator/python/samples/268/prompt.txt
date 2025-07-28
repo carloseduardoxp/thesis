@@ -1,0 +1,2 @@
+Based on this pull request with the developer description: Eliminating some functions: `process_single_shape` and `_filter_zero_tangents`, the code was changed by the developer from def process_single_shape(shape, tape_dtype):
+         return jax.ShapeDtypeStruct(tuple(shape), tape_dtype) (if dont have code before, the code wasnt exist yet) to , (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,40 @@
+Given the following Java code snippet:
+
+import java.io.*;
+import java.util.*;
+
+public class Teste {
+
+    public static void main(String[] args) {        
+        File file = new File("mayshapefile.shp");
+
+        try {
+          Map<String, String> connect = new HashMap();
+          connect.put("url", file.toURI().toString());
+        
+          DataStore dataStore = DataStoreFinder.getDataStore(connect);
+          String[] typeNames = dataStore.getTypeNames();
+          String typeName = typeNames[0];
+        
+          System.out.println("Reading content " + typeName);
+        
+          FeatureSource featureSource = dataStore.getFeatureSource(typeName);
+          FeatureCollection collection = featureSource.getFeatures();
+          FeatureIterator iterator = collection.features();
+        
+        
+          try {
+            while (iterator.hasNext()) {
+              Feature feature = iterator.next();
+              GeometryAttribute sourceGeometry = feature.getDefaultGeometryProperty();
+            }
+          } finally {
+            iterator.close();
+          }
+        
+        } catch (Throwable e) {}
+    }
+}
+
+the following improvements are recommended: rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "sourceGeometry" local variable., start line = 28, end line = 28, rule key = java:S108 message = Remove this block of code, start line = 34, end line = 34, rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "sourceGeometry" local variable., start line = 28, end line = 28, rule key = java:S108 message = Remove this block of code, start line = 34, end line = 34, rule key = java:S3740 message = Provide the parametrized type for this generic., start line = 11, end line = 11, rule key = java:S1481 message = Remove this unused "sourceGeometry" local variable., start line = 28, end line = 28, rule key = java:S108 message = Remove this block of code, start line = 34, end line = 34.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

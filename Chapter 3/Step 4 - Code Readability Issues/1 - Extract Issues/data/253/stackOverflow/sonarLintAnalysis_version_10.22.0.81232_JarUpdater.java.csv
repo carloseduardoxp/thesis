@@ -1,0 +1,10 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S112,37,37,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S1075,14,14,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,
+java:S1075,15,15,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,
+java:S1075,17,17,CONVENTIONAL,Refactor your code to get this URI from a customizable parameter.,null,
+java:S899,32,32,COMPLETE,Do something with the "boolean" value returned by "delete".,null,
+java:S4042,32,32,CONVENTIONAL,Use "java.nio.file.Files#delete" here for better messages on error conditions.,null,
+java:S899,83,83,COMPLETE,Do something with the "boolean" value returned by "delete".,null,
+java:S4042,83,83,CONVENTIONAL,Use "java.nio.file.Files#delete" here for better messages on error conditions.,null,

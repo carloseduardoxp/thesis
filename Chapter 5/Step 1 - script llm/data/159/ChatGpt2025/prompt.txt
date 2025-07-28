@@ -1,0 +1,16 @@
+Given the following Java code snippet:
+
+public class Chat {
+
+    public static void main(String[] args) {
+
+        double myDouble = 9.7;
+        int myInt = (int) myDouble;  // myInt will be 9 (decimal part is truncated)
+
+    }
+
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "myInt"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "myInt" local variable., start line = 7, end line = 7, rule key = java:S1854 message = Remove this useless assignment to local variable "myInt"., start line = 7, end line = 7, rule key = java:S1481 message = Remove this unused "myInt" local variable., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

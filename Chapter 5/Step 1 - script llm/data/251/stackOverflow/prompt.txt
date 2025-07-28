@@ -1,0 +1,21 @@
+Given the following Java code snippet:
+
+import java.io.File;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class Teste {
+
+    public static void main(String[] args) {
+        // Path to your file, if you have it on local, use something like C:\\MyFolder or /home/usr/etc
+        File file = new File("YOUR_PATH");
+        URL[] url = file.toURI().toURL();
+        ResourceBundle rb = ResourceBundle.getBundle("MessageBundle", Locale.CANADA_FRENCH, new URLClassLoader(url));
+    }
+}
+
+
+the following improvements are recommended: rule key = java:S1854 message = Remove this useless assignment to local variable "rb"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "rb" local variable., start line = 14, end line = 14, rule key = java:S1854 message = Remove this useless assignment to local variable "rb"., start line = 14, end line = 14, rule key = java:S1481 message = Remove this unused "rb" local variable., start line = 14, end line = 14.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

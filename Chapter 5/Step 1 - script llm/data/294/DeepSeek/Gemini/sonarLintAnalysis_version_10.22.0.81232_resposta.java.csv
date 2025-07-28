@@ -1,0 +1,4 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1130,15,15,CLEAR,Remove the declaration of thrown exception 'java.lang.ClassNotFoundException' which is a subclass of 'java.lang.ReflectiveOperationException'.,null,
+java:S3011,35,35,MODULAR,This accessibility update should be removed.,null,

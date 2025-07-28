@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S1854,27,54,LOGICAL,Remove this useless assignment to local variable "mCountDownTimer".,null,
+java:S1854,25,25,LOGICAL,Remove this useless assignment to local variable "diff".,null,
+java:S1135,19,19,COMPLETE,Complete the task associated to this TODO comment.,null,
+java:S1481,25,25,CLEAR,Remove this unused "diff" local variable.,null,
+java:S1481,27,27,CLEAR,Remove this unused "mCountDownTimer" local variable.,null,

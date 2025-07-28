@@ -1,0 +1,17 @@
+Given the following Java code snippet:
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class Teste {
+  
+  public static String readFileAsString(String filePath) throws Exception {
+      String content = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
+      return content;
+  }
+  
+}
+
+
+the following improvements are recommended: rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "content"., start line = 8, end line = 8, rule key = java:S112 message = Define and throw a dedicated exception instead of using a generic one., start line = 7, end line = 7, rule key = java:S1488 message = Immediately return this expression instead of assigning it to the temporary variable "content"., start line = 8, end line = 8, rule key = java:S112 message = Define and throw a dedicated exception instead of using a generic one., start line = 7, end line = 7.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

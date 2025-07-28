@@ -1,0 +1,7 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S112,71,71,COMPLETE,Define and throw a dedicated exception instead of using a generic one.,null,
+java:S106,38,38,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,39,39,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,43,43,MODULAR,Replace this use of System.out by a logger.,null,
+java:S106,44,44,MODULAR,Replace this use of System.out by a logger.,null,

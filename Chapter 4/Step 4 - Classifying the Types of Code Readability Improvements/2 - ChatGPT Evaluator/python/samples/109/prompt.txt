@@ -1,0 +1,20 @@
+Based on this pull request with the developer description: echo_test: parameterize tests, the code was changed by the developer from def test_echo(self):
+         for echo, echo_index, output_index in [
+             (lambda: st.echo(), 0, 1),
+             (lambda: st.echo("above"), 0, 1),
+             (lambda: st.echo("below"), 1, 0),
+         ]:
+ 
+             # The empty lines below are part of the test. Do not remove them.
+             with echo():
+                 st.write("Hello") (if dont have code before, the code wasnt exist yet) to @parameterized.expand(
+         [
+             ("code_location default", lambda: st.echo(), 0, 1),
+             ("code_location above", lambda: st.echo("above"), 0, 1),
+             ("code_location below", lambda: st.echo("below"), 1, 0),
+         ]
+     )
+     def test_echo(self, _, echo, echo_index, output_index):
+         # The empty lines below are part of the test. Do not remove them.
+         with echo():
+             st.write("Hello"), (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

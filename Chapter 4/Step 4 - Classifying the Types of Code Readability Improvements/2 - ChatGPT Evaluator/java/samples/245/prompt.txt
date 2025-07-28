@@ -1,0 +1,7 @@
+Based on this pull request with the developer description: Asserts.java simple and format., the code was changed by the developer from if (isNull(str1) && isNull(str2)) {
+             return true;
+         } else if (isNull(str1) || isNull(str2)) {
+             return false;
+         } else {
+             return str1.equalsIgnoreCase(str2);
+         } (if dont have code before, the code wasnt exist yet) to return (str1 == null && str2 == null) || (str1 != null && str1.equalsIgnoreCase(str2));, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

@@ -1,0 +1,7 @@
+Based on this pull request with the developer description: Streamlined the gathering and processing of asyncio tasks., the code was changed by the developer from await asyncio.gather(*task_list)  # ç­å¾ææä»»å¡æ§è¡å®æ (if dont have code before, the code wasnt exist yet) to results = await asyncio.gather(*task_list, return_exceptions=True)  # ç­å¾ææä»»å¡æ§è¡å®æ
+             for result in results:
+                 if isinstance(result, TimeoutException):
+                     notice_text = f"{result.__class__.__name__} å¾æ ç´ æä¸è½½è¿ç¨ä¸­è¯·æ±è¶æ¶.\næå³è¯¦ç»ä¿¡æ¯ï¼è¯·æ¥çæ¥å¿"
+                 elif isinstance(result, Exception):
+                     notice_text = f"{result.__class__.__name__} å¾æ ç´ æä¸è½½è¿ç¨ä¸­åçå¼å¸¸.\næå³è¯¦ç»ä¿¡æ¯ï¼è¯·æ¥çæ¥å¿"
+                     break, (if dont have code after, the code was removed) please, provide the appropriate label that represents the code readability improvement described and performed by the developer. No explanations, only the name of the appropriate label.

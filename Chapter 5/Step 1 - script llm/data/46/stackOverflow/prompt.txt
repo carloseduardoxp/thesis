@@ -1,0 +1,32 @@
+Given the following Java code snippet:
+class A
+{
+    class B
+    {
+        // static int x; not allowed here
+    }
+
+    static class C
+    {
+        static int x; // allowed here
+    }
+}
+
+public class Teste
+{
+    public static void main(String[] str)
+    {
+        A a = new A();
+
+        // Non-Static Inner Class
+        // Requires enclosing instance
+        A.B obj1 = a.new B(); 
+
+        // Static Inner Class
+        // No need for reference of object to the outer class
+        A.C obj2 = new A.C(); 
+    }
+}
+
+the following improvements are recommended: rule key = java:S2094 message = Remove this empty class, start line = 3, end line = 3, rule key = java:S1854 message = Remove this useless assignment to local variable "obj2"., start line = 26, end line = 26, rule key = java:S1854 message = Remove this useless assignment to local variable "obj1"., start line = 22, end line = 22, rule key = java:S1481 message = Remove this unused "obj1" local variable., start line = 22, end line = 22, rule key = java:S2440 message = Remove this instantiation of "C"., start line = 26, end line = 26, rule key = java:S1481 message = Remove this unused "obj2" local variable., start line = 26, end line = 26, rule key = java:S2094 message = Remove this empty class, start line = 3, end line = 3, rule key = java:S1854 message = Remove this useless assignment to local variable "obj2"., start line = 26, end line = 26, rule key = java:S1854 message = Remove this useless assignment to local variable "obj1"., start line = 22, end line = 22, rule key = java:S1481 message = Remove this unused "obj1" local variable., start line = 22, end line = 22, rule key = java:S2440 message = Remove this instantiation of "C"., start line = 26, end line = 26, rule key = java:S1481 message = Remove this unused "obj2" local variable., start line = 26, end line = 26, rule key = java:S2094 message = Remove this empty class, start line = 3, end line = 3, rule key = java:S1854 message = Remove this useless assignment to local variable "obj2"., start line = 26, end line = 26, rule key = java:S1854 message = Remove this useless assignment to local variable "obj1"., start line = 22, end line = 22, rule key = java:S1481 message = Remove this unused "obj1" local variable., start line = 22, end line = 22, rule key = java:S2440 message = Remove this instantiation of "C"., start line = 26, end line = 26, rule key = java:S1481 message = Remove this unused "obj2" local variable., start line = 26, end line = 26, rule key = java:S2094 message = Remove this empty class, start line = 3, end line = 3, rule key = java:S1854 message = Remove this useless assignment to local variable "obj2"., start line = 26, end line = 26, rule key = java:S1854 message = Remove this useless assignment to local variable "obj1"., start line = 22, end line = 22, rule key = java:S1481 message = Remove this unused "obj1" local variable., start line = 22, end line = 22, rule key = java:S2440 message = Remove this instantiation of "C"., start line = 26, end line = 26, rule key = java:S1481 message = Remove this unused "obj2" local variable., start line = 26, end line = 26.
+Please provide a revised version of the code snippet that applies the recommended improvements. Only the revised code snippet, without additional text.

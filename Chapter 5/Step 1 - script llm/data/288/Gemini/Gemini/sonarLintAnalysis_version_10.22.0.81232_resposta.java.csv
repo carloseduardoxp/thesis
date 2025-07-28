@@ -1,0 +1,5 @@
+rule key,start line,end line,severity,message,type
+java:S1220,null,null,MODULAR,Move this file to a named package.,null,
+java:S106,61,61,MODULAR,Replace this use of System.err by a logger.,null,
+java:S2094,68,68,CLEAR,Remove this empty class, write its code or make it an "interface".,null,
+java:S2094,72,72,CLEAR,Remove this empty class, write its code or make it an "interface".,null,

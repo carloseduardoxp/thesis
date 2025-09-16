@@ -5,7 +5,7 @@ import pandas as pd
 import sys
 
 csv_path = "issues_sample_total.csv"
-base_data_dir = r"../../Chapter 3/Replication Package/Step 4 - Code Readability Issues/1 - Extract Issues/data"
+base_data_dir = r"../../Chapter 3/Step 4 - Code Readability Issues/1 - Extract Issues/data"
 output_base = r"data"
 
 baseline_map = {

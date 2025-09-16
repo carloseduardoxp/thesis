@@ -8,14 +8,14 @@ diretorio_base = os.path.dirname(os.path.abspath(__file__))
 
 nlp = spacy.load("en_core_web_sm")
 
-entrada = os.path.join(diretorio_base, 'nuvem_java.txt')
-#entrada = os.path.join(diretorio_base, 'nuvem_python.txt')
+#entrada = os.path.join(diretorio_base, 'nuvem_java.txt')
+entrada = os.path.join(diretorio_base, 'nuvem_python.txt')
 
 with open(entrada, 'r', encoding='utf-8') as f:
     texto_total = f.read()
 
 stopwords_personalizadas = {
-    ''
+    'readability'
 }
 
 stopwords = STOPWORDS.union(stopwords_personalizadas)

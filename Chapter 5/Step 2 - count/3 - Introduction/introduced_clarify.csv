@@ -1,0 +1,7 @@
+query_id_llm,chatgpt_remaining,deepseek_remaining,gemini_remaining
+128_stackoverflow,1,0,0
+148_stackoverflow,1,1,0
+186_gemini,1,0,0
+38_deepseek,1,0,0
+71_stackoverflow,1,0,0
+247_gemini,0,0,1
